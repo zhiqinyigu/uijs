@@ -2102,9 +2102,6 @@ UI.Resize = function(o,option) {
 		}
 	},UI.isUndefined(option.capture) ? true : option.capture);
 }
-UI.Sortable = function(o) {
-	
-}
 UI.Gotop = {
 	title : '返回顶部',
 	className : 'gotop',
