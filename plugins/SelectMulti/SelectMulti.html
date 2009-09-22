@@ -1,0 +1,136 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>demo</title>
+<link href="../page.css" rel="stylesheet" type="text/css" />
+<link href="../table.css" rel="stylesheet" type="text/css" />
+<link href="../form.css" rel="stylesheet" type="text/css" />
+<link href="../msg.css" rel="stylesheet" type="text/css" />
+<link href="../nsfocus_ui.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/ui.js"></script>
+<!--  -->
+</head>
+<body>
+<table class="cmn_table">
+								<tr class="first_title">
+									<td>样式名</td>
+									<td>用途</td>
+									<td>适用标签</td>
+								</tr>
+								<tr class="even">
+									<td><b>selectMulti</b></td>
+									<td>多选下拉框</td>
+									<td>span</td>
+								</tr>
+								<tr class="odd">
+									<td><b>text select</b></td>
+									<td>多选框数值显示</td>
+									<td>input</td>
+								</tr>
+								<tr class="even">
+									<td><b>cont</b></td>
+									<td>下拉框内容</td>
+									<td>div</td>
+								</tr>
+								<tr class="odd">
+									<td><b>tools</b></td>
+									<td>下拉框工具条</td>
+									<td>div</td>
+								</tr>
+								<tr class="even">
+									<td><b>cmn_btn SelectAll</b></td>
+									<td>全选</td>
+									<td>input</td>
+								</tr>
+								<tr class="odd">
+									<td><b>cmn_btn SelectReverse</b></td>
+									<td>反选</td>
+									<td>input</td>
+								</tr>
+							</table>
+							<br /><br />
+							<span class="cmn_warning">HTML加载完后，<span class="text_comment">UI.selectMulti();</span>来进行事件绑定</span><br /><br />
+							<span class="cmn_warning">多选后的提示信息放到input的rel属性中，便于支持多语言。</span><br />
+							<br /><br />
+							<div class="sub_title">示例</div>
+<form method="post" action="" class="cmn_form">
+	<table>
+		<tr>
+			<th>多选框1</th>
+			<td>
+				<span class="selectMulti"><input type="text" class="text select" readonly="readonly" rel="（多选）" value="" />
+					<div class="cont">
+						<ul>
+							<li><input type="checkbox" />any</li>
+							<li><input type="checkbox" />拒绝服务类攻击事件</li>
+							<li><input type="checkbox" />获取权限类攻击事件</li>
+							<li><input type="checkbox" />信息收集类攻击事件</li>
+							<li><input type="checkbox" />可疑网络活动类事件</li>
+							<li><input type="checkbox" />网络监控类功能事件</li>
+							<li><input type="checkbox" />拒绝服务类攻击事件</li>
+							<li><input type="checkbox" />获取权限类攻击事件</li>
+							<li><input type="checkbox" />信息收集类攻击事件</li>
+							<li><input type="checkbox" />可疑网络活动类事件</li>
+							<li><input type="checkbox" />网络监控类功能事件</li>
+							<li><input type="checkbox" />拒绝服务类攻击事件</li>
+							<li><input type="checkbox" />获取权限类攻击事件</li>
+							<li><input type="checkbox" />信息收集类攻击事件</li>
+							<li><input type="checkbox" />可疑网络活动类事件</li>
+							<li><input type="checkbox" />网络监控类功能事件</li>
+							<li><input type="checkbox" />拒绝服务类攻击事件</li>
+							<li><input type="checkbox" />获取权限类攻击事件</li>
+							<li><input type="checkbox" />信息收集类攻击事件</li>
+							<li><input type="checkbox" />可疑网络活动类事件</li>
+						</ul>
+						<div class="tools">
+							<input type="button" class="cmn_btn SelectAll" value="全选"/> <input type="button" class="cmn_btn SelectReverse" value="反选"/>
+						</div>
+					</div>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<th>多选框2</th>
+			<td>
+				<span class="selectMulti"><input type="text" class="text select" rel="（多选）" value="" />
+					<div class="cont">
+						<ul>
+							<li><input type="checkbox" />html</li>
+							<li><input type="checkbox" />css</li>
+							<li><input type="checkbox" />js</li>
+							<li><input type="checkbox" />exe</li>
+							<li><input type="checkbox" />py</li>
+						</ul>
+						<div class="tools">
+							<input type="button" class="cmn_btn SelectAll" value="全选"/> <input type="button" class="cmn_btn SelectReverse" value="反选"/>
+						</div>
+					</div>
+				</span>
+			</td>
+		</tr>
+	</table>
+</form>
+<br />
+<select><option>Test For IE 6</option></select>
+<script type="text/javascript">
+	UI.selectMulti();
+</script>
+<!-- 							<br /><br />
+							<div class="sub_title">源代码</div>
+							<textarea rows="15" class="code"><span class="selectMulti"><input type="text" class="text select" readonly="readonly" rel="（多选）" value="" />
+	<div class="cont">
+		<ul>
+			<li><input type="checkbox" />any</li>
+			<li><input type="checkbox" />拒绝服务类攻击事件</li>
+			<li><input type="checkbox" />获取权限类攻击事件</li>
+		</ul>
+		<div class="tools">
+			<input type="button" class="cmn_btn SelectAll" value="全选"/> <input type="button" class="cmn_btn SelectReverse" value="反选"/>
+		</div>
+	</div>
+</span>
+<script type="text/javascript">
+	UI.selectMulti();
+</script></textarea> -->
+</body>
+</html>
