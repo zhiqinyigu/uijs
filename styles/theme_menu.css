@@ -1,0 +1,17 @@
+/* New Menu Theme */
+/* Index Page ---------------------------------*/
+.index_page .header .menu {display:none;}
+.index_page .header {background-image:url(images/theme_menu/bg_top_repeat.png);}
+	.index_page .header .wrap {background:url(images/theme_menu/bg_top.png) no-repeat;}
+
+.index_page.HasMainMenu .header .wrap {height:61px;}
+	.index_page.HasMainMenu .header .menu {display:block;left:0;top:38px;width:100%;background:url(images/theme_menu/main_menu_bg.gif) repeat-x;}
+		.index_page.HasMainMenu .header .menu a {color:#FFF !important;}
+		.index_page.HasMainMenu .header .menu a.on {background:url(images/theme_menu/main_menu_bg_on.gif) no-repeat !important;color:#1478A6 !important;}
+			.index_page.HasMainMenu .header .menu a.on span{background:url(images/theme_menu/main_menu_bg_on.gif) no-repeat right 0;background-color:#4592AE !important;}
+		.index_page.HasMainMenu .header .menu a.first {background:none;margin:0 0 0 1ex;}
+		.index_page.HasMainMenu .header .menu a.last {background:none;}
+
+.index_page .location {background:url(images/theme_menu/bg_location.png) repeat-x;}
+
+#language .cor,.index_page .header a.first,.index_page .header a.last,.index_page .header .tools,.sub_menu a.bar {background-image:url(images/theme_menu/bg.png);background-color:#DCECF2;}
