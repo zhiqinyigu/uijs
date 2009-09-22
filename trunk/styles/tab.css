@@ -1,0 +1,161 @@
+div.cmn_tab {position:relative;background:url(images/tab_bg.gif) #CAE8EE repeat-x 0 2px;border-bottom:solid 1px #98C5DA;zoom:1;}
+	div.cmn_tab .line,div.cmn_tab_line {position:relative;z-index:1;border-top:1px solid #4696B1;border-bottom:1px solid #4696B1;background:#7DB5C8;height:1px;+height:3px;overflow:hidden;}
+	div.cmn_tab .tools {position:absolute;right:5px;bottom:2px;z-index:50;line-height:1.231;}
+		div.cmn_tab .tools * {vertical-align:middle;}
+		div.cmn_tab .tools .tip_box {width:500px;}
+	div.cmn_tab table {position:relative;top:1px;margin:-1px 60px 0 0;border-collapse:collapse;height:22px;line-height:1.231;}
+		div.cmn_tab td {padding:0 10px;}
+		div.cmn_tab td.tab_selected {background:#FFF;+padding-top:4px;border-right:1px solid #98C5DA;}
+			div.cmn_tab td.tab_selected a {color:#122347;cursor:default;}
+		div.cmn_tab td.tab_unselected {+padding-top:2px;border-right:1px solid #98C5DA;color:#236ca4;}
+			div.cmn_tab td.tab_unselected a {color:#236ca4;}
+table.inner div.cmn_tab {background:none;border-left:1px solid #98C5DA;}
+	table.inner table.cmn_tab td {background:none;}
+	table.inner div.cmn_tab .line {display:none;}
+	table.inner div.cmn_tab .tab_selected {border-top:1px solid #98C5DA;}
+	table.inner div.cmn_tab .tab_unselected {background:url(images/tab_bg_.gif) #ECF5F9 repeat-x 0 0;border-top:1px solid #98C5DA;border-bottom:1px solid #98C5DA;}
+table.inner table.tab_border {border:1px solid #98C5DA;border-top:none;}
+	table.inner table.tab_border .content {padding:8px;}
+table.vertical div.cmn_tab {position:relative;top:-1px;float:left;border:none;height:100%;vertical-align:top;}
+	table.vertical div.cmn_tab table {height:100%;margin:0 -1px 0 0;border:none;}
+	table.vertical div.cmn_tab table td {border-right:1px solid #98C5DA;white-space:nowrap;padding:0 !important;border-right:none !important;}
+		table.vertical div.cmn_tab table td a {display:block;height:100%;line-height:20px;border-right:1px solid #98C5DA;padding:0 8px;}
+	table.vertical div.cmn_tab table td.tab_selected {height:20px;border:1px solid #98C5DA;border-right-color:transparent;+border-right-width:0;}
+		table.vertical div.cmn_tab table td.tab_selected a {border-right:1px solid white;}
+	table.vertical div.cmn_tab table td.tab_unselected {height:20px;border:1px solid #98C5DA;}
+	table.vertical div.cmn_tab .tools {width:16px;text-align:right;}
+	table.vertical div.cmn_tab .tools * {margin-top:3px;}
+table.vertical table.tab_border {border:1px solid #98C5DA;}
+table.vertical .tab_cell {vertical-align:top;padding:2px 0;height:0;}
+table.vertical .tab_cell .content {overflow:visible;}
+
+table.cmn_tab {
+	/*border-collapse:collapse;*/
+	border-left:solid 0px #98C5DA;
+	width:100%;
+}
+table.cmn_tab tbody tr td.tab_selected {
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	color: #122347;
+	text-decoration: none;
+	font-weight:normal;
+	margin-left:20px;
+	margin-right:20px;
+	border-top:solid 0px #98C5DA;
+	border-left:solid 0px #98C5DA;
+	border-right:solid 1px #98C5DA;
+	border-bottom:0px solid #FFFFFF;
+	background:#FFFFFF;
+	text-align:center;
+	width:110px;
+	height:22px;
+}
+table.cmn_tab tbody tr td.tab_unselected {
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	color: #236ca4;
+	text-decoration: none;
+	font-weight:normal;
+	margin-left:20px;
+	margin-right:20px;
+	background:url(images/tab_bg.gif) #CAE8EE repeat-x;
+	border-top:solid 0px #98C5DA;
+	border-left:solid 0px #98C5DA;
+	border-right:solid 1px #98C5DA;
+	border-bottom:solid 1px #98C5DA;
+	text-align:center;
+	width:110px;
+	height:22px;
+}
+table.cmn_tab tbody tr td.tab_disabled {
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	color: #999999;
+	text-decoration: none;
+	font-weight:bold;
+}
+table.cmn_tab tbody tr td.tab_unselected a {
+	color:#236ca4;
+}
+table.cmn_tab tbody tr td.tab_selected a {
+	color:#122347;
+	cursor:default;
+}
+table.cmn_tab tr td{
+	padding-top:4px;
+	padding-left:6px;
+	padding-right:6px;
+}
+table.cmn_tab .border_top {
+	border-bottom:1px #98C5DA solid;
+	text-align:right;
+	background:url(images/tab_bg.gif) #CAE8EE repeat-x;
+	word-wrap:keep-all;word-break:keep-all;
+	white-space:nowrap;
+}
+table.cmn_tab .border_top .ico {
+	cursor:pointer;
+}
+table.cmn_tab .border_top h1 {
+	width:100px;
+	float:right;
+	text-align:right;
+}
+
+/* For Unfixed Tab */
+table.cmn_tab.set td.tab_unselected {cursor:pointer;width:95px!important;}
+table.cmn_tab.set td.tab_selected {padding-left:0;width:95px!important;}
+table.cmn_tab .current {position:relative;}
+	table.cmn_tab .current:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+	table.cmn_tab .current span {margin:0 13px 0 6px;display:block}
+		table.cmn_tab .current span img {display:none;}
+		table.cmn_tab .current span b {font-weight:normal;line-height:1.231;}
+	table.cmn_tab .current span.icon {margin-left:20px;}
+			table.cmn_tab .current span.icon img {display:block;position:absolute;left:6px;top:1px;}
+	table.cmn_tab .current .down {cursor:pointer;margin:-10px -1px 2px 0;+margin-top:-11px;width:16px;height:16px;background:url(images/icon/drop.gif) 0 0 no-repeat;position:absolute;right:-3px;+right:2px;top:50%;}
+	table.cmn_tab .current.hidden {display:block;}	/* No Menu Button*/
+		table.cmn_tab .current.hidden span {margin:2px 0 0 6px;}
+		table.cmn_tab .current.hidden .down {display:none;}
+	table.cmn_tab .tab_selected .cmn_tab_menu {margin:2px 0 0 84px;+margin:3px 0 0 37px;}
+		table.cmn_tab .tab_selected .cmn_tab_menu a {cursor:pointer!important;}
+table.cmn_tab td.tab_unselected.button {font-family:"宋体";padding:2px 2px 0 2px;border-top:none!important;border-right:none!important;cursor:default!important;width:17px!important;}
+	/* Tip And Cover The Left Border Of Table */
+	table.cmn_tab .button div.tip {word-wrap:keep-all;word-break:keep-all;white-space:nowrap;+border-left:1px solid #F3F9FA;+position:relative;+left:-24px;padding:5px 0 0 0;+padding:6px 0 0 20px;margin-top:-2px;height:17px;+height:21px;color:#7E7E7E;font-family:"宋体";}
+		table.cmn_tab .button div.tip:after {content:".";display:block;float:left;clear:both;margin:-20px 0 0 -24px;text-indent:1000px;width:1px;height:23px;border-left:1px solid #F3F9FA;}
+table.cmn_tab .ico{width:16px;height:16px;margin:0;cursor:pointer;}
+	table.cmn_tab .ico.add {background:url(images/icon/plus2.gif)!important;display:block}
+	table.cmn_tab .ico.expand {background:url(images/icon/arrow_right.gif) !important;display:block}
+.cmn_tab_menu {border:1px solid #c0d3e1;position:absolute;background:white;z-index:50;list-style:none outside;width:auto;background-color:#E6EFF4;text-align:left;}
+.cmn_tab_menu.big {width:auto;margin:4px 0 0 -3px;+margin:4px 0 0 -11px;cursor:default;}
+	.cmn_tab_menu a {display:block;line-height:22px;+line-height:23px;padding:0 6px 0 17px;color:#000!important;white-space:nowrap;}
+	.cmn_tab_menu .delete {background:url(images/icon/tab_del.gif) no-repeat 2px 2px;}
+	.cmn_tab_menu .rename {background:url(images/icon/tab_rename.gif) no-repeat 2px 2px;}
+	.cmn_tab_menu .refresh {background:url(images/icon/tab_refresh.gif) no-repeat 2px 2px;}
+	.cmn_tab_menu .dispatch {background:url(images/icon/tab_dispatch.gif) no-repeat 2px 2px;}
+	.cmn_tab_menu .copy {background:url(images/icon/tab_copy.gif) no-repeat 2px 2px;}
+	.cmn_tab_menu .input {cursor:default;padding:0 3px 0 0;}
+		.cmn_tab_menu .input input {margin:0 4px 2px 4px;+margin:auto;}
+		.cmn_tab_menu a:hover {background-color:white;color:#155175;}
+
+.tab_border {
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	border-left: 0px solid #c0d3e1;
+	border-right: 0px solid #c0d3e1;
+	border-bottom: 0px solid #c0d3e1;
+	background:white;
+	width:100%;
+	height:100%;
+	border-collapse:collapse;
+}
+.tab_border td {}
+/* padding: 8px ! important; height: 100%; position: relative; */
+.tab_border .content {padding:0px!important;+padding:0px;vertical-align:top;margin:8px;+margin:0;width:auto;+width:100%;height:100%;overflow-y:auto;overflow-x:auto;}
+	/*.tab_border .content:after {content:".";display:block;height:100%;width:100%;background:red;clear:both;}*/
+.tab_border iframe.content {width:100%!important;padding:0!important;margin:0 !important;overflow:auto!important;}
+.tab_border .content #content_1 {height:100%;}
+
+table.cmn_tab .inplace-editor {
+	background:#ffffff;
+	font-size:12px;
+	height:15px;
+	border: 1px solid #c0c1b3;
+	width:70px;
+}

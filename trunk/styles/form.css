@@ -1,0 +1,184 @@
+﻿.cmn_form{
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	color: #484848;
+	border: 0px solid #c0c1b3;
+}
+.cmn_form .error{
+	padding-top:10px;
+	line-height: 20px;
+	-line-height: 16px;
+	color: #FF0000;
+	position:relative;
+	bottom:-3px;
+	background:url(images/icon/icon_error.gif) no-repeat 0 10px;
+	height: 16px;
+	padding-left: 17px!important;
+}
+.cmn_form td.error { /* For Cavy Error */
+	background:none;
+	padding:0 !important;
+}
+.cmn_form td.error span {
+	background:url(images/icon/icon_error.gif) no-repeat;
+	padding-left: 17px!important;
+	position:relative;
+	bottom:-6px;
+}
+.cmn_form .success{
+	line-height: 20px;
+	-line-height: 16px;
+	color: #009900;
+	background:url(images/icon/success.gif) no-repeat;
+	height: 16px;
+	padding-left: 17px!important;
+}
+input.cmn_form,table.cmn_form {
+	border: 1px solid #c0c1b3;
+	background:white;
+}
+
+/*  表单样式  line[分隔线]  even[浅底]  odd[深底]  */
+.cmn_form table {
+	font-family:"宋体";
+	border-spacing:0;
+	font-size:12px;
+	color:#042953;
+	line-height:14px;
+	text-align:left;
+	border-collapse:collapse;
+}
+.cmn_form table td {
+	padding:2px 4px 1px;
+}
+.cmn_form table .line td {
+	border-bottom:1px solid #98C5DA;
+	padding:1px 0 0 0;
+	empty-cells:show;
+}
+.cmn_form .vertical_line { /* 暂时没用，可删 */
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:50%;
+	margin:0 0 0 -8px;
+	background:#FFF;
+	width:8px;
+	padding-bottom:5000px;
+	zoom:1;
+}
+.cmn_form table .even td,.cmn_form table .even th {
+	background:white;
+}
+.cmn_form table .odd td,.cmn_form table .odd th {
+	background:#eff5f7;
+}
+.cmn_form table td.cmn_label {
+	word-wrap:keep-all;word-break:keep-all;white-space:nowrap;
+	padding-right:5px;
+}
+.cmn_form table th {
+	font-weight:normal;
+	white-space:nowrap;
+	vertical-align:top;
+	line-height:22px;
+	padding:3px 4px 0 0;
+}
+.cmn_form .even td,.cmn_form .odd td,.cmn_form .even th,.cmn_form .odd th {
+	padding:4px 8px 4px 4px !important;
+	vertical-align:top;
+}
+
+.cmn_label,.cmn_form .label{
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	color: #484848;
+}
+.cmn_must {
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	color:#FF0000;
+}
+.cmn_title {
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	color:#484848;
+	font-weight:bold;
+}
+.cmn_form tr td{
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	padding-left:3px;
+}
+.cmn_form tbody tr.odd {
+	background:#f3f3f3;
+    color:#484848;
+}
+.cmn_form tbody tr.even {
+	background:#e9e9e9;
+	color:#484848;
+}
+.cmn_form tbody tr.child {
+	background:#EFEFEF;
+    color:#484848;
+}
+select {
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	color: #484848;
+	border: 1px solid #c0c1b3;
+	height: 19px;
+	padding:1px;
+	+height:18px;
+}
+
+.cmn_btn {
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	color: #18395b;
+	background: #FFFFFF url(images/btn_bg.gif) repeat-x 0;
+	height:auto;
+	+height:20px;
+	cursor:pointer;
+	border:1px solid #78aec0;
+	line-height:10px;
+	+line-height:18px;
+	font-family:Arial, Helvetica, sans-serif;
+	border-collapse:collapse;
+	border-spacing:0px;
+}
+.cmn_btn[disabled] {
+	color:#D2D2D2;
+	border:1px solid #BAD5E9;
+	cursor:default;
+}
+a.cmn_btn {
+	text-decoration:none;
+	padding:2px 5px;
+	+padding:0 5px;
+	line-height:22px;
+	+line-height:18px;
+	font-family:"宋体";
+}
+a.cmn_btn:hover {
+	color: #18395b!important;
+}
+a.button {
+	border:1px solid #9db6cb;
+	padding:3px 5px 1px 5px;
+	background: #d6e9f2;
+	color:#122347 !important;
+	line-height:20px;
+	zoom:1;
+}
+input.text,button.text,textarea.text,input.password {
+	font:12px Tahoma,Arial,Verdana,Helvetica,sans-serif,"宋体";
+	color: #484848;
+	border: 1px solid #c0c1b3;
+	height:19px;
+}
+textarea.text {
+	height:auto;
+}
+
+.cmn_icon {
+    cursor:pointer;
+    margin: 1px 1px 1px 1px;
+}
+/* For Opera ----------------------------------*/
+@media all and (min-width:0px){
+	.cmn_btn {height:20px!important;line-height:14px;}
+}
