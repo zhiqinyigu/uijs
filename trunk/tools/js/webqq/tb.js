@@ -1,0 +1,1 @@
+WEBQQ.obj.QQClient.mainPanel.handleLoadWeather("银川;10℃;25℃;http://cache.soso.com/zdq/tb/s_a0.png");
