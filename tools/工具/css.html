@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=gb2312"> 
+ 
+  
+  <title>CSS代码格式化和加密化</title> 
+  <meta name="Generator" content="EditPlus"> 
+  <meta name="Author" content=""> 
+  <meta name="Keywords" content=""> 
+  <meta name="Description" content=""> 
+<link rel="shortcut icon" href="http://www.xhlv.com/favicon.ico">
+</head><body> 
+<script language="JavaScript"> 
+<!-- 
+function $() { 
+  var elements = new Array(); 
+  for (var i = 0; i < arguments.length; i++) { 
+  var element = arguments[i]; 
+  if (typeof element == 'string') 
+    element = document.getElementById(element); 
+  if (arguments.length == 1)  
+    return element;    
+  elements.push(element); 
+  }    
+  return elements; 
+} 
+function CSSencode(code) 
+{ 
+ code = code.replace(/\n/ig,''); 
+ code = code.replace(/(\s){2,}/ig,'$1'); 
+ code = code.replace(/\t/ig,''); 
+ code = code.replace(/\n\}/ig,'\}'); 
+ code = code.replace(/\n\{\s*/ig,'\{'); 
+ code = code.replace(/(\S)\s*\}/ig,'$1\}'); 
+ code = code.replace(/(\S)\s*\{/ig,'$1\{'); 
+ code = code.replace(/\{\s*(\S)/ig,'\{$1'); 
+ return code; 
+} 
+function CSSdecode(code) 
+{ 
+ code = code.replace(/(\s){2,}/ig,'$1'); 
+ code = code.replace(/(\S)\s*\{/ig,'$1 {'); 
+ code = code.replace(/\*\/(.[^\}\{]*)}/ig,'\*\/\n$1}'); 
+ code = code.replace(/\/\*/ig,'\n\/\*'); 
+ code = code.replace(/;\s*(\S)/ig,';\n\t$1'); 
+ code = code.replace(/\}\s*(\S)/ig,'\}\n$1'); 
+ code = code.replace(/\n\s*\}/ig,'\n\}'); 
+ code = code.replace(/\{\s*(\S)/ig,'\{\n\t$1'); 
+ code = code.replace(/(\S)\s*\*\//ig,'$1\*\/'); 
+ code = code.replace(/\*\/\s*([^\}\{]\S)/ig,'\*\/\n\t$1'); 
+ code = code.replace(/(\S)\}/ig,'$1\n\}'); 
+ code = code.replace(/(\n){2,}/ig,'\n'); 
+ code = code.replace(/:/ig,': '); 
+ code = code.replace(/  /ig,' '); 
+ return code; 
+} 
+//--> 
+</script> 
+<style>*{font:12px,"宋体";}input{border:1px solid #cccccc;color:#666666;font-size:12px;padding:2px 0 0 0;}textarea{border:1px solid #cccccc;margin:0 0 5px 0;}</style>
+CSS代码格式化和压缩化 /*请将CSS代码复制到下面*/ <br>
+<textarea name="" rows="" cols="" style="width: 100%; height: 300px;" id="code" title="www.xhlv.com"></textarea><br> 
+<input onclick="$('code').value = CSSdecode($('code').value);" value="格式化" type="button"> | <input onclick="$('code').value = CSSencode($('code').value);" value="压缩化" type="button">  | <input onclick="window.clipboardData.setData('Text',$('code').value);" value="复制" type="button">  | <input onclick="$('code').value = window.clipboardData.getData('Text');" value="粘贴" type="button">  | <input onclick="$('code').value = ''" value="清空" type="button">
+  
+</body></html>
