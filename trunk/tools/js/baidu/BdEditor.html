@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>BdEditor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<script type="text/javascript" src="BdEditor-mined.js?v=2.3"></script>
+</head>
+<body>
+<textarea name="spBlogCmtText" id="spBlogCmtText" style="width:520px;height:155px" onFocus="hidErr(3);" ></textarea>
+
+<script>
+
+	var editor=null;
+
+	try{
+
+		editor=new BdEditor("spBlogCmtText",{width:"100%",height:"155px"});
+
+		editor.onfocus = function(){hidErr(3);}
+
+		editor.render();
+
+	}catch(e){
+
+		var spBlogCmtText = document.getElementById("spBlogCmtText");
+
+		var p = spBlogCmtText.previousSibling;
+
+		while(p && p.nodeType != 1) p = p.previousSibling;
+
+		if(p && /bdeditor_container/.test(p.id)){
+
+			p.parentNode.removeChild(p);
+
+		}
+
+		spBlogCmtText.style.display = '';
+
+		editor=null;
+
+	}
+
+</script>
+</body>
+</html>
