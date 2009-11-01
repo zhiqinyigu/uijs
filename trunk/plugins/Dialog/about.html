@@ -1,0 +1,93 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>about</title>
+<link rel="stylesheet" href="../../styles/link.css" type="text/css">
+<link rel="stylesheet" href="../../styles/form.css" type="text/css">
+<link rel="stylesheet" href="../../styles/table.css" type="text/css">
+<link rel="stylesheet" href="../../styles/page.css" type="text/css">
+</head>
+<body class="dialog">
+<div class="about noborder" id="about">
+	<!-- class="about noborder" Use In Dialog -->
+	<table class="cmn_form" cellspacing="0">
+		<thead>
+			<tr>
+				<td><img src="../../styles/images/logo/login_logo_waf_zh_CN.png" class="logo"><img src="../../styles/images/logo/nsfocus.png" class="nsfocus"></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="content">
+					<br>
+					<table class="wrap" cellspacing="0">
+						<tr>
+							<td>
+								<table class="cmn_label">
+									<tr>
+										<td>产品名称</td>
+										<td>: WEB应用防火墙</td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>&nbsp;</td>
+										<td></td>
+									</tr>
+								</table>
+							</td>
+							<td>
+								<table class="cmn_label">
+									<tr>
+										<td>技术支持信箱</td>
+										<td>: support@nsfocus.com</td>
+									</tr>
+									<tr>
+										<td>技术支持电话</td>
+										<td>: 400-818-6868</td>
+									</tr>
+									<tr>
+										<td>绿盟科技网站</td>
+										<td>: <a href="http://www.nsfocus.com" target="_blank">http://www.nsfocus.com</a></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<table class="wrap" cellspacing="0">
+						<tr>
+							<td>
+								<table class="cmn_label">
+									<tr>
+										<td >警告：<br/>本产品受著作权法和相关国际公约的保护，未经授权不得擅自复制或散布本产品的部分或全部。否则将承受严厉的民事和刑事处罚，对已知的违反者将给予法律范围内最严厉的制裁。
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<table class="cmn_label copyright" cellspacing="0" cellpadding="0">
+						<tr>
+							<th><a href="article.html" onclick="top.dialog.show({title:'用户许可协议',url:this.href,size:'medium',resize:true})">用户许可协议</a></th>
+							<td>版权所有 &copy; 2009 绿盟科技</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+	//解决About页面中英文高度不一样的问题
+	var delay = setInterval(function(){
+		if (document.getElementById('about').clientHeight != 0) {
+			top.dialog.show({height:document.getElementById('about').clientHeight + 25});
+			clearInterval(delay);
+		}
+	},100);
+</script>
+</body>
+</html>
