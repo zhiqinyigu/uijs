@@ -1,0 +1,98 @@
+﻿<html>
+<head>
+<title>Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../styles/link.css" rel="stylesheet" type="text/css" />
+<link href="../../styles/page.css" rel="stylesheet" type="text/css" />
+<link href="../../styles/tab.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/ui.js"></script>
+<script type="text/javascript" src="../../../lib/ui.Dialog.js"></script>
+</head>
+<body class="main">
+<!-- Tab 标签 start -->
+<table cellspacing="0" cellpadding="0" width="100%" height="100%">
+	<tr>
+		<td>
+			<div class="cmn_tab">
+				<div class="line"></div>
+				<table>
+					<tr>
+						<td class="tab_selected"><a href="#">样式应用</a></td>
+					</tr>
+				</table>
+			</div>
+ 		</td>
+	</tr>
+	<tr>
+		<td valign="top" height="100%">
+			<table class="tab_border">
+				<!-- 内容 -->
+				<tr>
+					<td valign="top">
+						<div class="content">
+							<table class="cmn_table">
+								<tr class="first_title">
+									<td>参数</td>
+									<td>说明</td>
+								</tr>
+								<tr class="even">
+									<td><b>name</b>(String)</td>
+									<td>菜单对象名</td>
+								</tr>
+								<tr class="odd">
+									<td><b>url</b>(String)</td>
+									<td>对话框里面页面的url地址</td>
+								</tr>
+								<tr class="even">
+									<td><b>size</b>(String)</td>
+									<td>对话框的尺寸，默认提供三种尺寸，'small'、'medium'、'big'</td>
+								</tr>
+								<tr class="odd">
+									<td><b>width</b>(Number)</td>
+									<td>对话框的宽度</td>
+								</tr>
+								<tr class="even">
+									<td><b>height</b>(Number)</td>
+									<td>对话框的高度度</td>
+								</tr>
+								<tr class="odd">
+									<td><b>close</b>(Boolean)</td>
+									<td>默认值为ture，是否启用关闭对话框的功能</td>
+								</tr>
+								<tr class="even">
+									<td><b>move</b>(Boolean)</td>
+									<td>默认值为true，是否启用移动对话框的功能</td>
+								</tr>
+								<tr class="odd">
+									<td><b>resize</b>(Boolean)</td>
+									<td>默认值为true，是否启用缩放对话框大小的功能</td>
+								</tr>
+								<tr class="even">
+									<td><b>call</b>(String)</td>
+									<td>关闭对话框时，执行某个JS命令</td>
+								</tr>
+							</table>
+
+							<br />
+							var dialog = new UI.Dialog({name:'dialog'});<br />
+							dialog.show();<br />
+							dialog.hide();<br />
+							dialog.show({...});
+
+							<br />
+							<div class="sub_title"><span>示例</span></div>
+							<input type="button" class="cmn_btn" value="顶层对话框" onclick="top.UI.Dialog.location = location;top.dialog.show({title:'关于',url:'about.html',width:532,height:360,resize:false,call:'UI.Dialog.location.reload();dialog.show({resize:true});'});" />
+<script type="text/javascript">
+	var dialog = new UI.Dialog({name:'dialog'});
+</script>
+						
+						</div>
+					</td>
+				</tr>
+			</table>
+ 		</td>
+	</tr>
+</table>
+<!-- Tab 标签 end -->
+</body>
+</html>
