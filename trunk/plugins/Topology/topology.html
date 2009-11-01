@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../styles/link.css" rel="stylesheet" type="text/css" />
+<link href="../../styles/print.css" rel="stylesheet" type="text/css" media="print" />
+<link href="../../styles/page.css" rel="stylesheet" type="text/css" />
+<link href="../../styles/tab.css" rel="stylesheet" type="text/css"/>
+<link href="../../styles/form.css" rel="stylesheet" type="text/css"/>
+<link href="../../styles/table.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../js/prototype.js"></script>
+<!--[if IE]><script src="../../js/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="../../../lib/ui.js"></script>
+<script type="text/javascript" src="../../../lib/ui.Dialog.js"></script>
+<script type="text/javascript" src="../../../lib/ui.PopupMenu.js"></script>
+<script type="text/javascript" src="../../../lib/ui.Topology.js"></script>
+<script>
+var dialog = new UI.Dialog({name:'dialog'});
+window.onload = function() {
+	var xData = [
+		{name:'主机1',x:50,y:50,ico:'../../styles/images/icon/map/host.gif',son:[
+			{name:'设备1',x:20,y:200,line:{color:'#CC0000',width:'2'},ico:'../../styles/images/icon/map/device.gif',son:[
+				{name:'主机2',x:200,y:200,ico:'../../styles/images/icon/map/host.gif',son:[
+					{name:'设备1',x:370,y:120,ico:'../../styles/images/icon/map/device.gif'},
+					{name:'设备2',x:270,y:220,ico:'../../styles/images/icon/map/device.gif'},
+					{name:'设备3',x:270,y:270,line:{color:'#ECEC00'},ico:'../../styles/images/icon/map/device.gif'}
+				]}
+			]},
+			{name:'设备2',x:140,y:100,ico:'../../styles/images/icon/map/device.gif'},
+			{name:'设备3',x:70,y:140,ico:'../../styles/images/icon/map/device.gif'}
+		]},
+		{name:'主机3',x:270,y:100,ico:'../../styles/images/icon/map/host.gif'}
+	];
+	window['topology'] = new UI.Topology({id:'x',line:{color:'#00CC00',width:'1',alpha:'1'},width:500,height:400,data:xData,popupMenu:{
+		main : [
+			{name:'添加',extend:'<img src="../../styles/images/icon/add.gif"/>',call:function(){
+				topology.currentId = null;
+				dialog.show({title:'添加子节点',width:300,height:80,html:$('add')});
+			}}
+		],
+		son : [
+			{name:'编辑',extend:'<img src="../../styles/images/icon/edit.gif"/>',call:function(){
+				$('edit_name').value = topology.current.name;
+				dialog.show({title:'编辑',width:300,height:80,html:$('edit')});
+			}},
+			{name:'删除',extend:'<img src="../../styles/images/icon/delete.gif"/>',call:function(){
+				topology.remove();
+			}},
+			{name:'添加子节点',extend:'<img src="../../styles/images/icon/add.gif"/>',call:function(){
+				dialog.show({title:'添加子节点',width:300,height:80,html:$('add')});
+			}}
+		]
+	}});
+	//console.log(UI.Browser.maxthon);
+};
+</script>
+</head>
+<body onmousedown="//alert('x');" onmouseup="//alert('y');">
+	<input type="button" value="恢复" onclick="topology.reset();" class="cmn_btn"/> <input type="button" value="保存" onclick="topology.save();" class="cmn_btn"/>&nbsp;&nbsp;&nbsp;&nbsp; <!-- <input type="button" value="添加主机" onclick="topology.add({name:'主机',x:270,y:20,ico:'../../styles/images/icon/map/host.gif'});" class="cmn_btn"/> <input type="button" value="添加设备" onclick="topology.add({name:'设备',x:330,y:20,ico:'../../styles/images/icon/map/device.gif'});" class="cmn_btn"/> -->
+	<br /><br />
+	<canvas id="x" class="topology"></canvas>
+	<span id="msg"></span>
+	<div id="add" style="display:none;">
+		<form method="post" action="" class="cmn_form" onsubmit="topology.add({name:$('add_name').value,ico:'../../styles/images/icon/map/device.gif'});dialog.hide();return false;">
+			<table>
+				<tr>
+					<td>名称</td>
+					<td><input type="text" class="text" name="add_name" id="add_name" /></td>
+				</tr>
+				<!-- <tr>
+					<td>类型</td>
+					<td><input type="radio" name="add_type" value="../../styles/images/icon/map/device.gif" checked="checked" />设备 <input type="radio" value="../../styles/images/icon/map/host.gif" name="add_type" />主机</td>
+				</tr> -->
+				<tr>
+					<td></td>
+					<td><input type="submit" class="cmn_btn" value="确定" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div id="edit" style="display:none;">
+		<form method="post" action="" class="cmn_form" onsubmit="topology.edit({name:$('edit_name').value,ico:topology.current.ico});dialog.hide();return false;">
+			<table>
+				<tr>
+					<td>名称</td>
+					<td><input type="text" class="text" name="edit_name" id="edit_name" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" class="cmn_btn" value="确定" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

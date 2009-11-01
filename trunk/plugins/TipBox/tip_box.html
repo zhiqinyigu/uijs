@@ -1,0 +1,104 @@
+﻿<html>
+<head>
+<title>Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../styles/link.css" rel="stylesheet" type="text/css" />
+<link href="../../styles/page.css" rel="stylesheet" type="text/css" />
+<link href="../../styles/tab.css" rel="stylesheet" type="text/css"/>
+<link href="../../styles/form.css" rel="stylesheet" type="text/css"/>
+<link href="../../styles/table.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../../lib/ui.js"></script>
+<script type="text/javascript" src="../../../lib/ui.TipBox.js"></script>
+</head>
+<body class="main">
+<!-- <img src="http://desk.kuyue.com/d/2007-9/200709150141026063.jpg" /> -->
+<!-- Tab 标签 start -->
+<table cellspacing="0" cellpadding="0" width="100%" height="100%">
+	<tr>
+		<td>
+			<div class="cmn_tab">
+				<div class="line"></div>
+				<table>
+					<tr>
+						<td class="tab_selected"><a href="#">样式应用</a></td>
+					</tr>
+				</table>
+			</div>
+ 		</td>
+	</tr>
+	<tr>
+		<td valign="top" height="100%">
+			<table class="tab_border">
+				<!-- 内容 -->
+				<tr>
+					<td valign="top">
+						<div class="content">
+							<table class="cmn_table">
+								<tr class="first_title">
+									<td>样式名</td>
+									<td>用途</td>
+									<td>适用标签</td>
+								</tr>
+								<tr class="even">
+									<td><b>tipBox</b></td>
+									<td>用来绑定tipBox事件</td>
+									<td>除tr,tbody,tfoot外的所有标签</td>
+								</tr>
+							</table>
+
+							<br /><br />
+							<span class="cmn_warning">需要加载ui.js，并在页面加载完后执行 UI.tipBox();</span><br />
+							<span class="text_comment">“提示内容”放在标签的title属性中，支持HTML，并指定标签class为“tipBox”</span><br /><br />
+							<span class="cmn_warning">UI.tipBox();可以指定所要寻找的class和范围（默认的class为“tipBox”，默认的范围是所有标签）</span><br />
+							<span class="text_comment">例如：<br/>1、将页面中class为ico的标签绑定事件，UI.tipBox('ico');<br/>2、在id为report的标签内的子标签中class为ico的绑定事件，UI.tipBox($('report'),'ico');</span><br /><br />
+							<span class="cmn_warning">AJAX嵌入HTML后，也可以再次执行 UI.tipBox();，但建议限制一下范围</span><br />
+							<span class="text_comment">例如：<br/>&lt;div id="report"&gt;&lt;/div&gt;中通过AJAX方式嵌入HTML后，可以执行 <span class="must">UI.tipBox($('report'));</span> ，仅对id为report的div中的tipBox进行事件绑定。</span><br /><br />
+							<span class="cmn_warning">tipBox默认宽度为250px，特殊的宽度可以用CSS来指定</span><br />
+							<span class="text_comment">例如：<br/>div.cmn_tab .tools .tip_box {width:500px;}<br/>body.dialog .tip_box {width:300px;}</span><br /><br />
+
+							<br /><br />
+							<div class="sub_title"><span>示例一（表单提示）</span></div>
+							<form method="post" action="" class="cmn_form">
+								<table>
+									<tr>
+										<th>目的IP</th>
+										<td><label class="tipBox" title="Label"><input type="text" class="text tipBox" title="<div class='list'><em>任务执行期间发生错误！</em><ul><li>IP：10.66.53.21</li><li>原因：网络超时</li><li>IP：10.66.53.21</li><li>原因：网络超时</li></ul></div>" /><span>555</span>............</label>XXXXXXXX <select><option>select to test ie 6...................................</option></select></td>
+									</tr>
+									<tr>
+										<th>目的IP</th>
+										<td><label class="tipBox" title="Label"><input type="text" class="text tipBox" title="B,ip地址支持通配符,如:192.168.1.*;或10.1.1.1-10,多个IP用空格间隔<br />..." /><span>555</span>............</label>XXXXXXXX <select><option>select to test ie 6...................................</option></select></td>
+									</tr>
+									<tr>
+										<th></th>
+										<td><input type="button" class="cmn_btn" value="提交" /></td>
+									</tr>
+								</table>
+							</form>
+							<br />
+							<div class="sub_title"><span>示例二（表格提示）</span></div>
+								<table class="cmn_table" style="">
+									<tr class="first_title">
+										<td class="tipBox" title="ID">ID</td>
+										<td class="tipBox" title="Value">Value</td>
+									</tr>
+									<tr class="even">
+										<td class="tipBox" title="1">1</td>
+										<td class="tipBox" title="<dl><dt>Title：</dt><dd>aaaa</dd></dl>" id="x">aaaaaaaaaaaaaaa...</td>
+									</tr>
+								</table>
+						</div>
+					</td>
+				</tr>
+			</table>
+ 		</td>
+	</tr>
+</table>
+<!-- Tab 标签 end -->
+<script type="text/javascript">
+	//UI.EA(window,'load',function(){
+	UI.ready(function(){
+		//alert('x');
+	});
+	UI.tipBox();
+</script>
+</html>

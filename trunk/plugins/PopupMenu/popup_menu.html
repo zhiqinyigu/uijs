@@ -1,0 +1,140 @@
+﻿<html>
+<head>
+<title>Main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../styles/link.css" rel="stylesheet" type="text/css" />
+<link href="../../styles/page.css" rel="stylesheet" type="text/css" />
+<link href="../../styles/tab.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/ui.js"></script>
+<script type="text/javascript" src="../../../lib/ui.PopupMenu.js"></script>
+</head>
+<body class="main">
+<!-- Tab 标签 start -->
+<table cellspacing="0" cellpadding="0" width="100%" height="100%">
+	<tr>
+		<td>
+			<div class="cmn_tab">
+				<div class="line"></div>
+				<table>
+					<tr>
+						<td class="tab_selected"><a href="#">样式应用</a></td>
+					</tr>
+				</table>
+			</div>
+ 		</td>
+	</tr>
+	<tr>
+		<td valign="top" height="100%">
+			<table class="tab_border">
+				<!-- 内容 -->
+				<tr>
+					<td valign="top">
+						<div class="content">
+							<table class="cmn_table">
+								<tr class="first_title">
+									<td>参数</td>
+									<td>说明</td>
+								</tr>
+								<tr class="even">
+									<td>name(String)</td>
+									<td>菜单名称</td>
+								</tr>
+								<tr class="odd">
+									<td>extend(String)</td>
+									<td>图标、单选框、复选框的HTML代码</td>
+								</tr>
+								<tr class="even">
+									<td>call(Funciton)</td>
+									<td>点击菜单后的返回函数</td>
+								</tr>
+								<tr class="odd">
+									<td>data(Array)</td>
+									<td>子菜单数组，格式同上</td>
+								</tr>
+							</table>
+
+							<br />
+							<span class="cmn_warning">支持复选框和单选框功能，但必须由菜单外部程序来处理数据，因为菜单关闭后checkbox和radio可能就不存在了。</span><br /><br />
+							<span class="cmn_warning">菜单左右键的指定：</span>（UI.PopupMenu第二个参数为true时生成左键菜单，第二个参数为flase或缺省时生成右键菜单）<br />
+							<span class="text_comment">new UI.PopupMenu(UI.G('popupMenu_1'),true);//左键菜单<br />new UI.PopupMenu(UI.G('popupMenu_1'));//右键菜单<br /></span>
+							<br />
+							<br />
+							<div class="sub_title"><span>示例（区域单个菜单）</span></div>
+							<style type="text/css">
+								/* Only For Demo Test */
+								.test_box {position:relative;background:#E9F5F9;border:1px solid #9ACAE0;width:300px;height:200px;text-align:center;line-height:200px;float:left;margin:0 8px 8px 0;}
+								.test_box .cont {position:absolute;top:8px;right:8px;text-align:right;}
+								div.msg {position:absolute;left:8px;margin:-90px 0 0 620px;overflow:auto;width:150px;border:1px solid #6D6D6D;background:#CACACA;line-height:16px;text-align:left;}
+							</style>
+							<div class="test_box" id="popupMenu_1">
+								<span>左键菜单</span>
+							</div>
+							<div class="test_box" id="popupMenu_2">
+								<span>右键菜单</span>
+							</div>
+							<br class="clear"/>
+							<select><option>test for ie6 ...........................................................................................................</option></select>
+							<div class="test_box msg" id="msg">
+								<div class="cont">
+									<b>Message</b>
+								</div>
+							</div>
+							<br class="clear"/>
+							<br />
+							<div class="sub_title"><span>示例（区域多个菜单）</span></div>
+							<div class="test_box" id="popupMenu_3">
+								<span>左键菜单 <a href="javascript:void(0);" onclick="popupMenu_3.popup([{name:'A'},{name:'AA'},{name:'AAA'}]);">A</a> <a href="javascript:void(0);" onclick="popupMenu_3.popup([{name:'B'},{name:'BB'},{name:'BBB'}]);">B</a> <a href="javascript:void(0);" onclick="popupMenu_3.popup();">UI</a></span>
+							</div>
+							<div class="test_box" id="popupMenu_4">
+								<span>右键菜单 <a href="javascript:void(0);" oncontextmenu="popupMenu_4.popup([{name:'A'},{name:'AA'},{name:'AAA'}]);">A</a> <a href="javascript:void(0);" oncontextmenu="popupMenu_4.popup([{name:'B'},{name:'BB'},{name:'BBB'}]);">B</a> <a href="javascript:void(0);" oncontextmenu="popupMenu_4.popup();">UI</a></span>
+							</div>
+							<br class="clear"/>
+							
+<script type="text/javascript">
+	var menuArray = [
+		{name:'剪贴',extend:'<img src="../../styles/images/icon/popup/cut.gif"/>',call:showMessage},
+		{name:'复制',extend:'<img src="../../styles/images/icon/popup/copy.gif"/>',call:showMessage},
+		{name:'粘贴',extend:'<img src="../../styles/images/icon/popup/paste.gif"/>',call:showMessage},
+		'',
+		{name:'编码',extend:'<input type="checkbox" checked />',data:[
+			{name:'UTF-8',extend:'<input type="radio" name="radio_1" checked />',call:showMessage},
+			{name:'GB2312',extend:'<input type="radio" name="radio_1" />',call:showMessage},
+			{name:'Unicode',extend:'<input type="radio" name="radio_1" />',call:showMessage},
+			{name:'ANSI',extend:'<input type="radio" name="radio_1" />',call:showMessage}
+		]},
+		{name:'导出',data:[
+			{name:'HTML',extend:'<img src="../../styles/images/icon/html.gif"/>',call:showMessage},
+			{name:'Word',extend:'<img src="../../styles/images/icon/word.gif"/>',call:showMessage},
+			{name:'PDF',extend:'<img src="../../styles/images/icon/pdf.gif"/>',call:showMessage},
+			{name:'Excel',extend:'<img src="../../styles/images/icon/execl.gif"/>',call:showMessage}
+		]},
+		'',
+		{name:'属性',call:showMessage}
+	];
+
+	var popupMenu_1 = new UI.PopupMenu(UI.G('popupMenu_1'),true);
+	popupMenu_1.build(menuArray);
+
+	var popupMenu_2 = new UI.PopupMenu(UI.G('popupMenu_2'));
+	popupMenu_2.build(menuArray);
+	
+	var popupMenu_3 = new UI.PopupMenu(UI.G('popupMenu_3'),true);
+	popupMenu_3.setActions(menuArray);
+
+	var popupMenu_4 = new UI.PopupMenu(UI.G('popupMenu_4'));
+	popupMenu_4.setActions(menuArray);
+
+	function showMessage(e){
+		UI.G('msg').innerHTML += 'Click -> ' + this.innerText + '<br/>';
+	}
+</script>
+						</div>
+					</td>
+				</tr>
+			</table>
+ 		</td>
+	</tr>
+</table>
+<!-- Tab 标签 end -->
+</body>
+</html>
