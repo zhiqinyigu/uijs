@@ -1,0 +1,126 @@
+﻿<html>
+<head>
+<title>时间日历控件</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../styles/link.css" rel="stylesheet" type="text/css" />
+<link href="../../styles/page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/ui.js"></script>
+<script type="text/javascript" src="../../../lib/ui.DatePicker.js"></script>
+</head>
+<body>
+<h1>时间日历控件</h1>
+<h2>思路</h2>
+<ol>
+	<li>借鉴了WdatePicker较好的交互，并有所改进；</li>
+	<li>满足产品中的国际化需求，以及可选的跨Iframe功能等；</li>
+	<li>为了原先老的日历控件提供原有的接口，以兼容老程序；</li>
+	<li>整个日历的弹出方式，完全使用JS生成Dom，插入到页面中，不采用Iframe加载或弹出窗口，这样可以减少很多http请求；</li>
+</ol>
+<h2>参数</h2>
+<table>
+	<tr>
+		<td><strong>format</strong>(String)</td>
+		<td>日历格式，'yyyy-MM-dd ww hh:mm:ss WW'或'yyyy-M-d w h:m:s W'是最全的，可任意组合<br />
+			<span class="text_comment">（yyyy年，MM月，dd日，ww星期几，hh小时，mm分钟，ss秒，WW第几周）</span>
+		</td>
+	</tr>
+	<tr>
+		<td><strong>lang</strong>(String)</td>
+		<td>日历语言，值可以为'en'、'en_US'、'zh_CN'、'zh_TW'，默认为'zh_CN'</td>
+	</tr>
+	<tr>
+		<td><strong>weekStartDay</strong>(Number)</td>
+		<td>一周开始的一天，默认为周一开始</td>
+	</tr>
+	<tr>
+		<td><strong>disabledWeekDays</strong>(Array)</td>
+		<td>禁用某星期，如：[1,2] 禁用星期一和星期二</td>
+	</tr>
+	<tr>
+		<td><strong>disabledWeeks</strong>(Array)</td>
+		<td>禁用某周，如：[1] 禁用第一周</td>
+	</tr>
+	<tr>
+		<td><strong>disabledDays</strong>(Array)</td>
+		<td>禁用某天，如：[10,11] 禁用10号和11号</td>
+	</tr>
+	<tr>
+		<td><strong>target</strong>(Array)</td>
+		<td>将日历分开输出到多个文本框，如：[UI.G('x1'),UI.G('x2'),UI.G('x3')]</td>
+	</tr>
+	<tr>
+		<td><strong>showWeek</strong>(Boolean)</td>
+		<td>显示第几周，默认值为false</td>
+	</tr>
+	<tr>
+		<td><strong>selectWeek</strong>(Boolean)</td>
+		<td>可以选择第几周，默认值为false</td>
+	</tr>
+</table>
+<br /><br />
+<span class="cmn_warning">需要加载cavy.js</span><br />
+<span class="text_comment">原先老的通用部件日历方法'onOpen'、'onWndClick'仍然可以正常使用，但建议使用新的方法'show'</span><br /><br />
+
+<h2>示例</h2>
+<table class="cmn_table plumb">
+	<tr>
+		<th width="150">年月日</th>
+		<td><input type="text" class="Wdate" value="2009-07-07" onclick="UI.DatePicker.show(event,{format:'yyyy-MM-dd'});" /> <span class="text_comment">UI.DatePicker.show(event,{format:'yyyy-MM-dd'});</span></td>
+	</tr>
+	<tr>
+		<th>月日</th>
+		<td><input type="text" class="Wdate" value="07-07" onfocus="UI.DatePicker.show(event,{format:'MM-dd'});" /> <span class="text_comment">UI.DatePicker.show(event,{format:'MM-dd'});</span></td>
+	</tr>
+	<tr>
+		<th>年日</th>
+		<td><input type="text" class="Wdate" value="2009-07" onfocus="UI.DatePicker.show(event,{format:'yyyy-dd'});" /> <span class="text_comment">UI.DatePicker.show(event,{format:'yyyy-dd'});</span></td>
+	</tr>
+	<tr>
+		<th>年月</th>
+		<td><input type="text" class="Wdate" value="2009-07" onfocus="UI.DatePicker.show(event,{format:'yyyy-MM'});" /> <span class="text_comment">UI.DatePicker.show(event,{format:'yyyy-MM'});</span></td>
+	</tr>
+	<tr>
+		<th>禁选周、星期、日</th>
+		<td><input type="text" class="Wdate" value="2009-07-07" onfocus="UI.DatePicker.show(event,{format:'yyyy-MM-dd',disabledWeeks:[4],disabledWeekDays:[2],disabledDays:[10,16]});" /> <span class="text_comment">UI.DatePicker.show(event,{format:'yyyy-MM-dd',disabledWeeks:[4],disabledWeekDays:[2],disabledDays:[10,16]});</span></td>
+	</tr>
+	<tr>
+		<th>星期日为每周第一天</th>
+		<td><input type="text" class="Wdate" value="2009-07-07" onfocus="UI.DatePicker.show(event,{format:'yyyy-MM-dd',weekStartDay:7});" /> <span class="text_comment">UI.DatePicker.show(event,{format:'yyyy-MM-dd',weekStartDay:7});</span></td>
+	</tr>
+	<tr>
+		<th>日历语言</th>
+		<td><input type="text" class="Wdate" value="2009-07-07" onfocus="UI.DatePicker.show(event,{format:'yyyy-MM-dd',lang:'en_US'});" /> <span class="text_comment">UI.DatePicker.show(event,{format:'yyyy-MM-dd',lang:'en_US'});</span></td>
+	</tr>
+</table>
+<br class="space_line"/>
+<table class="cmn_table plumb">
+	<tr>
+		<th width="150">显示第几周</th>
+		<td><input type="text" class="Wdate" value="2009-07-07 01" onfocus="UI.DatePicker.show(event,{format:'yyyy-MM-dd WW',lang:'',showWeek:true,weekStartDay:1});" /> <span class="text_comment"></span></td>
+	</tr>
+	<tr>
+		<th>选择第几周</th>
+		<td><input type="text" class="Wdate large" value="2009/07/07" onfocus="UI.DatePicker.show(event,{format:'yyyy/MM/dd',lang:'',selectWeek:true,weekStartDay:1});" /> <span class="text_comment"></span></td>
+	</tr>
+</table>
+<br class="space_line"/>
+<table class="cmn_table plumb">
+	<tr>
+		<th width="150">年月日、时间</th>
+		<td><input type="text" class="Wdate" value="2009-07-07 10:12:45" onfocus="UI.DatePicker.show(event,{format:'yyyy-MM-dd hh:mm:ss'});" /> <span class="text_comment">UI.DatePicker.show(event,{format:'yyyy-MM-dd hh:mm:ss'});</span></td>
+	</tr>
+	<tr>
+		<th>年月、时间</th>
+		<td><input type="text" class="Wdate" value="2009-07 10:12" onfocus="UI.DatePicker.show(event,{format:'yyyy-MM hh:mm'});" /> <span class="text_comment">UI.DatePicker.show(event,{format:'yyyy-MM hh:mm'});</span></td>
+	</tr>
+</table>
+<br class="space_line"/>
+<table class="cmn_table plumb">
+	<tr>
+		<th width="150">分开输出</th>
+		<td><input type="text" size="3" class="text" value="2009" id="date0_0" />年<input type="text" size="1" class="text" value="07" id="date0_1" />月<input type="text" size="1" class="text" value="07" id="date0_2" />日，星期<input type="text" size="1" class="text" value="6" id="date0_3" />，第<input type="text" size="1" class="text" value="28" id="date0_4" />周 <input type="image" src="../../styles/images/icon/calendar.gif" title="选择日期" onclick="UI.DatePicker.show(event,{format:'yyyy-MM-dd w WW',target:[UI.G('date0_0'),UI.G('date0_1'),UI.G('date0_2'),UI.G('date0_3'),UI.G('date0_4')]});" /> <span class="text_comment">UI.DatePicker.show(event,{format:'yyyy-MM-dd w WW',target:[UI.G('date0_0'),UI.G('date0_1'),UI.G('date0_2'),UI.G('date0_3'),UI.G('date0_4')]});</span><br />
+		<span id="date1_0">2009</span>年<span id="date1_1">07</span>月<span id="date1_2">07</span>日，星期<span id="date1_3">6</span>，第<span id="date1_4">28</span>周 <input type="image" src="../../styles/images/icon/calendar.gif" title="选择日期" onclick="UI.DatePicker.show(event,{format:'yyyy-MM-dd w WW',target:[UI.G('date1_0'),UI.G('date1_1'),UI.G('date1_2'),UI.G('date1_3'),UI.G('date1_4')]});" /></td>
+	</tr>
+</table>
+</body>
+</html>
