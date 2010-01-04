@@ -27,3 +27,10 @@ java -jar compiler.jar --js=../ui.Dialog.js --js_output_file=ui.tmp.js
 /* ui.all.min.js */
 java -jar compiler.jar --js=../ui.js
  --js_output_file=ui.all.min.js
+
+
+java -jar compiler.jar --js=../ui.js --js=../mi.js --js_output_file=ui.min.js
+java -jar compiler.jar --charset=gb2312 --js=../ui.mi.js --js=../mi.js --js_output_file=mi.js
+
+
+java -jar compiler.jar --help
