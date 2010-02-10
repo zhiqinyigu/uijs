@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>图片展示_国家馆库_世博频道_腾讯网</title>
+<link href="styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/ui.js?v=1.0"></script>
+</head>
+<body>
+<div class="mode_col_1">
+	<div class="top_nav">
+		<a href="http://2010.qq.com/" target="_blank" class="logo" title="魅力上海 精彩世博">魅力上海 精彩世博</a>
+		<a href="http://www.qq.com/" target="_blank">腾讯网首页</a> · <a href="http://3gqq.qq.com/" target="_blank">手机腾讯网</a> · <a href="javascript:void(0)" onclick="addBookmark(document.title)" target="_top">加入收藏</a> · <a href="javascript:void(0)" onclick="SetHome(this,window.location)" target="_top">设为首页</a> · <a href="http://www.qq.com/map/" target="_blank">导航</a>
+	</div>
+</div>
+<!-- <div class="mode_col_1">
+	<div class="location">
+		<p><a href="#">世博首页</a> >> <a href="#">国家库</a> >> <a href="#">中国</a> >> 图片展示(共224张) <a href="#">查看全部</a></p>
+		<div class="search">
+			<form method="post" action="">
+				<label for="s_key">请输入场馆关键字</label><input type="text" id="s_key" onfocus="this.previousSibling.style.display='none'" /><button type="submit">搜 索</button>
+			</form>
+		</div>
+	</div>
+	<div class="photo_box" id="photobox">
+		<h1>场馆图片：与自然融合的“畅想之洲”</h1>
+		<div class="picture">
+			<img src="images/pic_15.jpg" alt="场馆图片：与自然融合的“畅想之洲”" />
+			<a href="#" class="prev" title="上一张"><b></b></a> <a href="#" class="next" title="下一张"><b></b></a>
+		</div>
+		<div class="tools">
+			<a href="#"><b class="ico good"></b>赞(<span>5869人</span>)</a> <a href="#"><b class="ico full"></b>原图</a> <a href="#"><b class="ico share"></b>分享</a>
+		</div>
+		<div class="page">
+			<p><a href="#" class="prev_disable"><b>&lt;&lt;</b><span>上一张</span></a> <span class="num"><strong>3</strong>/224张</span> <a href="#" class="next"><span>下一张</span><b>&gt;&gt;</b></a></p>
+		</div>
+		<div class="list">
+			<ul>
+				<li class="cur"><a href="#"><img src="images/pic_13.png" alt="" onload="this.style.cssText='margin:-'+this.height/2+'px 0 0 -'+this.width/2+'px;'"/></a></li>
+				<li><a href="#"><img src="images/pic_13.png" alt="" onload="this.style.cssText='margin:-'+this.height/2+'px 0 0 -'+this.width/2+'px;'" /></a></li>
+				<li><a href="#"><img src="images/pic_13.png" alt="" onload="this.style.cssText='margin:-'+this.height/2+'px 0 0 -'+this.width/2+'px;'" /></a></li>
+				<li><a href="#"><img src="images/pic_13.png" alt="" onload="this.style.cssText='margin:-'+this.height/2+'px 0 0 -'+this.width/2+'px;'" /></a></li>
+				<li><a href="#"><img src="images/pic_13.png" alt="" onload="this.style.cssText='margin:-'+this.height/2+'px 0 0 -'+this.width/2+'px;'" /></a></li>
+			</ul>
+			<a href="#" class="prev_disable" title="上一页">上一页</a>
+			<a href="#" class="next" title="下一页">下一页</a>
+		</div>
+	</div>
+</div> -->
+<div class="mode_col_1">
+	<div class="location">
+		<p><a href="#">世博首页</a> >> <span id="imgLocation"></span>&nbsp;图片展示(共<span id="imgNumTotal">-</span>张) <a href="javascript:void(0)" id="imgAll">查看全部</a></p>
+	</div>
+	<div class="photo_box" id="imgBox">
+		<h1 id="imgTitle"></h1>
+		<div class="picture">
+			<img src="about:blank" alt="" id="imgCurrent" />
+			<a href="javascript:void(0)" class="prev prev_disable" rel="" id="imgPrev"><b></b></a> <a href="javascript:void(0)" class="next next_disable" rel="" id="imgNext"><b></b></a>
+			<div class="cover loading" id="imgCover"></div>
+		</div>
+		<div class="tools">
+			<a href="javascript:void(0)" id="imgFull" target="_blank"><b class="ico full"></b>原图</a> <a href="javascript:void(0)" onclick="if(window.clipboardData) {window.clipboardData.setData('Text',UI.G('imgFull').href);alert('复制成功！');}"><b class="ico share"></b>分享</a>
+		</div>
+		<div class="page">
+			<p><a href="javascript:void(0)" class="prev prev_disable" id="imgPrevBtn"><b>&lt;&lt;</b><span>上一张</span></a> <span class="num"><strong id="imgNumCurrent">-</strong>/<span id="imgNumTotal2">-</span>张</span> <a href="javascript:void(0)" class="next next_disable" id="imgNextBtn"><span>下一张</span><b>&gt;&gt;</b></a></p>
+		</div>
+		<div class="list">
+			<ul id="imgList"></ul>
+			<a href="javascript:void(0)" class="prev prev_disable" title="上一页" id="imgPrevPage">上一页</a>
+			<a href="javascript:void(0)" class="next next_disable" title="下一页" id="imgNextPage">下一页</a>
+		</div>
+	</div>
+	<div class="pane">
+		<ul class="pohto s_150_150" id="imgListAll"></ul>
+	</div>
+	<script type="text/javascript" src="js/ui.ImageDetail.js?v=1.0"></script>
+	<script type="text/javascript">
+		UI.ImageDetail.data=[' <a href="http://2010.qq.com/d/gj/1/1/">中国馆</a> >>',[[13,"北京天坛","http://mat1.gtimg.com/lady/images/index/2010/01/12/qq.jpg"],[14,"北京故宫","http://mat1.gtimg.com/lady/images/index/2010/01/12/qq.jpg"],[15,"四川九寨沟","http://mat1.gtimg.com/lady/images/index/2010/01/12/qq.jpg"],[16,"香港夜景","http://mat1.gtimg.com/lady/images/sj/2010/01/12/hot1.jpg"],[9,"陆家嘴金融贸易区","http://p.kaixin001.com/privacy/photo/52/54/116710_235525431.jpg"],[8,"上海外滩","http://img1.gtimg.com/2010/d/gj/piclib/20091214/6eea54c2c53bb722afcf6c728facefc53.jpg"],[10,"上海外滩","http://img1.gtimg.com/2010/d/gj/piclib/20091214/b5116d34f242ddd09968ff77db7b13793.jpg"],[11,"上海城隍庙","http://img1.gtimg.com/2010/d/gj/piclib/20091214/382a66967770e8cf112c726b8f3d31693.jpg"],[12,"上海新天地","http://img1.gtimg.com/2010/d/gj/piclib/20091214/d5166daeefd6ed5d2c62479e0cb3d6f03.jpg"],[1,"中国馆效果图","http://img1.gtimg.com/2010/d/gj/piclib/20091214/662f148918258b7d411f132ade5822873.jpg"],[2,"中国馆效果图","http://img1.gtimg.com/2010/d/gj/piclib/20091214/3babc15e6c8101793dcf99427d7f369d3.jpg"],[3,"第一抹“中国红”","http://img1.gtimg.com/2010/d/gj/piclib/20091214/5fb5973eecda2646caea6818c195f0493.jpg"],[4,"中国国家馆施工现场","http://img1.gtimg.com/2010/d/gj/piclib/20091214/b05f4eef8b41095aa1ac3891c856ffe33.jpg"],[5,"中国国家馆施工工地","http://img1.gtimg.com/2010/d/gj/piclib/20091214/9251dde418ebb7d58d8cca7d20ba2fe83.jpg"]]];
+		var url = UI.parseUrl('#');
+		if (url) {
+			UI.ImageDetail.init({current:url.picid,urlRuleBig:function(n){return n.replace('3.','.')},urlRule:function(n){return n.replace('3.','4.')},call:function(){if(window['pgvMain']) { pvRepeatCount = 1;pgvMain(); }},animate:false,loop:false});
+			//json:'photo_.js',d/'+url.libname+'/'+url.dataid+'/'+url.dataid+'/pic
+		}
+	</script>
+</div>
+<!--
+	pic.shtml#libname=samtest&dataid=10&picid=123123
+	digi.qq.com/d/samtest/1/1/pic.js
+-->
+<!-- <div class="mode_col_1">
+	<div id="photo_box"></div>
+	<script type="text/html" id="tmpl">
+		<div class="location">
+			<p><a href="#">世博首页</a> >> <a href="#">国家库</a> >> <a href="#">中国</a> >> 图片展示(共<%=list.length%>张) <a href="#">查看全部</a></p>
+			<div class="search">
+				<form method="post" action="">
+					<label for="s_key">请输入场馆关键字</label><input type="text" id="s_key" /><button type="submit">搜 索</button>
+				</form>
+			</div>
+		</div>
+		<div class="photo_box" id="photobox">
+			<h1><%=list[current].title%></h1>
+			<div class="picture">
+				<img src="<%=list[current].srcBig%>" alt="<%=list[current].title%>" />
+				<a href="#" class="prev" title="上一张"><b></b></a> <a href="#" class="next" title="下一张"><b></b></a>
+			</div>
+			<div class="tools">
+				<a href="#"><b class="ico good"></b>赞(<span>5869人</span>)</a> <a href="<%=list[current].srcBig%>"><b class="ico full"></b>原图</a> <a href="#"><b class="ico share"></b>分享</a>
+			</div>
+			<div class="page">
+				<p><a href="#" class="prev"><b>&lt;&lt;</b><span>上一张</span></a> <span class="num"><strong><%=current+1%></strong>/<%=list.length%>张</span> <a href="#" class="next next_disable"><span>下一张</span><b>&gt;&gt;</b></a></p>
+			</div>
+			<div class="list">
+				<ul>
+					<% for ( var i = 0; i < list.length; i++ ) { %>
+					<li <% if (i == current) { %>class="cur"<% } %>><a href="<%=list[i].url%>"><img src="<%=list[i].src%>" alt="<%=list[i].title%>" style="margin:-40px 0 0 -55px;" /></a></li>
+					<% } %>
+				</ul>
+				<a href="#" class="prev prev_disable" title="上一页">上一页</a>
+				<a href="#" class="next" title="下一页">下一页</a>
+			</div>
+		</div>
+	</script>
+	<script type="text/javascript">
+		UI.G('photo_box').innerHTML = UI.tmpl('tmpl',{
+			location:{
+				
+			},
+			current:0,
+			list:[
+				{
+					id:100,
+					title:"场馆图片：与自然融合的“畅想之洲”",
+					url:"http://www.qq.com",
+					src:"images/pic_13.png",
+					srcBig:"images/pic_15.jpg"
+				},
+				{
+					id:101,
+					title:"场馆图片：与自然融合的“畅想之洲”",
+					url:"http://www.qq.com",
+					src:"images/pic_13.png",
+					srcBig:"images/pic_15.jpg"
+				},
+				{
+					id:102,
+					title:"场馆图片：与自然融合的“畅想之洲”",
+					url:"http://www.qq.com",
+					src:"images/pic_13.png",
+					srcBig:"images/pic_15.jpg"
+				},
+				{
+					id:103,
+					title:"场馆图片：与自然融合的“畅想之洲”",
+					url:"http://www.qq.com",
+					src:"images/pic_13.png",
+					srcBig:"images/pic_15.jpg"
+				},
+				{
+					id:104,
+					title:"场馆图片：与自然融合的“畅想之洲”",
+					url:"http://www.qq.com",
+					src:"images/pic_13.png",
+					srcBig:"images/pic_15.jpg"
+				}
+			]
+		});
+	</script>
+</div> -->
+<div class="mode_col_1">
+	<div class="ft">
+		<p><a href="http://www.tencent.com/">关于腾讯</a> | <a href="http://www.tencent.com/index_e.shtml">About Tencent</a> | <a href="http://www.qq.com/contract.shtml">服务条款</a> | <a href="http://www.tencentmind.com/">广告服务</a> | <a href="http://hr.tencent.com/">腾讯招聘</a> | <a href="http://gongyi.qq.com/">腾讯公益</a> | <a href="http://service.qq.com/">客服中心</a> | <a href="http://www.qq.com/map/">网站导航</a></p>
+		<p>Copyright &copy; 1998 - 2009 Tencent. All Rights Reserved <a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank"><img src="http://img1.qq.com/www/pics/816/816587.gif" align="absmiddle" border="0" hspace="5"></a></p>
+		<p>腾讯公司 <a href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml" target="_blank">版权所有</a></p>
+	</div>
+</div>
+</body>
+</html>
