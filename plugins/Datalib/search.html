@@ -34,80 +34,91 @@
 	<div class="mode_col_l">
 		<div class="pane search">
 			<h2 class="title"><span>组合搜索</span></h2>
+			<form method="post" action="" id="search">
+				<input type="hidden" name="key_sort" id="key_sort" value="0"/>
+				<input type="hidden" name="key_num" id="key_num" value="10"/>
+				<input type="hidden" name="key_0" id="key_0"/>
+				<input type="hidden" name="key_1" id="key_1"/>
+				<input type="hidden" name="key_2" id="key_2"/>
+			</form>
 			<table>
 				<tr>
 					<th>国 家:</th>
-					<td>
-						<a href="#" class="on">全部</a>
-						<a href="#">内地</a>
-						<a href="#">香港</a>
-						<a href="#">台湾</a>
-						<a href="#">澳门</a>
-						<a href="#">美国</a>
-						<a href="#">韩国</a>
-						<a href="#">日本</a>
-						<a href="#">法国</a>
-						<a href="#">英国</a>
-						<a href="#">德国</a>
-						<a href="#">丹麦</a>
-						<a href="#">瑞典</a>
+					<td class="key">
+						<a href="#" class="on" rel="0">全部</a>
+						<a href="#" rel="1">内地</a>
+						<a href="#" rel="2">香港</a>
+						<a href="#" rel="3">台湾</a>
+						<a href="#" rel="4">澳门</a>
+						<a href="#" rel="5">美国</a>
+						<a href="#" rel="6">韩国</a>
+						<a href="#" rel="7">日本</a>
+						<a href="#" rel="8">法国</a>
+						<a href="#" rel="9">英国</a>
+						<a href="#" rel="10">德国</a>
+						<a href="#" rel="11">丹麦</a>
+						<a href="#" rel="12">瑞典</a>
 					</td>
 				</tr>
 				<tr>
 					<th>影 型:</th>
-					<td>
-						<a href="#" class="on">全部</a>
-						<a href="#">动作</a>
-						<a href="#">战争</a>
+					<td class="key">
+						<a href="#" class="on" rel="0">全部</a>
+						<a href="#" rel="1">动作</a>
+						<a href="#" rel="2">战争</a>
 					</td>
 				</tr>
 				<tr>
 					<th>影片类型:</th>
-					<td>
-						<a href="#" class="on">全部</a>
-						<a href="#">1910-1920</a>
-						<a href="#">1920-1930</a>
-						<a href="#">1940-1950</a>
-						<a href="#">1950-1960</a>
+					<td class="key">
+						<a href="#" class="on" rel="0">全部</a>
+						<a href="#" rel="1">1910-1920</a>
+						<a href="#" rel="2">1920-1930</a>
+						<a href="#" rel="3">1940-1950</a>
+						<a href="#" rel="4">1950-1960</a>
 					</td>
 				</tr>
 			</table>
-			<div class="button"><a href="#" class="dl_btn">搜 索</a> <a href="#" class="dl_btn">重 置</a></div>
+			<div class="button"><a href="javascript:UI.Search.submit()" class="dl_btn" id="submit">搜 索</a> <a href="javascript:UI.Search.reset()" class="dl_btn">重 置</a></div>
 		</div>
-		<p class="search_result">搜索“澳门”“喜剧”，有<strong>234</strong>条结果符合条件</p>
+		<p class="search_result"><span id="tipKey"></span>有<strong id="tipNum">234</strong>条结果符合条件</p>
 		<div class="dl_tab">
-			<div class="dl_tab_tools">显示方式 <a href="#"><b class="ico pic_view"></b>缩略图</a> <a href="#"><b class="ico li_view"></b>列表</a></div>
+			<div class="dl_tab_tools">显示方式 <a href="#" rel="0"><b class="ico pic_view"></b>缩略图</a> <a href="#" rel="1"><b class="ico li_view"></b>列表</a></div>
 			<ul class="dl_tab_title">
-				<li class="first on"><a href="#">按更新排序</a></li>
-				<li class=""><a href="#">按点击量</a></li>
-				<li><a href="#">按评论</a></li>
+				<li class="first on"><a href="#" rel="0">按更新排序</a></li>
+				<li><a href="#" rel="1">按点击量</a></li>
+				<li><a href="#" rel="2">按评论</a></li>
 			</ul>
 			<div class="dl_tab_cont">
-				<div class="pane">
-					<ul class="pohto s_100_75 left">
-						<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国s国馆</a><br />浏览量:166</li>
-						<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国1馆</a><br />浏览量:166</li>
-						<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国书法为美国馆</a><br />浏览量:166</li>
-						<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国书1馆</a><br />浏览量:166</li>
-						<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">2法为美国馆</a><br />浏览量:166</li>
-						<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国2美国馆</a><br />浏览量:166</li>
-						<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国书法1馆</a><br />浏览量:166</li>
-						<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中1法为1馆</a><br />浏览量:166</li>
-						<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国s国馆</a><br />浏览量:166</li>
-						<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国1馆</a><br />浏览量:166</li>
-					</ul>
+				<div id="result">
+					<!-- <div class="pane">
+						<ul class="pohto s_100_75 left">
+							<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国s国馆</a><br />浏览量:166</li>
+							<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国1馆</a><br />浏览量:166</li>
+							<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国书法为美国馆</a><br />浏览量:166</li>
+							<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国书1馆</a><br />浏览量:166</li>
+							<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">2法为美国馆</a><br />浏览量:166</li>
+							<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国2美国馆</a><br />浏览量:166</li>
+							<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国书法1馆</a><br />浏览量:166</li>
+							<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中1法为1馆</a><br />浏览量:166</li>
+							<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国s国馆</a><br />浏览量:166</li>
+							<li><a href="#" class="box" style="background:url(images/pic_14.png)"><img src="images/pic_14.png" /></a><a href="#" class="txt">中国1馆</a><br />浏览量:166</li>
+						</ul>
+					</div>
+					<div class="data_list">
+						<ul>
+							<li><img src="images/pic_08.png" width="120" height="90" alt="" class="box" /><p><a href="#">墨西哥国家馆</a><br />主题：东方之冠，鼎盛中华，天下粮仓，富庶百姓<br />建筑师：世博园区A</p></li>
+							<li class="last"><img src="images/pic_09.png" width="120" height="90" alt="" class="box" /><p><a href="#">墨西哥国家馆</a><br />主题：东方之冠，鼎盛中华，天下粮仓，富庶百姓<br />建筑师：世博园区A</p></li>
+						</ul>
+					</div> -->
 				</div>
-				<div class="data_list">
-					<ul>
-						<li><img src="images/pic_08.png" width="120" height="90" alt="" class="box" /><p><a href="#">墨西哥国家馆</a><br />主题：东方之冠，鼎盛中华，天下粮仓，富庶百姓<br />建筑师：世博园区A</p></li>
-						<li class="last"><img src="images/pic_09.png" width="120" height="90" alt="" class="box" /><p><a href="#">墨西哥国家馆</a><br />主题：东方之冠，鼎盛中华，天下粮仓，富庶百姓<br />建筑师：世博园区A</p></li>
-					</ul>
-				</div>
-				<div class="dl_tab_msg">
+				<div class="loading" id="tipLoad">loading...</div>
+				<div class="dl_tab_msg" style="display:none" id="tipResult">
 					<p>抱歉，暂无搜索结果。换个条件试一试？</p>
 					<a href="#" class="dl_btn">重新搜索</a> <a href="#" class="dl_btn">查看全部</a>
 				</div>
-				<div class="turn-page">
+				<div class="turn-page" style="display:none" id="page"></div>
+				<!-- <div class="turn-page">
 					<a id="prev" class="disabled">上一页</a>
 					<a class="selected">1</a>
 					<a href="#">2</a>
@@ -136,14 +147,154 @@
 					<span class="dot">...</span>
 					<a href="#" class="last">9999</a>
 					<a id="next" href="#">下一页</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<script type="text/javascript">
-			
+			UI.Search = {
+				_body : UI.G('search'),
+				_result : UI.G('result'),
+				_page : UI.G('page'),
+				_tipKey : UI.G('tipKey'),
+				_tipNum : UI.G('tipNum'),
+				_tipResult : UI.G('tipResult'),
+				_tipLoad : UI.G('tipLoad'),
+				key : [],
+				checked : 0,
+				type : 0,
+				tmpl : ['<div class="pane"><ul class="pohto s_100_75 left"><%for(var i=0;i<data.length;i++){%><li><a href="<%=data[i][2]%>" class="box" style="background:url(<%=data[i][1]%>)"><img src="images/pic_14.png" /></a><a href="<%=data[i][2]%>" class="txt"><%=data[i][0]%></a><%for(var j=0;j<data[i][3].length;j++){%><br /><%=data[i][3][j][0]%>:<%=data[i][3][j][1]%><%}%></li><%}%></ul></div>','<div class="data_list"><ul><%for(var i=0;i<data.length;i++){%><li<% if(i+1==data.length){%> class="last"<%}%>><img src="<%=data[i][1]%>" width="120" height="90" class="box" /><p><a href="<%=data[i][2]%>"><%=data[i][0]%></a><%for(var j=0;j<data[i][3].length;j++){%><br /><%=data[i][3][j][0]%>:<%=data[i][3][j][1]%><%}%></p></li><%}%></ul></div>'],
+				keySelect : function(el,i){
+					UI.G('key_' + i).value = UI.A(el,'rel');
+					UI.removeClass(UI.GC(UI.Search.key[i],'.on')[0],'on');
+					UI.addClass(el,'on');
+				},
+				reset : function(){
+					UI.each(UI.Search.key,function(o,i){
+						UI.Search.keySelect(UI.GT(o,'a')[0],i);
+					});
+				},
+				typeSelect : function(){
+					UI.Search.type = UI.A(this,'rel');
+					UI.Search.submit();
+					return false;
+				},
+				tabSelect : function(){
+					UI.G('key_sort').value = UI.A(this,'rel');
+					var P = this.parentNode;
+					UI.removeClass(UI.GC(P.parentNode,'.on')[0],'on');
+					UI.addClass(this.parentNode,'on');
+					this.blur();
+					UI.Search.submit();
+					return false;
+				},
+				submit : function(){
+					if (!UI.Search.checked) { //Kill Value Bug By Refresh
+						UI.each(UI.Search.key,function(o,i){
+							UI.G('key_' + i).value = UI.A(UI.GC(o,'.on')[0],'rel');
+						});
+						UI.Search.checked = 1;
+					}
+					var url = 'http://search.dataliba.qq.com?callback=search.show';
+					url = 'search.js?callback=search.show';
+					UI.each(UI.GT(UI.Search._body,'input'),function(o,i){
+						url += '&' + UI.A(o,'name') + '=' + o.value;
+					});
+					UI.getScript(url);
+				},
+				show : function(o){
+					var key = [];
+					UI.each(UI.Search.key,function(o,i){
+						var cur = UI.GC(o,'.on')[0];
+						if (UI.A(cur,'rel') != 0) {
+							key.push(cur.innerHTML);
+						}
+					});
+					UI.Search._tipKey.innerHTML = key.length ? '<span id="tipKey">搜索“' + key.join('”“') + '”，</span>' : '';
+					UI.Search._tipNum.innerHTML = o.data.length;
+					if (o.result) {
+						if (o.data.length) {
+							UI.Search._result.innerHTML = new UI.tmplString(UI.Search.tmpl[UI.Search.type])(o);
+							UI.hide(UI.Search._tipResult);
+						}
+						else {
+							UI.Search._result.innerHTML = '';
+							UI.show(UI.Search._tipResult);
+						}
+						UI.Search.page = o.page;
+						UI.Search.pageShow(o.page[0],o.page[1]);
+						UI.hide(UI.Search._tipLoad);
+					}
+				},
+				pageShow : function(cur,total){
+					if (total > 1) {
+						var html = [];
+						html.push('<a id="prev" ' + (cur == 1 ? 'class="disabled"' : 'href="#"') + '>上一页</a>');
+						html.push('<a ' + (cur == 1 ? 'class="selected"' : 'href="#"') + '>1</a>');
+						if (total > 2) {
+							if (cur - 4 > 2) {
+								html.push('<span class="dot">...</span>');
+							}
+							for (var i = cur > 5 ? cur - 4 : 2;i < cur + 4 && i < total;i++) {
+								html.push('<a ' + (cur == i ? 'class="selected"' : 'href="#"') + '>' + i + '</a>');
+							}
+							if (i < total - 1) {
+								html.push('<span class="dot">...</span>');
+							}
+						}
+						html.push('<a ' + (cur == total ? 'class="selected"' : 'href="#"') + '>' + total + '</a>');
+						html.push('<a id="next" ' + (cur == total ? 'class="disabled"' : 'href="#"') + '>下一页</a>');
+						UI.Search._page.innerHTML = html.join('');
+						UI.each(UI.GC(UI.Search._page,'a'),function(o){
+							o.onclick = UI.Search.pageSelect;
+						});
+						UI.show(UI.Search._page);
+					}
+					else {
+						UI.hide(UI.Search._page);
+					}
+					UI.G('key_num').value = cur;
+				},
+				pageSelect : function(){
+					var num = UI.G('key_num').value;
+					if (this.id == 'prev') {
+						num--;
+					}
+					else if (this.id == 'next') {
+						num++;
+					}
+					else {
+						num = parseInt(this.innerHTML);
+					}
+
+					if (num <= 0) {
+						num = 1;
+					}
+					else if (num > UI.Search.page[1]) {
+						num = UI.Search.page[1];
+					}
+					UI.G('key_num').value = num;
+					UI.Search.submit();
+					return false;
+				}
+			};
+			UI.each(UI.GC('.key'),function(o,i){
+				UI.Search.key.push(o);
+				UI.each(UI.GT(o,'a'),function(O){
+					O.onclick = function(){
+						UI.Search.keySelect(this,i);
+						return false;
+					}
+				});
+			});
+			UI.each(UI.GC('.dl_tab_tools a'),function(o){
+				o.onclick = UI.Search.typeSelect;
+			});
+			UI.each(UI.GC('.dl_tab_title a'),function(o){
+				o.onclick = UI.Search.tabSelect;
+			});
 		</script>
+		<!-- <iframe id="" src=""></iframe> -->
 		<link href="http://t.qq.com" rel="stylesheet" type="text/css" id="x" />
-		
 	</div>
 	<div class="mode_col_r">
 		<div class="pane">
