@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk">
+<title>Javascript QUIZ</title>
+<style>
+/* global */
+body{width:900px;line-height:150%;color:#333;}
+h1 sub{font-size:14px; font-weight:normal; margin-left:4px;}
+.box{width: 400px;height: 80px; border:1px solid #555;margin:10px 0; padding:10px;background:#fff;overflow:hidden;}
+.block-link{float:left; margin:5px; padding: 5px; background:#808080;color:#fff;}
+.notice{background-color:#DDEDFB;clear:both; border:1px solid #0099CC; color:#000000;padding:10px; margin:10px 0;}
+.bg-red{background:red;padding:10px;}
+.bg-green{background:green;padding:10px;}
+.bg-blue{background:blue;padding:10px;}
+.bg-pic{background:url(http://s3.buysellads.com/1238605/11820-1260582053.jpg); padding:10px;}
+.explain{background:#3B2E22;color:#CCC;border-left:2px solid #CF7400;margin: 10px 0; padding:10px;}
+.result{width:180px; border:1px dotted #351E18;font-family:Arial;}
+.hide{display:none;}
+</style>
+</head>
+<body>
+<h1>Javascript QUIZ<sub>By Adam|空雁(<a href="http://adamlu.com/">http://adamlu.com/</a>)</sub></h1>
+<script>
+function log(r){
+	if(!this.clicked){
+		try{
+		var nd = document.createElement('p');
+		nd.innerHTML = r;
+		nd.className = 'result';
+		var pn = this.parentNode, exp = this.nextSibling;
+		while(exp.nodeType !== 1){
+			exp = exp.nextSibling;	
+		}
+		if(exp.className.indexOf('explain')>-1){
+			exp.style.display = 'block';	
+		}
+		pn.insertBefore(nd, this);
+		}catch(e){}
+		this.clicked = true;
+	}
+}
+</script>
+<div class="notice">
+整理了一些Javascript的小测试，可以试着先不看结果做一下。
+</div>
+<ol>
+<li>
+<pre>
+(function(){ 
+ return typeof arguments;
+ })();
+</pre>
+<button onclick = "log.call(this, (function(){ return typeof arguments; })())">看结果</button>
+<div class="explain hide">这个考查的是arguments这个对象</div>
+</li>
+<li>
+<pre>
+var f = function g(){ return 23; };
+typeof g();
+</pre>
+<script>
+var f = function g(){ return 23; };
+</script>
+<button onclick = "document.getElementById('explain-error-1').style.display='block';log.call(this, typeof g());">看结果</button>
+<div class="explain hide" id="explain-error-1">这个考查的是函数表达式</div>
+</li>
+<li>
+<pre>
+var y = 1, x = y = typeof x;
+x;
+</pre>
+<script>
+var y = 1, x = y = typeof x;
+</script>
+<button onclick = "log.call(this, x)">看结果</button>
+<div class="explain hide">这个考查的是变量声明和运算顺序</div>
+</li>
+<li>
+<pre>
+(function(x){
+ delete x;
+ return x;
+ })(1);
+</pre>
+<button onclick = "log.call(this, (function(x){delete x;return x;})(1))">看结果</button>
+<div class="explain hide">这个考查的是delete运算符</div>
+</li>
+<li>
+<pre>
+(function f(f){ 
+ return typeof f(); 
+ })(function(){ return 1; });
+</pre>
+<button onclick = "log.call(this, (function f(f){ return typeof f(); })(function(){ return 1; }))">看结果</button>
+<div class="explain hide">这个考查的是函数表达式</div>
+</li>
+<li>
+<pre>
+var foo = { 
+bar: function() { return this.baz; }, 
+	 baz: 1
+};
+(function(){ 
+ return typeof arguments[0]();
+ })(foo.bar);
+</pre>
+<script>
+var foo = { 
+bar: function() { return this.baz; }, 
+	 baz: 1
+};
+</script>
+<button onclick = "log.call(this, (function(){ return typeof arguments[0](); })(foo.bar))">看结果</button>
+<div class="explain hide">这个考查的是对象以及作用域</div>
+</li>
+<li>
+<pre>
+var foo = {
+bar: function(){ return this.baz; },
+	 baz: 1
+}
+typeof (f = foo.bar)();
+</pre>
+<button onclick = "log.call(this, typeof (f = foo.bar)())">看结果</button>
+<div class="explain hide">这个考查的是对象以及作用域</div>
+</li>
+<li>
+<pre>
+var f = (function f(){ return "1"; }, function g(){ return 2; })();
+typeof f;
+</pre>
+<script>
+var f1 = (function f1(){ return "1"; }, function g1(){ return 2; })();
+</script>
+<button onclick = "log.call(this, typeof f1)">看结果</button>
+<div class="explain hide">这个考查的是函数表达式</div>
+</li>
+<li>
+<pre>
+var x = 1;
+if (function f(){}) {
+	x += typeof f;
+}
+x;
+</pre>
+<script>
+var x1 = 1;
+if (function f2(){}) {
+	x1 += typeof f2;
+}
+</script>
+<button onclick = "log.call(this, x1)">看结果</button>
+<div class="explain hide">这个考查的是变量操作</div>
+</li>
+<li>
+<pre>
+var x = [typeof x, typeof y][1];
+typeof typeof x;
+</pre>
+<script>
+var x2 = [typeof x2, typeof y1][1];
+</script>
+<button onclick = "log.call(this, typeof typeof x2)">看结果</button>
+<div class="explain hide">这个考查的是typeof的使用</div>
+</li>
+<li>
+<pre>
+(function(foo){
+ return typeof foo.bar;
+ })({ foo: { bar: 1 } });
+</pre>
+<button onclick = "log.call(this, (function(foo1){ return typeof foo1.bar1; })({ foo1: { bar1: 1 } }))">看结果</button>
+<div class="explain hide">这个考查的是JSON对象</div>
+</li>
+<li>
+<pre>
+(function f(){
+ function f(){ return 1; }
+ return f();
+ function f(){ return 2; }
+ })();
+</pre>
+<button onclick = "log.call(this, (function f3(){ function f3(){ return 1; } return f3(); function f3(){ return 2; } })())">看结果</button>
+<div class="explain hide">这个考查的是函数声明</div>
+</li>
+<li>
+<pre>
+function f(){ return f; }
+new f() instanceof f;
+</pre>
+<script>
+function f4(){ return f4; }
+</script>
+<button onclick = "log.call(this, new f4() instanceof f4)">看结果</button>
+<div class="explain hide">这个考查的是类和对象</div>
+</li>
+<li>
+<pre>
+with (function(x, undefined){}) length;
+</pre>
+<script>
+</script>
+<button onclick = "log.call(this, (function(){with(function(x3, undefined){})return length})())">看结果</button>
+<div class="explain hide">这个考查的是with</div>
+</li>
+<li>
+<pre>
+var num1 = 5,
+	num2 = 10,
+	result = num1+++num2;
+</pre>
+<script>
+var num1 = 5,
+	num2 = 10;
+</script>
+<button onclick = "log.call(this, 'result='+(num1+++num2)+', num1='+num1+', num2='+num2)">看结果</button>
+<div class="explain hide">这个考查的运算符的优先级</div>
+</li>
+<li>
+<pre>
+var x = 5,
+	o = {
+x: 10,
+   doIt: function doIt(){
+	   var x = 20;
+	   setTimeout(function(){
+			   alert(this.x);
+			   }, 10);
+   }
+	};
+o.doIt();
+</pre>
+<script>
+var x4 = 5,
+	o1 = {
+x4: 10,
+   doIt: function doIt(){
+	   var x4 = 20;
+	   setTimeout(function(){
+			   alert(this.x4);
+			   }, 10);
+   }
+	};
+</script>
+<button onclick = "o1.doIt();log.call(this,'alert')">看结果</button>
+<div class="explain hide">这个考查的Javascript的作用域以及setTimeout</div>
+</li>
+<li>
+<pre>
+var num1 = "10",
+    num2 = "9";
+num1 < num2;
++num1 < num2;
+num1 + num2;
++num1 + num2;
+</pre>
+<script>
+var num3 = "10",
+    num4 = "9";
+</script>
+<button onclick = "log.call(this, 'num1 < num2 : '+(num3 < num4)+'<br>+num1 < num2 : '+(+num3 < num4)+'<br>num1 + num2 : '+(num3 + num4)+'<br>+num1 + num2 : '+(+num3 + num4))">看结果</button>
+<div class="explain hide">这个考查的是字符串和数字的比较和转换</div>
+</li>
+<li>
+<pre>
+var message = "Hello world!";
+message.substring(1, 4);
+message.substr(1,4);
+</pre>
+<script>
+var message = "Hello world!";
+</script>
+<button onclick = "log.call(this, 'message.substring(1, 4):'+message.substring(1, 4)+'<br>message.substr(1,4):'+message.substr(1,4))">看结果</button>
+<div class="explain hide">这个考查的是字符串的两个截取方法</div>
+</li>
+<li>
+<pre>
+	 var o = {
+x: 8,
+
+   valueOf: function(){
+	   return this.x + 2;
+   },
+toString: function(){
+			  return this.x.toString();
+		  }
+	 },
+	 result = o < "9";
+alert(o);
+result;
+</pre>
+<script>
+var o = {
+x: 8,
+   valueOf: function(){
+	   return this.x + 2;
+   },
+toString: function(){
+			  return this.x.toString();
+		  }
+},
+	result = o < "9";
+</script>
+<button onclick = "alert(o);log.call(this, result);">看结果</button>
+<div class="explain hide">这个考查的是对象的两个内置方法</div>
+</li>
+<li>
+<pre>
+if (!("a" in window)) {
+	    var a = 1;
+}
+alert(a);
+</pre>
+<script>
+if (!("a" in window)) {
+	    var a = 1;
+}
+</script>
+<button onclick = "alert(a); log.call(this, 'alert');">看结果</button>
+<div class="explain hide">这个考查的是对象以及变量的声明</div>
+</li>
+<li>
+<pre>
+var a = 1,
+	b = function a(x) {
+		x && a(--x);
+	};
+alert(a);
+</pre>
+<script>
+var a1 = 1,
+	b = function a1(x5) {
+		x5 && a1(--x5);
+	};
+</script>
+<button onclick = "alert(a1); log.call(this, 'alert');">看结果</button>
+<div class="explain hide">这个考查的是函数声明和变量声明</div>
+</li>
+<li>
+<pre>
+function a(x) {
+	    return x * 2;
+}
+var a;
+alert(a);
+</pre>
+<script>
+function a2(x) {
+	    return x * 2;
+}
+var a2;
+</script>
+<button onclick = "alert(a2); log.call(this, 'alert');">看结果</button>
+<div class="explain hide">这个考查的是函数声明和变量声明</div>
+</li>
+<li>
+<pre>
+function b(x, y, a) {
+	    arguments[2] = 10;
+		    alert(a);
+}
+b(1, 2, 3);
+</pre>
+<script>
+function b1(x, y, a) {
+	    arguments[2] = 10;
+		    alert(a);
+}
+</script>
+<button onclick = "b1(1, 2, 3);log.call(this, 'alert');">看结果</button>
+<div class="explain hide">这个考查的是arguments对象</div>
+</li>
+<li>
+<pre>
+function a() {
+	    alert(this);
+}
+a.call(null);
+</pre>
+<script>
+function a3() { alert(this); }
+</script>
+<button onclick = "a3.call(null); log.call(this, 'alert');">看结果</button>
+<div class="explain hide">这个考查的是this和call</div>
+</li>
+<li>
+<pre>
+(function(){
+	a = function(){ reuturn 1; };
+	function a(){return 2;}
+	var a;
+	return a;
+})()(); 
+</pre>
+<button onclick = "log.call(this, (function(){a4=function(){return 1;};function a4(){return 2;}var a4;return a4;})()())">看结果</button>
+<div class="explain hide">这个考查的也是函数声明和变量声明</div>
+</li>
+<!--<li>
+<pre>
+</pre>
+<script></script>
+<button onclick = "log.call(this, )">看结果</button>
+</li>
+<li>
+<pre>
+</pre>
+<script></script>
+<button onclick = "log.call(this, )">看结果</button>
+</li>
+<li>
+<pre>
+</pre>
+<script></script>
+<button onclick = "log.call(this, )">看结果</button>
+</li>-->
+</ol>
+<blockquote>
+<h3>了解更多，请阅读：</h3>
+<p><a href="http://perfectionkills.com/javascript-quiz/" target="_blank">Javascript quiz</a></p>
+<p><a href="http://www.nczonline.net/blog/2010/02/18/my-javascript-quiz-answers/" target="_blank">My JavaScript quiz - answers</a></p>
+<p><a href="http://www.nczonline.net/blog/2010/01/26/answering-baranovskiys-javascript-quiz/" target="_blank">Answering Baranovskiy’s JavaScript quiz</a></p>
+</blockquote>
+</body>
+</html>
