@@ -1,0 +1,12 @@
+1.避免将样式直接写到元素属性中（如：<div style="color:red;height:120px;width:10px">test</div>），一些用于交互的属性如display:none可以略微使用；
+2.样式命名，禁止使用英文拼音，尽量根据元素用途和内容来定义，原则上使用英文单词（hotTopic，第一个单词小写，后面单词首字母大写），某些对流量较高的项目可使用英文单词缩写（如：hotTopic  -->  HT），某些通俗的单词可简写（如：cont,btn,pic,del）；
+3.尽可能缩短样式选择符的路径（如：.test table tr td  -->  .test td）；
+4.同一个元素上的class尽量不要超过3个，权重兼容性问题比较多；
+5.样式尽量不要依赖id，不利于复用和变动（id还是留给JS用吧）；
+6.样式属性尽量缩写、合并，如：
+  list-style,border,font,margin,padding等的子属性，
+  颜色 #FFFFFF  -->  #FFF，
+  盒尺寸 margin:0px 9px 2px 9px  -->  margin:0 9px 2px，
+7.注释规范：
+  /* 小注释 */
+  /*------------- 大段注释 -----------*/
