@@ -52,7 +52,11 @@ input{vertical-align:middle;}
 	.mode_col_21 .mode_col_11 .mode_col_r {width:315px;float:left;}
 	.mode_col_21 .mode_col_1 {width:auto;}
 		.mode_col_21 .mode_col_l .pohto.s_100_75 li {margin-left:20px;}
+		.mode_col_21 .mode_col_l .Slide {-width:602px;}
 		.mode_col_21 .mode_col_l .pohto.s_120_90 li {margin-left:30px;}
+		.mode_col_21 .mode_col_l .pohto.s_120_90 li {margin-left:30px;}
+		.mode_col_21 .mode_col_r .Slide {-width:272px;}
+		.mode_col_21 .mode_col_r .pohto.s_100_75 li {margin-left:32px;}
 .mode_col_21 .mode_col_r {width:310px;float:left;}
 /* Layout Pane Style */
 .mode_col_1 .pane .pohto.s_150_150 {margin-left:8px;-margin-left:2px;}
@@ -109,6 +113,10 @@ input{vertical-align:middle;}
 	.pane .pohto.s_100_75 {margin-left:3px;-margin-left:-16px;}
 		.pane .pohto.s_100_75 li {margin-left:15px;}
 		.pane .pohto.s_100_75 .box {padding:0;width:100px;height:75px;}
+	.pane .Slide {margin:0 18px;position:relative;overflow:hidden;-zoom:1;-width:922px;}
+	.pane .Slide .pohto {width:9999px;margin-left:-15px;-margin-left:-30px;}
+	.pane .more .prev_off {background-position:-38px -360px;cursor:default;}
+	.pane .more .next_off {background-position:-95px -360px;cursor:default;}
 	.dl_tab_cont .pane {border:none;}
 	#imgListAll li {margin-left:32px;}
 	#imgListAll {-position:relative;-top:-8px;-left:-23px;}
@@ -156,7 +164,7 @@ input{vertical-align:middle;}
 	.pane.search .button {text-align:right;padding:10px 0 0;background:#FFF;position:relative;top:-1px;}
 .search_result {padding:0 0 3px 14px;margin:-4px 0 0;}
 	.search_result strong {font-weight:normal;color:#C10B00;margin:0 4px;line-height:25px;}
-.search_tag {}
+	.search_tag {}
 	.search_tag .tab {height:28px;border-bottom:1px solid #D7D7D7;position:relative;}
 	.search_tag .tab label {margin:0 11px 0 16px;position:relative;top:6px;}
 	.search_tag .tab a {display:inline-block;height:21px;border:1px solid #D7D7D7;border-bottom:0;padding:0 5px;margin:0 1px;text-decoration:none;color:#244183;font:normal bold 14px/1.35 Tahoma;position:relative;top:7px;background-position:0 -620px;}
