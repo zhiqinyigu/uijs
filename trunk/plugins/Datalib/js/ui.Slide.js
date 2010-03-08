@@ -18,7 +18,14 @@
 	Self.total = Math.ceil(Self._li.length / Self.perPage);
 	Self.step = Self.perPage * Self.stepSmall;
 	Self._page.innerHTML = new UI.tmplString(Self.tmpl.page)({num:Self.total});
-	UI.show(Self._page);
+	if (Self.total > 1) {
+		UI.show(Self._page);
+	}
+	else {
+		UI.hide(Self._page);
+		UI.hide(Self._prev);
+		UI.hide(Self._next);
+	}
 	Self.page();
 
 	//Event
@@ -100,10 +107,10 @@ UI.Slide.prototype = {
 UI.slide = function(selector){
 	UI.each(UI.GC(selector),function(el){
 		if (!el.Slide) {
-			console.log(new UI.Slide({
+			new UI.Slide({
 				target : el,
 				action : 'x'
-			}));
+			});
 		}
 	});
 }
