@@ -1,6 +1,27 @@
-﻿UI.Search = {
+﻿/*
+	http://ericapi.webdev.com/php/d_search_js.php?lib=joazhang&fun=UI.Search.show&mid=81&pn=1&tc=2&tp=2&cp=2
+	* lib           The Alias of lib.
+	* orderby       The condition for sorting.
+	* isaudited     The status of publish.
+	* exceptid      The data id which will be excluded.
+	* shorttextonly Exclude the attribute of text type.
+	* filtervalue   The value of attribute for query, '|' means 'and'.
+	* filterattr    The name of attribute for query, ',' means 'or'.
+	* keyword       The key word for query. It is more preferable than filterattr。
+	* attr          The attribute for query.
+	* stype         The flag for fuzzy query. 1 for fuzzy, 2 for accurate.
+	* cp            The current page.
+	* tc            The total records.
+	* tp            The total pages.
+	* pn            The number of record in each page.
+	* fun           The function name of js.
+	* f             The flag of simple or complex style.
+*/
+UI.Search = {
 	_body : UI.G('search'),
 	_result : UI.G('result'),
+	_resultWrap : UI.G('search_result_wrap'),
+	_searchWrap : UI.G('search_wrap'),
 	_page : UI.G('page'),
 	_tipKey : UI.G('tipKey'),
 	_tipNum : UI.G('tipNum'),
@@ -13,7 +34,7 @@
 	numTotal : 0,
 	libName : '',
 	pageNum : 20, //Number Of Per Page
-	action : 'http://search.dataliba.qq.com?callback=UI.Search.show',
+	action : 'http://ericapi.webdev.com/php/d_search_js.php?fun=UI.Search.show',
 	tmpl : ['<div class="pane"><ul class="pohto s_100_75 left"><%for(var i=0;i<data.length;i++){%><li><a href="<%=data[i][2]%>" class="box" style="background:url(<%=data[i][1]%>)"><img src="images/pic_14.png" /></a><a href="<%=data[i][2]%>" class="txt"><%=data[i][0]%></a><%for(var j=0;j<data[i][3].length;j++){%><br /><%=UI.Search.field[UI.Search.type][j]%>:<%=data[i][3][j]%><%}%></li><%}%></ul></div>','<div class="data_list"><ul><%for(var i=0;i<data.length;i++){%><li<% if(i+1==data.length){%> class="last"<%}%>><img src="<%=data[i][1]%>" width="120" height="90" class="box" /><p><a href="<%=data[i][2]%>"><%=data[i][0]%></a><%for(var j=0;j<data[i][3].length;j++){%><br /><%=UI.Search.field[UI.Search.type][j]%>:<%=data[i][3][j]%><%}%></p></li><%}%></ul></div>'],
 	reset : function(){
 		UI.each(UI.Search.key,function(o,i){
@@ -21,12 +42,16 @@
 		});
 	},
 	keySelect : function(el,i){ //选择关键字
-		UI.G('key_' + i).value = UI.A(el,'rel');
+		UI.G('key_numTotal').value = 0;
+		UI.G('key_' + i).value = UI.A(el,'rel') == 0 ? '' : el.innerHTML;
 		UI.removeClass(UI.GC(UI.Search.key[i],'.on')[0],'on');
 		UI.addClass(el,'on');
 	},
 	typeSelect : function(){ //选择模板类型
-		UI.Search.type = UI.A(this,'rel');
+		UI.removeClass(UI.GC(this.parentNode,'.on')[0],'on');
+		UI.addClass(this,'on');
+		this.blur();
+		UI.Search.type = UI.G('key_type').value = UI.A(this,'rel');
 		UI.Search.submit();
 		return false;
 	},
@@ -42,11 +67,22 @@
 	submit : function(){
 		if (!UI.Search.checked) { //Kill Value Bug By Refresh
 			UI.each(UI.Search.key,function(o,i){
-				UI.G('key_' + i).value = UI.A(UI.GC(o,'.on')[0],'rel');
+				var cur = UI.GC(o,'.on')[0];
+				UI.G('key_' + i).value = UI.A(cur,'rel') == 0 ? '' : cur.innerHTML;
 			});
 			UI.Search.checked = 1;
 		}
-		var url = UI.Search.action;
+		var url = UI.Search.action,attr = [],value = [],key;
+		attr.value = value.value = '';
+		UI.each(UI.Search.key,function(o,i){
+			key = UI.G('key_' + i);
+			if (key.value) {
+				attr.push(UI.A(key,'name').replace('key_',''));
+				value.push(key.value);
+			}
+		});
+		UI.G('key_attr').value = attr.join('|');
+		UI.G('key_value').value = value.join('|');
 		UI.each(UI.GT(UI.Search._body,'input'),function(o,i){
 			url += '&' + UI.A(o,'name') + '=' + o.value;
 		});
@@ -54,9 +90,6 @@
 	},
 	show : function(o){
 		var key = [];
-		if (o.num) {
-			UI.Search.numTotal = UI.G('key_numTotal').value = o.num;
-		}
 		UI.each(UI.Search.key,function(o,i){
 			var cur = UI.GC(o,'.on')[0];
 			if (UI.A(cur,'rel') != 0) {
@@ -64,7 +97,7 @@
 			}
 		});
 		UI.Search._tipKey.innerHTML = key.length ? '<span id="tipKey">搜索“' + key.join('”“') + '”，</span>' : '';
-		UI.Search._tipNum.innerHTML = UI.Search.numTotal;
+		UI.Search.numTotal = UI.G('key_numTotal').value = UI.Search._tipNum.innerHTML = o.num;
 		if (o.result) {
 			if (o.data.length) {
 				UI.Search._result.innerHTML = new UI.tmplString(UI.Search.tmpl[UI.Search.type])(o);
@@ -78,6 +111,7 @@
 			UI.Search.pageShow(o.page[0],o.page[1]);
 			UI.hide(UI.Search._tipLoad);
 		}
+		UI.show(UI.Search._resultWrap);
 	},
 	pageShow : function(cur,total){
 		if (total > 1) {
@@ -91,6 +125,9 @@
 				start = cur > 5 ? cur - 4 : 2;
 				if (total - start < 8) {
 					start = total - 8;
+					if (start < 2) {
+						start = 2;
+					}
 				}
 				end = start + (start == 2 ? 8 : 9);
 				for (var i = start;i < end && i < total;i++) {
@@ -151,4 +188,23 @@ UI.each(UI.GC('.dl_tab_tools a'),function(o){
 });
 UI.each(UI.GC('.dl_tab_title a'),function(o){
 	o.onclick = UI.Search.tabSelect;
+});
+
+UI.ready(function(){
+	//Search From Url
+	var input;
+	UI.Search.url = UI.parseUrl();
+	for (var i in UI.Search.url) {
+		input = UI.GC(UI.Search._body,'input[name=' + i + ']')[0];
+		if (input) {
+			input.value = UI.Search.url[i]
+		}
+		UI.Search.submit();
+	}
+
+	//Hide Wrap Which Is Not Need
+	if (document.location.search) {
+		UI.hide(UI.Search._searchWrap);
+	}
+	else UI.hide(UI.Search._resultWrap);
 });
