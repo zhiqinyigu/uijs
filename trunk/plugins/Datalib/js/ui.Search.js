@@ -30,12 +30,13 @@ UI.Search = {
 	key : [],
 	checked : 0,
 	type : 0,
+	picName : ['4.','2.'],
 	field : [[],[]],
 	numTotal : 0,
 	libName : '',
 	pageNum : 20, //Number Of Per Page
 	action : 'http://ericapi.webdev.com/php/d_search_js.php?fun=UI.Search.show',
-	tmpl : ['<div class="pane"><ul class="pohto s_100_75 left"><%for(var i=0;i<data.length;i++){%><li><a href="<%=data[i][2]%>" class="box" style="background:url(<%=data[i][1]%>)"><img src="images/pic_14.png" /></a><a href="<%=data[i][2]%>" class="txt"><%=data[i][0]%></a><%for(var j=0;j<data[i][3].length;j++){%><br /><%=UI.Search.field[UI.Search.type][j]%>:<%=data[i][3][j]%><%}%></li><%}%></ul></div>','<div class="data_list"><ul><%for(var i=0;i<data.length;i++){%><li<% if(i+1==data.length){%> class="last"<%}%>><img src="<%=data[i][1]%>" width="120" height="90" class="box" /><p><a href="<%=data[i][2]%>"><%=data[i][0]%></a><%for(var j=0;j<data[i][3].length;j++){%><br /><%=UI.Search.field[UI.Search.type][j]%>:<%=data[i][3][j]%><%}%></p></li><%}%></ul></div>'],
+	tmpl : ['<div class="pane"><ul class="pohto s_100_75 left"><%for(var i=0;i<data.length;i++){%><li><a href="<%=data[i][2]%>" class="box" style="background-image:url(<%=data[i][1]%>)" target="_blank"><img src="<%=data[i][1]%>" /></a><div class="li"><a href="<%=data[i][2]%>" class="txt" target="_blank" title="<%=data[i][0]%>"><%=data[i][0]%></a></div><%for(var j=0;j<field[UI.Search.type].length;j++){%><div class="li" title="<%=data[i][3][j]%>"><%=field[UI.Search.type][j]%>:<%=data[i][3][j]%></div><%}%></li><%}%></ul></div>','<div class="data_list"><ul><%for(var i=0;i<data.length;i++){%><li<% if(i+1==data.length){%> class="last"<%}%>><img src="<%=data[i][1]%>" width="120" class="box" /><p><a href="<%=data[i][2]%>" target="_blank"><%=data[i][0]%></a><%for(var j=0;j<field[UI.Search.type].length;j++){%><br /><%=field[UI.Search.type][j]%>:<%=data[i][3][j]%><%}%></p></li><%}%></ul></div>'],
 	reset : function(){
 		UI.each(UI.Search.key,function(o,i){
 			UI.Search.keySelect(UI.GT(o,'a')[0],i);
@@ -43,7 +44,7 @@ UI.Search = {
 	},
 	keySelect : function(el,i){ //选择关键字
 		UI.G('key_numTotal').value = 0;
-		UI.G('key_' + i).value = UI.A(el,'rel') == 0 ? '' : el.innerHTML;
+		UI.G('key_' + i).value = UI.A(el,'rel') === '0' ? '' : el.innerHTML;
 		UI.removeClass(UI.GC(UI.Search.key[i],'.on')[0],'on');
 		UI.addClass(el,'on');
 	},
@@ -72,6 +73,11 @@ UI.Search = {
 			});
 			UI.Search.checked = 1;
 		}
+		UI.each(UI.GC(UI.Search._body,'input'),function(o){ //UI.GC(UI.Search._body,'input[name=lib]')在IE中有bug，有空看一下
+			if (UI.A(o,'name') == 'lib') {
+				UI.Search.libName = o.value;
+			}
+		});
 		var url = UI.Search.action,attr = [],value = [],key;
 		attr.value = value.value = '';
 		UI.each(UI.Search.key,function(o,i){
@@ -92,7 +98,7 @@ UI.Search = {
 		var key = [];
 		UI.each(UI.Search.key,function(o,i){
 			var cur = UI.GC(o,'.on')[0];
-			if (UI.A(cur,'rel') != 0) {
+			if (UI.A(cur,'rel') == '') {
 				key.push(cur.innerHTML);
 			}
 		});
@@ -100,6 +106,11 @@ UI.Search = {
 		UI.Search.numTotal = UI.G('key_numTotal').value = UI.Search._tipNum.innerHTML = o.num;
 		if (o.result) {
 			if (o.data.length) {
+				o.field = UI.Search.field;
+				UI.each(o.data,function(o){
+					o[1] = o[1] ? 'http://img1.gtimg.com/' + o[1].replace('.',UI.Search.picName[UI.Search.type]) : 'about:blank';
+					o[2] = '/d/' + UI.Search.libName + '/' + Math.ceil(o[2] / 1000) + '/' + o[2] % 1000;
+				});
 				UI.Search._result.innerHTML = new UI.tmplString(UI.Search.tmpl[UI.Search.type])(o);
 				UI.hide(UI.Search._tipResult);
 			}
