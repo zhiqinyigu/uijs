@@ -31,12 +31,21 @@
 </div>
 <div class="mode_col_21">
 	<div class="mode_col_l">
-		<div class="pane search">
+		<div class="pane search" id="search_wrap">
 			<h2 class="title"><span>组合搜索</span></h2>
 			<form method="post" action="" id="search">
-				<input type="hidden" name="key_sort" id="key_sort" value="0"/>
-				<input type="hidden" name="key_num" id="key_num" value="10"/>
-				<input type="hidden" name="key_numTotal" id="key_numTotal" value=""/>
+				<input type="hidden" name="keyword"/>
+				<input type="hidden" name="orderby" id="key_sort" value="FTime desc"/>
+				<input type="hidden" name="filtervalue" id="key_attr"/>
+				<input type="hidden" name="filterattr" id="key_value"/>
+				<input type="hidden" name="cp" id="key_num" value="10"/>
+				<input type="hidden" name="tc" id="key_numTotal"/>
+
+				<input type="hidden" name="f" id="key_type" value="0"/>
+				<input type="hidden" name="pn" value="20"/>
+				<input type="hidden" name="lib" value="joazhang"/>
+				<input type="hidden" name="mid" value="81"/>
+
 				<input type="hidden" name="key_0" id="key_0"/>
 				<input type="hidden" name="key_1" id="key_1"/>
 				<input type="hidden" name="key_2" id="key_2"/>
@@ -81,13 +90,14 @@
 			</table>
 			<div class="button"><a href="javascript:UI.Search.submit()" class="dl_btn" id="submit">搜 索</a> <a href="javascript:UI.Search.reset()" class="dl_btn">重 置</a></div>
 		</div>
-		<p class="search_result"><span id="tipKey"></span>有<strong id="tipNum">234</strong>条结果符合条件</p>
-		<div class="dl_tab">
-			<div class="dl_tab_tools">显示方式 <a href="#" rel="0"><b class="ico pic_view"></b>缩略图</a> <a href="#" rel="1"><b class="ico li_view"></b>列表</a></div>
-			<ul class="dl_tab_title">
-				<li class="first on"><a href="#" rel="0">按更新排序</a></li>
-				<li><a href="#" rel="1">按点击量</a></li>
-				<li><a href="#" rel="2">按评论</a></li>
+		<div id="search_result_wrap">
+			<p class="search_result"><span id="tipKey"></span>有<strong id="tipNum">-</strong>条结果符合条件</p>
+			<div class="dl_tab">
+		<div class="dl_tab_tools">显示方式 <a href="#" rel="0" title="按缩略图方式查看" class="on"><b class="ico pic_view"></b></a><a href="#" rel="1" title="按列表方式查看"><b class="ico li_view"></b></a></div>
+				<ul class="dl_tab_title">
+					<li class="first on"><a href="#" rel="0">按更新排序</a></li>
+					<li><a href="#" rel="1">按点击量</a></li>
+					<li><a href="#" rel="2">按评论</a></li>
 			</ul>
 			<div class="dl_tab_cont">
 				<div id="result">
@@ -111,15 +121,18 @@
 							<li class="last"><img src="images/pic_09.png" width="120" height="90" alt="" class="box" /><p><a href="#">墨西哥国家馆</a><br />主题：东方之冠，鼎盛中华，天下粮仓，富庶百姓<br />建筑师：世博园区A</p></li>
 						</ul>
 					</div> -->
-				</div>
-				<div class="loading" id="tipLoad">loading...</div>
-				<div class="dl_tab_msg" style="display:none" id="tipResult">
-					<p>抱歉，暂无搜索结果。换个条件试一试？</p>
-					<a href="#" class="dl_btn">重新搜索</a> <a href="#" class="dl_btn">查看全部</a>
-				</div>
-				<div class="turn-page" style="display:none" id="page"></div>
-				<!-- <div class="turn-page">
-					<a id="prev" class="disabled">上一页</a>
+					</div>
+					<div class="loading" id="tipLoad">loading...</div>
+					<div class="dl_tab_msg" style="display:none" id="tipResult">
+						<p>抱歉，暂无搜索结果。换个条件试一试？</p>
+					</div>
+					<!-- <div class="dl_tab_msg" style="display:none" id="tipResult">
+						<p>抱歉，暂无搜索结果。换个条件试一试？</p>
+						<a href="#" class="dl_btn">重新搜索</a> <a href="#" class="dl_btn">查看全部</a>
+					</div> -->
+					<div class="turn-page" style="display:none" id="page"></div>
+					<!-- <div class="turn-page">
+						<a id="prev" class="disabled">上一页</a>
 					<a class="selected">1</a>
 					<a href="#">2</a>
 					<a href="#">3</a>
@@ -147,17 +160,14 @@
 					<span class="dot">...</span>
 					<a href="#" class="last">9999</a>
 					<a id="next" href="#">下一页</a>
-				</div> -->
+					</div> -->
+				</div>
 			</div>
+			<script type="text/javascript" src="js/ui.Search.js"></script>
+			<script type="text/javascript">
+				UI.Search.field=[['建筑师','浏览量','x'],['建筑师','浏览量','y','d']];
+			</script>
 		</div>
-		<script type="text/javascript" src="js/UI.Search.js"></script>
-		<script type="text/javascript">
-			UI.Search.libName = '2010';
-			UI.Search.pageNum = '20';
-			UI.Search.numTotal = '324';
-			UI.Search.field=[['建筑师','浏览量'],['建筑师','浏览量']];
-			UI.Search.action='search.js?callback=UI.Search.show';
-		</script>
 	</div>
 	<div class="mode_col_r">
 		<div class="pane">
