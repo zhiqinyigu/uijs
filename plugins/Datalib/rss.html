@@ -7,6 +7,7 @@
 <link href="styles/main.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="../../../lib/ui.js"></script>
 <script type="text/javascript" src="js/ui.Slide.js"></script>
+<script type="text/javascript" src="js/ui.TagSearch.js"></script>
 </head>
 <body>
 <div class="mode_col_1">
@@ -311,9 +312,10 @@
 			</dl>
 		</div>
 		<script type="text/javascript">
-		(function(){
-			var tag = UI.GC('.search_tag');
-		})();
+			UI.tagSearch = new UI.TagSearch({target:'.search_tag',value:{
+				lib : 'joazhang',
+				mid : 81
+			}});
 		</script>
 	</div>
 </div>
