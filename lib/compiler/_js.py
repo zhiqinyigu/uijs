@@ -31,6 +31,7 @@ for i in dir:
     filename = f + '_' + str(localtime[0])[2:4] + addZero(str(localtime[1])) + addZero(str(localtime[2])) + ext
 
     print i
+    convert(i);
     file = open(i,'r')
     content =  file.readlines()
     strcontent = ''
@@ -47,5 +48,4 @@ for i in dir:
     strcontent = "".join(filecontent)
 
     file = open(filename,'w').write(strcontent)
-    convert(filename);
 print 'success'
