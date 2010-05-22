@@ -1,0 +1,104 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+body{font-size:16px;font-family:Helvetica;color:#333;line-height:1.5em;overflow-x:hidden;-webkit-user-select:none;-webkit-text-size-adjust:none;background:#5F7076}
+ul,li,ol{list-style:none}
+h3{font-weight:normal}
+a{color:#3D5B74;text-decoration:none;-webkit-tap-highlight-color:rgba(70,70,70,0.5)}
+
+.wrapper{width:100%;height:100%;overflow:hidden;background:#5F7076 url(http://mat1.gtimg.com/www/mb/images/iwbg.jpg) right top no-repeat}
+#tocContainer{position:absolute;z-index:1;height:100%;width:229px;border-right:1px solid #A5AAAB;overflow:hidden;-webkit-box-shadow:2px 0 8px #515C60;background-color:#D9E0E2}
+#contents{position:relative;margin-left:230px;min-width:50%;height:100%}
+
+.userInfoWrap:after,.tocWrap:after,.msgList>li:after{clear:both;display:block;height:1px;content:'.';overflow:hidden;border-top:1px solid #B0C6CD;background:#F0F3F4}
+.msgList>li:after{border-color:#677980;background:#A5B2B8}
+#logo,.userInfo .userPic,.ico_fun,.funList li,.title .btn,.newNum,.vip,.ico_new{background:url(http://mat1.gtimg.com/www/mb/images/ibg1_0521.png) no-repeat}
+
+.vip{display:inline-block;width:19px;height:22px;background-position:0 -120px;vertical-align:middle}
+.ico_new{display:inline-block;width:14px;height:14px; margin-left:3px;background-position:-34px -119px;vertical-align:text-top}
+.ico_fun{display:block;width:31px;height:31px;background-position:-66px 0}
+
+.userPic{display:block;float:left;margin-right:12px}
+.moreFun{position:absolute;top:12px;right:12px}
+.funList{display:none;position:absolute;width:115px;padding:18px 0 6px;top:40px;right:-5px;border:1px solid #A0ADB2;-webkit-border-radius:6px;-webkit-box-shadow:0 0 5px #ACB8BB;background:-webkit-gradient(linear, left top, left bottom, from(#E2E8EA), to(#F2F4F4))}
+.funList:before,.funList:after,.dialogCnt:before,.dialogCnt:after{content:"\00a0";position:absolute;z-index:0;top:-18px;right:12px;display:block;width:0;height:0;border:9px solid transparent;border-bottom-color:#A9B5B9}
+.funList:after,.dialogCnt:after{border-width:8px;top:-16px;right:13px;border-bottom-color:#E2E8EA}
+.funList>ul{width:101px;margin:0 auto;border:1px solid #CDD8DC;-webkit-border-radius:5px;background:#FDFDFD}
+.funList li{height:37px;border-bottom:1px solid #CDD8DC}
+.funList li.set{background-position:-238px 0}
+.funList li.invite{background-position:-238px -37px}
+.funList li.help{background-position:-238px -74px}
+.funList li.logout{border:none;background-position:-238px -111px}
+.funList a{display:block;padding-left:35px;font-size:18px;line-height:37px}
+.userNums{padding:12px 0 12px 12px}
+.userNums p{display:inline-block;width:68px}
+.userNums p span{font-size:18px}
+.msgCnt{margin:0 94px 0 90px;color:#fff}
+.userName{font-size:18px}
+.userName>a,.dialogCnt p a{color:#fff}
+.userName>a,.pubTime,.pubSource,.cRelay,.sep,.dialogCnt p a{margin-right:5px}
+.pubTime,.pubSource{font-size:14px;color:#465256}
+.cnt{padding-bottom:15px}
+.cRelay{font-size:14px;color:#FEDC66}
+.imgBox img{padding:3px;border:1px solid #78929A;-webkit-box-shadow:3px 4px 6px #4B565A;background:#F7FBFC}
+
+.userInfo{padding:12px 12px 0}
+.userInfo:after{clear:both;content:'.';display:block;height:0;visibility:hidden;line-height:0}
+.userInfo .userPic{width:50px;height:50px;padding:3px}
+.userInfo .userPic>img{width:48px;height:48px;border:1px solid #C4C9CA;-webkit-border-radius:2px}
+.userInfoWrap,.headWrap{position:relative;z-index:1;background:#D9E0E2}
+.userInfoWrap a{padding-top:3px;color:#333}.userInfoWrap .vip{margin-left:5px}
+.userInfoWrap h3 a,.userInfoWrap a span{color:#3D5B74}
+.nav{width:211px;margin:0 auto;padding:10px 0}
+.nav a{display:block;height:42px;padding-left:12px;font-size:20px;line-height:42px;}
+.nav .current>a,.nav a:active{color:#fff;background:#A9BABF;-webkit-border-radius:5px}
+.nav .ico_new{width:20px;height:20px; background-position:-66px -119px}
+
+.title{height:30px;overflow:hidden;padding:13px 9px 13px 22px}
+.title>h3{float:left;line-height:30px}
+.title .btn{float:right;display:block;width:30px;height:30px;background-position:-107px -35px}
+.title .btn:active{background-position:-107px 0}
+.fold .btn{background-position:-147px -35px}
+.fold .title .btn:active{background-position:-147px 0}
+.fold .tocList{display:none}
+.tocList{padding-left:22px;line-height:34px}
+
+.cntHeader{width:100%;height:51px;padding-top:13px;overflow:hidden;background:-webkit-gradient(linear, left top, left bottom, from(#516167), to(#3D4B52), color-stop(0.5, #47565C), color-stop(0.5, #3F4D53))}
+#logo{float:left;width:138px;height:38px;overflow:hidden;margin:3px 17px;background-position:0 -70px;line-height:20em}
+.writeBtn{float:left;display:block;width:50%;padding-left:17px;border:1px solid #3F5962;font-size:20px;color:#A5A5A5;line-height:36px;border:1px solid #3F5962;-webkit-border-radius:5px;background:-webkit-gradient(linear, left top, left bottom, from(#CFCFCF), to(#F4F4F4), color-stop(0.3, #EFEFEF), color-stop(0.5, #F4F4F4))}
+.newTip{position:relative;height:0;border-top:1px solid #FFDA00;border-bottom:1px solid #FC0}
+.newNum{position:absolute;top:-49px;right:10px;display:block;width:44px;height:51px;padding-left:7px;color:#fff;text-shadow:0 2px 3px #CE9202;font-size:18px;line-height:42px;text-align:center;background-position:-187px 0}
+.msgList>li{padding-top:15px;position:relative}
+.msgList .userPic{float:none;position:absolute;margin-left:20px}
+.msgList .userPic>img{width:50px;height:50px;border:2px solid #ADB6BA;-webkit-border-radius:3px;-webkit-box-shadow:0 0 8px #4B565A}
+.msgList .moreFun{top:16px;right:30px}
+.msgList .ico_fun{width:40px;height:60px;background-position:-187px -74px}
+.msgList .moreFun.open{}
+.originCnt{padding:15px 0;border-top:1px dotted #CDD4D7}
+.dialogCnt{position:relative;margin-bottom:15px;padding:15px;background:#5D6E74;border:1px solid #536267;-webkit-border-radius:5px}
+.dialogCnt:before{left:46px;right:auto;border-bottom-color:#536267}
+.dialogCnt:after{left:47px;right:auto;border-bottom-color:#5D6E74}
+.dialogCnt>a{color:#9AABB1}
+.funBox{position:absolute;z-index:1;right:-6px;top:-11px;width:652px;height:134px;padding:0 2px;overflow:hidden;border:1px solid #97A0A4;-webkit-border-radius:8px;-webkit-box-shadow:0 0 5px #848C8F;background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#C8D1D4))}
+.funBox li{float:left;width:150px;height:130px;padding:2px 0;border-left:1px solid #fff;border-right:1px solid #97A0A4}
+.funBox a{display:block;width:150px;height:60px;padding-top:70px;font-size:22px; text-align:center;line-height:41px;background:url(http://mat1.gtimg.com/www/mb/images/ibg2_0521.png) no-repeat}
+.funBox a:active{color:#fff}
+.funBox .fo{border-left:0}
+.funBox .fo a{-webkit-border-top-left-radius:6px;-webkit-border-bottom-left-radius:6px}.funBox .fo a:active{background-position:-160px 0}
+.funBox .relay a{background-position:0 -140px}.funBox .relay a:active{background-position:-160px -140px}
+.funBox .reply a{background-position:0 -280px}.funBox .reply a:active{background-position:-160px -280px}
+.funBox .fav a{background-position:0 -420px}.funBox .fav a:active{background-position:-160px -420px}
+.funBox li.btn{width:44px;border-right:0;}
+.funBox li.btn a{width:44px;-webkit-border-top-right-radius:6px;-webkit-border-bottom-right-radius:6px;background:url(http://mat1.gtimg.com/www/mb/images/ibg1_0521.png) -145px -66px no-repeat,url(http://mat1.gtimg.com/www/mb/images/ibg2_0521.png) no-repeat}
+
+.Dmask{position:absolute;z-index:999;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.6}
+.Dwrap{position:absolute;z-index:1000;top:25%;left:25%;-webkit-border-radius:5px;-webkit-box-shadow:0 0 10px #222;background:#fff}
+.Dtitle{height:49px;padding-left:25px;color:#627075;line-height:49px;border-bottom:1px solid #CED7DA;-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#DDE4E6), color-stop(0.48, #EDF3F6), color-stop(0.5, #E1E6E9))}
+.Dtitle h3{display:inline-block;margin-right:10px;font-size:20px;color:#333;text-shadow:1px 1px 1px #fff}
+.Dcnt{position:relative;margin:15px;padding:8px 3px 8px 25px;border:1px solid #B5BFC1;-webkit-border-radius:5px}
+.Dcnt>textarea{width:29em;height:72px;padding-top:5px;overflow:hidden;font-size:18px;line-height:25px;word-wrap:break-word;border:none}
+.Dcnt:before{position:absolute;z-index:1;top:1px;left:1px;display:block;width:99.8%;height:13px;overflow:hidden;content:"\00a0";position:absolute;background:#fff}
+.Dfun{height:44px;padding:0 15px 20px;overflow:hidden;color:#999;line-height:42px;-webkit-border-bottom-left-radius:5px;-webkit-border-bottom-right-radius:5px;background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#EFF2F2))}
+.Dfun .btn{float:right;display:block;width:102px;height:42px;border:1px solid transparent;-webkit-border-radius:5px;font-size:24px;color:#798797;text-align:center}
+.Dfun a.btn{float:left;width:42px;font-size:36px}
+.Dfun a.btn:active,.Dfun button.btn{color:#fff;text-shadow:0 0 1px #396E8C;border-color:#396E8C;background:-webkit-gradient(linear, left top, left bottom, from(#7BC3E8), to(#2085B9), color-stop(0.43, #6CBBE4), color-stop(0.46, #53A1CE))}
+.countTxt{float:right;margin-right:15px;font-size:20px;line-height:44px}
