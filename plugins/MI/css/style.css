@@ -1,14 +1,4 @@
-@charset "utf-8";/*
-Content-Type: multipart/related; boundary="_ANY_STRING_WILL_DO_AS_A_SEPARATOR"
-
---_ANY_STRING_WILL_DO_AS_A_SEPARATOR
-Content-Location:gifBg2_v0.0.1.gif
-Content-Transfer-Encoding:base64
-
-R0lGODlh0gAxAIAAAJnb8snx/yH5BAAAAAAALAAAAADSADEAAAK3RI6py+0Po5y02ouxybz7D4Zito3miabqV67uC8dhK9f2jdP4zvezDwwKKbqh8egrIpdMmLIJjYqe0qrVQr1qt4ws97v1gsdSMfm8NKPXQjX7zXPD5zU5/e6y4/cnPf8P4gc4SEJo+CJ4qAiRuOi40PgoGRA56VhpqYiZabjJOej5+RcqukdaeneKOqe6+tbqugYbezZLO2Z7+5WrG9aLyvtrFSxcVvxJfNyUrJzWbMn8bBQtLVQAADs=
-
---_ANY_STRING_WILL_DO_AS_A_SEPARATOR--
-*/
+@charset "utf-8";
 /* css reset */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
 table{border-collapse:collapse;border-spacing:0}
@@ -35,7 +25,7 @@ a{color:#2b4a78;text-decoration:none}
 a:hover{text-decoration:underline}
 a:focus{outline:none}
 /* 布局 */
-#mainWrapper{width:800px;min-height:900px;_height:900px;margin:0 auto;background:#FFF url(data:image/gif;base64,R0lGODlh0gAxAIAAAJnb8snx/yH5BAAAAAAALAAAAADSADEAAAK3RI6py+0Po5y02ouxybz7D4Zito3miabqV67uC8dhK9f2jdP4zvezDwwKKbqh8egrIpdMmLIJjYqe0qrVQr1qt4ws97v1gsdSMfm8NKPXQjX7zXPD5zU5/e6y4/cnPf8P4gc4SEJo+CJ4qAiRuOi40PgoGRA56VhpqYiZabjJOej5+RcqukdaeneKOqe6+tbqugYbezZLO2Z7+5WrG9aLyvtrFSxcVvxJfNyUrJzWbMn8bBQtLVQAADs=) repeat-y right 0;*background-image:url(mhtml:http://mat1.gtimg.com/www/mb/css/style_100505.css!gifBg2_v0.0.1.gif);_background-image:url(../images/gifBg2_v0.0.1.gif)}
+#mainWrapper{width:800px;min-height:900px;_height:900px;margin:0 auto;background:#FFF url(data:image/gif;base64,R0lGODlh0gAxAIAAAJnb8snx/yH5BAAAAAAALAAAAADSADEAAAK3RI6py+0Po5y02ouxybz7D4Zito3miabqV67uC8dhK9f2jdP4zvezDwwKKbqh8egrIpdMmLIJjYqe0qrVQr1qt4ws97v1gsdSMfm8NKPXQjX7zXPD5zU5/e6y4/cnPf8P4gc4SEJo+CJ4qAiRuOi40PgoGRA56VhpqYiZabjJOej5+RcqukdaeneKOqe6+tbqugYbezZLO2Z7+5WrG9aLyvtrFSxcVvxJfNyUrJzWbMn8bBQtLVQAADs=) repeat-y right 0;*background-image:url(../images/gifBg2_v0.0.1.gif)}
 .wrapper{width:800px;margin:0 auto}
 .main{float:left;position:relative;z-index:2;width:590px;overflow-y:visible;margin-bottom:-1px}
 .main.hBig{height:800px}
@@ -65,13 +55,13 @@ a:focus{outline:none}
 li.nobg{background-image:none!important}
 li.nobor,.topicList.nobor{border-bottom:0!important}
 /* 公用背景 */
-.vip,#headRound span,#footRound span,.moreFoot em,.ico_pic,.newVideo,.creatNew,#allTopic .title h3,.btnNoStr,.btnHasStr,.btnHasStr.disabled,.btnHover,.AL .title,.dotList li,.MM .AL .title em,.SM li,.SM li a,.SM li span,.topMenu,.tSearch,.tSearch .inputBtn,.recommendBox h3,.cT .title h3,.SC .btn,.topMenu .ico_new{background:url(../images/b1_100506.png) no-repeat}
+.vip,.ico_expo,#headRound span,#footRound span,.moreFoot em,.ico_pic,.newVideo,.creatNew,#allTopic .title h3,.btnNoStr,.btnHasStr,.btnHasStr.disabled,.btnHover,.AL .title,.dotList li,.MM .AL .title em,.SM li,.SM li a,.SM li span,.topMenu,.tSearch,.tSearch .inputBtn,.recommendBox h3,.cT .title h3,.SC .btn,.topMenu .ico_new{background:url(../images/b1_100519.png) no-repeat}
 #logo a,.moreFoot,.moreFoot a,.blueFoot,.delChose,#talkBox,.cT .title,.tabStyle2,.searchTit,.navArr em{background:url(../images/b3_100506.png) no-repeat}
 #logo a,.navArr em{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/www/mb/images/b3_100506.png')}
 #nav a:hover,.ico_ts,.ico_te,.bubble{background:url(../images/b4_100506.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/www/mb/images/b4_100506.png')}
 .inputTxt,textarea,.D .zfWrap .inputTxt,.D .talkWrap .inputTxt{background:#fff url(../images/b3_100506.png) 0 -328px repeat-x;outline:none}
-.pass,.msgDel,.PBB .inputBtn,.searchBox .inputBtn,.tsendBtn,.ML .btn,.receive,.send,input.addAttention,input.delAttention,.HT .HSR .inputBtn,#EP li em,.seeMore .title h3,.LC .pubInfo,#LUI .right a,.floatTip,.floatTip .lside,.floatTip .rside,.sTxtWrap,.ico_new,.ico_hot,.uCardcnt .btn a,.uCard .addAttention,
-.uCard .delAttention,.attend,.HSR .top span,.HSR .bot span,.close,.DClose,.ico_suc,.ico_error,.tools a,.LC .inputBtn,.D .inputBtn,.zfWrap .left a,.tbList .inputBtn,.MM .title span,.tbSendMsg .tl,.tbSendMsg .tr,.tbSendMsg .bl,.tbSendMsg .br,.tabStyle2 li{background:url(../images/b2_100506.png) no-repeat}
+.pass,.msgDel,.PBB .inputBtn,.searchBox .inputBtn,.tsendBtn,.ML .btn,.receive,.send,input.addAttention,input.delAttention,.HT .HSR .inputBtn,#EP li em,.LC .pubInfo,#LUI .right a,.floatTip,.floatTip .lside,.floatTip .rside,.sTxtWrap,.ico_new,.ico_hot,.uCardcnt .btn a,.addAttention,.delAttention,.attend,.HSR .top span,
+.HSR .bot span,.close,.DClose,.ico_suc,.ico_error,.tools a,.LC .inputBtn,.D .inputBtn,.tbList .inputBtn,.MM .title span,.tbSendMsg .tl,.tbSendMsg .tr,.tbSendMsg .bl,.tbSendMsg .br,.tabStyle2 li,.ico_vData,.citySel span,.moreFun span,.moreFun b,.orginCnt .inputBtn,.citySame,.blackNote em{background:url(../images/b2_100608.png) no-repeat}
 /* hsRound --- 图片圆角-消息底层页、话题页 */
 .HSR .top,.HSR .bot{margin:0 9px;height:8px;border-top:1px solid #E7E7E7;background:#F7F7F7}
 .HSR .bot{_margin-top:-1px;border-top:0;border-bottom:1px solid #E7E7E7}
@@ -100,16 +90,52 @@ input.addAttention,input.delAttention{display:block;width:73px;height:21px;backg
 input.delAttention{background-position:-59px -55px}
 /* 图片图标 */
 .pass,.vip{display:inline-block;width:16px;height:16px;overflow:hidden;margin-left:8px;background-position:-179px -32px;vertical-align:middle}
-.vip{margin-left:2px;background-position:-212px -130px;vertical-align:text-top}#LUI .vip{float:left;margin-top:6px}
+.vip{margin-left:2px;background-position:-212px -130px;vertical-align:text-top}
+.ico_expo,.ico_flag{display:inline-block;width:12px;height:16px;_height:18px;margin-left:2px;overflow:hidden;background-position:-267px -54px;*background-position:-267px -52px;vertical-align:middle}
+.ico_flag{*position:relative;*top:2px;width:18px;background:url(../images/flag_0610.png) no-repeat;left:2px;*margin-right:2px}
+#LUI .vip,#LUI .ico_expo,#LUI .ico_flag{*position:static;*top:0;float:left;margin-top:6px;vertical-align:text-top}
+.flag1{background-position:0 -2px}
+.flag2{background-position:-29px -2px}
+.flag3{background-position:-58px -2px}
+.flag4{background-position:-87px -2px}
+.flag5{background-position:-116px -2px}
+.flag6{background-position:-145px -2px}
+.flag7{background-position:-174px -2px}
+.flag8{background-position:-203px -2px}
+.flag9{background-position:0 -25px}
+.flag10{background-position:-29px -25px}
+.flag11{background-position:-58px -25px}
+.flag12{background-position:-87px -25px}
+.flag13{background-position:-116px -25px}
+.flag14{background-position:-145px -25px}
+.flag15{background-position:-174px -25px}
+.flag16{background-position:-203px -25px}
+.flag17{background-position:0 -48px}
+.flag18{background-position:-29px -48px}
+.flag19{background-position:-58px -48px}
+.flag20{background-position:-87px -48px}
+.flag21{background-position:-116px -48px}
+.flag22{background-position:-145px -48px}
+.flag23{background-position:-174px -48px}
+.flag24{background-position:-203px -48px}
+.flag25{background-position:0 -71px}
+.flag26{background-position:-29px -71px}
+.flag27{background-position:-58px -71px}
+.flag28{background-position:-87px -71px}
+.flag29{background-position:-116px -71px}
+.flag30{background-position:-145px -71px}
+.flag31{background-position:-174px -71px}
+.flag32{background-position:-203px -71px}
+.flag33{background-position:0 -94px}
 .creatNew{float:left;display:block;height:16px;line-height:1.231;margin-right:10px;padding-left:18px;background-position:-170px -33px}
-.fav,.talk,.zf,.del,.report{float:left;padding-left:18px;height:19px;overflow:hidden;line-height:19px;background-position:-125px -232px}
-.fav.light{background-position:-143px -232px}
-.hover .fav,.cur .fav,.orginCnt .fav{background-image:url(../images/b2_100506.png);background-repeat:no-repeat}
+.fav,.talk,.zf,.del,.report{float:left;padding-left:18px;height:19px;overflow:hidden;line-height:19px;background-position:-125px -232px;background-position:-125px -233px\9}
+.fav.light{background-position:-143px -232px;background-position:-143px -233px\9}
+.hover .fav,.cur .fav,.ipad .fav,.orginCnt .fav,#talkFinal .fav{background-image:url(../images/b2_100608.png);background-repeat:no-repeat}
 .talk{padding-left:16px}
 .report{text-indent:0}
 .receive,.send{color:#999;padding-left:20px;background-position:-197px -36px}
 .send{background-position:-197px -58px}
-.ico_tsW{display:inline;float:left;width:21px;height:21px;margin-right:8px;_margin-right:12px;margin-left:8px;overflow:hidden}
+.ico_tsW{display:inline;float:left;width:21px;height:21px;margin-right:8px;_margin-right:5px;margin-left:8px;overflow:hidden}
 .ico_ts,.ico_te{display:block;width:100%;height:100%;background-position:0 0}
 .ico_te{_padding-left:30px;_margin-left:-30px;background-position:-30px 0}
 .attend{display:block;float:left;width:25px;height:26px;margin-right:10px;background-position:0 -428px}
@@ -117,7 +143,7 @@ input.delAttention{background-position:-59px -55px}
 .bubble{display:block;position:absolute;width:100%;height:100%;_padding-left:60px;_margin-left:-60px;background-position:-60px 0}
 .ico_suc{background-position:-202px -205px;background-position:-202px -206px\9;_background-position:-202px -204px;padding-left:18px}
 .ico_error{background-position:-202px -183px;background-position:-202px -184px\9;_background-position:-202px -182px;padding-left:10px}
-.ico_new,.ico_hot{display:inline-block;width:23px;height:11px;margin-left:2px;overflow:hidden;line-height:10em;background-position:-156px -51px;vertical-align:text-top}
+.ico_new,.ico_hot{display:inline-block;width:23px;height:11px;margin-left:2px;overflow:hidden;line-height:10em;background-position:-156px -51px;vertical-align:text-top;vertical-align:top\0}
 .ico_hot{background-position:-156px -65px}
 .loading{color:#999;background:url(../images/loading.gif) 50% 50% no-repeat}
 .floatTip{position:absolute;z-index:999;top:50%;left:50%;height:44px;margin:-22px 0 0 -80px;padding:24px 20px 0 15px;font:normal 18px/21px "MicroSoft YaHei","SimHei";background-position:0 -335px;background-repeat:repeat-x}
@@ -131,13 +157,15 @@ input.delAttention{background-position:-59px -55px}
 #searchU .searchTit h3{float:left;padding-left:10px;background:none}.searchTit h3 strong{color:#574343}.tabStyle2 .right{padding-top:5px}
 .tabStyle2 li{width:100px;height:33px;margin:9px 0 0 -1px;padding-left:1px;font-size:14px;line-height:35px;text-align:center;background-position:-184px -297px}
 .tabStyle2 li.select{font-weight:bold;background-position:0 -297px}
+#seeM .tabStyle2 li.select{background-position:-102px -297px}
+#seeM .tabStyle2 li{width:80px}
 /* 头部-导航/搜索 */
 #headWrap{position:relative;z-index:2;width:800px;height:88px;margin:0 auto}
 #logo{position:absolute;top:28px;width:200px;height:46px;overflow:hidden;cursor:pointer}
 #logo a{display:block;width:200px;height:46px;line-height:20em}
-.topMenu{position:absolute;top:2px;right:5px;min-width:346px;_width:346px;height:29px;overflow-y:hidden;padding-right:5px;text-align:right;background-position:right 0}
+.topMenu{position:absolute;top:2px;right:5px;min-width:600px;_width:600px;height:29px;overflow-y:hidden;padding-right:5px;text-align:right;background-position:right 0}
 .topMenu span{float:none;line-height:31px;margin-left:15px}.topMenu .userName{font-size:12px!important}.topMenu a{color:#C3EFFF}
-.topMenu .ico_new{width:10px;height:10px;background-position:-212px -84px}
+.topMenu .ico_new{width:10px;height:10px;background-position:-212px -84px;vertical-align:text-top\0}
 #nav{position:absolute;top:50px;right:218px}
 #nav li{float:left;_display:inline;width:86px;height:32px;overflow:hidden}
 #nav li.people,#nav li.topic{width:57px}
@@ -145,8 +173,9 @@ input.delAttention{background-position:-59px -55px}
 #nav li.people a,#nav li.topic a{_padding-left:87px;_margin-left:-87px}
 #nav a:hover{background-position:0 -30px;text-decoration:none}#nav li.people a:hover,#nav li.topic a:hover{background-position:-87px -30px}
 .tSearch{position:absolute;top:50px;right:0;width:201px;height:25px;padding-left:8px;background-position:0 -282px}
-.tSearch label{position:absolute;min-width:95px;_width:95px;margin-top:2px;color:#999;cursor:text}
-.tSearch .inputTxt{width:177px;height:16px;margin:0;padding:1px 0 0;padding:2px 0 0\9;border:0;background:none}
+.tSearch label{position:absolute;min-width:170px;_width:170px;margin-top:2px;color:#999;cursor:text}
+.ipad .tSearch label{margin-top:3px}
+.tSearch .inputTxt{width:177px;height:16px;margin:0;padding:1px 0 0;padding:2px 0 0\9;border:0;background-position:0 99px}
 .tSearch .inputBtn{width:22px;height:22px;margin-top:2px;background-position:-212px -53px}.tSearch .inputBtn.hover{ background-position:-239px -53px}
 .navArr{position:absolute;z-index:99;width:16px;height:7px;left:330px;top:-7px;overflow:hidden}
 .navArr em{display:block;width:100%;height:100%;_padding-top:47px;_margin-top:-47px;background-position:0 -47px}
@@ -183,6 +212,7 @@ input.delAttention{background-position:-59px -55px}
 #talkBox .cntBox textarea,#talkBox .txtShadow{font-family:Tahoma,Arial;width:528px;height:66px;resize:none;line-height:21px;margin:4px 0 0 4px;padding:3px 5px;overflow-y:auto;font-size:14px;border:1px solid #D0D0D0;word-wrap:break-word;word-break:break-all;border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;transition:border linear .2s,box-shadow linear .2s;-moz-transition:border linear .2s,-moz-box-shadow linear .2s;-webkit-transition:border linear .2s,-webkit-box-shadow linear .2s;}
 #talkBox .cntBox textarea.focus{border-color:#7BD6F6;-moz-outline:4px solid #E2F5FB;-moz-outline-radius:8px;-webkit-box-shadow:0 0 10px rgba(123,214,246,.6);}
 #talkBox .countTxt,.btnNoStr,.btnHasStr,.btnHover,.D .countTxt{float:right;margin-left:14px;color:#999;line-height:33px;overflow:visible;_overflow:hidden}
+#talkBox .countTxt{margin-left:0}
 #talkBox .loading,.zfWrap .loading,.talkWrap .loading,.D .loading{display:inline-block;padding-left:18px;background-position:0 50%}
 #talkBox .uploadPic .loading{background-position:0 0}
 #talkBox .uploadPic .cancel{float:none;}
@@ -207,10 +237,11 @@ input.delAttention{background-position:-59px -55px}
 .hover .msgBox .relay,.cur .msgBox .relay,.hover .msgBox .alarm,.cur .msgBox .alarm{display:inline;margin-right:0;}
 .userName{float:left;display:inline;_display:inline-block;height:23px;font-size:14px;line-height:23px;color:#999;}/* 用户名 */
 .msgCnt{display:inline;}.userName strong,.msgCnt strong{font-weight:normal}
+.msgCnt em{color:#999;}
 .msgCnt,.talkDetail,.RUI li{font-size:14px;overflow:hidden;word-wrap:break-word}
 .talkDetail{display:none;position:absolute;z-index:20;width:464px;padding:5px 8px 3px;font-size:12px;line-height:19px;border:1px solid #333;background:#fff;filter:progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa',Direction=135,Strength=2);-moz-box-shadow:1px 1px 2px #aaa;-webkit-box-shadow:1px 1px 2px #aaa}
 .pubInfo{position:static;margin-top:3px;overflow:hidden;zoom:1;line-height:19px}
-.pubInfo .left a{color:#999}.pubInfo .left a.zfNum{color:#2b4a78;}.pubInfo .left a.alarm{color:#C1C1C1}
+.pubInfo .left a{color:#999}.pubInfo .left a.zfNum{color:#2b4a78}.pubInfo .left a.alarm{color:#C1C1C1}
 .pubInfo .left a.view{cursor:default;color:#999;padding:0 1px;border-bottom:1px dashed #999;background:none;text-decoration:none}
 .tools span{float:left;margin:0 6px;font-size:14px;color:#eaeaea;line-height:15px}
 .tools a{float:left;display:block;width:13px;height:16px;background-position:-162px -234px}
@@ -218,18 +249,21 @@ input.delAttention{background-position:-59px -55px}
 .tools a.btnOriginal{float:right;width:50px;height:19px;padding-left:15px;line-height:19px;line-height:21px\9;background-position:-197px -258px}
 .picBox{clear:both;overflow:hidden;margin-right:8px;*zoom:1;display:inline}
 .picBox img,.picBox canvas{margin:3px 0 5px;padding:3px;border:1px solid #E7E7E7;background:#F7FBFC;display:none}
-.picBox canvas{display:none;}
 .picBox .pic{display:inline-block;}
-.picBox .pic:hover{cursor:url("http://mat1.gtimg.com/www/mb/images/cursor_zoom.cur"),pointer;}
+.picBox .pic:hover{cursor:url("http://mat1.gtimg.com/www/mb/images/cursor_zoom.cur"),pointer;zoom:1}
+.picBox canvas,.picBox .pic .preview{display:none;}
+.picBox .pic.hover .preview{display:block;position:absolute;z-index:99;padding:3px;margin-top:22px;border:1px solid #E7E7E7;background:#F7FBFC}
 .picBox .ico_load{background:#FFF url(../images/loading.gif) 50% 50% no-repeat;position:absolute;filter:alpha(opacity=75);opacity:0.75;}
 .picBox .tools,.picBox .large{display:none;}
+.iconPic .picBox img{border:0;padding:0;background:none}
+.iconPic .picBox .ico_load{width:16px!important;height:16px!important;margin:3px 0 0 -1px;}
 /* bigPicture */
 .picBox.big{margin:3px 0 8px;padding:4px;border:1px solid #e5e5e5;background:#f9f9f9;text-align:center;display:block;}
 .picBox.big img{display:none!important}
 .picBox.big .large{display:inline!important}
 .picBox.big .tools{display:block;overflow:hidden;padding:5px 6px 0;height:21px}
 .picBox.big img,.picBox.big canvas{margin:0 auto;padding:0;border:none}
-.picBox.big .pic,.picBox.big .pic:hover{cursor:url("http://mat1.gtimg.com/www/mb/images/cursor_minify.cur"),pointer;display:block;overflow:hidden;width:100%}
+.picBox.big .pic,.picBox.big .pic:hover{cursor:url("http://mat1.gtimg.com/www/mb/images/cursor_minify.cur"),pointer!important;display:block;overflow:hidden;width:100%}
 .replyBox .picBox.big{overflow:visible;_width:460px;padding:0 0 4px;margin:3px 0 2px;_margin-left:-8px;border:0}
 .replyBox .picBox.big .tools{width:448px;padding:5px 1px 0 2px;margin-left:-4px;_margin:0;border-top:1px solid #e5e5e5}
 .replyBox .picBox.big .pic{width:460px;margin-left:-8px;_margin-left:0}
@@ -253,6 +287,7 @@ input.delAttention{background-position:-59px -55px}
 .comment .cont{padding:10px 0 0 4px}
 .zfWrap .inputBtn,.zfWrap .countTxt,.talkWrap .countTxt,.talkWrap .inputBtn,.D .inputBtn,.comment .inputBtn,.comment .countTxt{float:right;margin-left:15px;color:#999}
 .zfWrap .inputTxt,.talkWrap .inputTxt{width:432px;overflow-y:hidden;border-color:#cdcdcd;resize:none;background:none}
+ipad .LC .zfWrap .inputTxt,.talkWrap .inputTxt{height:58px}
 .zfWrap .cont,.talkWrap .cont,.comment .cont{position:relative;overflow:hidden;}
 .talkWrap .inputTxt,.comment .inputTxt{height:38px;height:37px\9;overflow-y:auto;line-height:17px}
 .comment .inputTxt{width:432px;overflow-y:hidden;border-color:#cdcdcd;resize:none;}
@@ -264,8 +299,7 @@ input.delAttention{background-position:-59px -55px}
 .comment .disabled{background-position:-124px -212px}
 .zfWrap .countTxt em,.talkWrap .countTxt em,.comment .countTxt em{font-size:22px}
 .zfWrap .top .left{padding:0 0 2px}
-.zfWrap .left a{display:inline-block;height:17px;line-height:17px;padding:0 32px 0 2px;border-top:2px solid #FEEDC9;background-color:#FEEDC9;background-position:right -409px}
-.replyBox{zoom:1;margin:4px 0 8px;line-height:19px;border:1px solid #DCDCDC;background:#F8F8F8}
+.replyBox{zoom:1;margin:4px 0 8px;line-height:19px;border:1px solid #DCDCDC;background:#F8F8F8;clear:both}
 .replyBox .userPic{width:49px;padding:0 0 2px 7px;display:none}
 .replyBox .userPic img{width:40px;height:40px}
 .replyBox .cusPic{display:none!important}
@@ -277,7 +311,8 @@ input.delAttention{background-position:-59px -55px}
 .replyBox .msgCnt a{_line-height:21px}
 .tState{color:#999;padding-right:5px}
 .delChose{position:absolute;z-index:20;width:122px;right:27px;padding:7px 5px 5px;margin:-40px 0 0;text-align:center;line-height:29px;border:1px solid #C4C4C4;background-color:#fff;background-position:0 -238px;background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.Shadow(color='#aaaaaa',Direction=135,Strength=2);-moz-box-shadow:1px 1px 2px #CAC8C8;-webkit-box-shadow:1px 1px 2px #CAC8C8;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
-.delChose input{font-size:12px;width:46px;height:23px;padding-top:2px\9;line-height:15px\9;cursor:pointer}
+.delChose input,.blackTip p input{font-size:12px;width:46px;height:23px;padding-top:2px\9;line-height:15px\9;cursor:pointer}
+.ipad .delChose input,.ipad .blackTip p input{width:55px}
 .pubSuc{background:#fff}.pubSuc .top,.pubSuc .bot,.pubSuc .cont{display:none}
 .talkSuc{width:100%;height:31px;padding:10px 0 0;font-size:14px;line-height:21px;color:#828282}
 /* listCon --- 公用列表 */
@@ -300,11 +335,15 @@ input.delAttention{background-position:-59px -55px}
 .orderType{float:right;color:#B3B3B3}
 .orderType span,.orderType a{display:inline-block;padding:0 4px 0 5px}
 .orderType span{color:#333;font-weight:bold}
+.orderType label{color:#333}
+.orderType input{position:relative;margin:0 2px 0 0;top:2px;_top:1px;_margin:0}
+.cT .orderType{margin:0 8px 0 0;}
 .AL .newsBox{position:relative;z-index:1;height:27px;margin-top:-2px;border:1px solid #F4E4B4;background-color:#fff4d8;display:none}
 .AL .newsBox a{display:block;width:100%;height:24px;padding-top:3px;color:#EFAA00;text-align:center}
 .AL .newsBox a:hover,.AL .newsBox.loading{background-color:#ffffe9}
 .AL .newsBox.loading a{display:none}
-.AL .msgBox strong{padding-right:5px;text-align:left}.AL .msgBox .userTo a{margin:0 5px}.AL .msgBox .userTo a.vip{margin-left:-4px}
+.AL .msgBox strong{padding-right:5px;text-align:left}.AL .msgBox .userTo a{margin:0 5px}
+.AL .msgBox .userTo a.vip,.AL .msgBox .userTo a.ico_expo,.AL .msgBox .userTo a.ico_flag{*position:static;*top:0;margin-left:-4px}
 .AL .pubInfo{height:19px;clear:both;padding:0!important;color:#999;background:none!important}
 .AL .pubInfo strong{padding:0;}
 .AL .listWrapper{margin:0 auto}
@@ -315,12 +354,16 @@ input.delAttention{background-position:-59px -55px}
 .AL .LC .funBox{display:none}
 .AL .LC .hover .funBox,.AL .LC .cur .funBox{display:block}
 .AL .LC li.hover p,.AL .LC li.cur p{display:inline}
-#talkList li.hover,#talkList li.cur{border-bottom:1px dashed #D8D8D8;background:#F5F5F5}
+#talkList li.hover{border-bottom:1px dashed #D8D8D8;background:#F5F5F5}
+#talkList li.cur{border-bottom:1px dashed #D8D8D8;background:#F5F5F5!important}
 #talkList li.cur .smallPic img{padding:2px;border:2px solid #E7E7E7}
 .msgBox .relay{display:none}.favorites{margin-left:10px}.favorites.sel{cursor:default;text-decoration:none;color:#999}
 .hover .msgBox .relay, .cur .msgBox .relay{display:inline}
 .AL .LC .funBox a,#commentList .funBox a{float:left;margin-top:1px\9;color:#889db6}
 .AL .LC .funBox span{float:left;margin:0 8px 0 7px;line-height:17px\9;color:#DBDBDB}.AL .LC .funBox span.last{margin-right:43px}
+.ipad .AL .LC .funBox{display:block;}
+.ipad #talkList li.hover{background:#FFF;}
+.ipad .msgBox .relay,.ipad .msgBox .alarm{display:inline;}
 /* listWrapper --- 公用列表外框-关注页 */
 .listWrapper{width:560px;margin:0 auto}
 .listWrapper .pubInfo{margin-top:0}
@@ -335,36 +378,56 @@ input.delAttention{background-position:-59px -55px}
 .favList .title{background-position:-325px -148px}
 .motionList .title{background-position:-325px -111px}
 .myPubList .title{background-position:-325px -76px}
-.seeMore .title{height:36px;padding:0 10px;margin-top:24px;background:none}
-.seeMore .title h3{display:block;width:168px;height:26px;background-position:0 -162px}
-.seeMore .title .right{padding-top:10px;*padding-top:8px}
-.seeMore .title input[type=checkbox]{margin-right:3px;*margin:0;vertical-align:text-top;vertical-align:baseline\9}
+.seeMore .tabStyle2 input[type=checkbox]{margin-right:3px;*margin:0;vertical-align:text-top;vertical-align:baseline\9}
+.seeMore .tabStyle2 .right{padding-top:17px;*padding-top:16px;color:#333;line-height:19px}
 #seeM .navArr{left:416px}#allTopic .navArr{left:544px}
 .topicList{width:540px;margin:0 auto}
 .topicList li{float:left;width:172px;overflow:hidden;padding-left:8px;font-size:14px;line-height:25px}.topicList li a{display:inline-block}
+.cityDrop{position:absolute;top:69px;right:22px;*right:26px;z-index:10;font-size:12px;}
+.citySel{position:relative;display:inline-block;height:19px;overflow:hidden;margin:0;padding:0 24px 0 5px;line-height:19px;*line-height:21px;color:#333;border:1px solid #C5C5C5;background:#fff}
+.citySel:hover{text-decoration:none}.citySel span{position:absolute;top:0;right:0;display:inline-block;width:19px;height:19px;background-position:0 -462px}
+.citySel span{cursor:pointer;}
+.cityCnt{position:absolute;padding:12px 5px;width:210px;left:-167px;top:20px;border:1px solid #C5C5C5;background:#fff}
+.cityDrop.sel .citySel{height:20px;border-bottom-width:0}.cityDrop.sel .cityCnt{display:block}
+.cityDrop.sel .citySel span{background-position:-29px -462px}
+.cityDrop .citys{padding:0 9px 9px;margin-bottom:15px;border-bottom:1px dotted #C5C5C5}
+.cityDrop .citys a{margin:0 6px;line-height:23px}
+.cityDrop select{margin-left:6px;width:92px}.citySelect{padding:0 10px 0 2px}.citySelect p{ text-align:right}
+.cityDrop .selBtn{font-size:12px;width:46px;height:23px;margin-top:10px;padding-top:2px\9;line-height:15px\9;cursor:pointer}
 /* leftUserInfo --- 客人页-左侧用户信息及操作 */
-#LUI{padding:25px 0 8px;overflow:hidden}
+#LUI{padding:25px 0 8px;position:relative;z-index:1}
 #LUI ul{width:526px;margin:0 auto}
+#LUI ul ul{width:78px;overflow:hidden;zoom:1;padding:1px 2px;border:1px solid #C5C5C5;border-width:0 1px;background:#fff}
 #LUI .pic{float:left;width:130px;margin-right:16px}
 #LUI .pic img{width:120px;height:120px;padding:2px;border:1px solid #D2D2D2;background:#fff}
 #LUI .detail{float:left;width:380px}
 #LUI .detail h4{line-height:25px;color:#999}
-#LUI .detail .report{text-indent:0}
 #LUI .userName{padding-top:2px;font-family:"MicroSoft YaHei","SimHei";font-size:20px;color:#333}
-#LUI .link{clear:both;font-family:Tahoma,Arial;font-size:12px;line-height:21px}
+#LUI .link{display:block;clear:both;font-family:Tahoma,Arial;font-size:12px;line-height:21px}
 #LUI .userNums{height:54px;line-height:33px}
 #LUI .userNums span{margin:0 9px 0 8px;font-size:16px;color:#DEDEDE}
 #LUI .userNums a strong{margin:0 2px;font-size:16px}
-#LUI .funBox{height:27px;line-height:27px;overflow:hidden}
+#LUI .funBox{height:27px;line-height:27px;line-height:29px\9;overflow:hidden}
 #LUI .addAttention{margin-top:5px}
-#LUI .right a{float:left;width:31px;height:21px;overflow:hidden;padding-left:26px;margin:5px 0 0 8px;line-height:21px;*line-height:23px;background-position:0 -55px;color:#616161}
-#LUI .right a.sendMsg{background-position:0 -32px}
-#LUI .right a.talk{background-position:0 -78px}
+#LUI .right a{float:left;width:31px;height:21px;overflow:hidden;padding-left:26px;margin:5px 0 0 8px;line-height:21px;line-height:23px\9;background-position:0 -78px;color:#616161}
+#LUI .right a.fun{padding:0 13px;background-position:0 -32px}
+#LUI .right a.fun.open{background-position:0 -55px}
 #LUI .right a:hover{text-decoration:none}
+#LUI .right .moreFun a{display:block;width:100%;height:23px;float:none;padding:0;margin:0;background:none}
+#LUI .right .moreFun a:hover{background:#fff6d0}
+#LUI .delAttention{background:none}
+.moreFun{position:absolute;width:84px;right:5px;margin-top:24px;overflow:hidden;zoom:1}
+.moreFun li{float:left;width:100%;border-bottom:1px dotted #D9D9D9}
+.moreFun span{display:block;height:2px;overflow:hidden;background-position:-56px -460px}
+.moreFun span.bot{background-position:-56px -477px}
+.moreFun b{display:inline-block;width:12px;height:23px;*height:21px;margin:0 6px;padding:0;vertical-align:middle;background-position:-163px -258px}
+.moreFun b.sendMsg{background-position:-144px -258px}.moreFun b.report{background-position:-180px -258px}
 /* rightUserInfo --- 客人页-右侧用户信息 */
 .RUI{min-height:169px;_height:169px;overflow:visible;margin:10px 0 0 17px;margin:6px 0 0 17px\0;line-height:25px}
 .RUI ul{padding:4px 0;width:182px;line-height:19px}
 .RUI li{padding-bottom:2px;font-size:12px}
+.vDateBox{_position:relative;width:169px;margin:0 0 10px -11px;padding:10px 13px;line-height:19px;border:1px solid #A8E4FA;background:#E7F9FF}
+.ico_vData{width:89px;height:21px;margin-bottom:8px;overflow:hidden;line-height:20em;background-position:-89px -428px}
 /* cusTopic --- 客人页 */
 .cT .title{height:30px;padding:12px 0 0;margin-top:16px;border:1px solid #E8E8E8;border-bottom:0;background-position:0 -276px;background-repeat:repeat-x}
 .cT .title h3{padding-left:45px;background-position:-318px -75px}
@@ -380,6 +443,8 @@ input.delAttention{background-position:-59px -55px}
 .cT .LC .inputTxt{width:498px}
 .cT .replyBox .picBox.big{_margin-left:0;_width:auto;}
 .cT .replyBox .picBox.big .tools,.cT .replyBox .picBox.big .pic{width:auto;padding-left:5px;padding-right:5px;margin:0}
+.cT .msgBox strong{display:none}
+.cT .msgBox .replyBox strong,.cT .msgBox .userTo{display:inline}
 /* myLetter --- 私信 */
 .ML .title{border:0;background-position:-326px -179px}
 .ML .tabStyle2{margin:3px auto 0}
@@ -420,53 +485,12 @@ input.delAttention{background-position:-59px -55px}
 .dotList li{float:none;height:35px;line-height:35px;background-position:-13px -126px}
 .dotList li a{display:block;height:35px;font-size:14px}
 .noSearchResult{width:510px;margin:20px auto 0;color:#999}.noSearchResult .note{font-size:14px;color:#333;padding:5px 0 15px}
-/* myMsg --- 消息底层 */
-.MM{width:728px;overflow-y:visible;margin:0 auto;position:relative}
-.MM .userTalk{padding-top:11px;margin-bottom:35px}
-.MM .userDetail{float:left;width:106px;padding-top:2px;text-align:center;font-weight:bold}
-.MM .userDetail img{width:100px;height:100px;padding:2px;margin-bottom:2px;border:1px solid #D2D2D2}
-.MM .userDetail .vip{background-position:-212px -130px}
-.MM .HSR{float:right;width:606px}
-.MM .HSR .SA{top:25px}
-.MM .HSR .SA em{padding-bottom:1px;color:#E7E7E7}
-.MM .HSR .SA span{padding-bottom:1px;color:#F7F7F7}
-.MM .HSR .cntBox{padding:6px 25px 5px}
-.MM .HSR .msgCnt{width:554px;overflow:hidden;padding-bottom:20px;font:normal 18px/25px "MicroSoft YaHei","SimHei"}
-.MM .noteBox{width:688px;height:59px;overflow:hidden;padding:20px;margin:0 auto 10px;font:18px/59px "MicroSoft YaHei","SimHei"}
-.MM .pubInfo{margin-top:9px;color:#999}
-.MM .pubInfo em{margin-left:10px;color:#2b4a78}
-.MM .pubInfo .funBox{float:right}
-.MM .title{height:33px;padding:0;margin:0;overflow:hidden;zoom:1;background:none;border:0}
-.MM .title span{width:6px;height:33px;overflow:hidden;background-position:-181px -51px}
-.MM .title span.right{background-position:-189px -51px}
-.MM .title h3{float:left;width:701px;height:24px;padding:7px 0 0 15px;font-size:12px;line-height:19px;border-top:1px solid #E8E8E8;border-bottom:1px solid #E8E8E8;background:#F8F8F8}
-.MM .title u{margin-left:5px;text-decoration:none;font-weight:normal;color:#999}
-.processBox .title h3{vertical-align:text-top}
-.processBox .title .uname{*display:inline-block;*line-height:18px;*vertical-align:middle}
-.processBox .title .vip{position:relative;top:0;*vertical-align:text-bottom}
-.whiteBg .moreFoot{width:795px}
-.msgDel{float:left;margin-right:24px;width:59px;height:59px;background-position:0 -101px}
-/* processList */
-.PL{width:728px;padding:11px 0}
-.PL li{float:left;width:720px;padding:11px 0 0 8px;overflow:visible;zoom:1}
-.PL .pic{float:left;width:64px;position:relative}
-.PL .pic span{position:absolute;z-index:1;left:11px;top:-23px;width:27px;height:22px}
-.PL .pic img{width:40px;height:40px;padding:3px 6px 6px 3px}
-.PL .msgBox{float:right;width:656px;padding:0 0 8px 0;border-bottom:1px dashed #D8D8D8}
-.PL .nobg .msgBox{border:0}
-.MM .AL{width:728px;margin:12px auto 0}
-.MM .AL .title h3{width:716px;padding-left:0}
-.MM .AL .title em{float:left;width:14px;height:11px;overflow:hidden;margin:4px 9px 0 9px;background-position:-61px -265px}
-.MM .AL .msgBox{width:648px;padding:0}
-.MM .LC{width:712px;margin:0 auto}
-.PL .funBox{line-height:23px}
-.MM .userPic{width:64px;padding:0 0 4px 0}
-.MM .moreFoot{width:795px;left:-36px}
 /* userInfo --- 右侧用户信息 */
 #UI{position:relative;min-height:150px;_height:150px;padding:16px 0 13px 13px}
-#UI .userDetail img{display:block;width:100px;height:100px;padding:2px;border:1px solid #D2D2D2;background:#fff}
-#UI .userDetail p{width:183px;margin-top:5px;font-size:14px;line-height:21px;overflow:hidden}
-#UI .userDetail p.userId{font-size:11px;margin:0;line-height:17px;white-space:nowrap}#UI .userDetail strong{font-weight:normal;vertical-align:text-top\0}
+.userDetail img{display:block;width:100px;height:100px;padding:2px;border:1px solid #D2D2D2;background:#fff}
+.userDetail p{width:183px;margin-top:5px;font-size:14px;line-height:21px;overflow:hidden}
+.userDetail p.userId{font-size:11px;margin:0;line-height:17px;white-space:nowrap}
+.userDetail strong,.userDetail .ico_expo,.userDetail .ico_flag{font-weight:normal;vertical-align:text-top\0}
 #UI .nums{width:78px;padding-top:18px;position:absolute;right:0;top:16px}
 #UI .nums p{margin:0 10px 7px 0}
 #UI .nums a{display:block;_zoom:1}
@@ -495,7 +519,7 @@ input.delAttention{background-position:-59px -55px}
 .FTL a:hover em,.hotTopicList a:hover em{text-decoration:underline}
 .FTL li,.FTL li a,.FTL li .close{float:left}
 .FTL li .close{display:none;width:12px;height:21px;margin:0 0 0 3px;*line-height:19px;background-position:-197px -233px}
-.FTL li:hover .close,.FTL li.hover .close{display:inline-block}
+.ipad .FTL li .close,.FTL li:hover .close,.FTL li.hover .close{display:inline-block}
 .imgList li{float:left;width:51px;height:79px;overflow:hidden;margin-right:12px;text-align:center}
 .imgList li img{display:block;width:45px;height:45px;padding:2px;border:1px solid #D2D2D2;background:#fff}
 .imgList li a{white-space:nowrap}
@@ -508,7 +532,7 @@ input.delAttention{background-position:-59px -55px}
 .SM li.index{background-position:0 -127px}
 .SM li:hover,.SM li.hover{z-index:1;background-position:0 -55px}
 .SM li.index:hover,.SM #x1.hover{background-position:0 -54px}
-.SM li.current{height:34px;z-index:2;background:url(../images/b1_100506.png) 0 -90px no-repeat!important}
+.SM li.current{height:34px;z-index:2;background:url(../images/b1_100519.png) 0 -90px no-repeat!important}
 .SM li.current a{color:#333}
 .SM li.index a{background-position:-307px -33px}
 .SM li.mypub a{background-position:-307px -68px}
@@ -558,7 +582,7 @@ input.delAttention{background-position:-59px -55px}
 .D .DLoad{position:absolute;z-index:5;background:url(http://mat1.gtimg.com/www/mb/images/loading.gif) #FFF 50% 50% no-repeat;}
 .D .CR{position:absolute;top:50%;left:50%;margin:0 0 0 -9999px}
 .D .DWrap{position:relative;margin:-3px 0 -10px;*margin:0 0 -7px;margin:-7px 0 -14px\0;padding:15px 15px 2px;zoom:1;border:0;background-color:#fff}
-.D .DTitle{background:#fff;+zoom:1;font-size:14px;font-weight:bold;overflow:hidden}
+.D .DTitle{background:#fff;+zoom:1;font-size:14px;font-weight:bold;overflow:hidden;cursor:move;margin:-14px -14px 0;padding:14px 0 0 14px;}
 .D .letterBg{background:#fff url(http://mat1.gtimg.com/www/mb/images/letterBg.png) 5px 55px no-repeat}
 .D .SA{display:none}.D .top{padding-top:0;color:#333}.D .bot{height:37px;margin:5px 0;margin:5px 0 8px\0}
 .D label{position:absolute;padding-left:5px;color:#999;cursor:text;font-family:Simsun;line-height:23px;_line-height:25px}
@@ -584,18 +608,26 @@ input.delAttention{background-position:-59px -55px}
 .zfWrap .txtShadow,.talkWrap .txtShadow{border:1px solid;line-height:1.231;padding:2px 5px 0;width:432px;}
 /* 用户资料卡 */
 .uCard{position:absolute;z-index:999;left:18px;margin-top:-9px;height:84px;padding:2px;background:#EFEFEF;border:1px solid #CFCFCF;filter:progid:DXImageTransform.Microsoft.Shadow(color='#919191',Direction=135,Strength=3);-moz-box-shadow:1px 1px 3px #919191;-webkit-box-shadow:1px 1px 3px #919191}
-.uCardcnt{min-width:174px;_width:174px;_overflow:visible;height:80px;padding:4px 6px 0 64px;color:#999;background:#fff}.uCard p{padding-left:1px;white-space:nowrap;display:block!important}
+.uCardcnt{min-width:174px;_width:174px;_overflow:visible;height:80px;padding:4px 6px 0 64px;color:#999;background:#fff}.uCard p,.attentBox{padding-left:1px;white-space:nowrap;display:block!important}
 .uCard .userPic{position:absolute!important;width:58px!important;padding:6px 0 0 6px!important}.uCard .nums span{padding:0 5px 0 4px}
-.uCard .userPic .btn{padding-top:3px;height:18px;overflow:hidden;zoom:1;line-height:23px!important;text-align:left!important}
-.uCard .userName{float:none;height:auto!important;line-height:19px;color:#333}.uCard .en{font-size:11px;line-height:13px}
-.uCard .addAttention{float:left;width:50px;height:17px;margin-top:1px;background-position:-118px -78px}
-.uCard .delAttention{float:left;height:18px;padding-left:24px;background-position:-29px -428px}
+.uCard .userPic .btn,.attentBox{width:50px;padding-top:3px;height:18px;overflow:hidden;zoom:1;line-height:23px!important;text-align:left!important}
+.uCard .userName{float:none;height:auto!important;padding-top:4px\0;line-height:19px;color:#333}.uCard .userName a{display:inline-block;vertical-align:text-top}.uCard .en{font-size:11px;line-height:13px}
+.uCard .addAttention,.attentBox .addAttention{float:left;width:50px;height:17px;margin-top:1px;background-position:-118px -78px}
+.uCard .delAttention,.attentBox .delAttention{float:left;height:18px;padding-left:24px;background-position:-29px -428px}
 .uCardcnt .btn{position:absolute;z-index:1;bottom:7px;right:8px}
-.uCardcnt .btn a{display:inline-block;width:42px;height:17px;overflow:hidden\9;margin-left:-1px;color:#333;line-height:17px;line-height:19px\9;_line-height:17px;text-align:center;background-position:-151px -120px}
-.uCardcnt .btn a:hover{text-decoration:none;background-position:-151px -101px}
+.uCardcnt .btn a{display:inline-block;height:15px;padding:0 7px 0 8px;overflow:hidden\9;margin-left:-1px;color:#333;line-height:15px;line-height:17px\9;_line-height:15px;border:1px solid #DFDFDF;background-position:-80px -408px}
+.uCardcnt .btn a:hover{text-decoration:none;background-position:0 -408px}
 .uCard.small{width:60px;height:60px;left:19px;margin-top:-8px;overflow:hidden;border:0;background:none;cursor:pointer;filter:none;-moz-box-shadow:none;-webkit-box-shadow:none}
 .uCard.small .uCardcnt,.uCard.small .btn *{display:none!important}
 .uCard.isMe .btn *{visibility:hidden}.uCard.isMe .uCardcnt .btn{background:#EFEFEF}
-.uCard .tip{display:none;position:absolute;z-index:2;left:8px;bottom:7px;width:219px;height:17px;padding-left:5px;overflow:hidden;border-top:4px solid #fff;line-height:17px;line-height:19px\9;background:#EFEFEF}
+.uCard .tip{display:none;position:absolute;z-index:2;left:8px;bottom:7px;width:219px;height:17px;padding-left:5px;overflow:hidden;border-top:4px solid #fff;font-family:"Simsun";line-height:17px;line-height:19px\9;background:#EFEFEF}
 .uCard.isMe .tip{display:block}.ML .uCard{left:16px;_left:15px}.ML .uCard.small{left:17px;_left:16px}.ML .uCard .btn{width:auto;height:auto;margin:0;background-image:none}
 .uCard.small .userPic .btn,.ML .uCard.small .userPic .btn{position:absolute;left:6px;top:6px;width:52px;height:52px;padding:0;background:#fff url(http://mat1.gtimg.com/www/mb/images/loading.gif) 50% 50% no-repeat;filter:alpha(opacity=70);opacity:0.7}
+/* 黑名单 */
+.blackTip{width:330px;padding:10px 20px 20px}
+.blackTip h2{font:normal 18px/21px "MicroSoft YaHei","Simhei";*line-height:23px}
+.blackTip p{padding-left:38px;margin-top:10px;line-height:2em}
+.blackTip p input{margin-right:10px}
+.blackNote{float:right;height:23px;overflow:hidden;zoom:1;margin-top:1px;_margin-top:2px;margin:0\0;padding:0 8px;font-family:"Simsun";line-height:25px;*line-height:23px;_line-height:25px;border:1px solid #F0E0B1;background:#FFF9DC}
+.blackNote em{display:block;float:left;width:18px;_width:15px;height:13px;margin-top:5px;background-position:-175px -88px}
+.applyPic{width:350px;padding:0 10px 15px;line-height:23px}.applyPic h3{margin-bottom:5px;font-weight:normal}.applyPic input{display:block;width:85px;height:25px;padding-bottom:2px;margin:10px auto 0}
