@@ -56,10 +56,10 @@ li.nobg{background-image:none!important}
 li.nobor,.topicList.nobor{border-bottom:0!important}
 /* 公用背景 */
 .vip,.ico_expo,#headRound span,#footRound span,.moreFoot em,.ico_pic,.newVideo,.creatNew,#allTopic .title h3,.btnNoStr,.btnHasStr,.btnHasStr.disabled,.btnHover,.AL .title,.dotList li,.MM .AL .title em,.SM li,.SM li a,.SM li span,.topMenu,.tSearch,.tSearch .inputBtn,.recommendBox h3,.cT .title h3,.SC .btn,.topMenu .ico_new,.homeTab .ico_new,.vThumbs .mask{background:url(../images/b1_100622.png) no-repeat}
-#logo a,.moreFoot,.moreFoot a,.blueFoot,.delChose,#talkBox,.cT .title,.tabStyle2,.searchTit,.navArr em,.topicIntro .left{background:url(../images/b3_100708.png) no-repeat}
-#logo a,.navArr em,.topicIntro .left{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='images/b3_100708.png')}
-#nav a:hover,.ico_ts,.ico_te,.bubble{background:url(../images/b4_100506.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='images/b4_100506.png')}
-.inputTxt,textarea,.D .zfWrap .inputTxt,.D .talkWrap .inputTxt{background:#fff url(../images/b3_100708.png) 0 -328px repeat-x;outline:none}
+#logo a,.moreFoot,.moreFoot a,.blueFoot,.delChose,#talkBox,.cT .title,.tabStyle2,.searchTit,.navArr em,.topicIntro .left{background:url(../images/b3_100719.png) no-repeat}
+#logo a,.navArr em,.topicIntro .left{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/www/mb/images/b3_100719.png')}
+#nav a:hover,.ico_ts,.ico_te,.bubble{background:url(../images/b4_100506.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/www/mb/images/b4_100506.png')}
+.inputTxt,textarea,.D .zfWrap .inputTxt,.D .talkWrap .inputTxt{background:#fff url(../images/b3_100719.png) 0 -328px repeat-x;outline:none}
 .pass,.msgDel,.PBB .inputBtn,.searchBox .inputBtn,.tsendBtn,.ML .btn,.receive,.send,input.addAttention,input.delAttention,.HT .HSR .inputBtn,#EP li em,.LC .pubInfo,#LUI .talk,#LUI .fun,.floatTip,.floatTip .lside,.floatTip .rside,.sTxtWrap,.ico_new,.ico_hot,.uCardcnt .btn a,.addAttention,.delAttention,.attend,.HSR .top span,.vTools em,.ico_sFo,.ico_help,
 .HSR .bot span,.close,.DClose,.ico_suc,.ico_error,.tools em,.tools a.btnOriginal,.LC .inputBtn,.D .inputBtn,.tbList .inputBtn,.MM .title span,.tbSendMsg .tl,.tbSendMsg .tr,.tbSendMsg .bl,.tbSendMsg .br,.tabStyle2 li,.ico_vData,.citySel span,.moreFun span,.moreFun b,.orginCnt .inputBtn,.citySame,.blackNote em{background:url(../images/b2_100706.png) no-repeat}
 /* hsRound --- 图片圆角-消息底层页、话题页 */
@@ -93,7 +93,7 @@ input.delAttention{background-position:-59px -55px}
 .pass{margin-left:8px;background-position:-179px -32px;vertical-align:middle}
 .vip{margin-left:2px;background-position:-212px -130px;vertical-align:text-top}
 .ico_help{line-height:20em;background-position:-176px -173px}
-.ico_sFo{position:absolute;display:inline-block;width:21px;height:21px;background-position:-198px -405px}
+.ico_sFo{position:absolute;z-index:2;display:inline-block;width:21px;height:21px;background-position:-198px -405px}
 .foLight{background-position:-154px -405px}
 .ico_expo,.ico_flag{display:inline-block;width:12px;height:16px;_height:18px;margin-left:2px;overflow:hidden;background-position:-267px -54px;*background-position:-267px -52px;vertical-align:middle}
 .ico_flag{*position:relative;*top:2px;width:18px;background:url(../images/flag_0610.png) no-repeat;left:2px;*margin-right:2px}
@@ -166,8 +166,8 @@ input.delAttention{background-position:-59px -55px}
 #seeM .tabStyle2 li{width:80px}
 /* 头部-导航/搜索 */
 #headWrap{position:relative;z-index:2;width:800px;height:88px;margin:0 auto}
-#logo{position:absolute;top:28px;width:200px;height:46px;overflow:hidden;cursor:pointer}
-#logo a{display:block;width:200px;height:46px;line-height:20em}
+#logo{position:absolute;top:28px;width:212px;height:46px;overflow:hidden;cursor:pointer}
+#logo a{display:block;width:212px;height:46px;line-height:20em}
 .topMenu{position:absolute;top:2px;right:5px;min-width:600px;_width:600px;height:29px;overflow-y:hidden;padding-right:5px;text-align:right;background-position:right 0}
 .topMenu span{float:none;line-height:31px;margin-left:15px}.topMenu .userName{font-size:12px!important}.topMenu a{color:#C3EFFF}
 .topMenu .ico_new,.homeTab .ico_new{width:10px;height:10px;background-position:-212px -84px;vertical-align:text-top\0}
@@ -180,7 +180,7 @@ input.delAttention{background-position:-59px -55px}
 .tSearch{position:absolute;top:50px;right:0;width:201px;height:25px;padding-left:8px;background-position:0 -282px}
 .tSearch label{position:absolute;min-width:170px;_width:170px;margin-top:2px;color:#999;cursor:text}
 .ipad .tSearch label{margin-top:3px}
-.tSearch .inputTxt{width:177px;height:16px;margin:0;padding:1px 0 0;padding:2px 0 0\9;border:0;background-position:0 99px}
+.tSearch .inputTxt{width:177px;height:16px;margin:0;padding:1px 0 0;padding:2px 0 0\9;border:0;background:none}
 .tSearch .inputBtn{width:22px;height:22px;margin-top:2px;background-position:-212px -53px}.tSearch .inputBtn.hover{ background-position:-239px -53px}
 .navArr{position:absolute;z-index:99;width:16px;height:7px;left:330px;top:-7px;overflow:hidden}
 .navArr em{display:block;width:100%;height:100%;_padding-top:47px;_margin-top:-47px;background-position:0 -47px}
@@ -261,7 +261,7 @@ input.delAttention{background-position:-59px -55px}
 .picBox,.videoBox{overflow:hidden;margin-right:8px;*zoom:1;display:inline}
 .picBox img,.picBox canvas,.vThumbs img{margin:3px 0 5px;padding:3px;border:1px solid #E7E7E7;background:#F7FBFC;display:none}
 .picBox .pic,.vThumbs img{display:inline-block}
-.picBox .pic:hover{cursor:url("http://mat1.gtimg.com/www/mb/images/cursor_zoom.cur"),pointer;*zoom:1}
+.picBox .pic.hover{cursor:url("http://mat1.gtimg.com/www/mb/images/cursor_zoom.cur"),pointer;*zoom:1}
 .picBox canvas,.picBox .pic .preview{display:none;}
 .picBox .pic.hover .preview{display:block;position:absolute;z-index:99;padding:3px;margin-top:22px;border:1px solid #E7E7E7;background:#F7FBFC}
 .picBox .ico_load{background:#FFF url(../images/loading.gif) 50% 50% no-repeat;position:absolute;filter:alpha(opacity=75);opacity:0.75;}
@@ -300,6 +300,8 @@ input.delAttention{background-position:-59px -55px}
 .relayList{margin:6px 0 4px;padding:0 8px 4px;border:1px solid #DCDCDC;background:#fff}
 .relayList .top{height:28px;padding:3px 0 0 4px;line-height:29px;*zoom:1;overflow:hidden;border-bottom:1px solid #DCDCDC}
 .relayList .close{margin:6px 4px 0 10px}
+.relayList .loading{background-color:#fff!important;background-position:175px 50%;text-align:center;margin:10px 0;}
+.relayList iframe{width:100%}
 .pages{height:17px;margin:9px 4px 0;line-height:1.231;text-align:right}
 .pages span,.pages a{display:inline-block;margin-left:5px}
 .comment .comts{margin:-6px 0 0 3px;width:445px}
@@ -402,7 +404,7 @@ ipad .LC .zfWrap .inputTxt,.talkWrap .inputTxt{height:58px}
 .userNums a:hover,.SC h3 a:hover,#UIn .nums a:hover{text-decoration:none}
 .userNums a:hover strong,.SC h3 a:hover strong,#UIn .nums a:hover strong{text-decoration:underline}
 /* 绑定IE6鼠标滑过事件 */
-#talkBox .btnHasStr,.FTL li,.FTL li,.hotTopicList li,.SM li{*zoom:expression(function(el){if(window['UI'] && UI.B && UI.B.ie6){el.onmouseover=function(){UI.addClass(this,'hover')};el.onmouseout=function(){UI.removeClass(this,'hover')}}setTimeout(function(){el.style.zoom = '1'},0)}(this))}
+#talkBox .btnHasStr,.FTL li,.FTL li,.hotTopicList li,.SM li{*zoom:expression(function(el){if(window['UI'] && UI.B && UI.B.ie6){el.onmouseover=function(){UI.addClass(this,'hover')};el.onmouseout=function(){UI.removeClass(this,'hover')};setTimeout(function(){el.style.zoom = '1'},0)}}(this))}
 /* 左侧列表标题-收藏、提到我的、我发表的、随便看看 */
 .favList .title{background-position:-325px -148px}
 .motionList .title{background-position:-325px -111px}
@@ -549,7 +551,8 @@ ipad .LC .zfWrap .inputTxt,.talkWrap .inputTxt{height:58px}
 .topicIntro .top,.topicIntro .left,.topicIntro .right{display:block;width:100%;height:5px;overflow:hidden}
 .topicIntro .left{width:30px;_width:60px;_height:52px;_margin:-47px 0 0 -30px;background-position:-30px -47px}
 .topicIntro .right{width:157px;height:1px;margin-top:4px;background:#A1C7DD}
-.topicIntro em{display:block;position:relative;width:187px;height:48px;margin:-48px 0 10px;background:#fff;filter:alpha(opacity:60);opacity:0.6}
+.topicIntro .middle{overflow:hidden;zoom:1}
+.topicIntro em{display:block;width:187px;height:200px;margin:-200px 0 10px;background:#fff;filter:alpha(opacity:60);opacity:0.6}
 .topicIntro a,.topicIntro a:hover{position:relative;z-index:1;display:block;zoom:1;padding:5px 5px 4px;border:1px solid #A1C7DD;border-top:0;color:#666!important;text-decoration:none}
 /* favTopicList */
 .FTL li,.hotTopicList li{width:187px}
@@ -645,7 +648,7 @@ ipad .LC .zfWrap .inputTxt,.talkWrap .inputTxt{height:58px}
 .D .txtShadow{width:435px;height:60px;padding:3px 5px;overflow-y:auto;line-height:1.231;}
 .zfWrap .txtShadow,.talkWrap .txtShadow{border:1px solid;line-height:1.231;padding:2px 5px 0;width:432px;}
 /* 用户资料卡 */
-.uCard{position:absolute;z-index:999;left:18px;margin-top:-9px;height:84px;padding:2px;background:#EFEFEF;border:1px solid #CFCFCF;filter:progid:DXImageTransform.Microsoft.Shadow(color='#919191',Direction=135,Strength=3);-moz-box-shadow:1px 1px 3px #919191;-webkit-box-shadow:1px 1px 3px #919191}
+.uCard{position:absolute;z-index:99;left:18px;margin-top:-9px;height:84px;padding:2px;background:#EFEFEF;border:1px solid #CFCFCF;filter:progid:DXImageTransform.Microsoft.Shadow(color='#919191',Direction=135,Strength=3);-moz-box-shadow:1px 1px 3px #919191;-webkit-box-shadow:1px 1px 3px #919191}
 .uCardcnt{min-width:174px;_width:174px;_overflow:visible;height:80px;padding:4px 6px 0 64px;color:#999;background:#fff}.uCard p,.attentBox{padding-left:1px;white-space:nowrap;display:block!important}
 .uCard .userPic{position:absolute!important;width:58px!important;padding:6px 0 0 6px!important}.uCard .nums span{padding:0 5px 0 4px}
 .uCard .userPic .btn,.attentBox{width:50px;padding-top:3px;height:18px;overflow:hidden;*zoom:1;line-height:23px!important;text-align:left!important}
@@ -656,7 +659,7 @@ ipad .LC .zfWrap .inputTxt,.talkWrap .inputTxt{height:58px}
 .uCardcnt .btn a{display:inline-block;height:15px;padding:0 7px 0 8px;overflow:hidden\9;margin-left:-1px;color:#333;line-height:15px;line-height:17px\9;_line-height:15px;border:1px solid #DFDFDF;background-position:-80px -408px}
 .uCardcnt .btn a:hover{text-decoration:none;background-position:0 -408px}
 .uCardcnt .btn a.disabled{color:#999;background-position:-80px -408px}
-.uCard.small{width:60px;height:60px;left:19px;margin-top:-8px;overflow:hidden;border:0;background:none;cursor:pointer;filter:none;-moz-box-shadow:none;-webkit-box-shadow:none}
+.uCard.small{z-index:0;width:60px;height:60px;left:19px;margin-top:-8px;overflow:hidden;border:0;background:none;cursor:pointer;filter:none;-moz-box-shadow:none;-webkit-box-shadow:none}
 .uCard.small .uCardcnt,.uCard.small .btn *{display:none!important}
 .uCard.isMe .btn *{visibility:hidden}.uCard.isMe .uCardcnt .btn{background:#EFEFEF}
 .uCard .tip{display:none;position:absolute;z-index:2;left:8px;bottom:7px;width:219px;height:17px;padding-left:5px;overflow:hidden;border-top:4px solid #fff;font-family:"Simsun";line-height:17px;line-height:19px\9;background:#EFEFEF}
