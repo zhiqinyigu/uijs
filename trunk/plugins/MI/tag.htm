@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>个人标签_腾讯微博</title>
+<meta name="viewport" content="width= 810;" />
+<link rel="apple-touch-icon-precomposed" href="http://mat1.gtimg.com/www/mb/images/microblog_72_72.png" />
+<link rel="shortcut icon" href="http://mat1.gtimg.com/www/mb/favicon.ico"/>
+<link href="http://mat1.gtimg.com/www/mb/css/style_100826d.css" type="text/css" rel="stylesheet"/>
+<style>
+#mainWrapper{background:#fff;padding:15px 0}
+.tabStyle2{width:750px;margin-top:0}
+.selTagWrap h3,.leftBtn a,.rightBtn a,.writeTag,.submitBtn,.noTag,.tagTips,.tagTips em{background:url(http://mat1.gtimg.com/www/mb/images/tagBg1a.png) no-repeat}
+.selTagWrap{position:relative;width:760px;margin:32px auto}
+.selTagWrap h3{width:265px;height:20px;margin:0 0 12px 10px}
+.selTagBox{width:722px;height:246px;padding:16px 17px 0 21px;background:url(http://mat1.gtimg.com/www/mb/images/tagBg2.png) no-repeat}
+.userInfo{float:left;width:278px;line-height:20px}
+.userInfo .pic{float:left;width:118px}
+.userInfo .pic img{width:100px;height:100px;padding:2px;border:1px solid #D2D2D2;background:#fff}
+.userTag{float:left;width:160px}
+.userTag h5{margin-bottom:10px;font-size:14px}
+.myTags li{float:left;display:inline-block;height:20px;padding:0 8px 0 4px;line-height:1.231;color:#52878F;white-space:nowrap;cursor:pointer}
+.myTags li .tagFun{display:none}
+.myTags li.hover{position:relative;z-index:9}
+.myTags li.hover .tagFun{display:block}
+.myTags a:hover{text-decoration:none}
+.tagFun{position:absolute;overflow:hidden;zoom:1;*width:100%;_width:auto;height:15px;padding:0 6px 0 3px;margin:-1px 0 0 -4px;border:1px solid #C9C9C9;background:#fff;filter:progid:DXImageTransform.Microsoft.Shadow(color='#C2C2C2',Direction=135,Strength=1);-moz-box-shadow:1px 1px 1px #C2C2C2;-webkit-box-shadow:1px 1px 1px #C2C2C2}
+.myTags span.tag,a.tag{*display:inline-block;*padding-top:1px;_padding:0;filter:none}
+a.tag{color:#52878F}
+span.tag{cursor:pointer}
+.delTag{position:absolute;right:0;_right:-1px;top:0;width:15px;height:15px;padding-top:1px;*padding:0;_padding-top:1px;font-family:"Simsun";font-weight:bold;color:#D6D6D6;text-align:center}
+.delTag:hover{color:#fff;background:#E4E4E4}
+.tagAdv{position:absolute;bottom:36px;padding-left:7px;color:#999}
+.tagAdv a{font-family:Simsun}
+.tagsWrap{float:right;width:422px}
+.tagsWrap h4{height:21px;margin:2px 0 0 29px;font:normal 18px/21px "MicroSoft YaHei","SimHei";color:#999}.tagsWrap h4 em{color:#F08800}
+.note{margin:5px 29px;color:#999}
+.leftBtn,.rightBtn,.leftBtn a,.rightBtn a{float:left;display:block;width:23px;height:48px;margin-top:24px;overflow:hidden}
+.leftBtn a,.rightBtn a{margin:0;white-space:nowrap;line-height:20em}
+.leftBtn a{background-position:0 -101px}
+.leftBtn a:hover{background-position:-28px -101px}
+.rightBtn a{background-position:-48px -101px}
+.rightBtn a:hover{background-position:-76px -101px}
+.tagsList{float:left;width:356px;margin:0 10px;overflow:hidden}.tagsList ul{width:10000%}.tagsList li{position:relative;position:static\9;float:left;width:356px}
+.tagsList a{float:left;display:inline-block;height:18px;*height:17px;_height:18px;padding:5px 8px 0;*padding-top:6px;_padding-top:5px;margin:1px 1px 1px 0;color:#52878F;line-height:1.231;white-space:nowrap;background:#D9ECEF}
+.tagsList a:hover{color:#fff;text-decoration:none;background:#69B8C4}
+.tagsList a.disabled,.tagsList a.disabled:hover{color:#999;background:#E9EAEA}
+.writeTag{position:absolute;right:21px;bottom:33px;width:192px;height:30px;padding:8px 6px 0 28px;background-position:0 -58px}
+.writeTag .inputTxt{float:left;width:123px;margin-right:6px}
+.writeTag label{position:absolute;left:35px;*left:34px;*margin-top:1px;margin-top:2px\0;color:#999;cursor:text}
+.writeTag .error{top:-20px;margin-top:0}
+.submitBtn{float:left;width:50px;height:21px;overflow:hidden;border:0;text-align:left;text-indent:-20em;background-position:-236px -58px}
+.hasCommon{width:750px;margin:0 auto}
+.title{height:23px;position:relative}
+.title h3{position:absolute;z-index:1;left:10px;padding:0 12px;font:normal 16px/23px "MicroSoft Yahei","SimHei";background:#fff}
+.bg{position:absolute;top:10px;width:100%;height:4px;overflow:hidden;background:#E9EEEF}
+.comList{width:726px;margin:0 auto}
+.comList li{float:left;width:242px;margin:20px 0 10px}
+.comList .pic{float:left;width:66px}
+.comList .userInfo{width:175px;line-height:19px}
+.comList img{width:50px;height:50px;padding:2px;border:1px solid #D2D2D2;background:#fff}
+.noTag{width:146px;height:82px;margin-top:-6px;overflow:hidden;line-height:20em;background-position:-144px -101px}
+.tagTips{position:absolute;z-index:1;height:19px;margin:-2px 0 0 2px;padding:0 7px 0 14px;background-position:0 -154px}
+.tagTips em{position:absolute;top:0;right:0;display:block;width:7px;height:19px;overflow:hidden;background-position:-24px -154px}
+.tagTips b{display:inline-block;height:17px;font-weight:normal;color:#F08800;line-height:17px;border:1px solid #F6DDA8;border-width:1px 0;background:#FFFCCF}
+.noCommon{width:404px;height:130px;margin:-20px auto 0;background:url(http://mat1.gtimg.com/www/mb/images/tagBg3.png) no-repeat}
+.noCommonTxt{width:258px;margin:20px auto 0;font-size:14px}
+.noCommonTxt.loading{padding-left:20px;color:#333;background-position:0 46%}
+</style>
+</head>
+<body>
+<div id="headWrap">
+<h1 id="logo"><a href="/" title="t.qq.com">腾讯微博</a></h1>
+<div class="topMenu"><span class="userName"><a href="/xhlv" title="xhlv(@xhlv)">xhlv</a></span><span><a href="/setting">设置</a></span><span><a href="/client.php?t=mobile">手机</a></span><span><a href="/invite/friends.php" id="invite">邀请(57)</a></span><span><a href="http://t.qzone.qq.com" target="_blank">公告</a></span><span><a href="/help.php" target="_blank">帮助</a></span><span><a href="/logout.php">退出</a></span></div>
+<div id="nav"><ul><li class="home"><a href="/xhlv">我的主页</a></li><li class="news"><a href="/p/news">广播大厅</a></li><li class="people"><a href="/people">找人</a></li><li class="topic"><a href="/p/topic">话题</a></li></ul></div>
+<div class="tSearch"><form id="searchForm" method="get" action="/search/index.php"><label for="searchKey">搜名字/帐号/标签/广播/话题
+</label><input type="text" id="searchKey" maxlength="50" name="k" autocomplete="off" class="inputTxt"/><input type="submit" class="inputBtn" value="搜索"/></form>
+</div>
+<style type="text/css">
+#labTip{position:absolute;width:77px;height:145px;overflow:hidden;right:-96px;top:90px;padding:14px 0 0 7px;font:normal 15px/31px "Simsun";color:#43B6E8}
+#labTip span{position:absolute;z-index:-1;width:84px;height:159px;top:0;left:0;background:url(http://mat1.gtimg.com/www/mb/images/lab_tipbg.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/www/mb/images/lab_tipbg.png')}
+#labTip a{font-size:12px;color:#fff}#labTip a.labTit{display:inline-block;width:70px;height:29px;margin-bottom:5px;overflow:hidden;line-height:20em}
+</style><div id="labTip"><span></span><a href="/labs/index.php" class="labTit">实验室</a><br />&#183;<a href="/labs/index.php">新增功能</a><br />&#183;<a>参与成员</a><br />&#183;<a href="http://ce.oa.com/tx_weibo/add" target="_blank">意见反馈</a></div>
+</div>
+<div id="mainWrapper" class="clear">
+	<div class="tabStyle2"><ul><li><a href="/setting">个人资料</a></li><li><a href="/setting/face">修改头像</a></li><li><a href="/setting/mobile">绑定手机</a></li><li><a href="/blocks.php">黑名单</a></li><li id="bTab"><a href="/setting_theme.php">我爱世界杯</a></li><li class="select">个人标签</li><li><a href="/setting_msgsource.php">其他设置</a></li></ul></div>
+	<div class="selTagWrap">
+		<h3></h3>
+		<div class="selTagBox clear">
+			<div class="userInfo">
+				<div class="clear"><div class="pic"><a href="/xhlv"><img src="http://t2.qlogo.cn/mbloghead/7509c670ff7865356ab4/100"/></a></div>
+				<div class="userTag">
+					<h5>xhlv</h5>
+					<div class="noTag" id="noTag" style="display:none">从右侧选择属于你的标签</div>
+					<ul class="myTags clear"><li><p class="tagFun"><a href="/search/tag.php?k=%E5%8A%A0%E7%8F%ADING" class="tag">加班ING</a><a href="#" class="delTag" rel="1834448081534761348">×</a></p><span class="tag">加班ING</span></li><li><p class="tagFun"><a href="/search/tag.php?k=%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" class="tag">前端开发</a><a href="#" class="delTag" rel="2073765526388604431">×</a></p><span class="tag">前端开发</span></li><li><p class="tagFun"><a href="/search/tag.php?k=%E7%88%B1%E7%9D%A1%E8%A7%89" class="tag">爱睡觉</a><a href="#" class="delTag" rel="3116172981967911833">×</a></p><span class="tag">爱睡觉</span></li><li><p class="tagFun"><a href="/search/tag.php?k=%E7%9C%8B%E7%94%B5%E5%BD%B1" class="tag">看电影</a><a href="#" class="delTag" rel="9393533470027694381">×</a></p><span class="tag">看电影</span></li><li><p class="tagFun"><a href="/search/tag.php?k=85%E5%90%8E" class="tag">85后</a><a href="#" class="delTag" rel="11923406428680378616">×</a></p><span class="tag">85后</span></li><li><p class="tagFun"><a href="/search/tag.php?k=" class="tag"></a><a href="#" class="delTag" rel="12778609907288546659">×</a></p><span class="tag"></span></li><li><p class="tagFun"><a href="/search/tag.php?k=%E5%90%AC%E9%9F%B3%E4%B9%90" class="tag">听音乐</a><a href="#" class="delTag" rel="7632343735443733612">×</a></p><span class="tag">听音乐</span></li><li><p class="tagFun"><a href="/search/tag.php?k=%E5%AE%85" class="tag">宅</a><a href="#" class="delTag" rel="12323892526972733886">×</a></p><span class="tag">宅</span></li><li><p class="tagFun"><a href="/search/tag.php?k=IT%E6%B0%91%E5%B7%A5" class="tag">IT民工</a><a href="#" class="delTag" rel="8883392011515948172">×</a></p><span class="tag">IT民工</span></li></ul>
+				</div></div>
+				<div class="tagAdv"><b>为啥要打标签？</b><br />每个标签后面都隐藏着一群志同道合的人<br />贴上你的标签，找到你的同道中人<br /><a href="/xhlv?preview" target="_blank">去看看打了标签后的我>></a></div>
+			</div>
+			<div class="tagsWrap">
+				<h4>标签秘籍：<span id="tagsListTitle"></span></h4>
+				<div class="note">你最多可以拥有10个标签</div>
+				<div class="tagsBox clear">
+					<div class="page" style="display:none"></div>
+					<div class="leftBtn prev"><a href="#">上一页</a></div>
+					<div class="tagsList" id="tagsList"><ul><li rel="从<em>兴趣爱好</em>开始，让别人认识你！"><a href="#">听音乐</a><a href="#">看电影</a><a href="#">K歌</a><a href="#">上网</a><a href="#">逛论坛</a><a href="#">摄影</a><a href="#">旅游</a><a href="#">爬山</a><a href="#">看书</a><a href="#">小说</a><a href="#">动漫</a><a href="#">游戏</a><a href="#">美食</a><a href="#">美容</a><a href="#">爱睡觉</a><a href="#">爱猫</a><a href="#">爱狗</a><a href="#">打篮球</a><a href="#">踢足球</a><a href="#">游泳</a><a href="#">偶像剧</a><a href="#">港台剧</a><a href="#">美剧</a><a href="#">日剧</a><a href="#">韩剧</a></li>
+<li rel="人人都有一张<em>社会名片</em>，你的呢？"><a href="#">70后</a><a href="#">80后</a><a href="#">85后</a><a href="#">90后</a><a href="#">学生</a><a href="#">教师</a><a href="#">蚁族</a><a href="#">IT民工</a><a href="#">OL</a><a href="#">记者</a><a href="#">主持人</a><a href="#">编辑</a><a href="#">写手</a><a href="#">自由职业</a><a href="#">宅男</a><a href="#">宅女</a><a href="#">腐女</a><a href="#">八卦女</a><a href="#">麦霸</a><a href="#">大龄青年</a><a href="#">杯具天王</a><a href="#">伪愤青</a><a href="#">外貌协会</a><a href="#">乐活族</a><a href="#">月光族</a></li>
+<li rel=" 此时此刻你<em>正在做什么</em>？"><a href="#">恋爱ING</a><a href="#">缺爱ING</a><a href="#">失恋ING</a><a href="#">交友ING</a><a href="#">幸福ING</a><a href="#">发呆ING</a><a href="#">颓废ING</a><a href="#">痛苦ING</a><a href="#">成长ING</a><a href="#">减肥ING</a><a href="#">感冒ING</a><a href="#">失眠ING</a><a href="#">夜生活ING</a><a href="#">学习ING</a><a href="#">加班ING</a><a href="#">努力ING</a><a href="#">攒钱ING</a><a href="#">房奴ING</a></li>
+<li rel="有<em>超能力</em>？拿出来晒一晒吧！"><a href="#">过目不忘</a><a href="#">记忆力超常</a><a href="#">力大无穷</a><a href="#">晒不黑</a><a href="#">狂吃不胖</a><a href="#">没生过病</a><a href="#">能睁着眼睛睡觉</a><a href="#">耳朵可以动</a><a href="#">能倒立睡觉</a><a href="#">单个眉毛可以动</a><a href="#">舌头可以舔到鼻子</a></li>
+<li rel="<em>你是什么粉</em>？赶紧宣告天下吧！"><a href="#">苹果控</a><a href="#">彪马控</a><a href="#">Nokia迷</a><a href="#">微博控</a><a href="#">海清粉</a><a href="#">贾静雯迷</a><a href="#">薇迷</a><a href="#">华仔迷</a><a href="#">Jay迷</a><a href="#">Jolin粉</a><a href="#">宏迷</a><a href="#">锋蜜</a><a href="#">尊迷</a><a href="#">庚饭</a><a href="#">玉米</a><a href="#">笔笔</a><a href="#">凉粉</a><a href="#">可爱多</a><a href="#">芋头</a><a href="#">艾迷</a><a href="#">MJ粉</a><a href="#">Justin迷</a></li>
+<li rel="晒出你的<em>个性</em>，让大家更了解你！"><a href="#">囧</a><a href="#">宅</a><a href="#">各种宅</a><a href="#">幽默</a><a href="#">木讷</a><a href="#">执着</a><a href="#">三分钟热度</a><a href="#">体贴</a><a href="#">粗枝大叶</a><a href="#">直率</a><a href="#">内敛</a><a href="#">柔情似水</a><a href="#">大大咧咧</a><a href="#">善良</a><a href="#">邪恶</a><a href="#">低调</a><a href="#">张扬</a><a href="#">阳光</a><a href="#">腹黑</a><a href="#">乐观主义</a><a href="#">悲观主义</a><a href="#">完美主义</a></li><!--[if !IE]>|xGv00|76b59eb9f255222b1a67424718f32d9f<![endif]--></ul></div>
+					<div class="rightBtn next"><a href="#">下一页</a></div>
+				</div>
+				<div class="writeTag clear"><label class="error" id="tagErrorTip"></label><form method="post" action="/asyn/tag_oper.php" onsubmit="return false">
+					<label for="tagAdd">我写我标签</label><input type="text" class="inputTxt" onfocus="this.previousSibling.style.display='none'" id="tagAdd" /><button type="submit" class="submitBtn">贴上</button>
+				</form></div>
+			</div>
+		</div>
+	</div>
+	<div class="noCommon" id="noCommon" style="display:none"></div>
+	<div class="hasCommon" id="hasCommon" style="display:none">
+		<div class="title"><h3>我的同道中人</h3><span class="bg"></span></div>
+		<ul class="comList clear">
+		<li><div class="pic"><a href="/tegic"><img src="http://t1.qlogo.cn/mbloghead/bcc00c5394426604108a/100" /></a></div><div class="userInfo"><a href="/tegic">Tegic</a><br />和你拥有相同标签:<br /><a href="/search/tag.php?k=%E5%8A%A0%E7%8F%ADING"><span class="tag" rel="加班ING">加班ING</span>(10)</a></div></li><li><div class="pic"><a href="/xiaonie"><img src="http://t1.qlogo.cn/mbloghead/ba64d86134d3346d61e6/100" /></a></div><div class="userInfo"><a href="/xiaonie">小孽</a><br />和你拥有相同标签:<br /><a href="/search/tag.php?k=%E7%88%B1%E7%9D%A1%E8%A7%89"><span class="tag" rel="爱睡觉">爱睡觉</span>(76)</a></div></li><li><div class="pic"><a href="/maxcomic"><img src="http://t3.qlogo.cn/mbloghead/f09b6e86476d200ca66e/100" /></a></div><div class="userInfo"><a href="/maxcomic">赖有贤</a><br />和你拥有相同标签:<br /><a href="/search/tag.php?k=%E7%9C%8B%E7%94%B5%E5%BD%B1"><span class="tag" rel="看电影">看电影</span>(116)</a></div></li><li><div class="pic"><a href="/xfansh"><img src="http://t1.qlogo.cn/mbloghead/0628598df1f4e39a98d2/100" /></a></div><div class="userInfo"><a href="/xfansh">蕃薯</a><br />和你拥有相同标签:<br /><a href="/search/tag.php?k=85%E5%90%8E"><span class="tag" rel="85后">85后</span>(28)</a></div></li><li><div class="pic"><a href="/weiyaoxin"><img src="http://t0.qlogo.cn/mbloghead/c5d488fa3cf8d5a0a5f8/100" /></a></div><div class="userInfo"><a href="/weiyaoxin">魏耀欣</a><br />和你拥有相同标签:<br /><a href="/search/tag.php?k=%E5%90%AC%E9%9F%B3%E4%B9%90"><span class="tag" rel="听音乐">听音乐</span>(119)</a></div></li><li><div class="pic"><a href="/ajiong"><img src="http://t1.qlogo.cn/mbloghead/eeb52aec937342f35dbe/100" /></a></div><div class="userInfo"><a href="/ajiong">阿囧</a><br />和你拥有相同标签:<br /><a href="/search/tag.php?k=%E5%AE%85"><span class="tag" rel="宅">宅</span>(26)</a></div></li><li><div class="pic"><a href="/corndog"><img src="http://t2.qlogo.cn/mbloghead/8e35891327c366d4b1b0/100" /></a></div><div class="userInfo"><a href="/corndog">性感玉米</a><br />和你拥有相同标签:<br /><a href="/search/tag.php?k=IT%E6%B0%91%E5%B7%A5"><span class="tag" rel="IT民工">IT民工</span>(47)</a></div></li>		</ul>
+	</div>
+</div>
+<script type="text/javascript" src="../../../lib/ui.js"></script>
+<script type="text/javascript" src="../../../lib/mi.js" charset="GBK"></script><script language="javascript">
+MI.user={account:'xhlv',name:'xhlv',flag:{},fun:{search:1,autoPic:1},pic:'http://t2.qlogo.cn/mbloghead/7509c670ff7865356ab4/50'};
+</script>
+<script type="text/javascript">
+UI.show('hasCommon');
+UI.hide('noCommon');
+UI.ready(function(){
+	function showTip(num){
+		$('tagsListTitle').innerHTML = UI.A($$('.tagsList li')[num - 1],'rel');
+	}
+	showTip(1);
+	UI.getScript('../../../lib/mi.Slide.js',function(){
+		MI.slide = new MI.Slide({target:$('tagsList'),call:showTip});
+	});
+	UI.getScript('../../../lib/mi.Tag.js',function(){
+		MI.Tag.build();
+	});});
+</script>
+<div id="Copyright"><div class="wrapper">Copyright &copy; 1998 - 2010 Tencent. All Rights Reserved</div></div>
+<script>try{QosS.timePoint3()();}catch(e){}</script>
+<script>setTimeout(function(){ UI.getScript('http://pingjs.qq.com/ping.js',function(){ if(typeof(pgvMain) == 'function')pgvMain() }); },200);</script></body>
+</html>
