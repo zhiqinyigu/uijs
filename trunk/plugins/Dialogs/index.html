@@ -10,7 +10,7 @@
 <script type="text/javascript" src="../../../lib/ui.Dialogs.js"></script>
 </head>
 <style type="text/css">
-html,body{overflow:hidden;}
+/*html,body{overflow:hidden;}*/
 </style>
 <body>
 <div class="wrap" id="wrap" style="width:1419px;">
@@ -135,24 +135,13 @@ html,body{overflow:hidden;}
         <span class="startBtn" title="易站成名" id="startBtn">易站成名</span>
         <span class="cutLine">|||</span>
         <span class="taskBtn taskLeft" style="display:none" id="taskLeft" title="←翻页">←翻页</span>
-        <div class="taskList" style="width:1100px;">
-            <ul class="ul_task" id="taskList">
-                <!-- <li title="商品管理"><span class="bgL"><span class="bgR"><img _png="yes" src="images/icons/settings.png" alt="商品管理" />商品管理</span></span></li>
-                <li class="li_hover" title="网站设置"><span class="bgL"><span class="bgR"><img _png="yes" src="images/icons/desktop.png" alt="网站设置" />网站设置</span></span></li>
-                <li class="li_active" title="开店向导"><span class="bgL"><span class="bgR"><img _png="yes" src="images/icons/settings.png" alt="开店向导" />开店向导</span></span></li>
-                <li title="开店向导"><span class="bgL"><span class="bgR"><img _png="yes" src="images/icons/settings.png" alt="开店向导" />开店向导</span></span></li>
-                <li title="开店向导"><span class="bgL"><span class="bgR"><img _png="yes" src="images/icons/settings.png" alt="开店向导" />开店向导</span></span></li>
-                <li title="开店向导"><span class="bgL"><span class="bgR"><img _png="yes" src="images/icons/settings.png" alt="开店向导" />开店向导</span></span></li>
-                <li title="开店向导"><span class="bgL"><span class="bgR"><img _png="yes" src="images/icons/settings.png" alt="开店向导" />开店向导</span></span></li>
-                <li title="开店向导"><span class="bgL"><span class="bgR"><img _png="yes" src="images/icons/settings.png" alt="开店向导" />开店向导</span></span></li>
-                <li title="开店向导"><span class="bgL"><span class="bgR"><img _png="yes" src="images/icons/settings.png" alt="开店向导" />开店向导</span></span></li>
-                <li title="开店向导"><span class="bgL"><span class="bgR"><img _png="yes" src="images/icons/settings.png" alt="开店向导" />开店向导</span></span></li> -->
-            </ul>
+        <div class="taskList" style="width:1120px;">
+            <ul class="ul_task" id="taskList"></ul>
         </div>
         <span class="infoBtn infoBtn_active" title="商城信息">商城信息</span>
         <div class="shortcuts">
-            <span class="shortcutsBtn shortcutsBtn_hover" id="settings" title="网站设置"><img _png="yes" src="images/icons/settings.png" alt="网站设置" /></span>
-            <span class="shortcutsBtn shortcutsBtn_active" title="显示桌面"><img _png="yes" src="images/icons/desktop.png" alt="显示桌面" /></span>
+            <span class="shortcutsBtn shortcutsBtn" id="settings" title="网站设置"><img _png="yes" src="images/icons/settings.png" alt="网站设置" /></span>
+            <span class="shortcutsBtn shortcutsBtn" title="显示桌面"><img _png="yes" src="images/icons/desktop.png" alt="显示桌面" /></span>
         </div>
         <span class="cutLine fRight">|||</span>
         <span class="taskBtn taskRight taskRight_active" style="display:none" id="taskRight" title="→翻页">→翻页</span>
@@ -449,6 +438,145 @@ UI.ready(function(){
 		height : 200, //高度
 		top : 150, //上边距
 		left : 350 //左边距
+	});
+	UI.dialogs.show({
+		id : 'test1', //Id
+		title : 'Test', //标题
+		move : true, //移动功能，默认true
+		resize : false, //改变大小，默认true
+		close : true, //关闭按钮，默认true
+		min : true, //最小化按钮，默认true
+		max : false, //最小化按钮，默认true
+		task : UI.G('settings'), //任务栏图标，不设置则在普通任务栏显示
+		html : '内容', //静态内容
+		url : '', //Iframe地址
+		width : 300, //宽度
+		height : 200, //高度
+		top : 150, //上边距
+		left : 350 //左边距
+	});
+	UI.dialogs.show({
+		id : 'test2', //Id
+		title : 'Test', //标题
+		move : true, //移动功能，默认true
+		resize : false, //改变大小，默认true
+		close : true, //关闭按钮，默认true
+		min : true, //最小化按钮，默认true
+		max : false, //最小化按钮，默认true
+		task : UI.G('settings'), //任务栏图标，不设置则在普通任务栏显示
+		html : '内容', //静态内容
+		url : '', //Iframe地址
+		width : 300, //宽度
+		height : 200, //高度
+		top : 150, //上边距
+		left : 350 //左边距
+	});
+	UI.dialogs.show({
+		id : 'test3', //Id
+		title : 'Test', //标题
+		move : true, //移动功能，默认true
+		resize : false, //改变大小，默认true
+		close : true, //关闭按钮，默认true
+		min : true, //最小化按钮，默认true
+		max : false, //最小化按钮，默认true
+		task : UI.G('settings'), //任务栏图标，不设置则在普通任务栏显示
+		html : '内容', //静态内容
+		url : '', //Iframe地址
+		width : 300, //宽度
+		height : 200, //高度
+		top : 150, //上边距
+		left : 350 //左边距
+	});
+	UI.dialogs.show({
+		id : 'test4', //Id
+		title : 'Test', //标题
+		move : true, //移动功能，默认true
+		resize : false, //改变大小，默认true
+		close : true, //关闭按钮，默认true
+		min : true, //最小化按钮，默认true
+		max : false, //最小化按钮，默认true
+		task : UI.G('settings'), //任务栏图标，不设置则在普通任务栏显示
+		html : '内容', //静态内容
+		url : '', //Iframe地址
+		width : 300, //宽度
+		height : 200, //高度
+		top : 150, //上边距
+		left : 350 //左边距
+	});
+	UI.dialogs.show({
+		id : 'test5', //Id
+		title : 'Test', //标题
+		move : true, //移动功能，默认true
+		resize : false, //改变大小，默认true
+		close : true, //关闭按钮，默认true
+		min : true, //最小化按钮，默认true
+		max : false, //最小化按钮，默认true
+		task : UI.G('settings'), //任务栏图标，不设置则在普通任务栏显示
+		html : '内容', //静态内容
+		url : '', //Iframe地址
+		width : 300, //宽度
+		height : 200, //高度
+		top : 150, //上边距
+		left : 350 //左边距
+	});
+	UI.dialogs.show({
+		id : 'test6', //Id
+		title : 'Test', //标题
+		move : true, //移动功能，默认true
+		resize : false, //改变大小，默认true
+		close : true, //关闭按钮，默认true
+		min : true, //最小化按钮，默认true
+		max : false, //最小化按钮，默认true
+		task : UI.G('settings'), //任务栏图标，不设置则在普通任务栏显示
+		html : '内容', //静态内容
+		url : '', //Iframe地址
+		width : 300, //宽度
+		height : 200, //高度
+		top : 150, //上边距
+		left : 350 //左边距
+	});
+	UI.dialogs.show({
+		id : 'test7', //Id
+		title : 'Test', //标题
+		move : true, //移动功能，默认true
+		resize : false, //改变大小，默认true
+		close : true, //关闭按钮，默认true
+		min : true, //最小化按钮，默认true
+		max : false, //最小化按钮，默认true
+		task : UI.G('settings'), //任务栏图标，不设置则在普通任务栏显示
+		html : '内容', //静态内容
+		url : '', //Iframe地址
+		width : 300, //宽度
+		height : 200, //高度
+		top : 150, //上边距
+		left : 350 //左边距
+	});
+	UI.dialogs.show({
+		id : 'test8', //Id
+		title : 'Test', //标题
+		move : true, //移动功能，默认true
+		resize : false, //改变大小，默认true
+		close : true, //关闭按钮，默认true
+		min : true, //最小化按钮，默认true
+		max : false, //最小化按钮，默认true
+		task : UI.G('settings'), //任务栏图标，不设置则在普通任务栏显示
+		html : '内容', //静态内容
+		url : '', //Iframe地址
+		width : 300, //宽度
+		height : 200, //高度
+		top : 150, //上边距
+		left : 350 //左边距
+	});
+	UI.each(UI.GC('.shortcuts span'),function(el,i){
+		el.onmouseover = el.onmouseout = el.onmousedown = el.onmouseup = UI.Dialogs.create.prototype.hover;
+		if (i == 0) {
+			
+		}
+		else if (i == 1) {
+			el.onclick = function(){
+				UI.dialogs.hide();
+			}
+		}
 	});
 	/*UI.dialogs.tip({
 		title : '提示信息',

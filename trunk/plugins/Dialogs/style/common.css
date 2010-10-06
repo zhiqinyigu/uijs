@@ -172,7 +172,7 @@ body {background:url(../images/bodyBG.jpg) no-repeat left top;}
 /***** taskList 任务列表 **********/
 .taskList {height:100%; display:inline; float:left; overflow:hidden; zoom:1;}
 
-.ul_task {width:100%; height:100%; margin:0px; padding:0px; list-style:none; display:block; overflow:hidden; zoom:1;}
+.ul_task {width:99999px; height:100%; margin:0px; padding:0px; list-style:none; display:block; overflow:hidden; zoom:1;}
 .ul_task li {width:150px; height:28px; margin:1px 0px 0px 5px; display:inline; float:left; overflow:hidden; zoom:1;}
 .ul_task li .bgL,
 .ul_task li .bgR {height:100%; line-height:28px; color:#fff; cursor:pointer; display:block; overflow:hidden; zoom:1;}
