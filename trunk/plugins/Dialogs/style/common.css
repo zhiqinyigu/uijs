@@ -1,0 +1,430 @@
+@charset "utf-8";
+
+
+
+
+/***** overAll 初始化 ********* ********** **********
+********** ********** ********** ********** **********/
+body {margin:0px; padding:0px; font-family:"宋体"; font-size:12px; line-height:24px; color:#333;}
+div, p, span, b, cite, font, a, img,
+h1, h2, h3, h4, h5, h6,
+form, input, textares {margin:0px; padding:0px; border:none; font-family:"宋体";}
+a:hover {color:#000; text-decoration:none;}
+a {color:#039; text-decoration:none;}
+
+.fLeft {display:inline; float:left!important;}
+.fRight {display:inline; float:right!important;}
+.noBrr {border:none!important;}
+.noBg {background:none!important;}
+.needFill {padding:0px 5px;}
+.c01 {color:#f90;}
+.c02 {color:#666;}
+.c03 {color:#999;}
+.c04 {color:#f60;}
+.c05 {color:#0a0;}
+.f14 {font-size:14px;}
+.pngBg {width:360px; height:220px; background:url(../images/BG_png.png) no-repeat left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/BG_png.png", sizingMethod="crop");}
+.coverSelect {width:100%; height:100%;}
+.iframe {width:100%; height:100%;}
+
+/***** phiz 表情 ********** ********** **********
+********** ********** ********** ********** **********/
+.phiz {width:16px; height:16px; background:url(../images/BG_noRepeat.gif) no-repeat; display:block; overflow:hidden; zoom:1;}
+
+.phiz01 {background-position:-241px -368px;}
+.phiz02 {background-position:-267px -368px;}
+.phiz03 {background-position:-293px -368px;}
+.phiz04 {background-position:-319px -368px;}
+.phiz05 {background-position:-345px -368px;}
+
+.phiz06 {background-position:-241px -394px;}
+.phiz07 {background-position:-267px -394px;}
+.phiz08 {background-position:-293px -394px;}
+.phiz09 {background-position:-319px -394px;}
+.phiz10 {background-position:-345px -394px;}
+
+.phiz11 {background-position:-241px -420px;}
+.phiz12 {background-position:-267px -420px;}
+.phiz13 {background-position:-293px -420px;}
+.phiz14 {background-position:-319px -420px;}
+.phiz15 {background-position:-345px -420px;}
+
+.phiz16 {background-position:-241px -446px;}
+.phiz17 {background-position:-267px -446px;}
+.phiz18 {background-position:-293px -446px;}
+.phiz19 {background-position:-319px -446px;}
+.phiz20 {background-position:-345px -446px;}
+
+/***** body **********/
+body {background:url(../images/bodyBG.jpg) no-repeat left top;}
+.wrap {position:relative;}
+
+/***** logo 易站成名 **********/
+.logo {width:76px; height:40px; position:absolute; left:29px; top:10px; display:block; overflow:hidden; zoom:1;}
+.logo img {width:76px; height:40px;}
+
+/***** topBar 顶部菜单 ********** ********** **********
+********** ********** ********** ********** **********/
+.topBar {height:58px; margin-bottom:-58px; overflow:hidden; zoom:1;}
+
+/***** quickNav 快速导航 **********/
+.quickNav {height:100%; overflow:hidden; zoom:1;}
+
+.quickNav .filterBg {width:100%; height:100%; padding-right:1px; margin-bottom:-58px; background:url(../images/topBg.png) repeat-x left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/topBg.png", sizingMethod="scale"); overflow:hidden; zoom:1;}
+
+.ul_quickNav {width:520px; height:100%; margin:0px; padding:0px; margin-left:125px; list-style:none; display:inline; float:left; overflow:hidden; zoom:1;}
+.ul_quickNav li {width:40px; height:40px; margin-top:10px; display:inline; float:left; overflow:hidden; zoom:1;}
+.ul_quickNav a:hover {width:36px; height:36px; margin-top:2px;}
+.ul_quickNav a:hover img {width:36px; height:36px;}
+.ul_quickNav a {width:26px; height:26px; margin:7px auto 0px; display:block; overflow:hidden; zoom:1;}
+.ul_quickNav a img {width:26px; height:26px;}
+
+/***** btn 按钮 **********/
+.quickBtn {margin:19px 10px 0px 0px; display:inline; float:right;}
+.aBtn:hover {color:#fff; background:url(../images/BG_noRepeat.gif) no-repeat right -160px;}
+.aBtn:hover span {background:url(../images/BG_noRepeat.gif) no-repeat -241px -160px;}
+.aBtn {color:#fff; padding-right:1px; margin-right:10px; background:url(../images/BG_noRepeat.gif) no-repeat right -96px; float:left; overflow:hidden; zoom:1;}
+.aBtn span {height:22px; line-height:22px; padding:0px 17px 0px 18px; background:url(../images/BG_noRepeat.gif) no-repeat -241px -96px; cursor:pointer; float:left; overflow:hidden; zoom:1;}
+
+.quickBtn01 {margin:-34px 30px 10px 0px;}
+.quickBtn01 .aBtn:hover {background:url(../images/BG_noRepeat.gif) no-repeat right -128px;}
+.quickBtn01 .aBtn:hover span {background:url(../images/BG_noRepeat.gif) no-repeat -241px -128px;}
+.quickBtn01 .aBtn {padding-right:5px; background:url(../images/BG_noRepeat.gif) no-repeat right top;}
+.quickBtn01 .aBtn span {padding:0px 13px 0px 18px; background:url(../images/BG_noRepeat.gif) no-repeat -241px top;}
+
+/***** topPart 顶级栏目 ********** ********** **********
+********** ********** ********** ********** **********/
+.topPart {width:125px; display:inline; float:left; overflow:hidden; zoom:1;}
+
+/***** topPart 半透明背景 **********/
+.topPart .filterBg {width:93px; height:100%; padding-bottom:1px; margin:0px -113px 0px 20px; background:url(../images/leftBg.png) repeat-y left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/leftBg.png", sizingMethod="scale"); display:inline; float:left; overflow:hidden; zoom:1;}
+
+.ul_topPart {width:115px; margin:0px; padding:0px; margin-left:10px; padding-top:100px; list-style:none; display:block; overflow:hidden; zoom:1;}
+.ul_topPart li {width:60px; height:60px; margin:0px -5px 20px 0px; display:inline; float:left; overflow:hidden; zoom:1;}
+.ul_topPart li.liR {margin:40px 0px -20px 0px; float:right;}
+.ul_topPart a:hover {width:60px; height:60px; margin-top:0px;}
+.ul_topPart a:hover img {width:60px; height:60px;}
+.ul_topPart a {width:50px; height:50px; margin:5px auto 0px; display:block; overflow:hidden; zoom:1;}
+.ul_topPart a img {width:50px; height:50px;}
+
+/***** toolBar 工具栏 ********** ********** **********
+********** ********** ********** ********** **********/
+.toolBar {float:right; overflow:hidden; zoom:1;} 
+.toolBar .filterBg {height:100%; padding-bottom:1px; border-left:#000 1px solid; background:url(../images/percent70.png) repeat left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/percent70.png", sizingMethod="scale"); float:right; overflow:hidden; zoom:1;}
+
+.toolBar_open {width:212px;}
+.toolBar_open .filterBg {width:210px; margin-left:-211px;}
+.toolBar_open .openClose {background:url(../images/openClose.gif) no-repeat left center;}
+
+.toolBar_close {width:9px;}
+.toolBar_close .filterBg {width:7px; margin-left:-8px;}
+.toolBar_close .openClose {background:url(../images/openClose.gif) no-repeat -13px center;}
+.toolBar_close .intoolBar {display:none;}
+
+/***** openClose 展开关闭 **********/
+.openClose {width:9px; height:100%; cursor:pointer; text-indent:-9999px; display:inline; float:right; overflow:hidden; zoom:1;}
+
+/***** intoolBar 内容 **********/
+.intoolBar {width:203px; height:100%; float:right; overflow:hidden; zoom:1;}
+
+.toolBtn {width:164px; margin:30px 0px 20px 16px; overflow:hidden; zoom:1;}
+.toolBtn span {margin:0px 10px; float:left; overflow:hidden; zoom:1;}
+.toolBtn span .pngBg {text-indent:-9999px; cursor:pointer; display:block; overflow:hidden; zoom:1;}
+
+.toolBtn .toolSet {width:38px; height:33px; margin-top:4px;}
+.toolBtn .toolSet_hover .pngBg {margin-top:-43px; padding-top:43px;}
+.toolBtn .toolSet_active .pngBg {margin-top:-86px; padding-top:86px;}
+
+.toolBtn .toolLeft {width:33px; height:33px;}
+.toolBtn .toolLeft .pngBg {margin-left:-48px; padding-left:48px;}
+.toolBtn .toolLeft_hover .pngBg {margin:-43px 0px 0px -48px; padding:43px 0px 0px 48px;}
+.toolBtn .toolLeft_active .pngBg {margin:-86px 0px 0px -48px; padding:86px 0px 0px 48px;}
+
+.toolBtn .toolRight {width:33px; height:33px;}
+.toolBtn .toolRight .pngBg {margin-left:-91px; padding-left:91px;}
+.toolBtn .toolRight_hover .pngBg {margin:-43px 0px 0px -91px; padding:43px 0px 0px 91px;}
+.toolBtn .toolRight_active .pngBg {margin:-86px 0px 0px -91px; padding:86px 0px 0px 91px;}
+
+/***** taskBar 任务栏 ********** ********** **********
+********** ********** ********** ********** **********/
+.taskBar {height:30px; background:#222 url(../images/BG_repeatX.gif) repeat-x left top; border-top:#000 1px solid; border-bottom:#000 1px solid; overflow:hidden; zoom:1; clear:both;}
+
+/***** startBtn 易站成名 **********/
+.startBtn {width:92px; height:100%; margin:0px 10px 0px 5px; background:url(../images/BG_noRepeat.gif) no-repeat left top; text-indent:-9999px; cursor:pointer; float:left; overflow:hidden; zoom:1;}
+.startBtn_hover {background:url(../images/BG_noRepeat.gif) no-repeat left -40px;}
+.startBtn_active {background:url(../images/BG_noRepeat.gif) no-repeat left -80px;}
+
+/***** cutLine 分割线 **********/
+.cutLine {width:8px; height:100%; background:url(../images/BG_noRepeat.gif) no-repeat -102px top; text-indent:-9999px; float:left; overflow:hidden; zoom:1;}
+
+/***** taskBtn 翻页按钮 **********/
+.taskBtn {width:22px; height:28px; margin:1px 0px 0px 5px; cursor:pointer; text-indent:-9999px; float:left; overflow:hidden; zoom:1;}
+.taskRight {float:right; margin:1px 5px 0px 0px;}
+
+.taskLeft {background:url(../images/BG_noRepeat.gif) no-repeat -177px top;}
+.taskLeft_hover {background:url(../images/BG_noRepeat.gif) no-repeat -177px -40px;}
+.taskLeft_active {background:url(../images/BG_noRepeat.gif) no-repeat -177px -80px;}
+
+.taskRight {background:url(../images/BG_noRepeat.gif) no-repeat -209px top;}
+.taskRight_hover {background:url(../images/BG_noRepeat.gif) no-repeat -209px -40px;}
+.taskRight_active {background:url(../images/BG_noRepeat.gif) no-repeat -209px -80px;}
+
+/***** taskList 任务列表 **********/
+.taskList {height:100%; display:inline; float:left; overflow:hidden; zoom:1;}
+
+.ul_task {width:100%; height:100%; margin:0px; padding:0px; list-style:none; display:block; overflow:hidden; zoom:1;}
+.ul_task li {width:150px; height:28px; margin:1px 0px 0px 5px; display:inline; float:left; overflow:hidden; zoom:1;}
+.ul_task li .bgL,
+.ul_task li .bgR {height:100%; line-height:28px; color:#fff; cursor:pointer; display:block; overflow:hidden; zoom:1;}
+.ul_task li img {width:16px; height:16px; margin:6px 5px 0px 0px; float:left;}
+
+.ul_task li {background:url(../images/BG_repeatX.gif) no-repeat left -78px; padding-left:5px;}
+.ul_task li .bgL {background:url(../images/BG_repeatX.gif) no-repeat right -116px; padding-right:5px;}
+.ul_task li .bgR {background:url(../images/BG_repeatX.gif) repeat-x left -40px;}
+
+.ul_task .li_hover {background:url(../images/BG_repeatX.gif) no-repeat left -192px;}
+.ul_task .li_hover .bgL {background:url(../images/BG_repeatX.gif) no-repeat right -230px;}
+.ul_task .li_hover .bgR {background:url(../images/BG_repeatX.gif) repeat-x left -154px;}
+
+.ul_task .li_active {background:url(../images/BG_repeatX.gif) no-repeat left -306px;}
+.ul_task .li_active .bgL {background:url(../images/BG_repeatX.gif) no-repeat right -344px;}
+.ul_task .li_active .bgR {background:url(../images/BG_repeatX.gif) repeat-x left -268px;}
+
+/***** mallInfo 商城信息 **********/
+.infoBtn {width:15px; height:100%; background:url(../images/BG_noRepeat.gif) no-repeat -120px top; border-left:#000 1px solid; text-indent:-9999px; cursor:pointer; float:right; overflow:hidden; zoom:1;}
+.infoBtn_hover {background:url(../images/BG_noRepeat.gif) no-repeat -120px -40px;}
+.infoBtn_active {background:url(../images/BG_noRepeat.gif) no-repeat -120px -80px;}
+
+/***** shortcuts 快捷方式 **********/
+.shortcuts {width:100px; height:100%; float:right; overflow:hidden; zoom:1;}
+.shortcuts img {widht:16px; height:16px;}
+
+.shortcutsBtn {width:16px; height:16px; margin:1px 0px 0px 5px; padding:6px 3px; cursor:pointer; float:left; overflow:hidden; zoom:1;}
+.shortcutsBtn_hover {background:url(../images/BG_noRepeat.gif) no-repeat -145px -40px;}
+.shortcutsBtn_active {background:url(../images/BG_noRepeat.gif) no-repeat -145px -80px;}
+
+/***** startMenu 开始菜单 ********** ********** **********
+********** ********** ********** ********** **********/
+/***** ul_allPart 所有栏目 **********/
+.ul_allPart {width:200px; height:360px; border:#000 1px solid; background:#fff; margin:0px; padding:2px; list-style:none; display:inline; float:left;}
+.ul_allPart li {width:100%; margin-bottom:-1px; background:url(../images/BG_noRepeat.gif) no-repeat left -407px; display:inline; float:left; clear:both;}
+.ul_allPart .hover a {height:28px; line-height:28px; border:#ccc 1px solid; background:#fff url(../images/BG_repeatX.gif) repeat-x left -632px;}
+.ul_allPart .hover .ul_inPart a{background:none;}
+.ul_allPart .hover a img {margin:6px 7px 0px 6px;}
+.ul_allPart .hover a b {margin:9px 9px 0px 0px; background:url(../images/BG_noRepeat.gif) no-repeat -205px -244px;}
+.ul_allPart a {height:30px; line-height:30px; display:block;}
+.ul_allPart span {width:80%; float:left; overflow:hidden; zoom:1; cursor:pointer;}
+.ul_allPart img {width:16px; height:16px; margin:7px 7px 0px 7px; float:left;}
+.ul_allPart .bMore {width:5px; height:10px; margin:10px 10px 0px 0px; background:url(../images/BG_noRepeat.gif) no-repeat -190px -244px; float:right; overflow:hidden; zoom:1;}
+.ul_allPart li .empty,.ul_inPart li .empty {position:absolute;width:30px;height:25px;cursor:pointer;margin:0 0 0 180px;}
+.ul_inPart li .empty{margin-left:140px;}
+
+.ul_operatList {width:94px; margin:0px; padding:2px 0px 2px 2px; list-style:none; display:inline; float:left;}
+.ul_operatList li {width:100%; display:inline; float:left; clear:both;}
+.ul_operatList a:hover {height:22px; line-height:22px; color:#000; border:#ccc 1px solid; background:#fff url(../images/BG_repeatX.gif) repeat-x left -670px;}
+.ul_operatList a:hover img {margin:3px 5px 0px 5px;}
+.ul_operatList a {height:24px; color:#fff; display:block;}
+.ul_operatList img {width:16px;  height:16px; margin:4px 5px 0px 6px; float:left;}
+
+.hover .ul_inPart,.hover .ul_inPart .hover .ul_inPart {display:block}
+.ul_inPart {width:150px; height:200px; border:#000 1px solid; margin:-30px 0 0 202px; padding:2px; background:#fff url(../images/BG_repeatY.gif) repeat-y -564px top; list-style:none; display:none; position:absolute;}
+.ul_inPart .ul_inPart {display:none;margin:-27px 0 0 152px}
+.ul_inPart li {width:100%; margin-bottom:-1px; display:inline; float:left; clear:both;}
+.hover .ul_inPart .hover a{background:none;}
+.hover .ul_inPart .hover a,.ul_inPart .hover .hover a {height:24px; border:#ccc 1px solid; background:#fff url(../images/BG_repeatX.gif) repeat-x left -670px;}
+.ul_inPart .hover a img {margin:3px 12px 0px 5px;}
+.ul_inPart .hover a b {margin:6px 4px 0px 0px; background:url(../images/BG_noRepeat.gif) no-repeat -205px -244px;}
+.ul_inPart a {height:24px; display:block;}
+.ul_inPart span {width:80%; float:left; overflow:hidden; zoom:1; cursor:pointer;}
+.ul_inPart img {width:16px; height:16px; margin:4px 12px 0px 6px; float:left;}
+.ul_inPart b {display:none;}
+.ul_inPart .bMore {width:5px; height:10px; margin:7px 5px 0px 0px; background:url(../images/BG_noRepeat.gif) no-repeat -190px -244px; display:inline; float:right; overflow:hidden; zoom:1;}
+
+/***** leftMenu 左侧导航 ********** ********** **********
+********** ********** ********** ********** **********/
+.leftMenu {width:180px; display:inline; float:left; overflow:hidden; zoom:1;}
+.rightMain {display:inline; float:right; overflow:hidden; zoom:1;}
+.inrightMain {padding:23px 0px; overflow:hidden; zoom:1;}
+
+.leftCBg {background:url(../images/BG_repeatY.gif) repeat-y left top; margin-top:20px;}
+.leftBBg {background:url(../images/BG_repeatY.gif) no-repeat -380px bottom;}
+.leftTBg {background:url(../images/BG_repeatY.gif) no-repeat -190px top; padding:15px 0px; overflow:hidden; zoom:1;}
+
+/***** ul_subPart 2级栏目 **********/
+.ul_subPart {width:100%; margin:0px auto; padding:0px; padding-bottom:2px; list-style:none; display:block; overflow:hidden; zoom:1; clear:both;}
+.ul_subPart li {width:100%; margin-bottom:-2px; display:inline; float:left; overflow:hidden; zoom:1; clear:both;}
+.ul_subPart a:hover {width:175px; background:url(../images/BG_noRepeat.gif) no-repeat -5px -244px;}
+.ul_subPart a {width:160px; height:32px; line-height:33px; color:#000; background:url(../images/BG_noRepeat.gif) no-repeat left -160px; display:block; overflow:hidden; zoom:1;}
+.ul_subPart span {width:16px; height:16px; padding:4px; margin:4px 10px 0px 10px; float:left; overflow:hidden; zoom:1;}
+.ul_subPart img {width:16px; height:16px;}
+.ul_subPart .li_active {margin-bottom:0px;}
+.ul_subPart .li_active a:hover,
+.ul_subPart .li_active a {width:175px; color:#fff; font-size:14px; background:url(../images/BG_noRepeat.gif) no-repeat -5px -202px;}
+.ul_subPart .li_active span {background:url(../images/BG_noRepeat.gif) no-repeat -190px -202px;}
+
+/***** recentRecord 最近操作记录 **********/
+.recentRecord {width:162px; height:35px; line-height:40px; text-indent:42px; font-size:14px; color:#fff; font-weight:normal; background:url(../images/BG_noRepeat.gif) no-repeat left -286px; margin-bottom:-10px; overflow:hidden; zoom:1;}
+
+.ul_recentRecord {width:100%; margin:0px auto; padding:0px; list-style:none; display:block; overflow:hidden; zoom:1; clear:both;}
+.ul_recentRecord li {width:100%; display:inline; float:left; overflow:hidden; zoom:1; clear:both;}
+.ul_recentRecord a:hover {width:175px; font-size:14px; background:url(../images/BG_noRepeat.gif) no-repeat 10px -330px;}
+.ul_recentRecord a:hover span {background:none;}
+.ul_recentRecord a {width:160px; height:30px; line-height:30px; color:#000; display:block; overflow:hidden; zoom:1; background:url(../images/BG_noRepeat.gif) no-repeat left -162px;}
+.ul_recentRecord span {width:16px; height:16px; padding:6px; margin:1px 10px 0px 10px; background:url(../images/BG_noRepeat.gif) no-repeat -190px -331px; float:left; overflow:hidden; zoom:1;}
+.ul_recentRecord img {width:16px; height:16px;}
+
+/***** uHere 当前位置 ********** ********** **********
+********** ********** ********** ********** **********/
+.uHere {height:24px; border:#f9f9f9 1px solid; border-right:#a00 2px solid; margin:0px 20px 10px; overflow:hidden; zoom:1; clear:both;}
+.uHere img {width:16px; height:16px; margin:4px 10px 0px 10px; float:left;}
+
+/***** search 搜索 ********** ********** **********
+********** ********** ********** ********** **********/
+.search {height:24px; border:#fff 1px solid; margin:0px 20px 10px; overflow:hidden; zoom:1; clear:both;}
+.search .magnifier {width:20px; height:20px; margin:2px 10px 0px 10px; background:url(../images/BG_noRepeat.gif) no-repeat -190px -286px; text-indent:-9999px; float:left; overflow:hidden; zoom:1;}
+.search .select {margin-top:1px;}
+.search .label {margin-top:1px;}
+.search .inputText input {margin-top:1px;}
+.search .inputBtn {margin-top:1px;}
+
+/***** topTitle 通用标题 ********** ********** **********
+********** ********** ********** ********** **********/
+.topTitle {height:26px; line-height:26px; border-bottom:#000 1px solid; margin:0px 20px 10px; background:url(../images/marker.gif) no-repeat 10px -313px; overflow:hidden; zoom:1; clear:both;}
+.topTitle .h3Tt {font-size:12px; font-weight:bold; margin-left:25px; display:inline; float:left; overflow:hidden; zoom:1;}
+.topTitle .aMore {margin-right:10px; float:right;}
+
+/***** selectAll 全选操作 ********** ********** **********
+********** ********** ********** ********** **********/
+.selectAll {margin:0px 20px 10px; overflow:hidden; zoom:1; clear:both;}
+
+/***** pages 翻页 ********** ********** **********
+********** ********** ********** ********** **********/
+.pages {margin:-38px 20px 10px; padding-left:30%; text-align:right;}
+.pages p {padding:0px 8px; margin:0px; overflow:hidden; zoom:1; clear:both;}
+.pages .incount span span,
+.pages .incount b {padding:0px 5px;}
+.pages .inpages {padding:8px; line-height:normal; overflow:hidden; zoom:1; clear:both;}
+.pages .inpages .select {float:right; margin-top:-5px;}
+.pages .inpages span span {line-height:normal; margin-right:5px; border:#a00 1px solid; padding:3px 6px 2px 7px; background:#a00; font-weight:bold; color:#fff; cursor:default;}
+.pages .inpages a:hover {background:#fff; border:#aa0000 1px solid; color:#a00;}
+.pages .inpages a {line-height:normal; margin-right:5px; border:#000 1px solid; padding:3px 6px 2px 7px; background:#f9f9f9; color:#333; cursor:pointer;}
+
+/***** tabPart 选项卡、栏目 ********** ********** **********
+********** ********** ********** ********** **********/
+.tabPart {padding:0px 10px 19px 10px; border-bottom:#000 1px solid; margin:0px 20px 10px;}
+.intabPart {display:inline; float:left; overflow:hidden; zoom:1;}
+.tabPart a,
+.tabPart a span,
+.tabPart a b {float:left;}
+.tabPart a {margin:2px 2px 0px 0px;}
+.tabPart a:hover b {background:#a00;}
+.tabPart a b {height:16px; line-height:16px; padding:0px 12px; background:#000; color:#fff; cursor:pointer; font-weight:normal; overflow:hidden; zoom:1;}
+.tabPart a.on {margin-top:0px;}
+.tabPart a.on:hover b,
+.tabPart a.on b {font-weight:bold; padding-left:18px; height:20px; line-height:20px; background:#a00 url(../images/marker.gif) no-repeat 5px -275px;}
+
+.tabPart01 {padding:0px 10px; border:none; margin:0px 20px -20px; overflow:hidden; zoom:1; clear:both;}
+.tabPart01 .intabPart {height:27px;}
+.tabPart01 .inputBtn {margin:0px;}
+.tabPart01 a:hover b {background:#a00;}
+.tabPart01 a b {height:22px; line-height:22px; padding:0px 12px; white-space:nowrap;}
+.tabPart01 a b.del {display:none;}
+.tabPart01 a.on {margin-top:0px;}
+.tabPart01 a.on:hover b,
+.tabPart01 a.on b {padding:0px 30px 0px 12px; margin-right:-22px; height:26px; line-height:26px; background:#fff; border:#ccc 1px solid; border-bottom:none; color:#000; font-size:14px;}
+.tabPart01 a.on:hover b.del,
+.tabPart01 a.on b.del {width:16px; height:16px; padding:0px; margin:6px 6px 0px 0px; float:left; display:inline; background:url(../images/marker.gif) no-repeat 4px 4px; border:none; text-indent:-9999px;}
+
+/***** 图片背景 **********/
+.trbl_rb {background:url(../images/trbl_rb.gif) no-repeat right bottom; display:block; overflow:hidden; zoom:1;}
+.trbl_lt {background:url(../images/trbl_lt.gif) no-repeat left top; display:block; overflow:hidden; zoom:1;}
+.trbl_lb {background:url(../images/trbl_lb.gif) no-repeat left bottom; display:block; overflow:hidden; zoom:1;}
+.trbl_rt {background:url(../images/trbl_rt.gif) no-repeat right top; padding:8px; display:block; overflow:hidden; zoom:1;}
+
+.trbl_rb01 .trbl_rt {padding:4px;}
+
+/***** 图片背景 **********/
+.pBtn {height:16px; display:inline; overflow:hidden; zoom:1;}
+.pBtn span {width:16px; height:16px; margin-left:2px; background:url(../images/BG_noRepeat.gif) no-repeat; text-indent:-9999px; cursor:pointer; float:left; overflow:hidden; zoom:1;}
+.pBtn .btn01 {background-position:-293px -316px;}
+.pBtn .btn02 {background-position:-319px -316px;}
+.pBtn .btn03 {background-position:-267px -342px;}
+.pBtn .btn04 {background-position:-345px -342px;}
+.pBtn .btn04_active {background-position:-345px -316px;}
+
+/***** 设置向导 **********/
+.guide {overflow:hidden; zoom:1; clear:both;}
+.inguide {height:460px; overflow:hidden; zoom:1; clear:both;}
+.ul_imgTtCon {margin:0px auto; padding:0px; display:block; overflow:hidden; zoom:1; clear:both; list-style:none;}
+.ul_imgTtCon li {display:block; overflow:hidden; zoom:1; clear:both;}
+.ul_imgTtCon .img {float:left; overflow:hidden; zoom:1;}
+.ul_imgTtCon .tt,
+.ul_imgTtCon .con {display:inline; float:right; overflow:hidden; zoom:1; clear:right;}
+
+.ul_imgTtCon01 {width:100%; height:260px; background:url(../images/guide.jpg) no-repeat center top;}
+.ul_imgTtCon01 .img {width:225px; height:163px; background:url(../images/guide_arrow.gif) no-repeat center top; margin:57px 0px 0px 130px; text-indent:-9999px;}
+.ul_imgTtCon01 .tt,
+.ul_imgTtCon01 .con {width:320px; margin-right:90px;}
+.ul_imgTtCon01 .tt {height:30px; line-height:30px; font-size:14px; font-weight:bold; color:#039; margin-top:50px; margin-bottom:10px;}
+
+.ul_imgTtCon02 {width:auto; height:180px; margin:0px auto;}
+.ul_imgTtCon02 .img {width:110px; height:91px; background:url(../images/right.gif) no-repeat center top; margin:35px 0px 0px 30px; text-indent:-9999px; float:left; overflow:hidden; zoom:1;}
+.ul_imgTtCon02 .tt,
+.ul_imgTtCon02 .con {width:75%; margin-right:30px;}
+.ul_imgTtCon02 .tt {height:30px; line-height:30px; font-size:14px; font-weight:bold; color:#039; margin-top:20px; margin-bottom:10px;}
+.ul_imgTtCon02 .tt span {font-size:12px; font-weight:normal;}
+
+.ul_imgTtCon03 {width:100%; margin:0px auto;}
+.ul_imgTtCon03 li {width:250px; height:72px; border:#ccc 1px solid; margin:11px 0px 0px 11px; display:inline; float:left; clear:none;}
+.ul_imgTtCon03 .img {width:55px; height:45px; background:url(../images/BG_noRepeat.gif) no-repeat; margin:20px 5px -65px 0px; float:right; text-indent:-9999px;}
+.ul_imgTtCon03 .num01 {background-position:left -772px;}
+.ul_imgTtCon03 .num02 {background-position:-80px -772px;}
+.ul_imgTtCon03 .num03 {background-position:-160px -772px;}
+.ul_imgTtCon03 .num04 {background-position:-240px -772px;}
+.ul_imgTtCon03 .num05 {background-position:-320px -772px;}
+.ul_imgTtCon03 .num06 {background-position:-400px -772px;}
+.ul_imgTtCon03 .tt,
+.ul_imgTtCon03 .con {width:auto; margin:0px; padding:0px 8px; float:none; display:block; clear:both;}
+.ul_imgTtCon03 .tt {height:24px; font-size:12px; font-weight:bold; color:#039; margin:0px;}
+.ul_imgTtCon03 .con {height:48px;}
+
+.setStep {width:700px; background:url(../images/BG_repeatX.gif) repeat-x left -738px; margin:20px auto 0px;}
+.setStepL {background:url(../images/BG_noRepeat.gif) no-repeat left -532px;}
+.setStepR {background:url(../images/BG_noRepeat.gif) no-repeat right -532px; overflow:hidden; zoom:1; clear:both;}
+.setStep a,
+.setStep span,
+.setStep b {height:38px; background:url(../images/BG_noRepeat.gif) no-repeat; float:left; overflow:hidden; zoom:1;}
+.setStep a {margin-left:25px;}
+.setStep b {padding:0px 20px 0px 50px; line-height:38px; cursor:pointer;}
+
+.setStep a.on,
+.setStep a:hover {background-position:left -628px;}
+.setStep a.on span,
+.setStep a:hover span {background-position:right -628px;}
+.setStep a.on b.num01,
+.setStep a:hover b.num01 {background-position:-420px -580px;}
+.setStep a.on b.num02,
+.setStep a:hover b.num02 {background-position:-420px -628px;}
+.setStep a.on b.num03,
+.setStep a:hover b.num03 {background-position:-420px -676px;}
+.setStep a.on b.num04,
+.setStep a:hover b.num04 {background-position:-420px -724px;}
+
+.setStep a {background-position:left -580px;}
+.setStep span {background-position:right -580px;}
+.setStep b.num01 {background-position:-210px -580px;}
+.setStep b.num02 {background-position:-210px -628px;}
+.setStep b.num03 {background-position:-210px -676px;}
+.setStep b.num04 {background-position:-210px -724px;}
+
+.prompt {padding-left:120px; margin:20px auto 0px; font-weight:bold; overflow:hidden; zoom:1; clear:both;}
+.prompt .phiz {margin:4px 6px 0px 0px; float:left;}
+.guide .label {margin:0px 0px 0px 20px;}
+.guide .quickBtn {margin:0px 10px 0px 0px;}
+
+
+
+
+
+
+
