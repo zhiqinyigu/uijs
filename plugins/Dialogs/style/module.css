@@ -1,0 +1,241 @@
+@charset "utf-8";
+
+
+
+
+/***** module 模块样式 ********** ********** **********
+********** ********** ********** ********** **********/
+.mh, .mhl, .mhc, .mhr,
+.mm, .mml, .mmc, .mmr,
+.mf, .mfl, .mfc, .mfr {height:100%; overflow:hidden; zoom:1;}
+
+.mhImg {width:16px; height:16px; float:left;}
+.mhH2 {overflow:hidden; zoom:1;}
+.mhMore {float:right;}
+
+/***** mod01 待处理事务 *********/
+.mod01 {width:196px; margin-bottom:10px; overflow:hidden; zoom:1; clear:both;}
+.mod01 .mh {height:34px;}
+.mod01 .mh .pngBg {margin-left:-134px; padding-left:134px;}
+.mod01 .mh .mhImg {margin:8px 5px 0px 10px;}
+.mod01 .mh .mhH2 {font-size:14px; font-weight:normal; color:#fff; height:34px; line-height:34px;}
+
+.mod01 .mm {width:186px; border:#000 1px solid; background:#fff; margin:0px auto;}
+
+/***** mod02 内部公告 *********/
+.mod02 {width:188px; margin-left:4px; margin-bottom:10px; overflow:hidden; zoom:1; clear:both;}
+.mod02 .mm {border:#000 1px solid; border-top:none; background:#fff;}
+
+/***** mod03 易站成名 *********/
+.mod03 {width:196px; margin-bottom:10px; overflow:hidden; zoom:1; clear:both;}
+.mod03 .mh {height:36px;}
+.mod03 .mhl {width:10px; float:left;}
+.mod03 .mhl .pngBg {margin:-44px 0px 0px -134px; padding:44px 0px 0px 134px;}
+.mod03 .mhc {width:176px; background:url(../images/mod03_mhc.png) repeat-x left bottom; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/mod03_mhc.png", sizingMethod="scale"); float:left;}
+.mod03 .mhc .mhH2 {width:66px; height:25px; margin-top:7px; overflow:hidden; zoom:1;}
+.mod03 .mhc .mhH2 .pngBg {margin:-44px 0px 0px -174px; padding:44px 0px 0px 174px; text-indent:-9999px; float:left; overflow:hidden; zoom:1;}
+.mod03 .mhc .mhMore:hover {color:#eee;}
+.mod03 .mhc .mhMore {margin:8px 0px 0px 0px; color:#fff;}
+.mod03 .mhr {width:10px; float:right;}
+.mod03 .mhr .pngBg {margin:-44px 0px 0px -154px; padding:44px 0px 0px 154px;}
+
+.mod03 .mm {height:150px;}
+.mod03 .mml {width:5px; background:url(../images/mod03_mml.png) repeat-y right top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/mod03_mml.png", sizingMethod="scale"); float:left;}
+.mod03 .mmc {width:186px; background:#333; float:left;}
+.mod03 .mmr {width:5px; background:url(../images/mod03_mmr.png) repeat-y left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/mod03_mmr.png", sizingMethod="scale"); float:right;}
+
+.mod03 .mf {height:10px;}
+.mod03 .mfl {width:10px; float:left;}
+.mod03 .mfl .pngBg {margin:-90px 0px 0px -134px; padding:90px 0px 0px 134px;}
+.mod03 .mfc {width:176px; background:url(../images/mod03_mfc.png) repeat-x left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/mod03_mfc.png", sizingMethod="scale"); float:left;}
+.mod03 .mfr {width:10px; float:right;}
+.mod03 .mfr .pngBg {margin:-90px 0px 0px -154px; padding:90px 0px 0px 154px;}
+
+/***** modBtn 窗口按钮 **********/
+.modBtn {width:105px; height:22px; position:absolute;top:0;right:8px; display:inline; overflow:hidden; zoom:1;}
+.modBtn span {height:22px; float:right; overflow:hidden; zoom:1;}
+.modBtn .pngBg {cursor:pointer; text-indent:-9999px; display:block; overflow:hidden; zoom:1;}
+
+.modBtn .minimize {width:31px;}
+.modBtn .minimize .pngBg {margin-top:-129px; padding-top:129px;}
+.modBtn .minimize_hover .pngBg {margin-top:-161px; padding-top:161px;}
+.modBtn .minimize_active .pngBg {margin-top:-193px; padding-top:193px;}
+
+.modBtn .maximize {width:31px;}
+.modBtn .maximize .pngBg {margin:-129px 0px 0px -41px; padding:129px 0px 0px 41px;}
+.modBtn .maximize_hover .pngBg {margin:-161px 0px 0px -41px; padding:161px 0px 0px 41px;}
+.modBtn .maximize_active .pngBg {margin:-193px 0px 0px -41px; padding:193px 0px 0px 41px;}
+
+.modBtn .restore {width:31px;}
+.modBtn .restore .pngBg {margin:-129px 0px 0px -82px; padding:129px 0px 0px 82px;}
+.modBtn .restore_hover .pngBg {margin:-161px 0px 0px -82px; padding:161px 0px 0px 82px;}
+.modBtn .restore_active .pngBg {margin:-193px 0px 0px -82px; padding:193px 0px 0px 82px;}
+
+.modBtn .close {width:40px;}
+.modBtn .close .pngBg {margin:-129px 0px 0px -123px; padding:129px 0px 0px 123px;}
+.modBtn .close_hover .pngBg {margin:-161px 0px 0px -123px; padding:161px 0px 0px 123px;}
+.modBtn .close_active .pngBg {margin:-193px 0px 0px -123px; padding:193px 0px 0px 123px;}
+
+.modBtn01 {width:47px;}
+.modBtn01 .close {width:44px;}
+.modBtn01 .close .pngBg {margin:-129px 0px 0px -173px; padding:129px 0px 0px 173px;}
+.modBtn01 .close_hover .pngBg {margin:-161px 0px 0px -173px; padding:161px 0px 0px 173px;}
+.modBtn01 .close_active .pngBg {margin:-193px 0px 0px -173px; padding:193px 0px 0px 173px;}
+
+.modBtn02 {width:47px;}
+.modBtn02 .close {width:44px; height:21px;}
+.modBtn02 .close .pngBg {margin:-130px 0px 0px -173px; padding:130px 0px 0px 173px;}
+.modBtn02 .close_hover .pngBg {margin:-162px 0px 0px -173px; padding:162px 0px 0px 173px;}
+.modBtn02 .close_active .pngBg {margin:-194px 0px 0px -173px; padding:194px 0px 0px 173px;}
+
+/***** resize 改变窗口大小 **********/
+.resize .tmhl {cursor:w-resize;}
+.resize .tmhr {cursor:e-resize;}
+.resize .tmml {cursor:w-resize;}
+.resize .tmmr {cursor:e-resize;}
+.resize .tmfl {cursor:w-resize;}
+.resize .tmfr {cursor:e-resize;}
+
+.eswn {width:6px; height:6px; margin-bottom:-6px; background:url(../images/gifPng.gif) repeat left top; position:relative; display:block; overflow:hidden; zoom:1; clear:both;}
+
+.nResize {width:auto; cursor:n-resize;}
+.nwResize {cursor:nw-resize;}
+.neResize {cursor:ne-resize;}
+
+.sResize {width:auto; cursor:s-resize;}
+.swResize {cursor:sw-resize;}
+.seResize {cursor:se-resize;}
+
+/***** tmod 未全屏窗口 *********/
+.tmod {position:absolute;}
+
+.tmod .tmhl {width:6px;}
+.tmod .tmhc {background:url(../images/tmod_mhc.png) repeat-x left bottom; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod_mhc.png", sizingMethod="scale");}
+.tmod .tmhr {width:6px;}
+.tmod .mhl {width:6px; height:27px;}
+.tmod .mhl .pngBg {margin:-44px 0px 0px -250px; padding:44px 0px 0px 250px;}
+.tmod .mhc {height:27px; cursor:move;}
+.tmod .mhc .mhImg {margin:6px 6px 0px 0px;}
+.tmod .mhc .mhH2 {height:27px; line-height:27px; color:#fff; font-size:14px; font-weight:bold;}
+.tmod .mhr {width:6px; height:27px;}
+.tmod .mhr .pngBg {margin:-44px 0px 0px -266px; padding:44px 0px 0px 266px;}
+
+.tmod .tmml {background:url(../images/tmod_mml.png) repeat-y right top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod_mml.png", sizingMethod="scale");}
+.tmod .tmmc {background:#fff; border:#000 1px solid;}
+.tmod .tmmr {background:url(../images/tmod_mmr.png) repeat-y left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod_mmr.png", sizingMethod="scale");}
+.tmod .mmc {overflow:auto;}
+
+.tmod .tmfc {background:url(../images/tmod_mfc.png) repeat-x left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod_mfc.png", sizingMethod="scale");}
+.tmod .mfl {width:6px; height:6px;}
+.tmod .mfl .pngBg {margin:-81px 0px 0px -250px; padding:81px 0px 0px 250px;}
+.tmod .mfc {height:6px; line-height:normal;}
+.tmod .mfr {width:6px; height:6px;}
+.tmod .mfr .pngBg {margin:-81px 0px 0px -266px; padding:81px 0px 0px 266px;}
+
+/***** 全屏窗口 *********/
+.fullScreen {left:0px!important; top:50px!important;}
+.fullScreen .eswn {display:none;}
+/*.fullScreen .tmhl {display:none;}
+.fullScreen .tmhc {background:url(../images/percent70.png) repeat left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/percent70.png", sizingMethod="scale");}
+.fullScreen .tmhr {display:none;}
+.fullScreen .eswn  {display:none;}
+.fullScreen .mhc {cursor:default;}
+.fullScreen .mhc .mhImg {margin-left:6px;}
+.fullScreen .mhc .modBtn {margin-right:6px;}
+
+.fullScreen .tmml {display:none;}
+.fullScreen .tmmc {background:#fff; border:none; border-top:#000 1px solid;}
+.fullScreen .tmmr {display:none;}
+
+.fullScreen .tmf {display:none;}*/
+
+/***** tmod01 浮动窗口 *********/
+.tmod01 {position:absolute;}
+
+.tmod01 .tmhl {width:12px; cursor:move;}
+.tmod01 .tmhc {background:url(../images/tmod01_mhc.png) repeat-x left bottom; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod01_mhc.png", sizingMethod="scale"); cursor:move;}
+.tmod01 .tmhr {width:12px; cursor:move;}
+.tmod01 .mhl {width:12px; height:34px;}
+.tmod01 .mhl .pngBg {margin:-44px 0px 0px -282px; padding:44px 0px 0px 282px;}
+.tmod01 .mhc {height:34px;}
+.tmod01 .mhc .mhH2 {height:30px; line-height:30px; margin:4px 0px 0px 4px; color:#fff; font-size:14px; font-weight:normal;}
+.tmod01 .mhc .modBtn {margin-top:4px;}
+.tmod01 .mhr {width:12px; height:34px;}
+.tmod01 .mhr .pngBg {margin:-44px 0px 0px -304px; padding:44px 0px 0px 304px;}
+
+.tmod01 .tmml {background:url(../images/tmod01_mml.png) repeat-y right top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod01_mml.png", sizingMethod="scale");}
+.tmod01 .tmmc {background:#fff;}
+.tmod01 .tmmr {background:url(../images/tmod01_mmr.png) repeat-y left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod01_mmr.png", sizingMethod="scale");}
+
+.tmod01 .tmfc {background:url(../images/tmod01_mfc.png) repeat-x left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod01_mfc.png", sizingMethod="scale");}
+.tmod01 .mfl {width:12px; height:12px;}
+.tmod01 .mfl .pngBg {margin:-88px 0px 0px -282px; padding:88px 0px 0px 282px;}
+.tmod01 .mfc {height:12px;}
+.tmod01 .mfr {width:12px; height:12px;}
+.tmod01 .mfr .pngBg {margin:-88px 0px 0px -304px; padding:88px 0px 0px 304px;}
+
+/***** tmod02 浮动窗口 *********/
+.tmod02 {position:absolute;}
+
+.tmod02 .tmhl {width:8px;}
+.tmod02 .tmhc {background:url(../images/tmod02_mhc.png) repeat-x left bottom; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod02_mhc.png", sizingMethod="scale");}
+.tmod02 .tmhr {width:8px;}
+.tmod02 .mhl {width:8px; height:8px;}
+.tmod02 .mhl .pngBg {margin:-44px 0px 0px -326px; padding:44px 0px 0px 326px;}
+.tmod02 .mhc {height:8px;}
+.tmod02 .mhr {width:8px; height:8px;}
+.tmod02 .mhr .pngBg {margin:-44px 0px 0px -344px; padding:44px 0px 0px 344px;}
+
+.tmod02 .tmml {background:url(../images/tmod02_mml.png) repeat-y right top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod02_mml.png", sizingMethod="scale");}
+.tmod02 .tmmc {background:#f9f9f9;}
+.tmod02 .tmmr {background:url(../images/tmod02_mmr.png) repeat-y left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod02_mmr.png", sizingMethod="scale");}
+
+.tmod02 .tmfc {background:url(../images/tmod02_mfc.png) repeat-x left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/tmod02_mfc.png", sizingMethod="scale");}
+.tmod02 .mfl {width:8px; height:8px;}
+.tmod02 .mfl .pngBg {margin:-62px 0px 0px -326px; padding:62px 0px 0px 326px;}
+.tmod02 .mfc {height:8px;}
+.tmod02 .mfr {width:8px; height:8px;}
+.tmod02 .mfr .pngBg {margin:-62px 0px 0px -344px; padding:62px 0px 0px 344px;}
+
+/***** startMenu 开始菜单 *********/
+.startMenu {left:1px; bottom:33px;}
+
+.startMenu .mhc {cursor:default;}
+.startMenu .mhc .mhH2 {font-size:12px; font-weight:normal;}
+
+.startMenu .tmmc {border:none; background:url(../images/percent50.png) repeat left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/percent50.png", sizingMethod="scale");}
+
+/***** mallInfo 商城信息 *********/
+.mallInfo {width:280px;}
+.rightOpen {right:212px; _right:211px; bottom:33px;}
+.rightClose {right:9px; _right:8px; bottom:33px;}
+
+.mallInfo .mhc {width:268px;}
+
+.mallInfo .mm {height:340px;}
+.mallInfo .mmc {width:266px; height:338px;}
+
+.mallInfo .mfc {width:268px;}
+
+/***** tab 选项卡 *********/
+.tabHead {height:25px; overflow:hidden; zoom:1; clear:both;}
+.tabHead span b {width:90px; height:23px; text-align:center; border:#000 1px solid; background:url(../images/BG_noRepeat.gif) no-repeat -451px top; overflow:hidden; zoom:1;}
+.tabHead .on b {height:24px; border-bottom:none; background:#fff;}
+
+.tabHead span a:hover {color:#fff;}
+.tabHead span a {color:#fff;}
+.tabHead .on a:hover {color:#a00;}
+.tabHead .on a {color:#a00; font-weight:bold; font-size:14px;}
+
+/***** message 提示信息 *********/
+.message {padding:5px 15px;}
+
+
+
+
+
+
+
+
+
+
