@@ -133,9 +133,8 @@
 .tmod .mfr .pngBg {margin:-81px 0px 0px -266px; padding:81px 0px 0px 266px;}
 
 /***** 全屏窗口 *********/
-.fullScreen {left:0px!important; top:50px!important;}
 .fullScreen .eswn {display:none;}
-/*.fullScreen .tmhl {display:none;}
+.fullScreen .tmhl {display:none;}
 .fullScreen .tmhc {background:url(../images/percent70.png) repeat left top; _background:url(../images/gifPng.gif) repeat left top; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/percent70.png", sizingMethod="scale");}
 .fullScreen .tmhr {display:none;}
 .fullScreen .eswn  {display:none;}
@@ -147,7 +146,7 @@
 .fullScreen .tmmc {background:#fff; border:none; border-top:#000 1px solid;}
 .fullScreen .tmmr {display:none;}
 
-.fullScreen .tmf {display:none;}*/
+.fullScreen .tmf {display:none;}
 
 /***** tmod01 浮动窗口 *********/
 .tmod01 {position:absolute;}
