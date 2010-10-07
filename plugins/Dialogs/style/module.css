@@ -114,7 +114,7 @@
 .tmod .tmhr {width:6px;}
 .tmod .mhl {width:6px; height:27px;}
 .tmod .mhl .pngBg {margin:-44px 0px 0px -250px; padding:44px 0px 0px 250px;}
-.tmod .mhc {height:27px; cursor:move;}
+.tmod .mhc {height:27px; cursor:move;position:relative;}
 .tmod .mhc .mhImg {margin:6px 6px 0px 0px;}
 .tmod .mhc .mhH2 {height:27px; line-height:27px; color:#fff; font-size:14px; font-weight:bold;}
 .tmod .mhr {width:6px; height:27px;}
