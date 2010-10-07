@@ -57,6 +57,7 @@ a {color:#039; text-decoration:none;}
 
 /***** body **********/
 body {background:url(../images/bodyBG.jpg) no-repeat left top;}
+body.white {background:none;}
 .wrap {position:relative;}
 
 /***** logo 易站成名 **********/
