@@ -8,14 +8,14 @@
 <link rel="stylesheet" type="text/css" href="style/style.css" />
 </head>
 <style type="text/css">
-/*html,body{overflow:hidden;}*/
+html,body{overflow:hidden;}
 </style>
 <body>
 <div class="wrap" id="wrap" style="width:1419px;">
     <a class="logo" href="#" title="易站成名"><img _png="yes" src="images/logo.png" alt="易站成名" /></a>
     <!-- ( 顶部 'topBar' 快速导航 ) 开始 -->
     <div class="topBar">
-        <div class="quickNav" style="width:1200px;">
+        <div class="quickNav" id="quickNav">
             <div class="filterBg"></div>
             <ul class="ul_quickNav">
                 <li><a href="index.html" title="设置"><img _png="yes" src="images/icons/settings.png" alt="设置" /></a></li>
@@ -37,7 +37,7 @@
     </div>
     <!-- ( 顶部 'topBar' 快速导航 ) 结束 -->
     <!-- ( 左侧 'topPart' 顶级栏目 ) 开始 -->
-    <div class="topPart" style="height:680px;">
+    <div class="topPart" id="topPart">
         <div class="filterBg"></div>
         <ul class="ul_topPart">
             <li><a href="#" title="设置"><img _png="yes" src="images/icons/settings.png" alt="设置" /></a></li>
@@ -55,7 +55,7 @@
     </div>
     <!-- ( 左侧 'topPart' 顶级栏目 ) 结束 -->
     <!-- ( 右侧 'toolBar' 工具栏 ) 开始 -->
-    <div class="toolBar toolBar_open" style="height:680px;">
+    <div class="toolBar toolBar_open" id="toolBar">
         <div class="filterBg"></div>
         <div class="intoolBar">
             <div class="toolBtn"><span class="toolSet" title="设置工具栏"><b class="pngBg">设置工具栏</b></span><span class="toolLeft toolLeft_active" title="←翻页"><b class="pngBg">←翻页</b></span><span class="toolRight" title="→翻页"><b class="pngBg">→翻页</b></span></div>
@@ -125,15 +125,15 @@
             </div>
             <!-- ( 工具栏 'mod03' 易站成名 ) 结束 -->
         </div>
-        <div class="openClose" title="关闭工具栏">关闭工具栏</div>
+        <div class="openClose" title="关闭工具栏" id="open_close_btn">关闭工具栏</div>
     </div>
     <!-- ( 右侧 'toolBar' 工具栏 ) 结束 -->
     <!-- ( 底部 'taskBar' 任务栏 ) 开始 -->
-    <div class="taskBar">
+    <div class="taskBar" id="taskBar">
         <span class="startBtn" title="易站成名" id="startBtn">易站成名</span>
         <span class="cutLine">|||</span>
         <span class="taskBtn taskLeft" style="display:none" id="taskLeft" title="←翻页">←翻页</span>
-        <div class="taskList" style="width:1120px;">
+        <div class="taskList" style="width:0">
             <ul class="ul_task" id="taskList"></ul>
         </div>
         <span class="infoBtn infoBtn_active" title="商城信息">商城信息</span>
@@ -144,8 +144,8 @@
         <span class="cutLine fRight">|||</span>
         <span class="taskBtn taskRight taskRight" style="display:none" id="taskRight" title="→翻页">→翻页</span>
     </div>
-    <div style="display:none" id="startMenu">
-        <table class="tmod startMenu" cellpadding="0" cellspacing="0" border="0" style="">
+
+        <table class="tmod startMenu" cellpadding="0" cellspacing="0" border="0" style="z-index:9999;display:none" id="startMenu">
             <tr class="tmh">
                 <td class="tmhl"><div class="mhl"><div class="pngBg"></div></div></td>
                 <td class="tmhc"><div class="mhc"><img class="mhImg" _png="yes" src="images/icons/desktop.png" alt="易站成名"/><h2 class="mhH2" title="易站成名">易站成名</h2></div></td>
@@ -191,17 +191,35 @@
             <li><a href="#" title=""><span><img class="mhImg" _png="yes" src="images/icons/desktop.png" alt="易站成名"/>易站成名</span></a></li>
             <li><a href="#" title=""><span><img class="mhImg" _png="yes" src="images/icons/desktop.png" alt="易站成名"/>易站成名</span></a></li>
         </ul>
-    </div>
+
+</div>
+<div id="demo" style="display:none">
+	<div onclick="UI.G('demoCode').value='UI.dialogs.show({id:\'demoShow\',title:\''+UI.G('demoTitle').value+'\',ico:\''+UI.G('demoIco').value+'\',html:\''+UI.G('demoHTML').value+'\',url:\''+UI.G('demoUrl').value+'\',move:'+UI.G('demoMove').checked+',resize:'+UI.G('demoResize').checked+',min:'+UI.G('demoMin').checked+',max:'+UI.G('demoMax').checked+',close:'+UI.G('demoClose').checked+',width:'+UI.G('demoWidth').value+',height:'+UI.G('demoHeight').value+',top:'+UI.G('demoTop').value+',left:'+UI.G('demoLeft').value+'});';">
+		<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;标题: <input type="text" id="demoTitle" style="border:1px solid #999" value="窗口标题" /><br />
+		&nbsp;图标地址: <input type="text" id="demoIco" style="border:1px solid #999" value="images/icons/desktop.png" size="30" /><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内容: <input type="text" id="demoHTML" style="border:1px solid #999" value="窗口内容" /><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网址: <input type="text" id="demoUrl" style="border:1px solid #999" value="http://www.baidu.com" /><span style="color:#999">（窗口内容为空时，才显示网址）</span><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;功能: <label><input type="checkbox" checked id="demoMove" />拖动</label> <label><input type="checkbox" checked id="demoResize" />改变大小</label> <label><input type="checkbox" checked id="demoMin" />最小化</label> <label><input type="checkbox" checked id="demoMax" />最大化</label> <label><input type="checkbox" checked id="demoClose" />关闭</label><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;尺寸: 宽<input type="text" id="demoWidth" style="border:1px solid #999" size="5" value="300" /> 高<input type="text" id="demoHeight" style="border:1px solid #999" size="5" value="100" /><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位置: 上<input type="text" id="demoTop" style="border:1px solid #999" size="5" value="10" /> 左<input type="text" id="demoLeft" style="border:1px solid #999" size="5" value="300" /><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="UI.dialogs.show({id:'demoShow'+UI.random(10000),title:UI.G('demoTitle').value,ico:UI.G('demoIco').value,html:UI.G('demoHTML').value,url:UI.G('demoUrl').value,move:UI.G('demoMove').checked,resize:UI.G('demoResize').checked,min:UI.G('demoMin').checked,max:UI.G('demoMax').checked,close:UI.G('demoClose').checked,width:UI.G('demoWidth').value,height:UI.G('demoHeight').value,top:UI.G('demoTop').value,left:UI.G('demoLeft').value})">演 示</button><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代码参考<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea id="demoCode" rows="4" cols="60"></textarea>
+	</div>
 </div>
 <script type="text/javascript" language="javascript" src="js/pngIE6.js"></script>
 <script type="text/javascript" src="../../../lib/ui.js"></script>
 <script type="text/javascript" src="../../../lib/ui.Dialogs.js" charset="gb2312"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="js/jquery.metadata.js"></script>
 <script type="text/javascript">
 UI.StartMenu = function(obj){
 	var Self = this,
 		html = [];
 	Self.data = obj.data;
 	Self._body = obj.target;
+	Self._wrap = obj.wrap;
 	Self._button = obj.button;
 
 	//Build
@@ -209,7 +227,7 @@ UI.StartMenu = function(obj){
 	Self._body.innerHTML = html.join('');
 
 	//Event
-	UI.each(UI.GC(Self._body,'li'),function(o){
+	UI.each(UI.GC(Self._wrap,'li'),function(o){
 		var son = UI.GC(o,'.ul_inPart')[0];
 		o.onmouseover = function(){
 			var y,h,H = UI.pageHeight();
@@ -225,14 +243,22 @@ UI.StartMenu = function(obj){
 		o.onmouseout = function(){
 			UI.removeClass(this,'hover');
 		}
+		if (!UI.GC(o,'ul').length) {
+			UI.EA(o,'click',function(){
+				UI.hide(Self._wrap);
+			});
+		}
 	});
-	Self._button.onclick = function(e){
-		UI.toggle('startMenu');
+	Self._button.onmousedown = function(e){
+		UI.toggle(Self._wrap);
 		UI.E(e).stop();
 	}
-	UI.EA(document.body,'click',function(){
-		UI.hide('startMenu');
+	UI.EA(document.body,'mousedown',function(){
+		UI.hide(Self._wrap);
 	});
+	Self._wrap.onmousedown = function(e){
+		UI.E(e).stop();
+	}
 
 	function parse(data){
 		UI.each(data,function(o){
@@ -246,106 +272,79 @@ UI.StartMenu = function(obj){
 		});
 	}
 }
+UI.autoScreen = function(){
+	var width = UI.windowWidth(),
+		height = UI.windowHeight(),
+		taskBarHeight = UI.height(UI.G('taskBar')),
+		taskListWidth = width;
+	UI.C(UI.G('wrap'),'width',width + 'px');
+	UI.C(UI.G('quickNav'),'width',width + 'px');
+	UI.C(UI.G('topPart'),'height',height - taskBarHeight + 'px');
+	UI.C(UI.G('toolBar'),'height',height - taskBarHeight + 'px');
+	UI.each(UI.children(UI.G('taskBar')),function(o){
+		if (!o.className.hasString('taskList') && !o.className.hasString('taskBtn')) {
+			taskListWidth -= UI.width(o);
+		}
+	});
+	UI.C(UI.GC('.taskList')[0],'width',((taskListWidth - 37 * 2) || 0) + 'px');
+	UI.dialogs.maxSize.width = width;// - UI.width(UI.G('toolBar'))
+	UI.dialogs.maxSize.height = height - 27 - taskBarHeight;// - UI.height(UI.G('quickNav')) + 8
+}
 UI.ready(function(){
 	UI.startMenu = new UI.StartMenu({
+		wrap : UI.G('startMenu'),
 		target : UI.G('ul_allPart'),
 		button : UI.G('startBtn'),
 		data : [
 			{
 				name : '易站成名',
 				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)'
+				click : 'demo()'
 			},
 			{
 				name : '易站成名',
 				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)'
+				click : 'demo()'
 			},
 			{
 				name : '易站成名',
 				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)'
+				click : 'demo()'
 			},
 			{
 				name : '易站成名',
 				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)'
+				click : 'demo()'
 			},
 			{
 				name : '易站成名',
 				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)'
-			},
-			{
-				name : '易站成名',
-				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)'
-			},
-			{
-				name : '易站成名',
-				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)'
-			},
-			{
-				name : '易站成名',
-				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)'
-			},
-			{
-				name : '易站成名',
-				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)',
 				son : [
 					{
 						name : '易站成名',
 						ico : 'images/icons/desktop.png',
-						click : 'javascript:void(0)'
+						click : 'demo()'
 					},
 					{
 						name : '易站成名',
 						ico : 'images/icons/desktop.png',
-						click : 'javascript:void(0)',
-						son : [
-							{
-								name : '易站成名',
-								ico : 'images/icons/desktop.png',
-								click : 'javascript:void(0)'
-							}
-						]
+						click : 'demo()'
 					}
 				]
 			},
 			{
 				name : '易站成名',
 				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)'
-			},
-			{
-				name : '易站成名',
-				ico : 'images/icons/desktop.png',
-				click : 'javascript:void(0)',
-				son : [
-					{
-						name : '易站成名',
-						ico : 'images/icons/desktop.png',
-						click : 'javascript:void(0)',
-						son : [
-							{
-								name : '易站成名',
-								ico : 'images/icons/desktop.png',
-								click : 'javascript:void(0)'
-							}
-						]
-					}
-				]
+				click : 'demo()'
 			}
 		]
 	});
 	UI.dialogs = new UI.Dialogs({
+		wrap : UI.G('wrap'),
 		maxSize : {
 			width : 1208,
 			height : 602,
-			top : 50,
+			top : 0,//UI.height(UI.G('quickNav')) - 8
 			left : 0
 		},
 		task : {
@@ -353,7 +352,10 @@ UI.ready(function(){
 			list : UI.G('taskList'),
 			next : UI.G('taskRight')
 		}
-	});/*
+	});
+	UI.autoScreen();
+	UI.EA(window,'resize',UI.autoScreen);
+	/*
 	UI.dialogs.show({
 		id : 'test', //Id
 		title : 'Test', //标题
@@ -483,8 +485,8 @@ UI.ready(function(){
 		left : 350 //左边距
 	});*/
 	UI.dialogs.show({
-		id : 'guide', //Id
-		title : '开店向导', //标题
+		id : 'dialogs', //Id
+		title : '功能说明', //标题
 		ico : 'images/icons/desktop.png' , //图标
 		move : true, //移动功能，默认true
 		resize : true, //改变大小，默认true
@@ -492,12 +494,27 @@ UI.ready(function(){
 		min : true, //最小化按钮，默认true
 		max : true, //最大化按钮，默认true
 		//task : UI.G('settings'), //任务栏图标，不设置则在普通任务栏显示
-		html : '内容', //静态内容
-		//url : 'message.html', //Iframe地址
-		width : 300, //宽度
-		height : 200, //高度
+		//html : '内容', //静态内容
+		url : 'dialogs.html', //Iframe地址
+		width : 500, //宽度
+		height : 300, //高度
 		top : 100, //上边距
-		left : 300 //左边距
+		left : 100 //左边距
+	});
+	UI.dialogs.show({
+		id : 'demo', //Id
+		title : '功能实例', //标题
+		ico : 'images/icons/desktop.png' , //图标
+		move : true, //移动功能，默认true
+		resize : true, //改变大小，默认true
+		close : true, //关闭按钮，默认true
+		min : true, //最小化按钮，默认true
+		max : true, //最大化按钮，默认true
+		html : UI.G('demo').innerHTML, //静态内容
+		width : 500, //宽度
+		height : 330, //高度
+		top : 150, //上边距
+		left : 150 //左边距
 	});
 	UI.each(UI.GC('.shortcuts span'),function(el,i){
 		el.onmouseover = el.onmouseout = el.onmousedown = el.onmouseup = UI.Dialogs.create.prototype.hover;
@@ -516,8 +533,8 @@ UI.ready(function(){
 					url : 'message.html', //Iframe地址
 					width : 266, //宽度
 					height : 338, //高度
-					top : 306, //上边距
-					left : 927 //左边距
+					top : UI.windowHeight() - UI.height(UI.G('taskBar')) - 338 - 35, //上边距
+					left : UI.windowWidth() - UI.width(UI.G('toolBar')) - 266 - 13 //左边距
 				});
 			}
 		}
@@ -532,6 +549,65 @@ UI.ready(function(){
 		content : '内容'
 	});*/
 });
+
+$(document).ready(function() {
+	$('#open_close_btn').click(openClose);
+	$('.ul_quickNav a,.ul_topPart a').click(demo);
+});
+
+/**
+ * 开关右侧栏
+ */
+function openClose() {
+	if($('#wrap .toolBar').attr('class').indexOf('toolBar_close') > -1) {
+		$('#wrap .topBar').width(getVisibleWidth()-212);
+		$('#wrap .toolBar').removeClass('toolBar_close').addClass("toolBar_open");
+	} else {
+		$('#wrap .topBar').width(getVisibleWidth()-9);
+		$('#wrap .toolBar').removeClass('toolBar_open').addClass("toolBar_close");
+	}
+}
+
+/**
+ * 设置界面
+ */
+function setVisibleWindow() {
+	var visibleWidth = getVisibleWidth();
+	var visibelHeight = getVisibleHeight();
+	var taskBarOuterHeight = 32;
+
+	$('#wrap').width(visibleWidth);
+	$('#wrap .topPart').height(visibelHeight-taskBarOuterHeight);
+	$('#wrap .toolBar').height(visibelHeight-taskBarOuterHeight);
+	$('#wrap').height(visibelHeight);
+}
+
+/**
+ * 获得可见宽度
+ */
+function getVisibleWidth() {
+	if($.browser.msie) {
+		return document.compatMode == "CSS1Compat" ? document.documentElement.clientWidth : document.body.clientWidth;
+	} else {
+		return self.innerWidth;
+	}
+}
+
+/**
+ * 获得可见高度
+ */
+function getVisibleHeight() {           
+	if($.browser.msie) {
+		return document.compatMode == "CSS1Compat" ? document.documentElement.clientHeight : document.body.clientHeight;
+	} else {
+		return self.innerHeight;
+	}
+}
+
+function demo(){
+	UI.dialogs.show({id:'demoShow',title:'百度',ico:'images/icons/desktop.png',html:'',url:'http://www.baidu.com',move:true,resize:true,min:true,max:true,close:true,width:700,height:300,top:50,left:100});
+	return false;
+}
 </script>
 </body>
 </html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>易站成名</title>
+<link rel="stylesheet" type="text/css" href="style/common.css" />
+<link rel="stylesheet" type="text/css" href="style/module.css" />
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+<script type="text/javascript" src="../../../lib/ui.js"></script>
+<script type="text/javascript" src="../../../lib/ui.Dialogs.js"></script>
+<style type="text/css">
+body{margin:8px;}
+*{font-family:Tahoma}
+th{text-align:right;}
+</style>
+</head>
+<body class="white">
+<pre>
+<b>功能：</b>
+1.最小化、最大化、还原、关闭，功能按钮可设置显示或隐藏；
+2.双击标题栏可以快速最大化和还原；
+3.改变窗口大小，可设置是否启用该功能；
+4.移动窗口，可设置是否启用该功能；
+5.任务栏显示窗口列表，任务过多时支持翻页，且自动翻页至某激活窗口；
+6.窗口图标，可设置是否显示图标；
+7.任务栏图标，不设置则在普通任务栏显示；
+
+<b>参数：</b>
+<table>
+	<tr>
+		<th>id</th>
+		<td>每个窗口的独立ID，不可重复</td>
+	</tr>
+	<tr>
+		<th>title</th>
+		<td>窗口标题</td>
+	</tr>
+	<tr>
+		<th>ico</th>
+		<td>窗口图标地址，默认true</td>
+	</tr>
+	<tr>
+		<th>move</th>
+		<td>是否可以移动，默认true</td>
+	</tr>
+	<tr>
+		<th>resize</th>
+		<td>是否可以改变大小，默认true</td>
+	</tr>
+	<tr>
+		<th>close</th>
+		<td>是否可以关闭窗口，默认true</td>
+	</tr>
+	<tr>
+		<th>min</th>
+		<td>是否可以最小化，默认true</td>
+	</tr>
+	<tr>
+		<th>max</th>
+		<td>是否可以最大化，默认true</td>
+	</tr>
+	<tr>
+		<th>task</th>
+		<td>任务栏图标，不设置则在普通任务栏显示</td>
+	</tr>
+	<tr>
+		<th>html</th>
+		<td>静态内容</td>
+	</tr>
+	<tr>
+		<th>url</th>
+		<td>Iframe地址</td>
+	</tr>
+	<tr>
+		<th>width</th>
+		<td>宽度</td>
+	</tr>
+	<tr>
+		<th>height</th>
+		<td>高度</td>
+	</tr>
+	<tr>
+		<th>top</th>
+		<td>上边距</td>
+	</tr>
+	<tr>
+		<th>left</th>
+		<td>左边距</td>
+	</tr>
+</table>
+<b>示例：</b>
+UI.dialogs.show({
+	id : 'dialogs', //Id
+	title : '功能说明', //标题
+	ico : 'images/icons/desktop.png' , //图标
+	move : true, //移动功能，默认true
+	resize : true, //改变大小，默认true
+	close : true, //关闭按钮，默认true
+	min : true, //最小化按钮，默认true
+	max : true, //最大化按钮，默认true
+	//task : UI.G('settings'), //任务栏图标，不设置则在普通任务栏显示
+	//html : '内容', //静态内容
+	url : 'dialogs.html', //Iframe地址
+	width : 500, //宽度
+	height : 300, //高度
+	top : 100, //上边距
+	left : 200 //左边距
+});
+</pre>
+</body>
+</html>
