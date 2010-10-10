@@ -205,7 +205,7 @@ html,body{overflow:hidden;}
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位置: 上<input type="text" id="demoTop" style="border:1px solid #999" size="5" value="10" /> 左<input type="text" id="demoLeft" style="border:1px solid #999" size="5" value="300" /><br />
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button onclick="UI.dialogs.show({id:'demoShow'+UI.random(10000),title:UI.G('demoTitle').value,ico:UI.G('demoIco').value,html:UI.G('demoHTML').value,url:UI.G('demoUrl').value,move:UI.G('demoMove').checked,resize:UI.G('demoResize').checked,min:UI.G('demoMin').checked,max:UI.G('demoMax').checked,close:UI.G('demoClose').checked,width:UI.G('demoWidth').value,height:UI.G('demoHeight').value,top:UI.G('demoTop').value,left:UI.G('demoLeft').value})">演 示</button><br />
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代码参考<br />
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea id="demoCode" rows="4" cols="60"></textarea>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea id="demoCode" rows="4" cols="50"></textarea>
 	</div>
 </div>
 <script type="text/javascript" language="javascript" src="js/pngIE6.js"></script>
@@ -286,6 +286,7 @@ UI.autoScreen = function(){
 			taskListWidth -= UI.width(o);
 		}
 	});
+	UI.dialogs.taskAutoScreen();
 	UI.C(UI.GC('.taskList')[0],'width',((taskListWidth - 37 * 2) || 0) + 'px');
 	UI.dialogs.maxSize.width = width;// - UI.width(UI.G('toolBar'))
 	UI.dialogs.maxSize.height = height - 27 - taskBarHeight;// - UI.height(UI.G('quickNav')) + 8
