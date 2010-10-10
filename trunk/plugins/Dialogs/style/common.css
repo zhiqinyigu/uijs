@@ -148,7 +148,7 @@ body.white {background:none;}
 
 /***** taskBar 任务栏 ********** ********** **********
 ********** ********** ********** ********** **********/
-.taskBar {height:30px; background:#222 url(../images/BG_repeatX.gif) repeat-x left top; border-top:#000 1px solid; border-bottom:#000 1px solid; overflow:hidden; zoom:1; clear:both;}
+.taskBar {height:30px; background:#222 url(../images/BG_repeatX.gif) repeat-x left top; border-top:#000 1px solid; border-bottom:#000 1px solid; overflow:hidden; zoom:1; clear:both;position:relative;z-index:9999;}
 
 /***** startBtn 易站成名 **********/
 .startBtn {width:92px; height:100%; margin:0px 10px 0px 5px; background:url(../images/BG_noRepeat.gif) no-repeat left top; text-indent:-9999px; cursor:pointer; float:left; overflow:hidden; zoom:1;}
@@ -164,11 +164,12 @@ body.white {background:none;}
 
 .taskLeft {background:url(../images/BG_noRepeat.gif) no-repeat -177px top;}
 .taskLeft_hover {background:url(../images/BG_noRepeat.gif) no-repeat -177px -40px;}
-.taskLeft_active {background:url(../images/BG_noRepeat.gif) no-repeat -177px -80px;}
+.taskLeft_active,.taskLeft_disabled {background:url(../images/BG_noRepeat.gif) no-repeat -177px -80px;}
 
 .taskRight {background:url(../images/BG_noRepeat.gif) no-repeat -209px top;}
 .taskRight_hover {background:url(../images/BG_noRepeat.gif) no-repeat -209px -40px;}
-.taskRight_active {background:url(../images/BG_noRepeat.gif) no-repeat -209px -80px;}
+.taskRight_active,.taskRight_disabled {background:url(../images/BG_noRepeat.gif) no-repeat -209px -80px;}
+.taskLeft_disabled,.taskRight_disabled{cursor:default;}
 
 /***** taskList 任务列表 **********/
 .taskList {height:100%; display:inline; float:left; overflow:hidden; zoom:1;}
@@ -228,7 +229,7 @@ body.white {background:none;}
 .ul_operatList img {width:16px;  height:16px; margin:4px 5px 0px 6px; float:left;}
 
 .hover .ul_inPart,.hover .ul_inPart .hover .ul_inPart {display:block}
-.ul_inPart {width:150px; height:200px; border:#000 1px solid; margin:-30px 0 0 202px; padding:2px; background:#fff url(../images/BG_repeatY.gif) repeat-y -564px top; list-style:none; display:none; position:absolute;}
+.ul_inPart {width:150px; height:auto; border:#000 1px solid; margin:-30px 0 0 202px; padding:2px; background:#fff url(../images/BG_repeatY.gif) repeat-y -564px top; list-style:none; display:none; position:absolute;}
 .ul_inPart .ul_inPart {display:none;margin:-27px 0 0 152px}
 .ul_inPart li {width:100%; margin-bottom:-1px; display:inline; float:left; clear:both;}
 .hover .ul_inPart .hover a{background:none;}
