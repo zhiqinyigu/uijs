@@ -1,0 +1,77 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0}
+body{height:100%;font:30px/1.5 "MicroSoft YaHei",Arial;color:#fff;background:#5FA0C6 url(http://mat1.gtimg.com/www/mb/images/wbWall/wallBg1.jpg) center top no-repeat;overflow:hidden}
+fieldset{display:inline}
+input,button,select,textarea{outline:none;resize:none}
+button{font-family:"Simsun";font-size:12px;line-height:1.231;vertical-align:middle;white-space:nowrap;cursor:pointer}
+strong{font-weight:800}
+a{color:#fff;text-decoration:none}
+a:hover{}
+a:focus{outline:none}
+
+#logo,.listCnt .userPic:after,.close{background:url(http://mat1.gtimg.com/www/mb/images/wbWall/wallBg2.png) no-repeat}
+.topSide,.btn_prev,.btn_next,.btn_back{background:url(http://mat1.gtimg.com/www/mb/images/wbWall/wallBg3.png) no-repeat}
+
+.btn_prev,.btn_next,.btn_back{display:inline-block;width:116px;height:33px;margin:0 5px;overflow:hidden;line-height:20em;border:1px solid #204D71;-webkit-border-radius:5px;-webkit-box-shadow:0 0 5px #204D71;background-position:0 -100px}
+.btn_next{background-position:-122px -100px}.btn_back{float:left;background-position:-244px -100px}
+.pageNav{text-align:right}.pageNav:after{content:'.';clear:both;display:block;height:0;visibility:hidden}
+.close{position:absolute;right:-26px;top:-26px;display:block;width:26px;height:26px;overflow:hidden;line-height:20em;background-position:-66px -79px}
+.close:hover{background-position:-32px -79px}
+
+.header{width:980px;height:130px;margin:0 auto;position:relative}
+#logo{position:absolute;top:20px;left:8px;width:280px;height:72px;overflow:hidden;cursor:pointer;}
+#logo a{display:block;line-height:20em;overflow:hidden}
+.topSide{position:absolute;top:18px;right:0;width:670px;height:95px;border:2px solid #0C3E6D;-webkit-border-radius:12px}
+.sideLogo{position:absolute;top:11px;right:25px}
+.method{position:absolute;top:15px;left:18px}
+
+.content{width:980px;margin:0 auto}
+.listWrap{height:576px;overflow:hidden}
+.listCnt li,.cntTxt,.cntImg{position:relative;width:962px;height:164px;overflow:hidden;padding:7px;margin-bottom:10px;border:2px solid #7FB9D5;-webkit-border-radius:12px}
+.listCnt li,.cntImg .pic{cursor:pointer;}
+.listCnt li:after,.cntTxt:after,.cntImg:after{content:" ";position:absolute;z-index:-1;top:0;left:0;clear:both;display:block;width:976px;height:178px;-webkit-border-radius:12px;background:#0B3155;opacity:0.7}
+.cntTxt{width:926px;height:522px;padding:20px 25px}
+.cntImg{width:944px;height:548px;padding:7px 7px 7px 25px}
+.cntTxt:after,.cntImg:after{height:562px}
+.userPic{float:left;width:134px;padding:18px 0 0 20px;margin-right:20px}
+.cntTxt .userPic{width:108px;padding:0}
+.cntImg .userPic{width:108px;padding:13px 0 0}
+.listCnt .userPic:after{content:" ";float:right;width:22px;height:147px;margin-top:-8px;background-position:0 -79px}
+.userPic img{width:100px;height:100px;padding:3px;border:1px solid #001F3D;background:#082E4D}
+.msgBox{float:left;width:788px}
+.cntTxt .msgBox{width:798px;font-size:40px}
+.cntImg .msgBox{width:816px}
+.msgCnt{padding-top:10px;height:4.5em;overflow:hidden;word-wrap:break-word}
+.cntTxt .msgCnt{padding:0;margin-top:-3px;height:13em}
+.cntImg .msgCnt{height:16.5em}
+.msgCnt b{margin-right:5px;color:#9DE2FF;font-weight:normal}
+.cntTxt .msgCnt b,.cntImg .msgCnt b{display:block;font-size:30px}
+.pic,.pic span{width:152px;height:152px;overflow:hidden;text-align:center;vertical-align:middle}
+.pic{float:right;margin:2px 2px 0 30px;padding:3px;border:1px solid #AFC8D9;-webkit-border-radius:5px;-webkit-box-shadow:0 0 6px #163C59;background:-webkit-gradient(linear,left top,right 72%,from(#759CB5),to(#719AB3),color-stop(0.48,#316688),color-stop(0.5,#2F6587),color-stop(0.65,#316688),color-stop(0.92,#6892AD))}
+.cntImg .pic{width:350px;height:530px;padding:6px}
+.pic span{display:table-cell}
+.cntImg .pic span{display:inline}
+.pic img{vertical-align:middle}
+.copySign{position:absolute;height:40px;right:16px;bottom:10px;font-size:18px;line-height:40px;color:#002543}
+
+@-webkit-keyframes opacity{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+.D,.content{-webkit-animation-name:opacity;-webkit-animation-duration:0.4s;-webkit-animation-timing-function:ease-in}
+.listCnt li{-webkit-transition-property:background-color;-webkit-transition-duration:0.4s;-khtml-transition-property:background-color;-khtml-transition-duration:0.4s;transition-property:background-color;transition-duration:0.4s}
+.D{position:absolute;z-index:99;width:100%;height:100%;}
+.D .Dwrap{position:absolute;left:50%;top:50%}
+.D .picBox img{padding:4px;border:1px solid #C4C4C4;background:#fff}
+.D .bg{position:absolute;z-index:-1;width:100%;height:100%;top:0;left:0;background:#000;opacity:0.7}
