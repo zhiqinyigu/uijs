@@ -1,0 +1,23 @@
+﻿<html>
+<head>
+<title>取色控件</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../styles/link.css" rel="stylesheet" type="text/css" />
+<link href="../../styles/page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../../lib/ui.js"></script>
+<script type="text/javascript" src="../../../lib/ui.ColorPicker.js"></script>
+</head>
+<style type="text/css">
+.color{display:inline-block;width:50px;height:50px;}
+.colorPickerBox{width:150px;height:150px;border:1px solid #ccc;position:relative;overflow:hidden;float:left;}
+.colorPickerBar{width:30px;height:150px;margin:0 3px;border:1px solid #ccc;position:relative;float:left;}
+.colorPickerBarArrow{position:absolute;top:0;margin:-5px 0 0;width:30px;height:10px;background:#0033FF;}
+.colorPickerBoxArrow{position:absolute;top:0;left:0;margin:-5px 0 0 -5px;width:10px;height:10px;background:#CC0000;}
+.colorPickerConfirm{}
+</style>
+<body>
+<a href="#" onclick="var T=this;UI.ColorPicker.show({target:T,call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#FF6699"></a>
+<a href="#" onclick="var T=this;UI.ColorPicker.show({target:T,call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#00FF33"></a>
+<a href="#" onclick="var T=this;UI.ColorPicker.show({target:T,call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#669966"></a>
+</body>
+</html>
