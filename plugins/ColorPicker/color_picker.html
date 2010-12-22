@@ -1,4 +1,5 @@
-﻿<html>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>取色控件</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,19 +7,109 @@
 <script type="text/javascript" src="../../../lib/ui.ColorPicker.js"></script>
 </head>
 <style type="text/css">
-.color{display:inline-block;width:50px;height:50px;}
-.colorPicker{width:280px;height:200px;}
-.colorPickerBox{font-size:0;cursor:default;background:#FFFFCC;width:150px;height:150px;position:relative;overflow:hidden;float:left;}
-.colorPickerBar{font-size:0;cursor:default;background:#FFFFCC;width:30px;height:150px;margin:0 3px;position:relative;float:left;}
-.colorPickerBarArrow{position:absolute;top:0;margin:-5px 0 0;width:30px;height:10px;background:#0033FF;}
-.colorPickerBoxArrow{position:absolute;top:0;left:0;margin:-5px 0 0 -5px;width:10px;height:10px;background:#CC0000;}
-.colorPickerColor{width:50px;height:20px;display:inline-block;float:right;}
-.colorPickerValue{float:right;}
-.colorPickerConfirm{float:right;}
+.color{display:inline-block;width:50px;height:50px;border:1px solid #CCC;}
+
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+q:before,q:after{content:''}
+abbr,acronym{border:0}
+body{height:100%;font:12px/1.75 Tahoma,Arial;color:#333}
+fieldset{display:inline}select{font-size:12px}
+
+
+.colorPicker h4{font-size:12px;font-weight:normal;height:24px;padding-top:3px;}
+.colorPickerBox div,.colorPickerBar div,.colorPickerBoxArrow b,.colorPickerBarArrow b,.colorPickerClose{background:url(http://mat1.gtimg.com/www/mb/images/colorpicker_ps1.png) no-repeat}
+.colorPickerBox div,.colorPickerBoxArrow b,.colorPickerBarArrow b{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/www/mb/images/colorpicker_ps1.png')}
+.colorPicker{position:absolute;z-index:9999;top:0;left:0;width:184px;height:199px;padding:0 9px;color:#999;border:4px solid #DFDFDF;background:#fff}
+.colorPickerClose,.colorPickerClose:hover{position:relative;float:right;display:inline-block;width:17px;height:17px;margin:-24px -7px 0 0;background-position:-183px 0}
+.colorPicker b{position:absolute;left:0;top:0;display:block;overflow:hidden}
+.colorPickerBox{position:relative;overflow:hidden;float:left;width:160px;height:140px;border:1px solid #CDCDCD;background:#000;}
+.colorPickerBox div{width:160px;height:140px}
+.colorPickerBoxArrow{width:11px;height:11px;overflow:hidden;margin:-6px 0 0 -6px}
+.colorPickerBoxArrow b{width:100%;height:100%;background-position:-183px -37px;_padding:37px 0 0 183px;_margin:-37px 0 0 -183px}
+.colorPickerBar{position:relative;float:left;width:13px;height:140px;border:1px solid #CDCDCD;margin-left:3px}
+.colorPickerBar div{width:13px;height:140px;background-position:-163px 0}
+.colorPickerBarArrow{width:23px;height:10px;overflow:hidden;margin-top:-5px}
+.colorPickerBarArrow b{width:100%;height:100%;background-position:-185px -22px;_padding:22px 0 0 183px;_margin:-22px 0 0 -183px}
+.colorDetail{clear:both;height:18px;overflow:hidden;*zoom:1;padding-top:7px}
+.colorPickerColor{float:left;width:16px;height:16px;margin-right:8px;border:1px solid #CDCDCD}
+.colorPickerValue,.colorPickerValue span{float:left;margin-right:1px;line-height:17px}
+.colorPickerValue input{width:48px;height:16px;padding:0 3px;*margin-top:-1px;font:normal 12px/1.231 Tahoma,Arial;border:1px solid #CDCDCD}
+.colorPickerConfirm{display:none}
 </style>
 <body>
-<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#FF6699"></a>
-<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#00FF33"></a>
-<a href="#" onclick="var T=this;UI.ColorPicker.show(event);return false" class="color" style=""></a>
+<h1>设置</h1>
+<div onclick="set()">
+<label><input type="radio" name="type" value="['x','-y','-z']" />Windows模式</label> <label><input type="radio" name="type" checked value="['z','x','-y']" />Photoshop模式</label>
+</div>
+<div>
+	<label><input type="checkbox" id="position"/>定位到这里 -------------------------------></label><b class="colorPosition" id="colorPosition">_</b>
+</div>
+<h1>演示</h1>
+<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{title:'背景色',position:position(),call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#37217e"></a>
+<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{title:'标题色',position:position(),call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#b1bd2c"></a>
+<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{position:position(),call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#d9d9d9"></a>
+<textarea id="type_0" style="display:none">
+.colorPicker h4{font-size:12px;font-weight:normal;height:24px;padding-top:3px;}
+.colorPickerBox div,.colorPickerBar div,.colorPickerBoxArrow b,.colorPickerBarArrow b,.colorPickerClose{background:url(http://mat1.gtimg.com/www/mb/images/colorpicker.png) no-repeat}
+.colorPickerBar div,.colorPickerBoxArrow b,.colorPickerBarArrow b{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/www/mb/images/colorpicker.png')}
+.colorPicker{position:absolute;top:0;left:0;width:184px;height:199px;padding:0 9px;color:#999;border:4px solid #DFDFDF;background:#fff}
+.colorPickerClose,.colorPickerClose:hover{position:relative;float:right;display:inline-block;width:17px;height:17px;margin:-24px -7px 0 0;background-position:-183px 0}
+.colorPicker b{position:absolute;left:0;top:0;display:block;overflow:hidden}
+.colorPickerBox{position:relative;overflow:hidden;float:left;width:160px;height:140px;border:1px solid #CDCDCD;background:#000;}
+.colorPickerBox div{width:160px;height:140px;background-position:-20px 0}
+.colorPickerBoxArrow{width:11px;height:11px;overflow:hidden;margin:-6px 0 0 -6px}
+.colorPickerBoxArrow b{width:100%;height:100%;background-position:-183px -37px;_padding:37px 0 0 183px;_margin:-37px 0 0 -183px}
+.colorPickerBar{position:relative;float:left;width:13px;height:140px;border:1px solid #CDCDCD;margin-left:3px}
+.colorPickerBar div{width:13px;height:140px;background-position:-1px 0}
+.colorPickerBarArrow{width:23px;height:10px;overflow:hidden;margin-top:-5px}
+.colorPickerBarArrow b{width:100%;height:100%;background-position:-185px -22px;_padding:22px 0 0 183px;_margin:-22px 0 0 -183px}
+.colorDetail{clear:both;height:18px;overflow:hidden;*zoom:1;padding-top:7px}
+.colorPickerColor{float:left;width:16px;height:16px;margin-right:8px;border:1px solid #CDCDCD}
+.colorPickerValue,.colorPickerValue span{float:left;margin-right:1px;line-height:17px}
+.colorPickerValue input{width:48px;height:16px;padding:0 3px;*margin-top:-1px;font:normal 12px/1.231 Tahoma,Arial;border:1px solid #CDCDCD}
+.colorPickerConfirm{display:none}
+</textarea>
+<textarea id="type_1" style="display:none">
+.colorPicker h4{font-size:12px;font-weight:normal;height:24px;padding-top:3px;}
+.colorPickerBox div,.colorPickerBar div,.colorPickerBoxArrow b,.colorPickerBarArrow b,.colorPickerClose{background:url(http://mat1.gtimg.com/www/mb/images/colorpicker_ps1.png) no-repeat}
+.colorPickerBox div,.colorPickerBoxArrow b,.colorPickerBarArrow b{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=crop,src='http://mat1.gtimg.com/www/mb/images/colorpicker_ps1.png')}
+.colorPicker{position:absolute;z-index:9999;top:0;left:0;width:184px;height:199px;padding:0 9px;color:#999;border:4px solid #DFDFDF;background:#fff}
+.colorPickerClose,.colorPickerClose:hover{position:relative;float:right;display:inline-block;width:17px;height:17px;margin:-24px -7px 0 0;background-position:-183px 0}
+.colorPicker b{position:absolute;left:0;top:0;display:block;overflow:hidden}
+.colorPickerBox{position:relative;overflow:hidden;float:left;width:160px;height:140px;border:1px solid #CDCDCD;background:#000;}
+.colorPickerBox div{width:160px;height:140px}
+.colorPickerBoxArrow{width:11px;height:11px;overflow:hidden;margin:-6px 0 0 -6px}
+.colorPickerBoxArrow b{width:100%;height:100%;background-position:-183px -37px;_padding:37px 0 0 183px;_margin:-37px 0 0 -183px}
+.colorPickerBar{position:relative;float:left;width:13px;height:140px;border:1px solid #CDCDCD;margin-left:3px}
+.colorPickerBar div{width:13px;height:140px;background-position:-163px 0}
+.colorPickerBarArrow{width:23px;height:10px;overflow:hidden;margin-top:-5px}
+.colorPickerBarArrow b{width:100%;height:100%;background-position:-185px -22px;_padding:22px 0 0 183px;_margin:-22px 0 0 -183px}
+.colorDetail{clear:both;height:18px;overflow:hidden;*zoom:1;padding-top:7px}
+.colorPickerColor{float:left;width:16px;height:16px;margin-right:8px;border:1px solid #CDCDCD}
+.colorPickerValue,.colorPickerValue span{float:left;margin-right:1px;line-height:17px}
+.colorPickerValue input{width:48px;height:16px;padding:0 3px;*margin-top:-1px;font:normal 12px/1.231 Tahoma,Arial;border:1px solid #CDCDCD}
+.colorPickerConfirm{display:none}
+</textarea>
+<script type="text/javascript">
+function position(){
+	return UI.G('position').checked ? UI.G('colorPosition') : null;
+}
+function set(){
+	UI.each(UI.GC('input'),function(o,i){
+		if (o.checked && i < 2) {
+			UI.remove(UI.ColorPicker._body);
+			UI.css(UI.G('type_' + i).value);
+			UI.ColorPicker.type = eval('(' + o.value + ')');
+			UI.ColorPicker.build();
+		}
+	});
+}
+UI.css(UI.G('type_1').value);
+</script>
 </body>
 </html>
