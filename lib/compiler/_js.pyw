@@ -21,14 +21,14 @@ import time
 import re
 import string
 dir = glob.glob(r"*.js")
-reg = ['(\/\*(\s|.)*?\*\/)|\r|\n|\t']
+reg = ['(\/\*(\s|.)*?\*\/)|\r|\n|\t|\\\\t\\\\t']
 regTo = ['']
 for i in dir:
     f,ext=os.path.splitext(i);
     if len(i.split('_')) > 1:
         continue
     localtime = time.localtime()
-    filename = f + '_' + str(localtime[0])[2:4] + addZero(str(localtime[1])) + addZero(str(localtime[2])) + ext
+    filename = f + '_' + str(localtime[0])[2:4] + addZero(str(localtime[1])) + addZero(str(localtime[2])) + '' + ext
 
     print i
     convert(i);
