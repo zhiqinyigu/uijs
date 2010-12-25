@@ -50,9 +50,12 @@ fieldset{display:inline}select{font-size:12px}
 	<label><input type="checkbox" id="position"/>定位到这里 -------------------------------></label><b class="colorPosition" id="colorPosition">_</b>
 </div>
 <h1>演示</h1>
-<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{title:'背景色',position:position(),call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#37217e"></a>
-<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{title:'标题色',position:position(),call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#b1bd2c"></a>
-<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{position:position(),call:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#d9d9d9"></a>
+<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{title:'背景色',position:position(),drag:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#37217e"></a>
+var T=this;UI.ColorPicker.show(event,{title:'背景色',position:position(),drag:function(value){UI.C(T,'background',value)}});<br />
+<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{title:'标题色',position:position(),drag:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#b1bd2c"></a>
+var T=this;UI.ColorPicker.show(event,{title:'标题色',position:position(),drag:function(value){UI.C(T,'background',value)}});return false<br />
+<a href="#" onclick="var T=this;UI.ColorPicker.show(event,{position:position(),stop:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#d9d9d9"></a>
+var T=this;UI.ColorPicker.show(event,{position:position(),stop:function(value){UI.C(T,'background',value)}});return false<br />
 <textarea id="type_0" style="display:none">
 .colorPicker h4{font-size:12px;font-weight:normal;height:24px;padding-top:3px;}
 .colorPickerBox div,.colorPickerBar div,.colorPickerBoxArrow b,.colorPickerBarArrow b,.colorPickerClose{background:url(http://mat1.gtimg.com/www/mb/images/colorpicker.png) no-repeat}
