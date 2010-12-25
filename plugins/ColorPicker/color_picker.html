@@ -42,20 +42,65 @@ fieldset{display:inline}select{font-size:12px}
 .colorPickerConfirm{display:none}
 </style>
 <body>
-<h1>设置</h1>
+<h1>取色控件</h1>
+<h2>功能</h2>
+1、兼容主流浏览器，兼容PC/Mac/iPad/iPhone/Adriod等终端；<br />
+2、取色模式可配置；<br />
+3、支持控件标题；<br />
+4、浮层位置支持任意定位；
+<h2>演示</h2>
 <div onclick="set()">
 <label><input type="radio" name="type" value="['x','-y','-z']" />Windows模式</label> <label><input type="radio" name="type" checked value="['z','x','-y']" />Photoshop模式</label>
 </div>
 <div>
 	<label><input type="checkbox" id="position"/>定位到这里 -------------------------------></label><b class="colorPosition" id="colorPosition">_</b>
 </div>
-<h1>演示</h1>
 <a href="#" onclick="var T=this;UI.ColorPicker.show(event,{title:'背景色',position:position(),drag:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#37217e"></a>
-var T=this;UI.ColorPicker.show(event,{title:'背景色',position:position(),drag:function(value){UI.C(T,'background',value)}});<br />
 <a href="#" onclick="var T=this;UI.ColorPicker.show(event,{title:'标题色',position:position(),drag:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#b1bd2c"></a>
-var T=this;UI.ColorPicker.show(event,{title:'标题色',position:position(),drag:function(value){UI.C(T,'background',value)}});return false<br />
 <a href="#" onclick="var T=this;UI.ColorPicker.show(event,{position:position(),stop:function(value){UI.C(T,'background',value)}});return false" class="color" style="background:#d9d9d9"></a>
-var T=this;UI.ColorPicker.show(event,{position:position(),stop:function(value){UI.C(T,'background',value)}});return false<br />
+<h2>参数</h2>
+<table>
+	<tr>
+		<td><strong>title</strong>(String)</td>
+		<td>标题，默认值为“选择颜色”</td>
+	</tr>
+	<tr>
+		<td><strong>position</strong>(Object)</td>
+		<td>定位到某个Dom</td>
+	</tr>
+	<tr>
+		<td><strong>start</strong>(Function)</td>
+		<td>拖动开始时的回调函数</td>
+	</tr>
+	<tr>
+		<td><strong>drag</strong>(Function)</td>
+		<td>拖动时的回调函数</td>
+	</tr>
+	<tr>
+		<td><strong>stop</strong>(Function)</td>
+		<td>拖动结束时的回调函数</td>
+	</tr>
+	<tr>
+		<td><strong>hide</strong>(Function)</td>
+		<td>控件隐藏时的回调函数</td>
+	</tr>
+</table>
+<h2>属性</h2>
+<table>
+	<tr>
+		<td><strong>type</strong>(Array)</td>
+		<td>控件类型，[色相,饱和度,亮度]，默认Photoshop模式：['-z','x','-y']。其他可任意修改，如Windows传统模式：['x','-y','-z']。修改方法：UI.ColorPicker.type = ['x','-y','-z']</td>
+	</tr>
+	<tr>
+		<td><strong>tmpl</strong>(String)</td>
+		<td>控件HTML模版</td>
+	</tr>
+	<tr>
+		<td><strong>value</strong>(String)</td>
+		<td>当前颜色值</td>
+	</tr>
+</table>
+
 <textarea id="type_0" style="display:none">
 .colorPicker h4{font-size:12px;font-weight:normal;height:24px;padding-top:3px;}
 .colorPickerBox div,.colorPickerBar div,.colorPickerBoxArrow b,.colorPickerBarArrow b,.colorPickerClose{background:url(http://mat1.gtimg.com/www/mb/images/colorpicker.png) no-repeat}
