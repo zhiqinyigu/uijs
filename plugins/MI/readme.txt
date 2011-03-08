@@ -17,6 +17,7 @@
 		regex:(?insx)^http://mat1.gtimg.com/www/mb/css/style_.*?.css$ #Match HTTPS-delivered GIFs
 		regex:(?insx)^http://mat1.gtimg.com/www/mb/css/style.lab_.*?.css$ #Match HTTPS-delivered GIFs
 		regex:(?insx)^http://mat1.gtimg.com/www/mb/js/mi.Base_.*?.js$ #Match HTTPS-delivered GIFs
+	3、Willow（Fiddler插件，方便管理Host、线上文件整个目录指向到本地、查看Json数据等等）
 
 JS文件：
 	t.qq.com/login
