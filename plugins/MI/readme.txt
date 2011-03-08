@@ -10,7 +10,7 @@
 	2、统一使用英文命名，可适当使用简写（如：Btn - Button），统一用驼峰式（如：isUndefined）
 
 开发工具：
-	1、Debug模式，t.qq.com传参数?debug=1，即可进入开发模式，加载独立的ui.js,mi.js,lang.js
+	1、Debug模式，t.qq.com传参数?jsDebug=1，即可进入开发模式，加载独立的ui.js,mi.js,lang.js
 	2、Fiddler（将线上文件指向到本地文件）
 		http://mat1.gtimg.com/www/mb/js/ui.js
 		http://mat1.gtimg.com/www/mb/js/mi.js
