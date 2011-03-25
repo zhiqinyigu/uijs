@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link type="text/css" rel="stylesheet" href="" />
+<script type="text/javascript"></script>
+</head>
+<body>
+<h1>前端练习</h1>
+<pre>
+---------------------------------关联多选框-------------------------------
+请实现下图中的功能，需要完全一致
+
+1、不使用任何CSS，下面的效果纯HTML实现；
+2、职位的输入框为不可用状态；
+3、最外层是一个表单，点击提交时，表单提交到本页面即可；
+4、勾选技能的复选框时，技能的输入框需要跟着变化，其内容为已选复选框的名字以“,”连接，如：“HTML,JS”。
+--------------------------------------------------------------------------
+</pre>
+<form method="post" action="">
+	<table>
+		<tr>
+			<th>职位：</th>
+			<td><input type="text" name="job" id="job" value="Web前端开发" disabled /></td>
+		</tr>
+		<tr>
+			<th>技能：</th>
+			<td><input type="text" name="skill" id="skill" /></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td>
+				<ul>
+					<li><label for="skill_0"><input type="checkbox" id="skill_0" />HTML</label></li>
+					<li><label for="skill_1"><input type="checkbox" id="skill_1" />JS</label></li>
+					<li><label for="skill_2"><input type="checkbox" id="skill_2" />CSS</label></li>
+					<li><label for="skill_3"><input type="checkbox" id="skill_3" />PHP</label></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th></th>
+			<td><input type="submit" value="提交" /></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
