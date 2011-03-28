@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link type="text/css" rel="stylesheet" href="" />
+<script type="text/javascript"></script>
+</head>
+<body>
+<h1>前端练习</h1>
+<h2>知识点：prompt的使用、DOM元素的创建和插入、事件绑定、数组去重</h2>
+<pre>
+---------------------------------新增多选框-------------------------------
+
+1、点击“新增”，弹出名称的输入，确定后在列表中创建一个新的选项；
+2、新加的选项可以有重复的，勾选复选框时，要求技能的输入框中的值合并重复的项；
+
+--------------------------------------------------------------------------
+</pre>
+<form method="post" action="">
+	<table>
+		<tr>
+			<th>职位：</th>
+			<td><input type="text" name="job" id="job" value="Web前端开发" disabled /></td>
+		</tr>
+		<tr>
+			<th>技能：</th>
+			<td><input type="text" name="skill" id="skill" /> <a href="#" onclick="alert(prompt('请输入新增技能名称',''));return false">新增</a></td>
+		</tr>
+		<tr>
+			<th></th>
+			<td>
+				<ul>
+					<li><label for="skill_0"><input type="checkbox" id="skill_0" />HTML</label></li>
+					<li><label for="skill_1"><input type="checkbox" id="skill_1" />JS</label></li>
+					<li><label for="skill_2"><input type="checkbox" id="skill_2" />CSS</label></li>
+					<li><label for="skill_3"><input type="checkbox" id="skill_3" />PHP</label></li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<th></th>
+			<td><input type="submit" value="提交" /></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
