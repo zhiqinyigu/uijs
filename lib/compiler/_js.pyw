@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import os,sys
-def convert(filename,in_enc = "gb2312",out_enc="UTF-8"):
+def convert(filename,in_enc = "gbk",out_enc="UTF-8"):
     # read the file
     content = open(filename).read()
     # convert the concent
@@ -9,7 +9,7 @@ def convert(filename,in_enc = "gb2312",out_enc="UTF-8"):
         #write to file
         open(filename,'w').write(new_content)
     except:
-        print " error... "
+        print " error... " + filename
 
 def addZero(str):
     if len(str) < 2:
@@ -25,7 +25,7 @@ reg = ['(\/\*(\s|.)*?\*\/)|\r|\n|\t|\\\\t\\\\t']
 regTo = ['']
 for i in dir:
     f,ext=os.path.splitext(i);
-    if len(i.split('_')) > 1:
+    if len(i.split('_1')) > 1:
         continue
     localtime = time.localtime()
     filename = f + '_' + str(localtime[0])[2:4] + addZero(str(localtime[1])) + addZero(str(localtime[2])) + '' + ext
@@ -48,4 +48,5 @@ for i in dir:
     strcontent = "".join(filecontent)
 
     file = open(filename,'w').write(strcontent)
+#    file = open(f + '.test' + ext,'w').write(strcontent)
 print 'success'
