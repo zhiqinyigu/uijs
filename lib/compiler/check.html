@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>前端版本验证_腾讯微博</title>
+<script type="text/javascript">
+MILang='zh_TW';
+</script>
+<script type="text/javascript" src="../ui.js"></script>
+<script type="text/javascript" src="../mi.lab.js"></script>
+<style type="text/css">
+body{line-height:1.5;}
+h4{color:#006600;}
+#x{color:#CCC;margin:0 0 0 20px}
+#x b{color:#000;font-weight:normal}
+</style>
+</head>
+<body>
+<h1>前端版本验证_腾讯微博</h1>
+<h4>使用方法：先Ctrl+F5，然后看是否有404请求（Chrome、Fiddler、HttpWatch都可以）</h4>
+<div id="x"></div>
+<div id="loader" style="display:none"></div>
+<script type="text/javascript">
+UI.ready(function(){
+	var xhr = {},img = [],index = 0;
+	for (var i in MI.version) {
+		img[index] = new Image();
+		img[index].src = MI.version[i];
+		$('x').innerHTML += '<b>' + img[index].src + '</b>' + '<br>';
+		index++;
+		if (MI.version[i].hasString('.lab')) { //实验室
+			img[index] = new Image();
+			img[index].src = MI.version[i].replace('.lab','');
+			$('x').innerHTML += '<b>' + img[index].src + '</b>' + '<br>';
+			index++;
+		}
+		else if (MI.version[i].hasString(MILang)) { //国际化
+			img[index] = new Image();
+			img[index].src = MI.version[i].replace('.' + MILang,'');
+			$('x').innerHTML += '<b>' + img[index].src + '</b>' + '<br>';
+			index++;
+		}
+	}
+});
+</script>
+</body>
+</html>
