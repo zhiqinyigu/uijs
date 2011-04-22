@@ -5,7 +5,8 @@ def convert(filename,in_enc = "gbk",out_enc="UTF-8"):
     content = open(filename).read()
     # convert the concent
     try:
-        new_content = content.decode(in_enc).encode(out_enc)
+        new_content = content
+        #new_content = content.decode(in_enc).encode(out_enc)
         #write to file
         open(filename,'w').write(new_content)
     except:
