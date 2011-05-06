@@ -29,7 +29,10 @@ for i in dir:
     if len(i.split('_1')) > 1:
         continue
     localtime = time.localtime()
-    filename = f + '_' + str(localtime[0])[2:4] + addZero(str(localtime[1])) + addZero(str(localtime[2])) + '' + ext
+    date = str(localtime[0])[2:4] + addZero(str(localtime[1])) + addZero(str(localtime[2]))
+    if suffix:
+        date = suffix;
+    filename = f + '_' + date + suffixSecond + ext
 
     print i
     convert(i);

@@ -3,6 +3,8 @@ import glob
 import time
 import re
 import string
+suffix = '';
+suffixSecond = 'a';
 dir = glob.glob(r"*.css")
 for i in dir:
     print i
@@ -19,7 +21,7 @@ op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../ui.mi.js --js=../mi.
 #op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.ValidateNew.js --js_output_file=mi.ValidateNew.js')
 #op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.Validate.js --js_output_file=mi.Validate.js')
 #op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.Tag.js --js_output_file=mi.Tag.js')
-#op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.List.js --js_output_file=mi.List.js')
+op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.List.js --js_output_file=mi.List.js')
 #op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.Theme.js --js_output_file=mi.Theme.js')
 #op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.City.js --js_output_file=mi.City.js')
 #op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.City.zh_TW.js --js_output_file=mi.City.zh_TW.js')
@@ -46,10 +48,11 @@ op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.Base.lab.js --js_
 #op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.Face.js --js_output_file=mi.Face.js')
 #op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.MapPop.js --js_output_file=mi.MapPop.js')
 #op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.Group.js --js_output_file=mi.Group.js')
+#op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.QunList.js --js_output_file=mi.QunList.js')
 op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.WebQQ.js --js_output_file=mi.WebQQ.js')
 op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.WebQQFull.js --js_output_file=mi.WebQQFull.js')
 op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.PicList.js --js_output_file=mi.PicList.js')
-#op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.Lang.zh_TW.js --js=../mi.Lang.js --js_output_file=mi.Lang.zh_TW.js')
+op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../mi.Lang.zh_TW.js --js=../mi.Lang.js --js_output_file=mi.Lang.zh_TW.js')
 #op=os.popen('java -jar compiler.jar --charset=utf-8 --js=../ui.mi.js --js=../mi.TV.js --js_output_file=mi.TV.js')
 op.close()
 execfile(r'_js.pyw')
