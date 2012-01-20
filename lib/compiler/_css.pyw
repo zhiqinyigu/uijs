@@ -33,8 +33,8 @@ for i in dir:
         date = suffix;
     filename = f + '_' + date + suffixSecond + ext
 
-    print i
-    convert(i);
+    #print i
+    #convert(i);
     file = open(i,'r')
     content =  file.readlines()
     strcontent = ''
@@ -50,8 +50,12 @@ for i in dir:
             filecontent.append(new)
     strcontent = "".join(filecontent)
 
-    print filename.replace('../../css\\','')
-    file = open(filename.replace('../../css\\',''),'w').write(strcontent)
+    #print filename.replace('../../css\\','')
+    filename = filename.replace('../../css\\','')
+    if filename.split('_1')[0] == 'style.api':
+        filename = filename.split('_1')[0] + ext
+    #print filename
+    file = open(filename,'w').write(strcontent)
 dir = glob.glob(r"../../css/webqq/*.css")
 reg = [';}','(\/\*(\s|.)*?\*\/)|\r|\n|\t']
 regTo = ['}','']
@@ -65,8 +69,8 @@ for i in dir:
         date = suffix;
     filename = f + '_' + date + suffixSecond + ext
 
-    print i
-    convert(i);
+    #print i
+    #convert(i);
     file = open(i,'r')
     content =  file.readlines()
     strcontent = ''
@@ -82,7 +86,7 @@ for i in dir:
             filecontent.append(new)
     strcontent = "".join(filecontent)
 
-    print filename.replace('../../css/webqq\\','')
+    #print filename.replace('../../css/webqq\\','')
     file = open(filename.replace('../../css/webqq\\',''),'w').write(strcontent)
 #    file = open(f + '.test' + ext,'w').write(strcontent)
 print 'success'

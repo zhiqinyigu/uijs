@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import os,sys
 def convert(filename,in_enc = "gbk",out_enc="UTF-8"):
+    return
     # read the file
     content = open(filename).read()
     # convert the concent
@@ -34,8 +35,8 @@ for i in dir:
         date = suffix;
     filename = f + '_' + date + suffixSecond + ext
 
-    print i
-    convert(i);
+    #print i
+        #convert(i);
     file = open(i,'r')
     content =  file.readlines()
     strcontent = ''
@@ -51,6 +52,9 @@ for i in dir:
             filecontent.append(new)
     strcontent = "".join(filecontent)
 
+    if filename.split('_1')[0] == 'mi.api':
+        filename = filename.split('_1')[0] + ext
+    #print filename
     file = open(filename,'w').write(strcontent)
 #    file = open(f + '.test' + ext,'w').write(strcontent)
 print 'success'
