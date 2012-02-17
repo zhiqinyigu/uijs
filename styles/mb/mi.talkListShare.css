@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* Qzone分享 */
+.DshareWrap .countTxt{margin-top:-5px}
+.DshareWrap .btnBox{float:right;padding-bottom:1px}.DshareWrap .btn3{margin:0 10px}
+.DshareWrap .userPic{padding-left:0}.DshareWrap .msgBox{width:434px;padding-right:0;line-height:23px}.DshareWrap .replyBox .msgBox{width:408px;padding-right:12px;line-height:19px}.DshareWrap .pubInfo{color:#999}
+.DshareWrap .wbpmcompose .submit .btn_send,.DshareWrap .wbpmcompose .submit .btn_send:hover{padding:0;margin-right:10px;line-height:25px;text-align:center;text-indent:0;text-decoration:none}
+.DshareWrap .wbpmcompose .submit .wbpm_right *{position:static;vertical-align:middle;margin-bottom:0}.DshareWrap .wbpmcompose .wbpmcount .wbpmtextlimit{position:relative;top:-5px}
+.DshareWrap .wbpmcompose .submit .wbpminsert{width:auto}.DshareWrap .wbpm_right{width:300px}
+.DshareWrap .wbmpsending a.wbpmsend{display:inline-block}.DshareWrap .wbmpsending .wbpmsendtxt{display:none}
+.DshareWrap .wbpmcompose textarea{width:496px;_float:left;_margin-top:1px;_width:488px}
+.DshareWrap .wbpmcompose .replycontent{clear:both;_zoom:1}
+.DshareWrap .wbpmcompose .replycontent textarea{width:526px;_width:518px}
+.DshareWrap .wbpmcompose .submit{_width:530px}
+/* 邮件分享 */
+.shareToMail,.shareToQzone,.shareToFriend,.shareMsg{width:600px;padding:10px 8px 15px}
+.shareToMail .mailLogo{display:none}
+.shareToMail dl,.shareToQzone dl{width:600px;margin-top:5px;line-height:19px}
+.shareToMail dt,.shareToQzone dt,.DmailCnt .dt{float:left;clear:left;width:60px;text-align:right;height:21px;margin-top:10px}
+.shareToMail dd,.shareToQzone dd{width:540px;float:left;margin-top:10px}.shareToMail .msgPreview{width:100%;padding:16px 0 6px}
+.DmailCnt{margin-bottom:10px}
+.shareToMail .msgContent{float:left;width:518px;height:150px;overflow:auto;margin-top:10px;padding:10px;word-wrap:break-word;border:1px solid #CECECE}
+.shareToMail .shareReason{width:500px;height:30px;padding:2px 0;font-size:14px;font-weight:bold;outline:none;border:none;overflow:hidden;background:none}
+.shareToMail .msgSource{width:500px;border-top:1px dashed #D8D8D8;margin:10px 0;padding-top:10px;overflow:hidden} 
+#tmain .picBox img, #tmain .picBox canvas, #tmain .videoBox img {background:#F7FBFC;border: 1px solid #E7E7E7;padding: 3px;display:inline-block}
+.shareToMail .notes{line-height:29px;margin-top:10px;padding-left:5px;background:#F2F2F2;outline:none}
+.shareToMail .newComt li{padding-bottom:6px;margin-bottom:5px;border-bottom:1px dashed #D8D8D8}
+.shareToMail .newComt .msgCnt{font-size:12px;line-height:19px}
+.shareToMail .countTxt {position:absolute;right:180px;bottom:12px}
+.shareToMail .inputArea,.shareToQzone .inputArea{width:528px;height:30px;border-color:#CECECE;background:none}.shareToMail textArea.gray,.shareToQzone textArea.gray{color:#999}
+.shareToMail .comPeople{position:relative;top:-4px;z-index:10;float:left}
+.shareToMail .btn_ldrop{position:absolute;top:0;cursor:pointer}.shareToMail .lopen{margin-top:3px}
+.shareToMail .comPeople .loading{right:-32px;height:16px;margin-top:2px}
+.shareToMail .btnBox{float:right}.shareToMail .btn1{margin-left:10px}
+.shareToMail .mailStatus{padding:30px 0 20px;text-align:center}.shareToMail .marl{margin-left:40px}
+.shareToMail .mail_listWrap{position:absolute;width:270px;left:0;top:19px;margin:0;background:#fff}
+.shareToMail .mailBox{width:268px;padding:0;margin:0;overflow:hidden;overflow-y:auto;border:1px solid #C1C8D2;border-top:0}
+.shareToMail .mail_lHead{position:relative;height:21px;padding:1px;border:1px solid #C1C8D2}.shareToMail .mail_lHead .close{display:block;margin:0;top:4px;right:5px}
+.shareToMail .mail_lHead .tHead{width:100%;height:21px;line-height:1.231;background-color:#FAFAFA}
+.shareToMail .mail_lHead .t1{width:26px;padding:0;text-align:center;border-right:1px solid #C4CACD;vertical-align:middle}
+.shareToMail .mail_lHead .t2,.shareToMail .mail_lHead .t3{padding-bottom:3px;padding-bottom:2px\9;padding-left:14px;vertical-align:bottom}
+.shareToMail .mail_lHead .t2{width:80px;border-right:1px solid #C4CACD}
+.shareToMail .mail_lcont{width:268px;overflow:hidden;*zoom:1;border:0}
+.shareToMail .mail_lcont li{float:left;width:100%;margin-top:-1px;padding-top:1px;border-top:1px solid #E3E6EB}
+.shareToMail .mail_lcont .cbg2{background:#FAFAFA}.shareToMail .mail_lcont li:hover{background:#EEF4F7}
+.shareToMail .mail_lcont .tCont{width:100%;height:25px;line-height:1.231}
+.shareToMail .mail_lcont .c1{width:28px;padding:0;text-align:center;vertical-align:middle}
+.shareToMail .mail_lcont .c2,.shareToMail .mail_lcont .c3{padding-bottom:6px;padding-bottom:5px\9;padding-left:14px;vertical-align:bottom;white-space:nowrap;cursor:default}
+.shareToMail .mail_lcont .c2{width:81px}
+/*邮件提示*/
+.shareMailSug{position:absolute;max-width:250px;*width:250px;max-height:200px;_height:200px;padding:1px;overflow-x:hidden;overflow-y:auto;background:#fff;border:1px solid #ADADAD;z-index:999;white-space:nowrap}.shareMailSug li{height:20px;line-height:20px;cursor:pointer;padding:0 4px;*zoom:1}
+.shareMailSug li.on{background:#D2E9FA}.mailTxtShadow{position:absolute;left:0;top:0;z-index:-999;opacity:0;filter:alpha(opacity=0);width:528px;height:30px;overflow-y:auto;padding:3px 5px;font-size:12px;line-height:1.231;border:1px solid #ccc;margin:0;white-space:pre-wrap;word-wrap:break-word}
+/* QQ好友分享 */
+.shareToFriend h3{margin:-20px 0 10px}
+.shareToFriend .btnBox{float:none;text-align:right;margin-top:10px}
+.shareToFriend .btn1{margin-left:10px}
+.shareMenu{position:relative;height:27px;overflow:hidden;*zoom:1}
+.shareSearch{float:right;width:196px}
+.shareSearch .inputTxt{float:left;width:184px;border-color:#CBE0EA;background:none}
+.shareSearch .atbtn{float:left;margin:1px 0 0 -19px}
+.shareTab{float:left}
+.shareTab li{position:relative;float:left;height:25px;margin-right:-1px;line-height:23px;text-align:center;border:1px solid #CBE0EA;background:#EDF7FB}.shareTab .select{padding-bottom:1px;border-bottom:0}
+.shareTab a{display:inline-block;padding:0 14px;border:1px solid #fff;background:#EAF6FA;background:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#EAF6FA));background:-moz-linear-gradient(top,#fff,#EAF6FA);filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,startColorStr=#FFFFFFFF,endColorStr=#FFEAF6FA)}
+.shareTab .select a{color:#333;border:none;padding:1px 15px;background:#EDF7FB;background:-webkit-gradient(linear,0 0,0 100%,from(#F6FBFE),to(#EDF7FB));background:-moz-linear-gradient(top,#F6FBFE,#EDF7FB);filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,startColorStr=#FFF6FBFE,endColorStr=#FFEDF7FB)}
+.shareTab .select a:hover{text-decoration:none}
+.shareFList{width:598px;overflow:hidden;overflow-y:auto;margin-top:-1px;border:1px solid #CBE0EA}
+.shareFList dl{margin-top:-1px;border-top:1px solid #CBE0EA}
+.shareFList dt{height:21px;padding:0 4px;overflow:hidden;*zoom:1;line-height:21px;line-height:23px\0;background:#EDF7FB;cursor:default}
+.shareFList .btn_ldrop{float:left;margin:6px 5px 0 0;background-position:-287px -164px}
+.shareFList .on .btn_ldrop{margin-top:4px;background-position:-300px -173px}
+.shareFList .hover dt{color:#fff;background:#90C1E4}
+.shareFList dd{display:none}.shareFList .on dd{display:block;width:576px;margin:5px 0 5px 16px;overflow:hidden}
+.shareFList p{float:left;width:50%;height:17px;overflow:hidden;padding:3px 0}
+.shareFList p *{*zoom:1;vertical-align:middle}
+.shareFList img{width:16px;height:16px;margin:-4px 4px 0 0;*margin-top:-2px}
+.shareFList label{position:static;font-family:Tahoma,Arial;color:#333;line-height:1.231;white-space:nowrap;cursor:default}
+.shareFList .find{border:none}.shareFList .find dt{display:none}.shareFList .find dd{display:block;margin:0 0 0 16px;overflow:visible}
+.shareFList dd label input{margin:0 4px 0 0;*margin-top:-1px;*vertical-align:top}
+.shareToFriend .noResult{position:absolute;left:0;top:200px;width:100%;display:none;text-align:center}
+.shareFList .noGroup{text-align:center;height:260px;line-height:260px}
+.toFoerWrap .talkBox{padding:0}
+.toFoerWrap .sendCnt{margin-bottom:10px;border-width:1px}
+#vary .toFoerWrap .talkBox .sendCnt,#vary .toFoerWrap .talkBox .sendFun{width:99%}
+/*分享到翼分享*/
+.c_ty i,.c_ty a{ display:inline-block; vertical-align:middle}
+.c_ty i,.c_ty a{ *display:inline}
+.c_ty i.ico{ margin-right:5px; width:20px; height:20px; background-position:0 -75px}

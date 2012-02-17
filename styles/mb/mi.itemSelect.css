@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*
+@ 成员选择()
+@ 作用域：html内，弹出层内
+*/
+body .itemSelect {z-index:1000}
+.itemSelect .searchBox .inputBtn{ border:0 none; cursor:pointer; outline:medium none; overflow:hidden; text-align:left; text-indent:-9999em; vertical-align:middle}
+.itemSelect .searchBox{ height:26px; border:1px solid #C6C6C6; border-bottom:0;width:348px}
+.itemSelect .searchLeft .inputBtn {background:url(http://mat1.gtimg.com/www/mb/images/group/b8_111027.png) no-repeat -227px -95px; height:23px;margin-top:0;width:24px; float:left}
+.itemSelect .searchLeft .inputTxt{color:#999; border:0; float:left; background:none;line-height:12px; width:300px; padding-top:4px;padding-top:7px\9}
+.itemSelect .friendList{ float:left; width:348px; height:165px; overflow-y:scroll; overflow-x:hidden; border:1px solid #C6C6C6}
+.itemSelect .friendList li{ height:21px; padding:3px 5px;border-bottom:1px solid #c6c6c6; cursor:pointer;*zoom:1;white-space:nowrap;overflow:hidden;}
+.itemSelect .friendList li p em{ color:#999}
+.itemSelect .friendList li img{ width:21px; height:21px; float:left; margin:0 8px 0 0}
+.itemSelect .friendList li.click img{ width:50px; height:50px; float:left; margin:4px 8px 0 0;_display:inline;border:1px solid #D2D2D2; display:block}
+.itemSelect .friendList li p{ line-height:19px; display:none}
+.itemSelect .friendList li p.friendName,.friendList li.hover p.friendName,.friendList li.click p{ line-height:19px; display:inline-block;*display:inline;zoom:1;}
+.itemSelect .friendList li.hover,.friendList li.click:hover,.selectedNum .friendList li.hover{background:#E9EFF1}
+.itemSelect .friendList li p.friendName{ float:left}
+.itemSelect .friendList li .ico_indetail{ display:none}
+.itemSelect .friendList li.hover .ico_indetail{ display:block; float:right}
+.itemSelect .friendList li.click{ height:60px; padding:0 5px;  background:#FFFFE9; overflow:hidden}
+.itemSelect .friendList li.click p{ height:19px}
+.itemSelect .friendList li.click p a,.friendList li.click p b,.friendList li.click p em{ float:left}
+.itemSelect .friendList li.click .listFun{border:0;margin:10px 15px 0 0; background:none; position:absolute; top:0; right:0}
+.itemSelect .friendList li.click .listFun a{margin:0 8px;float:right}
+.itemSelect .friendList li.click:hover .listFun,.friendList li.click.hover .listFun{ display:block}
+.itemSelect .friendList .empty{ text-align:center; width:300px; margin:60px auto}
+.itemSelect .selectedNum{ width:348px; float:right; height:188px;border:1px solid #c6c6c6; margin-top:-27px}
+.itemSelect .selectedNum h4{ background:#EBF1F2; height:23px; padding-left:5px}
+.itemSelect .selectedNum h4 .cSign{ float:right; padding-right:17px}
+.itemSelect .selectedNum .friendList{ width:348px; height:165px; border:none}
+.itemSelect .selectedNum .friendList li{ border:0; padding:5px 5px}
+.itemSelect .selectedNum .friendList li p.friendName{ overflow:hidden; height:21px}
+.itemSelect .ico_indetail{ background:url(http://mat1.gtimg.com/www/mb/images/group/b8_111027.png) no-repeat}
+.itemSelect .selectedNum .friendList li.hover .ico_indetail{ display:block; background-position:-242px -293px; width:8px; height:7px; color:#fff; text-indent:20em; overflow:hidden;margin:6px 5px 0 0}
+.itemSelect .friendList ul.unSelectList li.unSelectItem .ico_indetail {display:none}
+.itemSelect .cSign{ color:#E57600}
+
+.selectDropList {display:none;position:absolute;z-index:300;background:#fff}
+.selectDropList .selectedNum {display:none}
+.selectDropList .friendList {height:auto;max-height:195px}
+.selectDropList .searchLeft div {padding:3px 2px 3px 8px;overflow:hidden}
+.selectDropList .searchLeft div span {float:left}
+.selectDropList .friendList {float:none;width:auto;overflow-y:auto}
+.selectDropList .searchBox {width:auto}
+.selectDropList  .friendList .empty {margin:0;width:auto}
+.selectDropList .friendList li {overflow:hidden;white-space:nowrap}
+.selectDropList .friendList li p.friendName{float:none}
+.selectDropList .overflowTip {color:#FA7437}
