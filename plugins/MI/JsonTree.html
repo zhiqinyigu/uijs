@@ -7,8 +7,8 @@
 <style type="text/css">
 *{margin:0;padding:0;}
 body{margin:8px;}
-.jsonTree{font-family:Tahoma,Georgia;margin:20px 40px;position:relative;}
-.jsonTree .filter{position:absolute;left:0;margin:5px 0 0 10px;}
+.jsonTree{font-family:Tahoma,Georgia;font-size:14px;margin:20px 40px;position:relative;}
+.jsonTree .filter{position:absolute;left:0;margin:3px 0 0 10px;}
 .jsonTree .name{color:#C00;font-weight:bold;}
 .jsonTree .object{color:#0A0;font-weight:bold;}
 .jsonTree .array{color:#03F;font-weight:bold;}
@@ -55,7 +55,8 @@ JsonTree.prototype = {
                 }
                 for (var i in data) {
                     //console.log(i);
-                    string.push((isArray ? '<input type="checkbox" checked class="filter">' : ('<li><input type="checkbox" checked class="filter"><span class="name">"' + i + '"</span>:')) + parseData(data[i]) + '</li>');
+                    //string.push((isArray ? '<input type="checkbox" checked class="filter">' : ('<li><input type="checkbox" checked class="filter"><span class="name">"' + i + '"</span>:')) + parseData(data[i]) + '</li>');
+                    string.push((isArray ? '' : ('<li><input type="checkbox" checked class="filter"><span class="name">"' + i + '"</span>:')) + parseData(data[i]) + '</li>');
                 }
                 if(string.length) {
                     string = '<ul><li>' + string.join(',</li><li>') + '</li></ul>';
@@ -76,7 +77,7 @@ JsonTree.prototype = {
     addEvent : function(){
         var Self = this;
         $('.filter',Self._body).click(function(){
-            console.log(this.checked);
+            //console.log(this.checked);
             if (this.checked){
                 $('ul',this.parentNode).eq(0).show();
             }
@@ -93,8 +94,8 @@ JsonTree.prototype = {
         });
         $('.objectEnd',clone).each(function(i,o){
             var last = $('li:last',$(o).prev()).prev();
-            if (last.length)
-            last.get(0).innerHTML = last.text().replace(/,$/g,'');
+            //if (last.length)
+            //last.get(0).innerHTML = last.text().replace(/,$/g,'');
         });
         //console.log(clone);
         return $(clone).text();
@@ -109,7 +110,7 @@ var jsonTree = new JsonTree({
     target : $('#jsonTreeWrap')[0]
 });
 jsonTree.show($('#json')[0].value);
-console.log(jsonTree);
+//console.log(jsonTree);
 </script>
 </body>
 </html>
