@@ -1,0 +1,1251 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html style="height:100%;"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="QQ空间触屏版v2" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<link rel="apple-touch-icon" href="http://3gimg.qq.com/wap30/img/mqzone/fav.png"/>
+<link rel="apple-touch-icon-precomposed" href="http://3gimg.qq.com/wap30/img/mqzone/fav.png"/>
+<title>The youth have no regrets</title>
+
+
+<link href="http://3gimg.qq.com/wap30/mqzone/css/g.min.2012051001.css?v=0.5d" rel="stylesheet" type="text/css" />
+
+<script>
+startLoadTime=Date.now();
+</script>
+<style type="text/css">
+body > *[id]
+{
+	display: none;
+	
+}
+
+*[data-struct="page"]{
+	width: 100%;
+}
+
+body>*[selected="true"],body>header,body>footer {
+	display: block;
+}
+
+body >.preloader{
+	position:absolute;
+	width:120px;
+	line-height:32px;
+	height:1px;
+	top:220px;
+	left:35%;
+	z-index:9000;
+	display: none;
+}
+
+body >.preloader canvas{
+	float:left;
+}
+.hide{
+  display:none;
+}
+
+*[data-struct="tab"]:not([selected="true"]), *[data-struct="block"]:not([selected="true"]){
+	display: none;
+}
+
+*[data-struct="tab"][selected="true"], *[data-struct="block"][selected="true"]{
+	display: block;
+}
+
+*[data-struct="page"]{
+	position:absolute;
+}
+
+#feedBack[selected="true"],#moodinput[selected="true"],#QQchat[selected="true"],#blogEdit[selected="true"]{
+	height: 100%;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+#sheader{
+	display:block;
+}
+#sheader[data-page="bigPhoto"],#sheader[data-page="QQchat"]{
+	display:none;
+}
+
+/* end 页面顶部与 tab是否显示*/
+
+.zoom{
+	display:none;
+}
+
+.view-more{
+	position: relative;
+	margin-top: -1px;
+	border-top: 1px solid #C5C5C5;
+}
+.view-more > a{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #727272;
+}
+
+.page-top-float li a{
+	-webkit-tap-highlight-color:#68BDFF;
+}
+.about-feed-list li figure img{
+	width: 32px;
+	height: 32px;
+}
+
+/* 这段css用来设置右边发表按钮的  如写日志  写说说(这个页面按钮较多 没用这个) 发表反馈页面用到 */
+.btn-right-js{
+	float: right;
+	margin-top: 8px;
+	width: 63px;
+	height: 26px;
+	margin-right: 14px;
+	line-height: 26px;
+	text-align: center;
+	font-size: 15px;
+	color: white;
+	background: #0073B1;
+	-webkit-box-shadow: inset 0 0 5px #1a6aa2;
+	-webkit-border-radius: 4px;
+}
+
+</style>
+<script type="text/javascript">
+(function(){
+	if(location.hash == "" && 283540706 != 283540706){
+		location.hash = "#home_page/home?uid=283540706";
+	}
+})()
+</script>
+</head>
+<body style="height:100%;">
+<div style="position:absolute;top:0;left:0;right:0;bottom:0;z-index:9999;display:block;background-color:#FFF">
+	<div id="firstload" style="position:absolute;width:50px;height:50px;top:50%;left:50%;margin-top:-8px;margin-left:-8px;"></div>
+</div>
+<div id = "loading" class="extend-tips" style="background: rgba(255,255,255,0.6);padding:0;left:140px;right:140px;">
+    <div class="extend-tips-canvas" style="margin-bottom:0;"></div>
+</div>
+<div class="append-addscreen" style="display:none;">
+    <a class="btn-append-close-hide" onclick="document.body.removeChild(document.querySelector('.append-addscreen'))">关闭</a>
+</div>
+<div id="dynamic-page" style="position:absolute;z-index:101;display:none;"></div>
+<header id="sheader" data-page="info">
+    <div class="page-top"  bk-cls="btn-back">
+        <a id="backbtn" class="btn-home" href="#home_page/home?uid=283540706">主页</a>
+        <a id="rightbtn" class="btn-write" onClick="entranceToggle()">发表</a>
+        <div class="page-name" onClick="showInfoCenter()">
+            <h2>个人中心</h2>
+            <p>283540706.z.qq.com</p>
+        </div>
+	    <ul class="page-top-float hide" onClick="this.className='page-top-float hide'" style="z-index:99;">
+	        <li><a class="btn-float-shuoshuo" href="#moodinput">写说说</a></li>
+	        <li><a class="btn-float-daily" href="#blogEdit?isnew=1">写日志</a></li>
+	    	<li><a class="btn-float-start" href="#sign/sign-list">签到</a></li>
+	    </ul>
+    </div>
+</header>
+
+<div id="infor_center" data-struct="page" selected="true" title="个人中心" bk-txt="主页" bk-url="#home_page/home?uid=283540706" bk-cls="btn-home">
+
+<nav id="nav-info" class="main-menu">
+        <ul>
+            <li  class="current">
+            	<a onClick="showInfoCenter();" class="btn-nav-shuoshuo">
+            		<span>好友动态</span>
+            	</a>
+            </li>
+            <li>
+            	<a href="#infor_center/mentioned//mentioned-myfeeds" class="btn-nav-aboutme"><span>与我相关</span></a>
+            </li>
+            <li>
+            	<a href="#infor_center/subscribe?ac=100&buid=283540706" class="btn-nav-rss"><span>我的订阅</span></a>
+           	</li>
+            <li>
+            	<a href="#infor_center/friend//friend-myvistor?ac=2&mst=2&pid=1&buid=283540706" class="btn-nav-firend"><span>我的好友</span></a>
+            </li>
+            <li>
+            	<a href="#infor_center/applist//applist_game?mst=32"  class="btn-nav-app"><span>我的应用</span></a>
+            </li>
+            <li><a class="btn-nav-more" href="#infor_center/show-more" onClick="updateSecHeaderBar(this)"><span>更&nbsp;&nbsp;&nbsp;&nbsp;多</span></a></li>
+        </ul>
+    </nav>
+<section class="body-box-wrap" id="info" data-struct="tab" selected="true" title="个人中心">
+    <section class="body-box">
+        <div class="tips-refresh" style="height:50px;">
+            <p>正在更新...</p>
+            <p>&nbsp;</p>
+        </div>
+        <div class="banner-warm hide" style="display:none;">
+			<a class="banner-warm-href" onClick="closeBanner(this,0)" target="_blank" style="background:url(http://3gimg.qq.com/wap30/mqzone/img/null) no-repeat center top #F297AC;height:50px;-webkit-background-size: 320px auto;" href="null"></a>
+			<a class="btn-fl-close" onClick="closeBanner(this,0)"></a>
+		</div>
+        <div class="fast-textarea">
+            <div class="ss-area ellipsis"><a href="#moodinput" style="display:block; width:100%;height:100%;color:#9F9F9F;">分享生活，留住感动。</a></div>
+        </div>
+        <article class="shuoshuo-content">
+            <div class="shuoshuo-tips">
+            	<span style="color:#424242;">全部动态</span>
+            </div>
+            <ul class="shuoshuo-list" mst="2"><li><div class="ss-list-sign"><figure><a onclick="showHomePage(85328069) ;"><img tsrc="http://qlogo2.store.qq.com/qzone/85328069/85328069/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(85328069) ;">刘伟</a></h5><p><time datetime="刚刚">刚刚</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('85328069','c500160573b5b34fb4a80500' ) ;"></a></div><div class="ss-list-content"><p>转发:王哲林打的不错，有前途</p><div class="ss-list-rebroad"><p><a class="writer" onclick="UI.showHomePage(622008102) ;">腾讯体育</a>:【男篮热身大胜美明星取开门红 朱八手热砍20分】北京时间5月16日，在2012年中国男篮首场奥运热身赛中，#中国男篮#在山东诸城以106-78战胜美国明星队，取得集训之后的开门红。 @翟晓川BX 、朱彦西和王哲林先后出场，完成了国家队的首次亮相。 http://url.cn/1OIF6U  </p><figure class="clearfix"><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://t1.qpic.cn/mblogpic/416ac30bed2abf346320/120" alt="下载中" data-midsrc="http://t1.qpic.cn/mblogpic/416ac30bed2abf346320/320" data-bigsrc="http://t1.qpic.cn/mblogpic/416ac30bed2abf346320/2000"/></a></figure><p class="ss-rebroad-time"><time datetime="刚刚">刚刚</time>57人转发</p></div></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'c500160573b5b34fb4a80500', type:'1', buid:'85328069', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'c500160573b5b34fb4a80500', type:'1', buid:'85328069', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/85328069/mood/c500160573b5b34fb4a80500.1' ,uinkey:'http://user.qzone.qq.com/622008102/mood/261713255da7b34f3b680400.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(158488367) ;"><img tsrc="http://qlogo4.store.qq.com/qzone/158488367/158488367/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(158488367) ;">戴EL</a></h5><p><time datetime="1分钟前">1分钟前</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('158488367','2f5772091fb5b34fafca0d00' ) ;"></a></div><div class="ss-list-content"><p>转发:</p><div class="ss-list-rebroad"><p>周立菠脱口秀:大气的人，从不为已经不属于自己的东西而惋惜；大气的人生，像北极星一样璀璨永恒。让心豁达起来，不要惋惜过去，而应换一种观点、换一种心情去生活。赫尔岑说：会在快乐时微笑，也要学会在困难中微笑。有这样胸怀的人，从不回头去寻觅昨日黄花，而是快乐地去追求明日繁星。----不要惋惜，才能更快乐 </p><figure class="clearfix"><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://t3.qpic.cn/mblogpic/c3470a51cae0e3341b2c/120" alt="下载中" data-midsrc="http://t3.qpic.cn/mblogpic/c3470a51cae0e3341b2c/320" data-bigsrc="http://t3.qpic.cn/mblogpic/c3470a51cae0e3341b2c/2000"/></a></figure><p class="ss-rebroad-time"><time datetime="1分钟前">1分钟前</time>169人转发</p></div></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'2f5772091fb5b34fafca0d00', type:'1', buid:'158488367', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'2f5772091fb5b34fafca0d00', type:'1', buid:'158488367', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/158488367/mood/2f5772091fb5b34fafca0d00.1' ,uinkey:'http://user.qzone.qq.com/119/mood/00000000f694eca61b740000.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(85328069) ;"><img tsrc="http://qlogo2.store.qq.com/qzone/85328069/85328069/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(85328069) ;">刘伟</a></h5><p><time datetime="3分钟前">3分钟前</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('85328069','c5001605d5b4b34f19b90600' ) ;"></a></div><div class="ss-list-content"><p>转发:||</p><div class="ss-list-rebroad"><p>iamamiwhoami:不加班了~伤心了~走了~回家哭去~姐妹们帮我转个帖子吧~~~16层女厕2号坑丢失一个32G的TOUCH~上面有本人无数自拍和他拍~~请拾到的恩人还给我把~呃~非常感谢~ @姝梅像打了鸡血一样的工作  @黎明  @卢卢卢  @rina休假归来  @蓉蓉-要回家了 </p><figure class="clearfix"></figure><p class="ss-rebroad-time"><time datetime="3分钟前">3分钟前</time>13人转发</p></div></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'c5001605d5b4b34f19b90600', type:'1', buid:'85328069', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'c5001605d5b4b34f19b90600', type:'1', buid:'85328069', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/85328069/mood/c5001605d5b4b34f19b90600.1' ,uinkey:'http://user.qzone.qq.com/119/mood/0000000092ee0d3a35510000.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(123456) ;"><img tsrc="http://qlogo1.store.qq.com/qzone/123456/123456/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(123456) ;">腾讯视频</a></h5><p><time datetime="6分钟前">6分钟前</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('123456','40e201000cb4b34f67600800' ) ;"></a></div><div class="ss-list-content"><p>史上最搞笑的车祸 兰博基尼街头耍宝失败遭人围观 </p></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'40e201000cb4b34f67600800', type:'1', buid:'123456', t1src:'1'});">233</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'40e201000cb4b34f67600800', type:'1', buid:'123456', t1src:'1'});">141</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/123456/mood/40e201000cb4b34f67600800.1' ,uinkey:'http://user.qzone.qq.com/123456/mood/40e201000cb4b34f67600800.1', type:'0' });">22</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(6886925) ;"><img tsrc="http://qlogo2.store.qq.com/qzone/6886925/6886925/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(6886925) ;">王斯雅</a></h5><p><time datetime="14分钟前">14分钟前</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('6886925','0d16690046b2b34ff71b0200' ) ;"></a></div><div class="ss-list-content"><p>转发:被潜好多年了，依然还潜着的飘过<img src="http://qzonestyle.gtimg.cn/qzone/em/e100098.gif" alt="下载中" /> ||</p><div class="ss-list-rebroad"><p>yangyy:夜赴富来宫，潜龙六十五期开班啦。 </p><figure class="clearfix"></figure><p class="ss-rebroad-time"><time datetime="14分钟前">14分钟前</time>1人转发</p></div></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'0d16690046b2b34ff71b0200', type:'1', buid:'6886925', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'0d16690046b2b34ff71b0200', type:'1', buid:'6886925', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/6886925/mood/0d16690046b2b34ff71b0200.1' ,uinkey:'http://user.qzone.qq.com/119/mood/0000000099a41476053a0000.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(158488367) ;"><img tsrc="http://qlogo4.store.qq.com/qzone/158488367/158488367/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(158488367) ;">戴EL</a></h5><p><time datetime="14分钟前">14分钟前</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('158488367','2f5772091cb2b34f875f0300' ) ;"></a></div><div class="ss-list-content"><p>转发:||</p><div class="ss-list-rebroad"><p>历史上的那些事:【中国人血型起源】B型血占20%，主要是由匈奴、突厥、鲜卑、女真、契丹、西夏融入于汉族的血液中造成的；A型占40%，主要分布在南方，是由楚苗南蛮等古老民族融入华夏演变而来；AB型是B型人南下跟A型人繁杂而成；O型是一种最早血型，分布在中原，血缘来源是黄帝和东夷！ </p><figure class="clearfix"><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://t3.qpic.cn/mblogpic/2d18a491bfdf465ca942/120" alt="下载中" data-midsrc="http://t3.qpic.cn/mblogpic/2d18a491bfdf465ca942/320" data-bigsrc="http://t3.qpic.cn/mblogpic/2d18a491bfdf465ca942/2000"/></a></figure><p class="ss-rebroad-time"><time datetime="14分钟前">14分钟前</time>612人转发</p></div></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'2f5772091cb2b34f875f0300', type:'1', buid:'158488367', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'2f5772091cb2b34f875f0300', type:'1', buid:'158488367', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/158488367/mood/2f5772091cb2b34f875f0300.1' ,uinkey:'http://user.qzone.qq.com/119/mood/00000000460fdfe5d26c0000.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(6886925) ;"><img tsrc="http://qlogo2.store.qq.com/qzone/6886925/6886925/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(6886925) ;">王斯雅</a></h5><p><time datetime="15分钟前">15分钟前</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('6886925','0d166900e2b1b34f94dd0700' ) ;"></a></div><div class="ss-list-content"><p>转发:嗯，明天找行政调一下监控看看 ||</p><div class="ss-list-rebroad"><p>iamamiwhoami:不加班了~伤心了~走了~回家哭去~姐妹们帮我转个帖子吧~~~16层女厕2号坑丢失一个32G的TOUCH~上面有本人无数自拍和他拍~~请拾到的恩人还给我把~呃~非常感谢~ @姝梅像打了鸡血一样的工作  @黎明  @卢卢卢  @rina休假归来  @蓉蓉-要回家了 </p><figure class="clearfix"></figure><p class="ss-rebroad-time"><time datetime="15分钟前">15分钟前</time>13人转发</p></div></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'0d166900e2b1b34f94dd0700', type:'1', buid:'6886925', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'0d166900e2b1b34f94dd0700', type:'1', buid:'6886925', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/6886925/mood/0d166900e2b1b34f94dd0700.1' ,uinkey:'http://user.qzone.qq.com/119/mood/0000000092ee0d3a35510000.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(351312263) ;"><img tsrc="http://qlogo4.store.qq.com/qzone/351312263/351312263/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(351312263) ;">Ivy</a></h5><p><time datetime="今天21:24">今天21:24</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('351312263','8799f01481aab34f88d20600' ) ;"></a></div><div class="ss-list-content"><p>#有点舍不得#这一刻请轻轻地抱着我，再哼那首我喜欢的歌，可惜缘分注定这样的结果，不是谁的错。不明白爱情到底是什么，像雨中的花慢慢飘落，最后老去枯萎，只有寂寞静静地陪着我。 </p></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'8799f01481aab34f88d20600', type:'1', buid:'351312263', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'8799f01481aab34f88d20600', type:'1', buid:'351312263', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/351312263/mood/8799f01481aab34f88d20600.1' ,uinkey:'http://user.qzone.qq.com/351312263/mood/8799f01481aab34f88d20600.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(116656726) ;"><img tsrc="http://qlogo3.store.qq.com/qzone/116656726/116656726/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(116656726) ;">КaЛgКaЛ</a></h5><p><time datetime="今天21:23">今天21:23</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('116656726','560af4065eaab34fe3100d00' ) ;"></a></div><div class="ss-list-content"><p>转发:或许吧||</p><div class="ss-list-rebroad"><p>KaNgKaN:最近基本都没空更新微博，很快就有非官方机器发的广播比我多了，希望他不会被封，貌似也一直正常，或许到时候，俺就不会被说是神马的了。。。 </p><figure class="clearfix"><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://t2.qpic.cn/mblogpic/e38f5e6c311bd5398616/120" alt="下载中" data-midsrc="http://t2.qpic.cn/mblogpic/e38f5e6c311bd5398616/320" data-bigsrc="http://t2.qpic.cn/mblogpic/e38f5e6c311bd5398616/2000"/></a></figure><p class="ss-rebroad-time"><time datetime="今天21:23">今天21:23</time>11人转发</p></div></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'560af4065eaab34fe3100d00', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'560af4065eaab34fe3100d00', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/116656726/mood/560af4065eaab34fe3100d00.1' ,uinkey:'http://user.qzone.qq.com/119/mood/00000000b4fbd548a5600000.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(395606825) ;"><img tsrc="http://qlogo2.store.qq.com/qzone/395606825/395606825/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(395606825) ;">珊珊</a></h5><p><time datetime="今天21:23">今天21:23</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('395606825','297b94173faab34ff6210d00' ) ;"></a></div><div class="ss-list-content"><p>转发:哈哈~~~</p><div class="ss-list-rebroad"><p><a class="writer" onclick="UI.showHomePage(1927997462) ;">蘑菇街</a>:这排字,叫谁写都写不工整吧：厂下广卞廿士十一卉半与本二上旦上二本与半卉一十士廿卞广下厂下广卞廿士十一卉半与本二上旦上二本与半卉一十士廿卞广下厂下广卞廿士十一卉半与本二上旦上 二本与半卉一十士廿卞广下厂下广卞廿士十一卉半与本二上旦上二本与半卉一十士廿卞广下厂下广卞廿士 </p><figure class="clearfix"><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://a92.photo.store.qq.com/psb?/V12WIn911nl966/jZqJKml73qNTe9U*rXnTebcxBGTlkJeQxAO1dpMmDMk!/a/Yenf5jYhdgAAYuFx6DaedgAA" alt="下载中" data-midsrc="http://b92.photo.store.qq.com/psb?/V12WIn911nl966/jZqJKml73qNTe9U*rXnTebcxBGTlkJeQxAO1dpMmDMk!/m/Yenf5jYhdgAAYuFx6DaedgAA" data-bigsrc="http://b92.photo.store.qq.com/psb?/V12WIn911nl966/jZqJKml73qNTe9U*rXnTebcxBGTlkJeQxAO1dpMmDMk!/b/Yenf5jYhdgAAYuFx6DaedgAA"/></a></figure><p class="ss-rebroad-time"><time datetime="今天21:23">今天21:23</time>3716人转发</p></div></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'297b94173faab34ff6210d00', type:'1', buid:'395606825', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'297b94173faab34ff6210d00', type:'1', buid:'395606825', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/395606825/mood/297b94173faab34ff6210d00.1' ,uinkey:'http://user.qzone.qq.com/1927997462/mood/16e8ea727cd5134f61660d00.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(116656726) ;"><img tsrc="http://qlogo3.store.qq.com/qzone/116656726/116656726/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(116656726) ;">КaЛgКaЛ</a></h5><p><time datetime="今天21:21">今天21:21</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('116656726','560af406d3a9b34fe03f0b00' ) ;"></a></div><div class="ss-list-content"><p>#内地名导首拍台式小清新片#名导霍建起最新力作《台北飘雪》，改编自日本青春纯爱小说，内地85后美女携手当红小生陈柏霖，演绎史上最唯美爱情故事。 http://url.cn/1XguyI  </p></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'560af406d3a9b34fe03f0b00', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'560af406d3a9b34fe03f0b00', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/116656726/mood/560af406d3a9b34fe03f0b00.1' ,uinkey:'http://user.qzone.qq.com/116656726/mood/560af406d3a9b34fe03f0b00.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(395606825) ;"><img tsrc="http://qlogo2.store.qq.com/qzone/395606825/395606825/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(395606825) ;">珊珊</a></h5><p><time datetime="今天21:18">今天21:18</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('395606825','297b941739a9b34f1ec30000' ) ;"></a></div><div class="ss-list-content"><p>转发:</p><div class="ss-list-rebroad"><p><a class="writer" onclick="UI.showHomePage(1927997462) ;">蘑菇街</a>:没心没肺，才能“活着不累” </p><figure class="clearfix"><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://a95.photo.store.qq.com/psb?/V12WIn911nl966/cgX5sY*tRyOXUHtBL4ow9Z.yBR.2a6z1cZKWF6RSwjA!/a/YZFhoTisKAAAYrjrojjUKgAA" alt="下载中" data-midsrc="http://b95.photo.store.qq.com/psb?/V12WIn911nl966/cgX5sY*tRyOXUHtBL4ow9Z.yBR.2a6z1cZKWF6RSwjA!/m/YZFhoTisKAAAYrjrojjUKgAA" data-bigsrc="http://b95.photo.store.qq.com/psb?/V12WIn911nl966/cgX5sY*tRyOXUHtBL4ow9Z.yBR.2a6z1cZKWF6RSwjA!/b/YZFhoTisKAAAYrjrojjUKgAA"/></a></figure><p class="ss-rebroad-time"><time datetime="今天21:18">今天21:18</time>2477人转发</p></div></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'297b941739a9b34f1ec30000', type:'1', buid:'395606825', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'297b941739a9b34f1ec30000', type:'1', buid:'395606825', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/395606825/mood/297b941739a9b34f1ec30000.1' ,uinkey:'http://user.qzone.qq.com/1927997462/mood/16e8ea724cca124fbcc30200.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(122795675) ;"><img tsrc="http://qlogo4.store.qq.com/qzone/122795675/122795675/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(122795675) ;">丁士义</a></h5><p><time datetime="今天21:04">今天21:04</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('122795675','9bb65107cea5b34f34dc0000' ) ;"></a></div><div class="ss-list-content"><p>so important to say these things when you can,because when its over is over.--from DH  第一部追着看完了8季的美剧，持续了8年。经历了种种磨难，关于友情、爱情、人性、生离死别，每个人都从内而外的成长。。。完美大结局！ </p><ul class="ss-list-img"> <li><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://t3.qpic.cn/mblogpic/b9e074dd170db2d7a190/120" alt="下载中" data-midsrc="http://t3.qpic.cn/mblogpic/b9e074dd170db2d7a190/320" data-bigsrc="http://t3.qpic.cn/mblogpic/b9e074dd170db2d7a190/2000"/></a></li></ul></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'9bb65107cea5b34f34dc0000', type:'1', buid:'122795675', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'9bb65107cea5b34f34dc0000', type:'1', buid:'122795675', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/122795675/mood/9bb65107cea5b34f34dc0000.1' ,uinkey:'http://user.qzone.qq.com/122795675/mood/9bb65107cea5b34f34dc0000.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(116656726) ;"><img tsrc="http://qlogo3.store.qq.com/qzone/116656726/116656726/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(116656726) ;">КaЛgКaЛ</a></h5><p><time datetime="今天20:58">今天20:58</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('116656726','560af40685a4b34f56020500' ) ;"></a></div><div class="ss-list-content"><p>距离Pod2g发布iOS 5.1.1完美越狱的时间是越来越近了，相信有许多朋友都已经等不及了，今天Pod2g又再次详细列出了支持以及不支持的设备名单 </p><ul class="ss-list-img"> <li><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://t2.qpic.cn/mblogpic/19b32573eb45e4552224/120" alt="下载中" data-midsrc="http://t2.qpic.cn/mblogpic/19b32573eb45e4552224/320" data-bigsrc="http://t2.qpic.cn/mblogpic/19b32573eb45e4552224/2000"/></a></li></ul></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'560af40685a4b34f56020500', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'560af40685a4b34f56020500', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/116656726/mood/560af40685a4b34f56020500.1' ,uinkey:'http://user.qzone.qq.com/116656726/mood/560af40685a4b34f56020500.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(116656726) ;"><img tsrc="http://qlogo3.store.qq.com/qzone/116656726/116656726/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(116656726) ;">КaЛgКaЛ</a></h5><p><time datetime="今天20:55">今天20:55</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('116656726','560af406d9a3b34f51070b00' ) ;"></a></div><div class="ss-list-content"><p>转发:知道你知道||</p><div class="ss-list-rebroad"><p>KaNgKaN:最近基本都没空更新微博，很快就有非官方机器发的广播比我多了，希望他不会被封，貌似也一直正常，或许到时候，俺就不会被说是神马的了。。。 </p><figure class="clearfix"><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://t2.qpic.cn/mblogpic/e38f5e6c311bd5398616/120" alt="下载中" data-midsrc="http://t2.qpic.cn/mblogpic/e38f5e6c311bd5398616/320" data-bigsrc="http://t2.qpic.cn/mblogpic/e38f5e6c311bd5398616/2000"/></a></figure><p class="ss-rebroad-time"><time datetime="今天20:55">今天20:55</time>11人转发</p></div></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'560af406d9a3b34f51070b00', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'560af406d9a3b34f51070b00', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/116656726/mood/560af406d9a3b34f51070b00.1' ,uinkey:'http://user.qzone.qq.com/119/mood/00000000b4fbd548a5600000.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(116656726) ;"><img tsrc="http://qlogo3.store.qq.com/qzone/116656726/116656726/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(116656726) ;">КaЛgКaЛ</a></h5><p><time datetime="今天20:51">今天20:51</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('116656726','560af406d2a2b34f0ad50700' ) ;"></a></div><div class="ss-list-content"><p>最近基本都没空更新微博，很快就有非官方机器发的广播比我多了，希望他不会被封，貌似也一直正常，或许到时候，俺就不会被说是神马的了。。。 </p><ul class="ss-list-img"> <li><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://t2.qpic.cn/mblogpic/e38f5e6c311bd5398616/120" alt="下载中" data-midsrc="http://t2.qpic.cn/mblogpic/e38f5e6c311bd5398616/320" data-bigsrc="http://t2.qpic.cn/mblogpic/e38f5e6c311bd5398616/2000"/></a></li></ul></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'560af406d2a2b34f0ad50700', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'560af406d2a2b34f0ad50700', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/116656726/mood/560af406d2a2b34f0ad50700.1' ,uinkey:'http://user.qzone.qq.com/116656726/mood/560af406d2a2b34f0ad50700.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(365727259) ;"><img tsrc="http://qlogo4.store.qq.com/qzone/365727259/365727259/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(365727259) ;">Keeny</a></h5><p><time datetime="今天20:33">今天20:33</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('365727259','1b8ecc159c9eb34f60d40100' ) ;"></a></div><div class="ss-list-content"><p>下午5点盐城的风雨雷电太厉害了，百码速度前进！ </p></div><ul class="ss-remark-list"><li><a onclick="showHomePage(824234735) ;">●Orange╅</a>你来盐城啦！！<time datetime="今天20:47">今天20:47</time></li><li><a onclick="showHomePage(1369440990) ;">清忆水漾</a>嗯嗯，看看你妹妹的生活环境啊<time datetime="今天20:55">今天20:55</time></li></ul><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'1b8ecc159c9eb34f60d40100', type:'1', buid:'365727259', t1src:'1'});">2</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'1b8ecc159c9eb34f60d40100', type:'1', buid:'365727259', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/365727259/mood/1b8ecc159c9eb34f60d40100.1' ,uinkey:'http://user.qzone.qq.com/365727259/mood/1b8ecc159c9eb34f60d40100.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(365727259) ;"><img tsrc="http://qlogo4.store.qq.com/qzone/365727259/365727259/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(365727259) ;">Keeny</a></h5><p><time datetime="今天20:30">今天20:30</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('365727259','1b8ecc15ca9db34ffb4a0200' ) ;"></a></div><div class="ss-list-content"><p>人在连云港有事电话！ </p></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'1b8ecc15ca9db34ffb4a0200', type:'1', buid:'365727259', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'1b8ecc15ca9db34ffb4a0200', type:'1', buid:'365727259', t1src:'1'});">0</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/365727259/mood/1b8ecc15ca9db34ffb4a0200.1' ,uinkey:'http://user.qzone.qq.com/365727259/mood/1b8ecc15ca9db34ffb4a0200.1', type:'0' });">0</a></div></li><li><div class="ss-list-sign"><figure><a onclick="showHomePage(116656726) ;"><img tsrc="http://qlogo3.store.qq.com/qzone/116656726/116656726/50"></a></figure><h5><a class="ss-list-author" onclick="showHomePage(116656726) ;">КaЛgКaЛ</a></h5><p><time datetime="今天20:20">今天20:20</time></p><a class="btn-left-arrow" rel="noreferrer" onclick="showMoodDetail('116656726','560af4068c9bb34f19720800' ) ;"></a></div><div class="ss-list-content"><p>这个真不能禁用。。。 </p><ul class="ss-list-img"> <li><a onClick="UI.showMoodPhoto(this);"><img tsrc="http://t2.qpic.cn/mblogpic/aa9826cff649aea9e296/120" alt="下载中" data-midsrc="http://t2.qpic.cn/mblogpic/aa9826cff649aea9e296/320" data-bigsrc="http://t2.qpic.cn/mblogpic/aa9826cff649aea9e296/2000"/></a></li></ul></div><div class="ss-list-oper"><a class="btn-comment" onclick="showCmtBox(this, 4, {fid:'560af4068c9bb34f19720800', type:'1', buid:'116656726', t1src:'1'});">0</a><a class="btn-rebroad" onclick="showCmtBox(this, 40, {fid:'560af4068c9bb34f19720800', type:'1', buid:'116656726', t1src:'1'});">1</a><a class="btn-like" onclick="praise(this,54, {from:'311', curkey:'http://user.qzone.qq.com/116656726/mood/560af4068c9bb34f19720800.1' ,uinkey:'http://user.qzone.qq.com/116656726/mood/560af4068c9bb34f19720800.1', type:'0' });">0</a></div></li><li class="list-more"><a class="btn-text-return" onclick="toggleVersion()">返回旧版</a><a class="btn-text-retop" onclick="iScrollToTop()">返回顶部</a><a class="list-more-text" onclick="onGetMore(this,{ac:2,mst:2,buid:283540706,pid:2,dl:'',ofs:'0',ic:'false',basetime:'1337170828',direct:'0',dayval:'1'});">查看更多</a></li></ul>
+        </article>
+    </section>
+</section>
+<section class="body-box-wrap" id="mentioned" data-struct="tab" title="与我相关">
+    <section class="body-box">
+    	<div class="special-div-minheight">
+	        <div class="about-subnav">
+	            <ul class="subnav-style1">
+	                <li class="current"><a href="#infor_center/mentioned//mentioned-myfeeds">我的空间动态</a></li>
+	                <!--<li><a href="#infor_center/mentioned//mentioned-related">我的参与</a></li>-->
+	                <li><a href="#infor_center/mentioned//mentioned-msg">我的消息</a></li>
+	            </ul>
+	        </div>
+	        <ul id="mentioned-myfeeds" class="about-feed-list" mst="1" selected="true" data-struct="block" data-init="getMyFeeds"></ul>
+	        <ul id="mentioned-related" class="about-feed-list" style="display:none;" mst="31" data-struct="block" data-init="getMyJoin"></ul>
+	        <div id="mentioned-msg" mst="32" data-struct="block" data-init="getMyNewMsg">
+	        	<section class="summsg-box">
+	                <nav onclick="openExtend(this,getUnreadFriend)">
+	                    <figure>
+	                        <span>未读</span>
+	                        <p>0</p>
+	                    </figure>
+	                    <h4>我的QQ消息</h4>
+	                    <p>正在更新</p>
+	                    <span class="icon-extend-down" bclass="icon-extend-up"></span>
+	                </nav>
+	                <ul class="summsg-QQ-list hide"></ul>
+	        	</section>
+	        	<section class="summsg-box">
+	                <nav onclick="openExtend(this, getMicroBlog)">
+	                    <figure>
+	                        <span>@我</span>
+	                        <p>0</p>
+	                    </figure>
+	                    <h4>我的微博</h4>
+	                    <p>正在更新</p>
+	                    <span class="icon-extend-down" bclass="icon-extend-up"></span>
+	                </nav>
+	                <ul class="summsg-rss-list hide"></ul>
+	        	</section>
+	        	<section class="summsg-box">
+	                <nav onclick="openExtend(this, getPengyou)">
+	                    <figure>
+	                        <span>相关</span>
+	                        <p>0</p>
+	                    </figure>
+	                    <h4>我的朋友</h4>
+	                    <p>正在更新</p>
+	                    <span class="icon-extend-down" bclass="icon-extend-up"></span>
+	                </nav>
+	                <ul class="summsg-rss-list hide"></ul>
+	        	</section>
+	         </div>
+         </div>
+	</section>
+</section>
+
+<section class="body-box-wrap" id="subscribe" data-struct='tab' data-init="showNewSubscribe" title="我的订阅">
+	<section class="body-box">
+	    <div class="myrss">
+	        <div class="myrss-ul-wrap">
+	            <ul class="myrss-ul clearfix">
+	                <li><a class="myrss-product" style="background:url(http://3gimg.qq.com/wap30/mqzone/img/pic_rss01.jpg)" href="#topnews"><span>头条新闻</span></a></li>
+	                <li><a class="myrss-product" style="background:url(http://3gimg.qq.com/wap30/mqzone/img/pic_rss02.jpg)" href="#mblog"><span>热门微博</span></a></li>
+	                <li><a class="myrss-product" style="background:url(http://3gimg.qq.com/wap30/mqzone/img/pic_rss03.jpg)" href="#perfectDaily"><span>美文</span></a></li>
+	                <li><a class="myrss-product" style="background:url(http://3gimg.qq.com/wap30/mqzone/img/pic_rss04.jpg)" href="#iCare"><span>腾讯爱看</span></a></li>
+	            </ul>
+	        </div>
+	    </div>
+	    <footer></footer>
+	</section>
+</section>
+
+
+<section class="body-box-wrap" id="friend" data-struct="tab" data-init="getCurrFriend" title="我的好友">
+    <section class="body-box">
+        <div class="firend-search">
+            <div class="firend-search-input">
+                <form onsubmit="searchFriend();return false;"><input placeholder="请输入QQ号或昵称搜索好友" type="search" /></form>
+            </div>
+            <a class="btn-search-zoom" onclick="searchFriend()"></a>
+			<a class="btn-search-green" onclick="hideSearchFriend()" style="display:none">取消</a>
+        </div>
+		<ul class="hide"></ul>
+        <div class="friend-subnav">
+            <ul class="subnav-style1" onclick="updateSecHeaderBar(event.target)">
+                <li class="current"><a mst="12" onclick="getFriend(this)">谁看过我</a></li>
+                <li><a mst="11" onclick="getFriend(this)">我看过谁</a></li>
+                <li><a onclick="getRecentChat(this)">最近联系人</a></li>
+            </ul>
+        </div>
+        <div id="friend-myvistor" class="frend-slide special-style" data-struct="block">
+            <div class="frend-slide-box">
+                <!--<a class="btn-arrow-left"></a>-->
+                <div class="frend-slide-wrap">
+                    <div class="frend-slide-big frend-slide-pic" style = "-webkit-transform: none;">
+                        <!-- 左右两侧空白距离为35，因此ul的宽度应该为窗口宽度减去58 -->
+                    </div>
+                </div>
+                <!--<a class="btn-arrow-right"></a>-->
+            </div>
+            <div class="frend-slide-nav">
+                
+            </div>
+        </div>
+        <ul class="firend-more-list">
+            <li><a href="#maybeFriend">可能认识的人</a></li>
+            <li><a href="#allFriend">全部好友</a></li>
+        </ul>
+    </section>
+</section>
+
+
+
+<section class="body-box-wrap" id="applist" data-struct="tab" title="应用中心" ad-img="http://jwt.3g.qq.com/index.jsp?g_f=16864&sid=AYYxy0pg7xY3uHNUJ-nvU1Yq,http://3gimg.qq.com/images/qzone/wap3/jingwutang.jpg|http://openapi.3g.qq.com/invitation/callback?cid=1001&appId=101&it=1&g_f=16861&sid=AYYxy0pg7xY3uHNUJ-nvU1Yq,http://3gimg.qq.com/images/qzone/wap3/xiuzhengtianxiaL.jpg|http://ng.3g.qq.com/login.jsp?cpid=1023&gameid=2023&g_f=16862&sid=AYYxy0pg7xY3uHNUJ-nvU1Yq,http://3gimg.qq.com/images/qzone/wap3/zhengfengtiangxiaL.jpg">
+    <section class="body-box">
+    	<div class="special-div-minheight">
+	        <div class="about-subnav">
+	            <ul class="subnav-style1">
+	                <li class="current"><a href="#infor_center/applist//applist_game">游&nbsp;&nbsp;&nbsp;&nbsp;戏</a></li>
+	                <li><a href="#infor_center/applist//applist_soft">应&nbsp;&nbsp;&nbsp;&nbsp;用</a></li>
+	            </ul>
+	        </div>
+	        
+			
+			<section class="ns-appindex">
+                
+                <article id="applist_game" class="ns-appbox game" mst="32" selected="true" data-struct="block" data-init="getApplistGame">
+                    <div class="banner">
+                        <a href="http://openapi.3g.qq.com/invitation/callback?cid=1001&appId=101&it=1&g_f=16861&sid=AYYxy0pg7xY3uHNUJ-nvU1Yq"><img width="296" height="70" tsrc="http://3gimg.qq.com/images/qzone/wap3/xiuzhengtianxiaL.jpg"><span>抢先体验</span></a>
+                    </div>
+                    
+                    <section id="applist_game_recent" class="list-box">
+                        <h3 class="icon-scroll">最近在玩</h3>
+                        <ul class="list clearfix">
+                        </ul>
+                    </section>
+                    <section id="applist_game_perfect" class="list-box">
+                        <h3 class="icon-scroll">精品推荐</h3>
+                        <ul class="list clearfix">
+                        </ul>
+                    </section>
+                    
+                    <a href="#applist_all/applist_hot" class="app-more more-arrow sp-index">查看更多游戏</a>
+			        <div class="more-app-center">
+						<a href="http://wap.myapp.com/g/s?aid=qzone_index&g_f=990637&sid=AYYxy0pg7xY3uHNUJ-nvU1Yq"><img width="298" height="48" tsrc="http://3gimg.qq.com/images/mqzone/ad/pic_app_center.jpg"></a>
+					</div>
+                </article>
+                
+                <article id="applist_soft" class="ns-appbox soft" mst="33" data-struct="block" data-init="getApplistSoft">
+                    <div class="banner">
+                        <a href="http://openapi.3g.qq.com/invitation/callback?cid=1001&appId=101&it=1&g_f=16861&sid=AYYxy0pg7xY3uHNUJ-nvU1Yq"><img width="296" height="70" tsrc="http://3gimg.qq.com/images/qzone/wap3/xiuzhengtianxiaL.jpg"><span>抢先体验</span></a>
+                    </div>
+                    <section id="applist_game_webapp" class="list-box">
+                        <h3 class="icon-scroll">网页应用</h3>
+                        <ul class="list clearfix">
+                        </ul>
+                    </section>
+                    
+					<section id="applist_game_downapp" class="list-box">
+                        <h3 class="icon-scroll">下载应用</h3>
+                        <ul class="list clearfix">
+                        </ul>
+                    </section>
+                    
+                </article>
+            </section>
+         </div>
+	</section>
+</section>
+<section class="body-box-wrap" id="show-more" data-struct="tab" data-init="showMore" title="更多">
+
+    <section class="body-box">
+        <nav class="more">
+            <ul class="more-box">
+                <li><a class="more-arrow icon-option" href="#setting">设置</a></li>
+                <li><a class="more-arrow icon-feedback" href="#feedBack">反馈</a></li>
+            </ul>
+            <ul class="more-box">
+                <li><a class="more-arrow icon-qzone" onClick="showHomePage(97700000)">官方空间</a></li>
+                <li><a target="_blank" class="more-arrow icon-site" href="http://z.qq.com/html5/">官方网站</a></li>
+                <li><a target="_blank" class="more-arrow icon-weibo" href="http://ti.3g.qq.com/touch/iphone/index.jsp?sid=AYYxy0pg7xY3uHNUJ-nvU1Yq#guest_home/u=mobileqzone">官方微博</a></li>
+            </ul>
+            <div class="exit"><a class="btn-exit" href="http://blog60.z.qq.com/logout.jsp?sid=AYYxy0pg7xY3uHNUJ-nvU1Yq&amp;g_ut=3">退出帐号</a></div>
+        </nav>
+    </section>
+</section>
+
+</div>
+<section class="msg-talking" id="QQchat" data-struct="page">
+    <header>
+        <div class="page-top">
+            <a class="btn-back" onClick="event.preventDefault();getMyNewMsg();MQQ.ui.goBack()">返回</a>
+            <div class="page-name" onClick="MQQ.ui.setHash('infor_center/info');">
+                <h2>QQ聊天</h2>
+                <p>283540706.z.qq.com</p>
+            </div>
+        </div>
+    </header>
+    <h2 class="msg-header"></h2>
+    <section id="wrapper" class="msg-talking-box">
+        <dl class="clearfix"></dl>
+    </section>
+	<section class="message-box clearfix">
+	    <div class="message-box-inner">
+	        <div class="message-box-wrap">
+                <textarea title="留言框"></textarea>
+            </div>
+	    </div>
+	    <a onclick="sendQQMsg()">发送</a>
+    </section>
+</section>
+
+<section id="unreadFriends" data-struct="page">
+	<header>
+        <div class="page-top">
+            <a class="btn-back" onClick="MQQ.ui.goBack()">返回</a>
+            <h3>未读QQ消息</h3>
+        </div>
+    </header>
+    <section class="body-box-wrap" id="unreadFriendsList">
+        <section class="body-box">
+            <ul class="firend-result-list"></ul>
+        </section>
+    </section>
+</section>
+
+<section id="information-subscribe" title="资讯订阅" data-struct="page"  bk-fun="event.preventDefault();getNewSubscribe();MQQ.ui.goBack">
+    <section class="body-box">
+        <div class="about-subnav">
+            <ul class="subnav-style1">
+                <li><a class="current" href="#information-subscribe/information-subscribe-manage-wrapper" onclick="information_showChannelList(this);">订阅管理</a></li>
+                <li><a href="#information-subscribe/information-subscribe-view-wrapper" onclick="information_subscribe_showList(this);">已订阅内容</a></li>
+            </ul>
+        </div>
+        <div id="information-subscribe-manage-wrapper" data-struct="tab" data-init="information_showChannelList">
+        	<ul id="information-subscribe-manage" class="rss-manage-list"></ul>
+        </div>
+        
+        <div id="information-subscribe-view-wrapper"  data-struct="tab" data-init="information_subscribe_showList">
+        	<ul id="information-subscribe-view" class="rss-view-list"></ul>
+        </div>
+        
+    </section>
+</section>
+<section class="body-box-wrap" id="maybeFriend" data-struct="page" data-init="getMaybeFriend" title="可能认识的人">
+<section class="body-box">
+	<section class="firend-know">
+		<ul>
+			<!-- 添加好友事件绑定到li标签上 -->
+		</ul>
+	</section>
+</section>
+</section>
+<section class="body-box-wrap" id="allFriend" data-struct="page" data-init="getAllFriend" title="全部好友">
+	<section class="body-box">
+		<section class="firend-all">
+		</section>
+	</section>
+</section>
+<section class="body-box-wrap" id="home_page" title="主页"  data-struct="page" data-init="_showHomePage">
+<nav id="nav-home" class="main-menu">
+     <ul>
+         <li class="current"><a href="#home_page/home" id="snav-home">最新动态</a></li>
+         <li><a href="#home_page/profile">个人档</a></li>
+         <li><a href="#home_page/messageBoard">留言板</a></li>
+     </ul>
+</nav>
+<section class="body-box-wrap" id="home" data-struct="tab" data-init="showMiniFeeds">
+    <section class="body-box">
+            <div class="home-person">
+                <article class="clearfix"></article>
+                <ul class="subnav-style1">
+                    <li><a href="#moodList">说说<span></span></a></li>
+                    <li><a href="#album">相册<span></span></a></li>
+                    <li><a href="#blogList">日志<span></span></a></li>
+                </ul>
+            </div>
+            <div class="frend-slide" id="home_visitors" >
+                <h3>最新访客<span></span></h3>
+                <div class="frend-slide-box">
+                    <div class="frend-slide-wrap">
+                        <div class="frend-slide-big" style = "-webkit-transform: none;"></div>
+                    </div>
+                </div>
+                <div class="frend-slide-nav"></div>
+            </div>
+            <ul class="home-trends-list"></ul>
+        </section>
+</section>
+<section class="body-box-wrap" id="profile" data-struct="tab" data-init="showUserInfo" title="个人档">
+    <section class="body-box">
+        <div class="home-person">
+            <article class="clearfix">
+                <figure><img  alt="下载中" /></figure>
+                <h3></h3>
+                <p><span>今日访问数：<em></em></span></p>
+                <p><span>历史访问数：<em></em></span></p>
+            </article>
+        </div>
+        <div class="profile-box">
+            <article>
+                <h3>个人资料<a class="btn-edit hide"></a></h3>
+                <ul class="profile-list-self clearfix">
+                    <li>QQ号：<span></span></li>
+                    <li>昵称：<span></span></li>
+                    <li>性  别：<span></span></li>
+                    <li>年龄：<span></span></li>
+                    <li>生  日：<span></span></li>
+                    <li> 星座：<span></span></li>
+                    <li> 城  市：<span></span></li>
+                </ul>
+            </article>
+            <article class="border-dotted">
+                <h3>空间资料<a class="btn-edit hide"></a></h3>
+                <ul class="profile-list-zone">
+                    <li>空间名称：<span></span></li>
+                    <li>说       明：<span></span></li>
+                    <li>个人签名：<span></span></li>
+                </ul>
+            </article>
+        </div>
+    </section>
+</section>
+<section class="body-box-wrap" id="messageBoard" data-struct="tab" data-init="messageBoard" title="留言板">
+    <section class="body-box">
+        <div class="home-person">
+            <article class="clearfix"></article>
+        </div>
+        <div class="fast-textarea color-thin">
+            <textarea class="ss-area" placeholder="留下你的脚印吧..." onclick="showInputCurrCmt(this, g_scroller['messageBoard'])"></textarea>
+            <h6 class="hide">
+				<a class="btn-smilies hide"></a>
+				<span>
+					<a class="btn-text-comment" onclick="submitMsgInput(this)">留言</a>
+					<a class="btn-text-cancel" onclick="hideCurrCmt(this)">取 消</a>
+				</span>
+			</h6>
+        </div>
+        <ul class="home-board-list"></ul>
+    </section>
+</section>
+</section>
+<section id="icareDetail" class="body-box-wrap" data-struct="page" title="腾讯爱看">
+	<section class="body-box">
+		<section class="icare">
+			<div id="icare_detail_show">
+				
+			</div>
+			<div class="icare-oper">
+				<div class="icare-oper-left" style="display:none;">
+					<a class="btn-content-open" href="javascript:void(0);" onclick="openIcareMore(this);"></a>
+				</div>
+				<div class="icare-oper-right">
+					<a class="btn-share" href="javascript:shareIcareDetail();"></a>
+				</div>
+			</div>
+		</section>
+	</section>
+</section>
+<section class="body-box-wrap" id="moodList" data-struct="page" data-init="showMoodList" title="个人主页">
+	<section class="body-box">
+		<article class="shuoshuo-content">
+			<!-- 点击 shuoshuo-tips控制浮动菜单显示隐藏-->
+			<div class="shuoshuo-tips">我的说说<span>（）</span></div>
+			<ul class="shuoshuo-list home-shuoshuo">
+			</ul>
+		</article>
+		<footer></footer>
+	</section>
+</section>
+<section id="moodDetail" class="body-box-wrap" data-struct="page" data-init="_showMoodDetail" title="说说详情">
+	<section class="body-box">
+    	<div class="daily-content" style="border-bottom: none;"></div>
+    	<!--
+    	<div class="fast-textarea color-thin">
+            <textarea class="ss-area" placeholder="来说点什么吧..." maxlength="200" onclick="showInputCurrCmt(this,g_scroller['moodDetail'])"></textarea>
+            <h6 class="hide">
+				<span>
+					<a class="btn-text-comment" onclick="submitCurrCmt(this)">评 论</a>
+					<a class="btn-text-cancel" onclick="hideCurrCmt(this)">取 消</a>
+				</span>
+			</h6>
+        </div>
+        -->
+        <ul class="home-trends-list" style="border-bottom: 1px solid #C5C5C5;">
+        	<li style="border-bottom: none;">
+	            <div class="ss-list-oper">
+	                <a class="btn-comment">0</a>
+	                <a class="btn-rebroad">0</a>
+	            </div>
+	            <ul class="ss-remark-list"></ul>
+            </li>
+        </ul>
+        <ul class="daily-msg"></ul>
+	</section>
+</section>
+ <section id="giftDetail" class="body-box-wrap" data-struct="page" data-init="_showGiftDetail" title="礼物详情">
+        <section class="body-box">
+            <div class="daily-content gift-content">
+            </div>
+        </section>
+    </section>
+<section id="audioDetail" class="body-box-wrap" data-struct="page" data-init="_showAudioGiftDetail" title="礼物详情">
+        <section class="body-box">
+            <div class="daily-content gift-content">
+                <nav></nav>
+                <div class="gift-letter">
+                    <div class="gift-letter-tilte"><span>送给你一份语音礼物</span></div>
+                    <div class="gift-letter-audio-warp">
+                        <div class="gift-letter-audio" onClick="musicPlayer.p()">
+                            <div class="audio-bg"><img width="268" height="182" alt="图像" /></div>
+                            <div class="audio-mask"></div>
+                            <div class="play-button"></div>
+                            <div class="audio-time"></div>
+                            <div class="loading-box"></div>
+                            <audio id="gift-audio"> 您的浏览器不支持播放当前录音</audio>
+                        </div>
+                    </div>
+                    <div class="gift-letter-from">
+                        <p>回赠礼物，请安装Qzone客户端：</p>
+                        <div class="button-box">
+                            <a id="test" class="btn-pills"  href="http://mp.qq.com/z?g_f=17542">下载客户端</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </section>
+<section class="body-box-wrap" id="moodinput" data-struct="page" data-init="showMoodInput">
+    <header>
+        <div class="page-top">
+            <a class="btn-back" onclick="MQQ.ui.goBack();">返回</a>
+            <div class="page-save">
+                <a id="clearOfflineMood" onclick="clearOfflineMood()" style="display:none;">清除</a>
+                <a onclick="sendMoodWithLBS(this);">发表</a>
+            </div>
+        </div>
+    </header>
+    <section class="ss-write-area">
+    	<figure>
+        	<textarea maxlength="140" placeholder="分享生活，留住感动。"></textarea>
+        </figure>
+    </section>
+    <section class="ss-write-oper">
+        <div class="sw-oper-geo">
+            <span class="icon-gprs-gray" onclick="getLbsInfo(this)">添加地理位置</span>
+            <a class="btn-option hide" href="#lbsSet" onclick="getNearPoi()"></a>
+        </div>
+        <div class="ss-write-func">
+            <div class="ss-write-func-left">
+                <a class="btn-insert-pic" onclick="showPicker(this)"></a>
+                <a class="btn-geo-gray" bclass="btn-geo-light" style="display:none;" onclick="clearMoodGeo()"></a>
+            </div>
+            <div class="ss-write-func-right">
+                <span>同步至</span>
+                <a onclick="shuoshuoCopySet(this,2)" class="btn-qq-gray" bclass="btn-qq-light"></a>
+                <a onclick="shuoshuoCopySet(this,3)" class="btn-qweibo-gray" bclass="btn-qweibo-light"></a>
+            </div>
+        </div>
+    </section>
+	<div class="extend-mask" style="height:150%;display:none" onclick="this.style.display='none'" id="photoPicker">
+		<div class="extend-source-select" style="top:100px;">
+			<h2>请选择图片来源</h2>
+			<h3>目前使用的浏览器不支持本地上传图片</h3>
+			<ul>
+				<li><a onclick="event.stopPropagation();pickUpFromAlbum()" rel="noreferrer">从空间相册选择添加</a></li>
+			</ul>
+			<p class="extend-return"><a onclick="event.stopPropagation();clearPhotoForMood()" rel="noreferrer">取消</a></p>
+		</div>
+	</div>
+</section>
+
+<section class="body-box-wrap" id="lbsSet" data-struct="page">
+    <header>
+        <div class="page-top">
+            <!-- click事件绑定在a标签上 -->
+            <a class="btn-back" onclick="MQQ.ui.goBack();">返回</a>
+            <a class="btn-refresh hide">刷新</a>
+        </div>
+    </header>
+    <section id="lbsSetScroll" class="body-box-wrap">
+        <section class="body-box">
+            <section class="setgeo-controller hide">
+                <h3><a>地理位置设置</a></h3>
+                <ul>
+                    <li class="hide">
+                        <p class="setgeo-contro-entry">自动显示位置信息<a class="btn-set-gray" onclick="autoGetLbs(this)">不显示</a></p>
+                        <p class="setgeo-contro-tips">（仅在使用支持地址定位的浏览器访问时有效）</p>
+                    </li>
+                    <li class="hide">
+                        <p class="setgeo-contro-entry">公开包含位置信息的说说<a class="btn-set-gray" onclick="publishLbsInfo(this)">不公开</a></p>
+                        <p class="setgeo-contro-tips">（当您的空间对所有人开放时有效）</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="setgeo-location" style="display:none;">
+                <header>
+                    <p></p>
+                    <p>您可以选择一下具体地点信息：</p>
+                </header>
+                <ul></ul>
+            </section>
+        </section>
+    </section>
+</section>
+
+<section class="body-box-wrap" id="album" data-struct="page" data-init="showAlbum" title="相册">
+	<section class="body-box">
+        <section class="gallery">
+            <h3>我的相册</h3>
+            <ul class="gallery-ul"></ul>
+        </section>
+    </section>
+</section>
+<section class="body-box-wrap" id="photoList" data-struct="page" data-init="_showPhotoList" title="相册列表">
+    <section class="body-box">
+        <section class="gallery-list">
+           <h3>
+				<div x-click="true" class="gallery-title-wrap">我的相册<span>(30)</span>
+					<div class="btn-arrow-down">
+						<ul class="drift-nav">
+							<!-- 点击 a触发页面跳转-->
+							<li><a onclick="shareAlbum()" rel="noreferrer">分享相册</a></li>
+							<!--<li><a href="#" rel="noreferrer">自动播放</a></li>-->
+						</ul>
+					</div>
+				</div>
+				<a class="btn-option" rel="noreferrer"></a>
+			</h3>
+            <ul class="gallery-list-ul"></ul>
+        </section>
+    </section>
+</section>
+<section class="body-box-wrap" data-struct="page" id="bigPhoto" data-init="_showPhoto">
+	<section class="gallery-image-scoll">
+        <ul onmousedown="startSlide(this,event)" ontouchstart="startSlide(this,event)">
+            <li style="width:100%;height:480px;line-height:480px;"><img /></li>
+        </ul>
+    </section>
+	<section class="gallery-image-option" onclick="this.style.display='none'">
+        <div class="gallery-image-top" onclick="event.stopPropagation();">
+            <a class="btn-back" rel="noreferrer" onclick="MQQ.ui.goBack();"></a>
+            <a class="btn-gallery-comment" rel="noreferrer" href="#photoComment">0</a>
+            <div class="gallery-image-name">
+                <h2><span></span></h2>
+            </div>
+        </div>
+        <div class="gallery-image-bottom" onclick="event.stopPropagation();">
+            <ul>
+                <li><a class="btn-edit-white" rel="noreferrer" onclick="showPhotoRenameInput()"></a></li>
+				<li><a class="btn-gallery-tv" rel="noreferrer" onclick="photoPlay()"></a></li>
+                <!--<li><a class="btn-gallery-like" rel="noreferrer"></a></li>-->
+                <li><a class="btn-gallery-share" rel="noreferrer" onclick="sharePhoto()"></a></li>
+                <li><a class="btn-gallery-delete" rel="noreferrer" onclick="deletePhoto(this)"></a></li>
+            </ul>
+            <p></p>
+        </div>
+        <a class="btn-gallery-prev" rel="noreferrer" onclick="event.stopPropagation();anotherPhoto(-1,this)"></a>
+        <a class="btn-gallery-next" rel="noreferrer" onclick="event.stopPropagation();anotherPhoto(1,this)"></a>
+    </section>
+	<div class="extend-mask" style="display:none">
+		<div class="extend-modify">
+			<h3>修改相片描述</h3>
+			<div class="extend-modify-textarea">
+				<textarea></textarea>
+			</div>
+			<div class="extend-modify-btn">
+				<a class="btn-text-comment" rel="noreferrer" onclick="submitPhotoRename($('#bigPhoto .extend-modify-textarea textarea').value)">确定</a>
+				<a class="btn-text-cancel" rel="noreferrer" onclick="$('#bigPhoto .extend-mask').style.display='none';">取消</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="body-box-wrap" id="photoComment" data-struct="page" data-init="showPhotoComment" title="照片评论">
+	<section class="body-box">
+		<div class="gallery-comment-photo">
+			<figure><img alt="图片"></figure>
+			<h3>雨季<span>(17/30)</span></h3>
+		</div>
+		<div class="fast-textarea color-thin">
+            <textarea class="ss-area" placeholder="来说点什么吧..." onclick="showInputCurrCmt(this, g_scroller['photoComment'])"></textarea>
+            <h6 class="hide">
+				<a class="btn-smilies hide" rel="noreferrer"></a>
+				<span>
+					<a class="btn-text-comment" onclick="submitCurrCmt(this);" rel="noreferrer">评 论</a>
+					<a class="btn-text-cancel" onclick="hideCurrCmt(this)" rel="noreferrer">取 消</a>
+				</span>
+			</h6>
+		</div>
+		<ul class="daily-msg"></ul>
+	</section>
+</section>
+<section class="body-box-wrap" id="blogList" data-struct="page" data-init="showBlogList" title="日志列表">
+	<section class="body-box">
+        <section class="daily-list">
+            <h3></h3>
+			<ul id="drift-nav" class="drift-nav" style="display:none">
+				<li><a href="#blogCatList" rel="noreferrer">分类管理</a></li>
+				<li><a href="#blogDraft" rel="noreferrer">草稿箱</a></li>
+			</ul>
+            <p class="daily-list-select">
+                <select onChange="showBlogList({catname:this.value})"></select>
+            </p>
+            <ul class="daily-list-ul"></ul>
+        </section>
+    </section>
+</section>
+
+<section id="blogDraft" class="body-box-wrap" data-struct="page" data-init="showBlogDraftList" title="草稿箱">
+    <section class="body-box">
+        <section class="daily-list">
+            <h3>草稿箱<span></span></h3>
+            <ul class="daily-list-ul">
+            </ul>
+        </section>
+    </section>
+</section>
+<section class="body-box-wrap" id="blogCatList" data-struct="page" data-init="showBlogCat" title="日志分类">
+	<section class="body-box">
+		<section class="daily-list">
+			<h3>全部日志<span>(0)</span></h3>
+			<ul class="daily-list-ul"></ul>
+		</section>
+	</section>
+</section>
+
+<section class="body-box-wrap" id="blogDetail" data-struct="page" data-init="_showBlogDetail" title="日志">
+    <section class="body-box">
+        <div class="daily-content">
+            <nav>
+                <figure><a href="#"><img /></a></figure>
+                <h6><a href="#"></a></h6>
+                <p></p>
+            </nav>
+            <article>
+                <h2></h2>
+                <p></p>
+            </article>
+            <div class="daily-oper">
+                <div class="daily-oper-left">
+                    <a class="btn-content-open"></a>
+                </div>
+                <div class="daily-oper-right">
+                    <a class="btn-share" onclick="submitBlogShare(this)"></a>
+                    <a class="btn-rebroad" onclick="submitBlogRebroad(this)"></a>
+                </div>
+            </div>
+        </div>
+        <div class="frend-slide no-topborder">
+            <h3><a class="btn-extend-close">日志访客<span class="icon-extend-down"></span></a></h3>
+            <div style="display:none;" id="blog_visitor">
+                <div class="frend-slide-box">
+                    <!-- <a class="btn-arrow-left"></a> -->
+                    <div class="frend-slide-wrap">
+                        <div class="frend-slide-big"></div>
+                    </div>
+                    <!-- <a class="btn-arrow-right"></a>-->
+                </div>
+                <div class="frend-slide-nav"></div>
+            </div>
+        </div>
+        <ul class="daily-msg"></ul>
+        <div class="fast-textarea color-thin">
+            <textarea class="ss-area" maxlength="200" placeholder="来说点什么吧..." onclick="showInputCurrCmt(this, g_scroller['blogDetail'])"></textarea>
+            <h6 class="hide">
+				<a class="btn-smilies hide"></a>
+				<span>
+					<a class="btn-text-comment" onclick="submitCurrCmt(this)">评 论</a>
+					<a class="btn-text-cancel" onclick="hideCurrCmt(this)">取 消</a>
+				</span>
+			</h6>
+        </div>
+    </section>
+</section>
+
+<section class="body-box-wrap" id="blogEdit" data-struct="page" data-init="showBlogEdit">
+    <header>
+        <div class="page-top">
+            <a class="btn-back" onclick="MQQ.ui.goBack();">返回</a>
+            <div class="page-save">
+                <a onclick="saveBlogAsDraft(this);">保存</a>
+                <a onclick="submitBlog(this);">发表</a>
+                <a onclick="previewBlog(this);">预览</a>
+            </div>
+        </div>
+    </header>
+    <section class="ss-write-title">
+        <input placeholder="标题：(64个字以内)" maxlength="64" type="text" />
+    </section>
+    <section class="ss-write-area">
+      <figure>
+        <textarea  placeholder="内容：(5000字以内)" maxlength="5000"></textarea>
+      </figure>
+    </section>
+    <section class="ss-write-oper">
+        <div class="ss-write-func">
+            <div class="ss-write-func-left">
+                <span>分类：</span>
+                <select class="daily-select"></select>
+            </div>
+            <div class="ss-write-func-right hide">
+                <a class="btn-insert-pic"></a>
+            </div>
+        </div>
+    </section>
+</section>
+
+<div class="extend-mask" style="height:100%;" id="extendMask"></div>
+<div class="extend-bpic" style="height:100%;" id="photoView" onclick="hideMoodPhoto(this)">
+    <img alt="加载中" />
+</div>
+<div class="extend-verify" id="verifyBox">
+    <h2>发表前请输入验证码</h2>
+    <h3>您的号码可能有安全隐患，请进行安全验证。</h3>
+    <div class="extend-verify-box clearfix">
+        <div class="extend-verify-box-left">
+            <p>验证码图片:</p>
+            <p><a>
+                <img alt="下载中" />
+                <span>换一张</span>
+            </a></p>
+        </div>
+        <div class="extend-verify-box-right">
+            <p>输入验证码:</p>
+            <p><input type="text" /></p>
+        </div>
+    </div>
+    <p class="extend-verify-btn">
+        <a class="btn-extend-ok">确定</a>
+        <a class="btn-extend-cancel">取消</a>
+    </p>
+</div>
+<section class="body-box-wrap" id="sign" data-struct="page" title="签到">
+	 <section class="body-box">
+	 	<div class="special-div-minheight">
+	        <div class="about-subnav">
+	            <ul class="subnav-style1">
+	                <li class="current"><a href="#sign/sign-list">我的签到</a></li>
+	                <li><a href="#sign/friend-sign">好友的签到</a></li>
+	            </ul>
+	        </div>
+        	<section class="sign-list-wrapper">
+		        <!-- 如果今天还没签到 就下面这段 -->
+		        <div data-struct="tab" id="sign-list" data-init="showSign">
+		        	<!-- start 我的签到 -->
+			        <section class="sign-info mySign">
+			            <h1>你目前共签到<span class="t-blue">0</span>天</h1>
+			            <p><a class="btn-download float-r" href="#signDaylyRecord">查看记录</a></p>
+			        </section>
+			        <section class="sign-list mySign" style="display:none">
+			            <h1>选择心情图片</h1>
+			            <form><ul></ul></form>
+			            <section class="pages">
+			                <a class="to-first">上一页</a>
+			               	<select name="page"></select>
+			                <a class="to-last">下一页</a>
+			            </section>
+			            <form class="sign">
+			                <textarea placeholder="填写心情内容"></textarea>
+			                <p class="sign-sub" style="display:none"><a class="btn-download">签到</a> <a>取消</a></p>
+			            </form>
+			        </section>
+			        <!-- 如果今天签了 就下面这段 -->
+			        <section class="sign-record mySign" style="display:none">
+			            <h1>您今天已经签到，欢迎明天再来。</h1>
+			            <ul></ul>
+			        </section>
+		        </div>
+		        <!-- end 我的签到 -->
+		        <!-- start 好友签到 -->
+		        <section class="sign-rank friendSign" data-struct="tab" id="friend-sign" data-init="friendSign">
+		            <ul></ul>	   
+		        </section>
+		        <!-- end 好友签到 -->
+			</section>
+        </div>
+    </section>
+</section>
+
+<section class="body-box-wrap" id="signDaylyRecord" data-init="showSignHistory" data-struct="page" title="签到记录">
+	<section class="body-box">
+		<section class="sign-list-wrapper">
+	        <nav class="sign-record-nav">
+	            <h1></h1>
+	            <a rel="noreferrer">&lt;上一月</a>
+	            <a rel="noreferrer">下一月&gt;</a>
+	        </nav>
+	        <section class="sign-record">
+	            <ul></ul>
+	        </section>
+	    </section>
+	</section>
+</section>
+
+<section class="body-box-wrap" id="setting" data-struct="page" data-init="initSet" title="设置">
+    <section class="body-box">
+        <nav class="more">
+        	<!-- 
+            <ul class="more-box">
+                <li><a>好友动态图片<span class="btn-set-light" bclass="btn-set-gray" onclick="imgInFeedShow(this)">显示</span></a></li>
+            </ul>
+            -->
+            <ul class="more-box">
+                <li><p>访问权限<select class="select-seting"><option value="1">所有人</option><option value="2">QQ好友</option><option value="4">QQ校友</option></select></p></li>
+                <li><p>回复权限<select class="select-seting"><option value="1">所有人</option><option value="4">QQ好友</option><option value="3">禁止回复</option></select></p></li>
+            </ul>
+            <!-- 
+            <ul class="more-box">
+                <li><a class="check-blue" bclass="check-gray" onclick="noMarkReadBlog(this)">日志无痕浏览</a></li>
+            </ul>
+            --> 
+            <ul class="more-box">
+                <li><a class="more-arrow" href="#blackList">黑名单</a></li>
+            </ul>
+        </nav>
+   </section>
+</section>
+
+<section class="body-box-wrap" id="feedBack" data-struct="page" data-init="feedBack" title="反馈">
+	<section class="more-feedback">
+		<input type="text" placeholder="标题" />
+	    <textarea placeholder="空间触屏版全新上线，感谢您的宝贵建议，我们将继续予以改进优化，感谢您的反馈。"></textarea>
+	</section>
+</section>
+
+<section class="body-box-wrap" id="blackList" data-struct="page" data-init="showBlackList" title="黑名单">
+	<section class="body-box">
+	  <div class="special-div-minheight">	
+		<div class="firend-search">
+          <div class="firend-search-input">
+            <form onsubmit="addBlackList();return false;">
+                <input id="add-black-qq" class="sp" placeholder="输入要添加的黑名单QQ号" type="text" />
+            <form>
+           </div>
+           <a class="btn-blacklist" onclick="addBlackList()">确认添加</a>
+        </div>
+        <div class="shuoshuo-tips">已经添加到黑名单的号码<span></span></div>
+        <ul class="firend-result-list sp"></ul>
+      </div>
+	</section>
+</section>
+<section id="applist_all" class="body-box-wrap" data-struct="page" title="全部游戏">
+    <section class="body-box">
+    	<div class="special-div-minheight">
+	        <div class="about-subnav">
+	            <ul class="subnav-style1">
+	                <li><a href="#applist_all/applist_hot">热&nbsp;&nbsp;&nbsp;&nbsp;门</a></li>
+	                <li class="current"><a href="#applist_all/applist_new">新&nbsp;&nbsp;&nbsp;&nbsp;品</a></li>
+	            </ul>
+	        </div>
+	        
+	        <section id="applist_hot" class="soft-hot" mst="35" data-struct="block" data-init="getApplistHot">
+				<div style="min-height: 100px">
+                   <ul class="common-soft-list app-topten">
+                   </ul>
+               </div>
+            </section>
+            
+	        <section class="app-index" class="soft-new" id="applist_new" mst="34" data-struct="block" data-init="getApplistNew">
+                <div style="min-height: 100px">
+                      <ul class="common-soft-list app-topten">
+                      </ul>
+				</div>
+			</section>
+         </div>
+	</section>
+</section>
+
+
+<section class="body-box-wrap" id="mblog" data-struct="page" data-init="showHotMicroBlog" title="热门微博">
+	<section class="body-box">
+        <ul class="myrss-weibo"></ul>
+    </section>
+</section>
+
+<section class="body-box-wrap" id="perfectDaily" data-struct="page" data-init="showPerfectDaily" title="美文">
+	<section class="body-box">
+		<ul class="myrss-letters"></ul>
+    </section>
+</section>
+
+<section class="body-box-wrap" id="hotAlbum" data-struct="page" data-init="showHotAlbum" title="精彩相册">
+	<section class="body-box">
+        <section class="gallery">
+            <h3>精彩相册</h3>
+            <ul class="gallery-ul"></ul>
+        </section>
+    </section>
+</section>
+
+<section class="body-box-wrap" id="iCare" data-struct="page" data-init="show_iCare" title="腾讯爱看">
+	<section class="body-box">
+       <ul class="myrss-gallery"></ul>
+    </section>
+</section>
+<section class="body-box-wrap" id="icare-detail" data-struct="page" data-init="show_iCare_Detail" title="腾讯爱看">
+	<section class="body-box">
+        <section class="icare"></section>
+    </section>
+</section>
+<section class="body-box-wrap" id="topnews" data-struct="page" data-init="showTopNews" title="头条新闻">
+	<section class="body-box">
+        <div class="myrss-news">
+                <nav class="myrss-nav">
+                    <ul>
+                        <li><a class="current" onclick="showNewType(this, 0)">新闻</a></li>
+                        <li><a onclick="showNewType(this, 1)">财经</a></li>
+                        <li><a onclick="showNewType(this, 2)">体育</a></li>
+                        <li><a onclick="showNewType(this, 3)">娱乐</a></li>
+                        <li><a onclick="showNewType(this, 4)">科技</a></li>
+                        <li><a onclick="showNewType(this, 5)">汽车</a></li>
+                    </ul>
+                </nav>
+                <div class="myrss-news-class">
+                    <div class="news-slide" title="新闻">
+                        <div class="news-slide-wrap">
+                            <ul style="width: 640px;">
+                            </ul>
+                        </div>
+                        <div class="frend-slide-nav">
+                        </div>
+                    </div>
+                    <div class="myrss-stock hide" title="财经">
+                    </div>
+                    <div class="myrss-sport hide" title="体育">
+                    </div>
+                    <div class="myrss-entertain hide" title="娱乐">
+                    </div>
+                    <div class="myrss-sport myrss-tech hide" title="科技">
+                    </div>
+                    <div class="myrss-car hide" title="汽车">
+                    </div>
+                </div>
+                <div class="myrss-news-list">
+                </div>
+            </div>
+    </section>
+</section>
+
+
+<script type="text/javascript">
+var g_isUseGuide = false;
+
+var g_action = "http://m.z.qq.com/phone2.0/vaction.jsp?sid=AYYxy0pg7xY3uHNUJ-nvU1Yq";
+//上海接口地址
+var g_action_shanghai = "http://shm.z.qq.com/phone2.0/vaction.jsp?sid=AYYxy0pg7xY3uHNUJ-nvU1Yq";
+var g_mini_action = g_action;
+var g_imgPath = "http://3gimg.qq.com/wap30/img/mqzone2/";
+var g_app = {
+		usrid:"283540706",
+		buid:"283540706",
+		nohead:0,
+		usrname:"xhlv",
+		sid:"AYYxy0pg7xY3uHNUJ-nvU1Yq",
+		faceurl:"http://qlogo3.store.qq.com/qzone/283540706/283540706/50",
+		qinfourl:"http://info60.z.qq.com",
+		qzoneurl:"http://blog30.z.qq.com", 
+		imageurl:"http://3gimg.qq.com/",
+		blogCommentForbidden:false,
+		moodCommentForbidden:false,
+		cpath: "",
+		totalOfNews:0,
+		touchfeed_gosh: true,
+		startTime:1337177494171,
+		accept:"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+};
+window.g_guestId="283540706";
+
+(function(){var ctx;var cache=[];var index=0;window["loadCanvas"]=function(el,init){var w=0;this.id="loaing_"+index;index++;var canvas=document.createElement("canvas");canvas.id=this.id;this.ctx=canvas.getContext("2d");this.ac=270;var adjustTop=false;var e=2;if(!el||init){el=document.querySelector("#loading .extend-tips-canvas");if(init){el=document.querySelector("#firstload");}var lw=2.5;var w=32*e;this.r0=((w/e-lw)/2)*e;this.r1=(this.r0/e-lw)*e;this.showStart=true;adjustTop=true;}else{e=1;var ws=getComputedStyle(el).width;var hs=getComputedStyle(el).height;var w=16*e;var lw=3;this.showStart=false;this.r0=((w/e-lw)/2)*e;this.r1=(this.r0/e-lw)*e;if("IMG"==el.localName.toUpperCase()){w=30;canvas.style.top="50%";canvas.style.left="50%";canvas.style.marginTop=-w/2+"px";canvas.style.marginLeft=-w/2+"px";canvas.style.position="absolute";el=el.parentElement;el.style.position="relative";}}canvas.width=w;canvas.height=w;if(adjustTop){canvas.style.marginTop=-(w/(e*2))+"px";canvas.style.marginBottom=-(w/(e*2))+"px";canvas.style.marginLeft=-(w/(e*2))+"px";canvas.style.marginRight=-(w/(e*2))+"px";}var f=1/e;if(1!=f){canvas.style.webkitTransform="scale("+f+","+f+")";}this.cw=w;this.ch=w;this.origin={x:w/2,y:w/2};this.rotate=0;if(el.firstChild){el.insertBefore(canvas,el.firstChild);}else{el.appendChild(canvas);}if(adjustTop){var viewTop=window.pageYOffset;var viewHeight=document.documentElement.clientHeight;var c=document.querySelector("#loading");c.style.top=viewTop+(viewHeight-c.offsetHeight)/2+"px";}if(this.showStart){this.draw();}else{this.drawSmall();}};loadCanvas.prototype.draw=function(){if(0==this.ac){this.ac=360;}this.ctx.clearRect(0,0,this.cw,this.ch);this.ctx.save();var f=2*3.1415926/360;var s=this.ac*f;var interval=8;var len=13;var a=(360-len*interval)/len;this.ac-=a;var e=this.ac*f;var colorGroup=["142,149,155","155,160,164","166,170,173","172,177,181","187,191,194","195,199,202"];var len=360/a;var alpha=1;var sa=s,ea=s;if(this.showStart){this.drawStar();}this.ctx.lineWidth=this.r0-this.r1;for(var i=0;i<len;i++){if(i<colorGroup.length-1){this.ctx.strokeStyle="rgba("+colorGroup[i]+", "+alpha+")";}else{alpha*=0.9;this.ctx.strokeStyle="rgba("+colorGroup[colorGroup.length-1]+", "+alpha+")";}sa=ea+interval*f;ea=sa+a*f;this.ctx.beginPath();this.ctx.arc(this.origin.x,this.origin.y,this.r0,sa,ea,false);this.ctx.stroke();}var obj=this;var timer=window.setTimeout(function(){obj.draw();if(obj.showStart){obj.drawStar();}},130);this.ctx.canvas.setAttribute("timer",timer);this.ctx.restore();};loadCanvas.prototype.drawSmall=function(){var color="#6f7985",petalNum=8,petalRadius=1.5,petalSpiral=0,step=1,range=0.8,fps=10;var ctx=this.ctx;ctx.clearRect(0,0,this.cw,this.cw);ctx.save();ctx.translate(this.cw/2,this.cw/2);ctx.scale(this.cw/100,this.cw/100);this.classPetal();ctx.restore();var obj=this;var timer=setTimeout(function(){obj.drawSmall();},1000/fps);this.ctx.canvas.setAttribute("timer",timer);};loadCanvas.prototype.classPetal=function(){var color="#6f7985",petalNum=8,petalRadius=1.5,petalSpiral=0,step=1,range=0.8,fps=10;var ctx=this.ctx;ctx.rotate(2*step*this.rotate*Math.PI/petalNum);var rateBase=petalNum*range;var _rate=1/rateBase;var loopNum=Math.ceil(rateBase);var loop=petalNum<loopNum?petalNum:loopNum;var spiralRate;var petalRotate=2*Math.PI/petalNum;for(var i=0;i<loop;i++){spiralRate=1;ctx.rotate(-petalRotate);ctx.save();rate=1-i*_rate;ctx.fillStyle="rgba("+111+", "+121+", "+133+", "+rate+")";ctx.beginPath();ctx.arc(0,-40,7*spiralRate*petalRadius,0,Math.PI*2,false);ctx.closePath();ctx.fill();ctx.restore();}this.rotate=(this.rotate+1)%petalNum;};loadCanvas.prototype.drawStar=function(){var f=(this.r0-2.5-(this.r0-this.r1)/2)*2/100;this.ctx.save();this.ctx.translate(this.r0-this.r1+2.5,this.r0-this.r1+2.5);this.ctx.scale(f,f);this.ctx.beginPath();this.ctx.moveTo(96.9,34.9);this.ctx.lineTo(69.6,32.3);this.ctx.bezierCurveTo(66.1,32.7,63.9,29,63.9,29);this.ctx.lineTo(51.2,1.5);this.ctx.bezierCurveTo(49.7,-1.8,48.1,1.5,48.1,1.5);this.ctx.lineTo(35,29.2);this.ctx.bezierCurveTo(33.9,31.9,30.2,32.3,30.2,32.3);this.ctx.lineTo(2.2,35.1);this.ctx.bezierCurveTo(-2.2,37.1,1.3,38.9,1.3,38.9);this.ctx.lineTo(21.7,57);this.ctx.bezierCurveTo(26.3,61.4,23.9,64.9,23.9,64.9);this.ctx.lineTo(18.4,91.6);this.ctx.bezierCurveTo(18.2,97.5,21.7,94,21.7,94);this.ctx.lineTo(45.3,80.9);this.ctx.bezierCurveTo(49.7,77.6,53.4,80.6,53.4,80.6);this.ctx.lineTo(77.2,93.8);this.ctx.bezierCurveTo(83.1,98.1,80.9,91.4,80.9,91.4);this.ctx.lineTo(75.5,66.9);this.ctx.bezierCurveTo(75.4,66.4,75.3,66,75.3,65.6);this.ctx.bezierCurveTo(71.8,66.7,63.7,68.9,48.8,70.1);this.ctx.bezierCurveTo(48.8,70.1,35,71,28.1,73.1);this.ctx.bezierCurveTo(28.1,73.1,25.2,73.1,26.2,71.8);this.ctx.bezierCurveTo(26.2,71.8,26.3,65.9,41.2,56.9);this.ctx.bezierCurveTo(41.2,56.9,54.7,48.7,59.9,41.6);this.ctx.bezierCurveTo(59.9,41.6,49.9,41.3,39.4,41.9);this.ctx.bezierCurveTo(39.4,41.9,34.7,40.8,17.5,43.4);this.ctx.bezierCurveTo(17.5,43.4,23.5,35,54.7,36.5);this.ctx.bezierCurveTo(54.7,36.5,67.8,36.5,72.4,35.5);this.ctx.bezierCurveTo(72.4,35.5,74.9,35,73.4,37.8);this.ctx.bezierCurveTo(73.4,37.8,71.4,43.7,53.7,54.1);this.ctx.bezierCurveTo(53.7,54.1,41.7,61.6,41.1,64.6);this.ctx.bezierCurveTo(41.1,64.6,37.1,65.7,55.8,64.2);this.ctx.lineTo(75.2,62.5);this.ctx.bezierCurveTo(75.5,59.6,76.6,58.3,76.6,58.3);this.ctx.lineTo(98.4,38.9);this.ctx.bezierCurveTo(101.9,34.7,96.9,34.9,96.9,34.9);this.ctx.closePath();this.ctx.fillStyle="rgb(140, 147, 153)";this.ctx.fill();this.ctx.restore();};})();function loading(el,init){if(!el&&!init){var c=document.querySelector("#loading");var canvas=c.querySelector("canvas");if(canvas){return;}c.style.display="block";}new loadCanvas(el,init);}function unloading(el,init){if(!el&&!init){el=document.querySelector("#loading .extend-tips-canvas");var c=document.querySelector("#loading");c.style.display="none";}if(init){el=document.querySelector("#firstload");var c=el.parentElement;c.style.display="none";}if("IMG"==el.localName.toUpperCase()){el=el.parentElement;}var canvas=el.querySelector("canvas");if(!canvas){return;}var timer=canvas.getAttribute("timer");if(timer){clearTimeout(timer);}el.removeChild(canvas);}
+
+loading(null,true);
+
+</script>
+
+<script type="text/javascript" src="http://3gimg.qq.com/wap30/mqzone/js/all.min.2012051001.js?v=0.7d"></script>
+
+</body>
+</html>
