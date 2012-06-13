@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>首页_股市交流中心_资料库管理系统</title>
+<link type="text/css" rel="stylesheet" href="/css/main.css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/ui.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+</head>
+<link type="text/css" rel="stylesheet" href="/css/pane.css" />
+<link type="text/css" rel="stylesheet" href="http://mat1.gtimg.com/www/css/datalib/main.css" />
+<script type="text/javascript" src="/js/ui.Dialog.js"></script>
+<script type="text/javascript" src="/js/ui.DragPane.js"></script>
+<body class="config">
+	<div class="hd_datalib">
+		<div class="tools">
+			<span class="large">
+				<!-- <span class="select_btn"><input type="button" value="选择风格" /><ul>
+					<li><a href="javascript:void(0);">基本信息</a></li>
+					<li><a href="javascript:void(0);">相关信息</a></li>
+					<li><a href="javascript:void(0);">相关图片</a></li>
+				</ul></span> -->
+				<span class="select_btn"><input type="button" value="添加区块" /><ul>
+					<!-- <li><a href="javascript:void(0);" onclick="dragPane.addWrap('1');">通栏</a></li>
+					<li><a href="javascript:void(0);" onclick="dragPane.addWrap('11');">两栏 1:1</a></li>
+					<li><a href="javascript:void(0);" onclick="dragPane.addWrap('12');">两栏 1:2</a></li>
+					<li><a href="javascript:void(0);" onclick="dragPane.addWrap('21');">两栏 2:1</a></li>
+					<li><a href="javascript:void(0);" onclick="dragPane.addWrap('111');">三栏 1:1:1</a></li>
+					<li><a href="javascript:void(0);" onclick="dragPane.addWrap('121');">三栏 1:2:1</a></li> -->
+					
+										<li><a href="javascript:void(0);" onclick="dragPane.addWrap('1|1|1');">通栏</a></li>
+									</ul></span>
+				<span class="select_btn"><input type="button" value="添加模块" /><ul>
+					<!-- <li><a href="javascript:void(0);" onclick="dragPane.addPane({title:'空模块',cont:'示例',libId:'131',type:'0'});">空模块</a></li>
+					<li><a href="javascript:void(0);" onclick="dragPane.addPane({title:'基本信息',cont:'',libId:'131',type:'1'});">基本信息</a></li>
+					<li><a href="javascript:void(0);" onclick="dragPane.addPane({title:'图库',cont:'',libId:'131',type:'2'});">图库</a></li>
+					<li><a href="javascript:void(0);" onclick="dragPane.addPane({title:'资料库内部接口',cont:'',libId:'131',type:'3'});">资料库内部接口</a></li>
+					<li><a href="javascript:void(0);" onclick="dragPane.addPane({title:'新闻',cont:'',libId:'131',type:'4'});">新闻</a></li>
+					<li><a href="javascript:void(0);" onclick="dragPane.addPane({title:'排行榜',cont:'',libId:'131',type:'5'});">排行榜</a></li> -->
+
+										<li><a href="javascript:void(0);" onclick="dragPane.addPane({title:'空白模块（公共）',cont:'<br>',libId:'131',type:'10',isMove:1});">空白模块（公共）</a></li>
+										<li><a href="javascript:void(0);" onclick="dragPane.addPane({title:'排行榜',cont:'<br>',libId:'131',type:'17',isMove:1});">排行榜</a></li>
+										<li><a href="javascript:void(0);" onclick="dragPane.addPane({title:'字母页接口',cont:'<br>',libId:'131',type:'18',isMove:1});">字母页接口</a></li>
+										<li><a href="javascript:void(0);" onclick="dragPane.addPane({title:'资料库内部调用',cont:'<br>',libId:'131',type:'19',isMove:1});">资料库内部调用</a></li>
+									</ul></span>
+			</span>
+			<!-- <span class="btn"><input type="button" value="历史恢复" /></span> -->
+			<span class="btn"><input type="button" value="保存" id="paneSaveBtn" /></span>
+			<span class="btn"><input type="button" value="预览" id="paneViewBtn" /></span>
+			<span class="btn"><input type="button" value="发布" id="paneReleaseBtn" /></span>
+			<span class="btn"><input type="button" value="关闭" onclick="window.close();" /></span>
+		</div>
+		<div class="location_datalib">
+			<!-- 明星资料库: 页面管理 >> 页面列表 >> 底层页 -->
+		</div>
+		<div class="msg" id="msg"></div>
+	</div>
+	<div class="note"><span class="note">（注意：灰色模块为默认模块，请先保存）</span></div>
+	<form method="post" action="" style="display:none;" id="paneSave">
+		<input type="text" name="c" />
+		<input type="text" name="del" />
+		<input type="text" name="id" value="843" />
+	</form>
+	<form method="post" target="_blank" action="/update/preview" style="display:none;" id="paneView">
+		<input type="text" name="c" />
+		<input type="text" name="libid" value="131" />
+		<!-- <input type="text" name="dataid" value="1" /> -->
+	</form>
+	<form method="post" action="" style="display:none;" id="paneRelease">
+		<input type="text" name="libid" value="131" />
+		<input type="text" name="moduleid" value="843" />
+		<input type="text" name="pagetype" value="2" />
+		<input type="text" name="type" value="1" />
+	</form>
+	<div class="bd_datalib" id="bd"></div>
+	<script type="text/javascript">
+		var dialog = new UI.Dialog({name:'dialog'});
+
+		//隐藏头尾模块
+		$('span.select_btn a').each(function(i,o){
+			var html = o.innerHTML;
+			if ('头部模块,尾部模块,图库,图库JS文件,搜索列表,搜索结果'.hasString(html)) {
+				$(o).parent().remove();
+			}
+		});
+
+		var select = $('.select_btn');
+		select.hover(function(){
+			$(this).addClass('on');
+		},function(){
+			$(this).removeClass('on');
+		}).click(function(){
+			$(this).removeClass('on');
+		}).find('input').click(function(){
+			return false;
+		});
+
+		var dragPane = new UI.DragPane({id:'bd'});
+		dragPane.pageId = 843;
+		dragPane.libId = 131;
+		//UI.dragPane();
+		dragPane.call = function(){
+			//console.log( dragPane.getJson() );
+		}
+			dragPane.build([{"id":"8431339600231656553","tId":"0","isWrap":1,"isMove":0,"type":1,"pane":[[{"id":"8431339600231656320","isWrap":0,"isMove":0,"title":"头部模块","tId":"","type":"16","width":960}]]},{"id":"8431339600231750725","tId":"1","isWrap":1,"isMove":1,"type":1,"pane":[[{"isWrap":-1}]]},{"id":"8431339600231718656","tId":"4","isWrap":1,"isMove":1,"type":21,"pane":[[{"id":"8431339600231734885","isWrap":0,"isMove":1,"title":"资料库调用","tId":"","type":"19","width":640}],[{"id":"8431339600231718356","isWrap":0,"isMove":1,"title":"排行榜","tId":"","type":"17","width":320}]]},{"id":"8431339600231687310","tId":"1","isWrap":1,"isMove":1,"type":1,"pane":[[{"id":"8431339600231703930","isWrap":0,"isMove":1,"title":"资料库调用","tId":"","type":"19","width":960},{"id":"8431339600231687548","isWrap":0,"isMove":1,"title":"字母列表","tId":"","type":"18","width":960}]]},{"id":"8431339600231671807","tId":"0","isWrap":1,"isMove":0,"type":1,"pane":[[{"id":"8431339600231687286","isWrap":0,"isMove":0,"title":"尾部模块","tId":"","type":"7","width":960}]]}]);
+	
+			if (dragPane.getQueue().length == 2){
+			dragPane.addWrap('0|1|0');
+			dragPane.addPane({title:'头部模块',cont:'<br>',libId:'131',type:'16',isMove:0});
+			dragPane.addWrap('0|1|0');
+			dragPane.addPane({title:'尾部模块',cont:'<br>',libId:'131',type:'7',isMove:0});
+
+												//聚合页
+			dragPane.addWrap('1|1|1');
+			dragPane.addPane({title:'字母列表',cont:'<br>',libId:'131',type:'18',isMove:1});
+			dragPane.addPane({title:'资料库调用',cont:'<br>',libId:'131',type:'19',isMove:1});
+			dragPane.addWrap('1|21|4');
+			dragPane.addPane({title:'排行榜',cont:'<br>',libId:'131',type:'17',isMove:1});
+			dragPane.addPane({title:'资料库调用',cont:'<br>',libId:'131',type:'19',isMove:1,position:0});
+			
+
+			dragPane.addWrap('1|1|1');
+			window.onload = function(){
+				$('#paneSaveBtn').click();
+			}
+			//alert('页面初始化成功');
+		}
+		//alert(UI.$('div.paneWrap.paneMove').length);
+		//document.write('<textarea cols="150" rows="20">' + document.body.innerHTML + '</textarea>');
+	</script>
+
+	<script type="text/javascript">
+		$('#paneSaveBtn').click(function(){
+			var input = $('#paneSave input');
+			input[0].value = dragPane.getJson();
+			input[1].value = dragPane.paneDel.join(',');
+			$.ajax({
+				type: "POST",
+				url: "/page/send",
+				data: $('#paneSave input').serialize(),
+				success: function(msg){
+					if (msg == 0) {
+						showMsg('保存成功');
+						input[1].value = '';
+					}
+					else alert(msg);
+				}
+			});
+		});
+		$('#paneViewBtn').click(function(){
+			//window.open('/update/preview?libid=131&pageid=843&dataid=11&p=1','','');
+			var paneBox = $('.paneBox');
+			if (paneBox[0].getAttribute('tid') == "" || paneBox[paneBox.length - 1].getAttribute('tid') == "") {
+				alert('您还有默认模块没有保存，请保存后再预览：）');
+			}
+			else {
+				$('#paneView input')[0].value = dragPane.getJson();
+				$('#paneView').submit();
+			}
+		});
+		$('#paneReleaseBtn').click(function(){
+			$.ajax({
+				type: "POST",
+				url: "/update/do",
+				data: $('#paneRelease input').serialize(),
+				success: function(msg){
+					if (msg == 0) {
+						showMsg('发布成功');
+					}
+					else alert(msg);
+				}
+			});
+		});
+	</script>
+	<!-- /synsource/syncode/?libid=&modelid=&moduletype&width= 用户强制恢复默认代码 -->
+	<!-- <div class="footer">
+		<p>开发团队：资料库项目组 <br />Copyright &copy; 1998 - 2009 Tencent. All Rights Reserved</p><input type="button" value="Dialog" onclick="dialog.show({title:'Title',html:'content',size:'small'});" />
+	</div> -->
+</body>
+</html>
